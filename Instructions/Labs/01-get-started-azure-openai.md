@@ -13,7 +13,8 @@ In this lab, you will perform:
 ## Estimated time: 40 minutes
 
 ## Architecture Diagram
-![](media/lab-01-ad.PNG "Architecture Diagram")
+
+   ![](../media/lab-01-ad.PNG)
 
 ## Task 1: Provision an Azure OpenAI resource
 
