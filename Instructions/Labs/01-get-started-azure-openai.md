@@ -181,4 +181,4 @@ In this lab, you have accomplished the following:
 -   Deploy an Azure OpenAI model within the Azure OpenAI studio
 -   Use the chat playground to utilize the functionalities of prompts, parameters and code-generation
 
-### You have successfully completed the lab.
+### You have successfully completed the lab
