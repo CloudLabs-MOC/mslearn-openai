@@ -272,4 +272,4 @@ In this lab, you have accomplished the following:
 -   Deploy an OpenAI model within the Azure OpenAI studio
 -   Integrate Azure OpenAI models into your applications
 
-### You have successfully completed the lab.
+### You have successfully completed the lab
