@@ -1,10 +1,22 @@
 # Lab 07: Explore content filters in Azure OpenAI
 
+## Lab scenario
 Azure OpenAI includes default content filters to help ensure that potentially harmful prompts and completions are identified and removed from interactions with the service. Additionally, you can apply for permission to define custom content filters for your specific needs to ensure your model deployments enforce the appropriate responsible AI principals for your generative AI scenario. Content filtering is one element of an effective approach to responsible AI when working with generative AI models.
 
 In this exercise, you'll explore the affect of the default content filters in Azure OpenAI.
 
-### Estimated time: 30 minutes
+## Lab objectives
+In this lab, you will perform:
+-   Provision an Azure OpenAI resource
+-   Deploy an OpenAI model within the Azure OpenAI studio
+-   Use the power of OpenAI models to generate responses to generate natural language output
+-   Explore content filters
+
+## Estimated time: 30 minutes
+
+## Architecture Diagram
+
+  ![](media/lab-07-ad.PNG "Architecture Diagram")
 
 ## Task 1: Provision an Azure OpenAI resource
 
@@ -132,9 +144,9 @@ Content filters are applied to prompts and completions to prevent potentially ha
 ## Review
 
 In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource.
--   Deploy an OpenAI model within the Azure OpenAI studio.
--   Use the power of OpenAI models to generate responses to generate natural language output.
--   Explore content filters.
+-   Provision an Azure OpenAI resource
+-   Deploy an OpenAI model within the Azure OpenAI studio
+-   Use the power of OpenAI models to generate responses to generate natural language output
+-   Explore content filters
 
-### You have successfully completed the lab.
+### You have successfully completed the lab
