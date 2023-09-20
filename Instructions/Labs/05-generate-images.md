@@ -199,7 +199,7 @@ Now that you've reviewed the code, it's time to run it and generate some images.
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
--   understand the concepts of image generation via the DALL-E model.
+-   understand the concepts of image generation via the DALL-E model
 -   Implement image-generation into your applications using this model
 
-### You have successfully completed the lab.
+### You have successfully completed the lab
