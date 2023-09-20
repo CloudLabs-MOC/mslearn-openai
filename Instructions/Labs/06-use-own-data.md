@@ -1,8 +1,19 @@
 # Lab 06: Use your own data with Azure OpenAI
 
+## Lab scenario
 The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics, or blend it with results from the pre-trained model.
 
-### Estimated time: 20 minutes
+## Lab objectives
+In this lab, you will perform:
+- Provision an Azure OpenAI resource
+- Deploy an OpenAI model within the Azure OpenAI studio
+- Use the power of OpenAI models to generate responses limited to a custom ingested data
+
+## Estimated time: 20 minutes
+
+## Architecture Diagram
+
+  ![](media/lab-06-ad.PNG "Architecture Diagram")
 
 ## Task 1: Provision an Azure OpenAI resource
 
@@ -168,6 +179,6 @@ Try asking it about other cities included in the grounding data, which are Dubai
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
 -   Deploy an OpenAI model within the Azure OpenAI studio
--   Use the power of OpenAI models to generate responses limited to a custom ingested data.
+-   Use the power of OpenAI models to generate responses limited to a custom ingested data
 
-### You have successfully completed the lab.
+### You have successfully completed the lab
