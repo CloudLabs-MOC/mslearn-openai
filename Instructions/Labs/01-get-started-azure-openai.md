@@ -14,7 +14,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
-   ![](../media/lab-01-ad.PNG)
+   ![](../media/lab-01-ad.png)
 
 ## Task 1: Provision an Azure OpenAI resource
 
