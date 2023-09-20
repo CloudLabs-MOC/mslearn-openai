@@ -13,7 +13,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
-  ![](media/lab-04-ad.PNG "Architecture Diagram")
+  ![](../media/lab-04-ad.png)
   
 ## Task 1: Provision an Azure OpenAI resource
 
