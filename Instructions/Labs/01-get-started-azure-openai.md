@@ -1,8 +1,20 @@
 # Lab 01: Get started with Azure OpenAI Service
 
+## Lab scenario
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Studio to deploy and explore OpenAI models.
 
-### Estimated time: 40 minutes
+## Objectives
+In this lab, you will perform:
+
+-   Provision an Azure OpenAI resource
+-   Deploy an Azure OpenAI model within the Azure OpenAI studio
+-   Use the chat playground to utilize the functionalities of prompts, parameters and code-generation
+
+## Estimated time: 40 minutes
+
+## Architecture Diagram
+
+   ![](../media/lab-01-ad.png)
 
 ## Task 1: Provision an Azure OpenAI resource
 
@@ -170,4 +182,4 @@ In this lab, you have accomplished the following:
 -   Deploy an Azure OpenAI model within the Azure OpenAI studio
 -   Use the chat playground to utilize the functionalities of prompts, parameters and code-generation
 
-### You have successfully completed the lab.
+### You have successfully completed the lab

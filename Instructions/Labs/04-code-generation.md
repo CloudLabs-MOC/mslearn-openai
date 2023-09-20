@@ -1,9 +1,20 @@
 # Lab 04: Generate and improve code with Azure OpenAI Service
 
+## Lab scenario
 The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code to help you understand what it does and how to improve it.
 
-### Estimated time: 30 minutes
+## Lab objectives
+In this lab, you will perform:
+- Provision an Azure OpenAI resource
+- Deploy an OpenAI model within the Azure OpenAI studio
+- use the functionalites of the Azure OpenAI to generate and improvise code for your production applications
 
+## Estimated time: 30 minutes
+
+## Architecture Diagram
+
+  ![](../media/lab-04-ad.png)
+  
 ## Task 1: Provision an Azure OpenAI resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
@@ -319,6 +330,6 @@ If you would like to see the full response from Azure OpenAI, you can set the `p
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
 -   Deploy an OpenAI model within the Azure OpenAI studio
--   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
+-   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications
 
-### You have successfully completed the lab.
+### You have successfully completed the lab

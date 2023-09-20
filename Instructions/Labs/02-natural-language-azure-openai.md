@@ -1,8 +1,20 @@
 # Lab 02: Integrate Azure OpenAI into your app
 
+## Lab scenario
 With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application to summarize text.
 
-### Estimated time: 40 minutes
+## Lab objectives
+In this lab, you will perform:
+
+- Provision an Azure OpenAI resource
+- Deploy an OpenAI model within the Azure OpenAI studio
+- Integrate Azure OpenAI models into your applications
+
+## Estimated time: 40 minutes
+
+## Architecture Diagram
+
+   ![](../media/lab-02-ad.png)
 
 ## Task 1: Provision an Azure OpenAI resource
 
@@ -71,14 +83,14 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
-> **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however deployment and usage of other models you deploy will work in the same way.
+   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however deployment and usage of other models you deploy will work in the same way.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ## Task 3: Set up an application in Cloud Shell
 
@@ -260,4 +272,4 @@ In this lab, you have accomplished the following:
 -   Deploy an OpenAI model within the Azure OpenAI studio
 -   Integrate Azure OpenAI models into your applications
 
-### You have successfully completed the lab.
+### You have successfully completed the lab
