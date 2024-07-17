@@ -265,6 +265,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     **C#**: Program.cs
 
     ```csharp
+   
     // Add code to send request...
     // Build completion options object
     ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
@@ -340,11 +341,9 @@ For this exercise, you'll complete some key parts of the application to enable u
         OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
 
         // System message to provide context to the model
-        string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
+        string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three          suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
 
-
-
-        do {
+         do {
             Console.WriteLine("Enter your prompt text (or type 'quit' to exit): ");
             string? inputText = Console.ReadLine();
             if (inputText == "quit") break;
@@ -383,6 +382,8 @@ For this exercise, you'll complete some key parts of the application to enable u
         } while (true);
 
     ```
+
+
     - **Python**: test-openai-model.py
 
     ```Python
@@ -456,7 +457,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     main()
     ```
 
-9. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
+8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
