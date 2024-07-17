@@ -381,11 +381,11 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 
         } while (true);
-
-    ```
+   ```
 
 
     - **Python**: test-openai-model.py
+  
 
     ```Python
     
