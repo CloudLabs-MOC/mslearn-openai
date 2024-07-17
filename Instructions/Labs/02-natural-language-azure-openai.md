@@ -313,6 +313,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     - **C#**: Program.cs
 
     ```CSharp
+    
     // Implicit using statements are included
         using System.Text;
         using System.Text.Json;
@@ -387,6 +388,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     - **Python**: test-openai-model.py
 
     ```Python
+    
     import os
     from dotenv import load_dotenv
 
@@ -455,6 +457,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     if __name__ == '__main__': 
     main()
+    
     ```
 
 8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
