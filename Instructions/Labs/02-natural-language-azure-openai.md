@@ -21,7 +21,7 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
@@ -63,7 +63,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
@@ -75,19 +75,18 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/update08.png)
 
-4. In the prompt select the **OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
+   >**Note :** If the pop-up **Discover an even better Azure AI Studio experience** appears, click **Close** to dismiss it.
 
-      ![](../media/new03.png "Create a new deployment")
-
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+4. Click on **Deployments (1)** under **Shared 
+   Resources**, then select **+ Deploy Model**. Next, choose **Deploy Base Model (2).**
 
       ![](../media/ui1.png "Create a new deployment")
 
-6. Search for **gpt-35-turbo-16k** and click on **Confirm**
+5. Search for **gpt-35-turbo-16k** and click on **Confirm**
 
       ![](../media/new04.png)
 
-7. Within the Deploy model pop-up interface, enter the following details:
+6. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: text-turbo(1)
       - Model version: 0613(Default)(2)
       - Deployment type: Standard(3)
@@ -96,6 +95,10 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - Click on Deploy (6)
   
            ![](../media/i2.png)
+
+           >**Note:** If the options shown in the screenshot is not visible, click on **Customize**.
+
+           ![](../media/imagecustomize.png)
 
            >**Note** : if the **gpt-35-turbo-16k(1)** model isn't available, choose **gpt-35-turbo(2)**
 
@@ -122,11 +125,15 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
       ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
       > **Note**: The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-1. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+      >**Note :** If you don't see the Cloud Shell icon, click on the **ellipsis** button and select **Cloud Shell**.
+
+      ![](../media/open1.png)
+
+1. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
    ![](../media/cloudshell-getting-started.png)
 
-1. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+1. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
@@ -137,7 +144,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject>(3)
     - **Storage Account Name**: storage<inject key="DeploymentID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+    - Click **Create** (6)
 
          ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
@@ -164,7 +171,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
       code .
       ```
  
-      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
+      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 5 and 7** to and make sure you are in the correct project path.
 
       ![](../media/classic-cloudshell-prompt.png) 
    
@@ -603,6 +610,8 @@ In this task, you will provide a history of the conversation in your prompt to e
 
     - **C#**: `dotnet run`
     - **Python**: `python test-openai-model.py`
+
+   >**Note** : If you encounter any spacing issues in line 2, please ensure to correct them properly.
 
 9. Run the app again and provide the prompt `Where is a good hike near Boise?`.
 10. Observe the output, and then prompt `How difficult is the second hike you suggested?`.

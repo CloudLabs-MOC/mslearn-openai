@@ -22,7 +22,7 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
@@ -65,7 +65,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
@@ -76,18 +76,17 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/update08.png)
-   
-4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
 
-      ![](../media/new03.png)
+   >**Note :** If the pop-up **Discover an even better Azure AI Studio experience** appears, click **Close** to dismiss it.
 
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+4. Click on **Deployments (1)** under **Shared 
+   Resources**, then select **+ Deploy Model**. Next, choose **Deploy Base Model (2).**
 
       ![](../media/ui1.png "Create a new deployment")
 
-6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+5. Search for **GPT-35-TURBO-16K**, click on **Confirm**
 
-7. Within the Deploy model pop-up interface, enter the following details:
+6. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: text-turbo(1)
       - Model version: 0613(Default)(2)
       - Deployment type: Standard(3)
@@ -97,13 +96,17 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
            ![](../media/i2.png)
 
+           >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
+
+           ![](../media/imagecustomize.png)
+
            >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
 
- > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
+          > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
-> **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
+          > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
-<validation step="e3805450-2e13-40c4-80fa-58a0cd695e6e" />
+      <validation step="e3805450-2e13-40c4-80fa-58a0cd695e6e" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -117,6 +120,11 @@ In this task, you will examine how prompt engineering improves model responses i
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
 2. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Save** and subsequently click on **Continue**.
+
+    ![](../media/openai1.png)
+
+    >**Note**: If the **Setup** option is not visible, click on **Show set** to display it.
+
 3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
@@ -151,7 +159,10 @@ In this task, you will examine how prompt engineering improves model responses i
     ```
 
 10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
-11. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
+
+11. In the **Setup** section near the system message, select the **+ Add section** button. then click on **Examples** Add the following example.
+
+    ![](../media/example1.png)
 
        **User:**
 
@@ -214,6 +225,10 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
+    >**Note :** If you don't see the Cloud Shell icon, click on the **ellipsis** button and select **Cloud Shell**.
+
+     ![](../media/open1.png)
+
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
    ![](../media/cloudshell-bash.png)
@@ -233,7 +248,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(3)
     - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+    - Click **Create** (6)
 
         ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
    
@@ -338,6 +353,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
         api_version="2024-02-15-preview"
         )
     ```
+   >**Note :** Ensure that the indentation is correct when copying and pasting any Python code. This applies to all Python scripts.
 
 7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
