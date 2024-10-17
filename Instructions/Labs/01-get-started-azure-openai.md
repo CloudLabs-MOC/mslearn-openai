@@ -28,15 +28,13 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
    ![](../media/tel-10.png)
 
 1. Create an **Azure OpenAI** resource with the following settings then click on **Next** thrice and then click on **Create**.
-      - **Subscription**: Default - Pre-assigned subscription. **(1)**
-      - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> **(2)**
-      - **Region**: Select **France Central (3)**
-      - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> **(4)**
-      - **Pricing tier**: Standard S0 **(5)**
+    - **Subscription**: Default - Pre-assigned subscription. **(1)**
+    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> **(2)**
+    - **Region**: Select **France Central (3)**
+    - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> **(4)**
+    - **Pricing tier**: Standard S0 **(5)**
   
-           ![](../media/open-ai9.png "Create Azure OpenAI resource")
-
-
+         ![](../media/open-ai9.png "Create Azure OpenAI resource")
 
 1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -63,11 +61,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/new01.png)
    
-
-
 1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
       ![](../media/ui1.png "Create a new deployment")
+
+      > **Note**: Click on the **Expand** button, if you dont see the left side navigation pane.
+
+      ![](../media/code2.png "Keys and Endpoints")           
 
 1. Search for **GPT-35-TURBO**, click on **Confirm**
 
@@ -84,6 +84,10 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
            ![](../media/i1.png)
 
            >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+           
+           > **Note**: If you see the interface like the below screenshot, Click on **Customize** and provide the details.
+
+           ![](../media/code10.png "Keys and Endpoints")           
 
 1. This will deploy a model which you will be playing around with as you proceed.
 
@@ -151,7 +155,7 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
             ![](../media/exples-ai.jpg)
    
-      > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+            > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 1. Save the changes by clicking on **Save (1)** and subsequently click on **Continue (2)** to start a new session and set the behavioral context of the chat system.
 
@@ -169,9 +173,9 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
 1. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
-   ![](../media/view_code.jpg)
+      ![](../media/view_code.jpg)
 
-   ![](../media/open-ai4.png)       
+      ![](../media/open-ai4.png)       
 
 ### Task 5: Explore prompts and parameters
 
@@ -183,21 +187,24 @@ In this task, you'll explore prompts and parameters by experimenting with differ
     
     - **Max response**: 500 **(3)**
 
-       ![](../media/open-ai5.png)
+        ![](../media/open-ai5.png)
       
 1. Submit the following message in chat session
 
-    ```
+      ```
      Write three multiple choice questions based on the following text.
 
-     Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
+      Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
 
-     - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
+      - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to    
+        classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
 
-     - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
+      - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use 
+        object detection to identify the location of different classes of vehicle.*
 
-     - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
-    ```
+      - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution 
+        might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
+      ```
 
 1. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 

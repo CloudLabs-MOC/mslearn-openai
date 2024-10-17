@@ -50,6 +50,10 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
            ![](../media/ui3.png "Keys and Endpoints")
 
+   > **Note**: If you dont see the Left side Navigation pane, click on the three horizontal line in the top left corner.
+
+   ![](../media/code1.png "Keys and Endpoints")           
+
 <validation step="b2bea034-1f21-46f4-9d53-c1def354425e" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -66,27 +70,29 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
    ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/update08.png)
    
-4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
 
-      ![](../media/new03.png "Create a new deployment")
-
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
       ![](../media/ui1.png "Create a new deployment")
 
-6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+   > **Note**: Click on the **Expand** button, if you dont see the left side navigation pane.
+
+   ![](../media/code2.png "Keys and Endpoints")           
+   
+
+1. Search for **GPT-35-TURBO-16K (1)**, click on **Confirm (2)**
 
       ![](../media/new04.png)
 
-7. Within the Deploy model pop-up interface, enter the following details:
+1. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: 35turbo(1)
       - Model version: 0613(Default)(2)
       - Deployment type: Standard(3)
@@ -95,6 +101,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - Click on Deploy (6)
   
            ![](../media/i3.png)
+
+   > **Note**: If you see the interface like the below screenshot, Click on **Customize** and provide the details.
+
+   ![](../media/code10.png "Keys and Endpoints")           
+        
 
    > **Note**: if the **GPT-35-TURBO-16K** model isn't available, choose **gpt-35-turbo**
 
@@ -115,12 +126,16 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
+
+   ![](../media/code5.png)
    
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
     ```
+   ![](../media/code6.png)
+    
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
 1. Next, send the prompt `Do the same thing, but this time write it in C#`.
 1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
@@ -139,12 +154,14 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
       end
     end
     ```
+    
+1. Observe the output, which explains what the function does in natural language.
 
-8. Observe the output, which explains what the function does in natural language.
+   ![](../media/code7.png)
 
-9. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
+1. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
 
-10. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
+1. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
     
 ### Task 4: Set up an application in Cloud Shell
 
@@ -154,36 +171,40 @@ In this task, you will use a short command-line application running in Cloud She
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+   > **Note**: If you dont see the **[>_]** (*Cloud Shell*) button, click on three dots **(...)(1)** and select **Cloud Shell(2) (2)**
 
-3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
+   ![](../media/code8.png "Keys and Endpoints")          
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+
+1. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
 
    ![](../media/cloudshell-getting-started.png "Create storage advanced settings")
 
-4. Select I want to create a storage account and click on **Next**.
+1. Select I want to create a storage account and click on **Next**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-5. Within the **Create storage account** pane, enter the following details:
+1. Within the **Create storage account** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: East US (2)
     - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(3)
     - **Storage Account Name**: Select storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+    - Click **Create** (6)
 
        ![](../media/lab04-1.png "Create storage advanced settings")
 
-6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/04-code-generation
@@ -191,7 +212,7 @@ In this task, you will use a short command-line application running in Cloud She
 
    > **Note**: Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-9. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
    code .
@@ -284,6 +305,8 @@ In this task, you will complete key parts of the application to enable it to use
         max_tokens=1000
     )
     ```
+   > **Note**: Ensure that the indentation is correct when copying and pasting the Python code.
+ 
 
 6. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
 
@@ -327,7 +350,6 @@ In this task, you will run your configured app to generate code for each use cas
 
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
-
 
 5. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
 

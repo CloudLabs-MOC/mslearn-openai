@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Lab 04: Generate and improve code with Azure OpenAI Service",
+    "Language": "English",
+    "BaseURL": "https://github.com/Prapthi564/mslearn-openai",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/guidedlab/Instructions/Labs/00-GettingStarted-V2.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/Prapthi564/mslearn-openai/guidedlab/Instructions/Labs/04-code-generation.md",
+        "Order": 2
+      }
+    ]
+  }
+]
