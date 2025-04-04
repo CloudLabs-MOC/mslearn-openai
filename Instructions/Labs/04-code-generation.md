@@ -78,23 +78,23 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 1. Click on **Deployments (1)** under **Shared 
    Resources**, then select **+ Deploy Model**. Next, choose **Deploy Base Model (2).**
 
-      ![](../media/ui1.png "Create a new deployment")         
+      ![](../media/T2S5.png "Create a new deployment")         
    
 
-1. Search for **GPT-35-TURBO (1)**, click on **Confirm (2)**
+1. Search for **gpt-4o-mini (1)**, click on **Confirm (2)**
 
-      ![](../media/new04-1.png)
+      ![](../media/T2S6.png)
 
 1. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: **35turbo (1)**
+      - Deployment name: **gpt-4o-mini (1)**
       - Deployment type: **Standard (2)**
       - Click on **Customize**
-      - Model version: **0125(Default) (3)**
-      - Tokens per Minute Rate Limit (thousands): **10K (4)**
+      - Model version: **2024-07-18 (Default) (3)**
+      - Tokens per Minute Rate Limit (thousands): **8K (4)**
       - Enable dynamic quota: **Enabled (5)**
-      - Click on Deploy **(6)**
+      - Click on Deploy to selected resource **(6)**
   
-           ![](../media/i3-1.png)     
+           ![](../media/T2S7.png)     
         
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
