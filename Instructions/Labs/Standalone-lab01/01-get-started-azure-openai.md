@@ -12,7 +12,7 @@ In this lab, you will complete the following tasks:
 - Task 3: Explore a model in the Completions playground
 - Task 4: Use the Chat playground
 - Task 5: Explore prompts and parameters 
-- Task 6: Explore code-generation
+- Task 6: Explore code generation
 
 ## Task 1: Provision an Azure OpenAI resource
 
@@ -29,14 +29,18 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 3. Create an **Azure OpenAI** resource with the following settings and click on **Next (6)** thrice by keeping others default.
     
     - Subscription: **Default - Pre-assigned subscription (1)**
+    
     - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    
     - Region: Select **East US** **(3)**
+    
     - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    
     - Pricing tier: **Standard S0 (5)**
   
       ![](./media/g21.png "Create Azure OpenAI resource")
       
-      >**Note** : **Please deploy Openai resource in EAST US Region**.
+      >**Note:** **Please deploy OpenAI resource in EAST US Region**.
 
 4. Click on **Create**.
 
@@ -64,15 +68,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](./media/update07.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, which will navigate to **Azure AI Foundry**.
 
-    ![](./media/go-to-foundry.png)
+    ![](./media/T2S3.png)
 
-1. In the **Deployments (1)** page, click on **+ Deploy model (2)**, Choose **Deploy base Model (3)**.
+1. In the **Deployments (1)** page, click on **+ Deploy model (2)** and choose **Deploy base Model (3)**.
 
     ![](./media/g3.png "Create a new deployment")
 
-1. Search for **gpt-4o-mini (1)**, select **gpt-4o-mini (2)** click on **Confirm (3)**.
+1. Search for **gpt-4o-mini (1)**, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
 
    ![](./media/g4.png)
    
@@ -82,7 +86,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Within the **Deploy model gpt-4o-mini** pop-up interface, Enter the following details:
 
-      - Deployment type: **Standard(1)**
+      - Deployment type: **Standard (1)**
 
       - Deployment name: **my-gpt-model (2)**
 
@@ -96,21 +100,21 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Click on **Deploy (7)**
   
-      ![](./media/g22.png)
+      ![](./media/T2S7.png)
         
-      >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
+      >**Note:** gpt-4o-mini is supported only for chat completions, and it is not supported for completions API.
         
 1. This will deploy a model which you will be playing around with as you proceed.
 
-    > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
+    > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
    
-    > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4o-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+    > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4o-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-1. Navigate back to the  **Deployments (1)** page, click on **+ Deploy model (2)**, Choose **Deploy base Model (3)**.
+1. Navigate back to the  **Deployments (1)** page, click on **+ Deploy model (2)** and choose **Deploy base Model (3)**.
 
     ![](./media/g3.png "Create a new deployment")    
 
-1. Search for **gpt-35-turbo-instruct (1)**, select **gpt-35-turbo-instruct (2)**, click on **Confirm (3)**.
+1. Search for **gpt-35-turbo-instruct (1)**, select **gpt-35-turbo-instruct (2)** and click on **Confirm (3)**.
 
    ![](./media/g7.png)
 
@@ -120,14 +124,19 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 1. Within the **Deploy model gpt-35-turbo-instruct** pop-up interface, enter the following details:
 
-      - Deployment type: **Standard(1)**
+      - Deployment type: **Standard (1)**
+      
       - Deployment name: **gpt-35-turbo-instruct (2)**
+      
       - Model version: **0914 (Default) (3)**
+      
       - Tokens per Minute Rate Limit (thousands): **20K (4)**
+      
       - Enable dynamic quota: **Enabled (5)**
+      
       - Click on **Deploy** **(6)**
   
-        ![](./media/g23.png)
+        ![](./media/T2S12.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - Hit the Validate button for the corresponding task.
@@ -139,13 +148,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 ## Task 3: Explore a model in the Completions playground
 
-In this task, you'll Explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
+In this task, you'll explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
 1. In Azure OpenAI Foundry, in the left pane under **Playground (1)**, select **Completions (2)**.
 
-      ![](./media/g9.png)  
+      ![](./media/g9.png)
 
-2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected , type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt **(2)** and click on **Generate (3)**.
+2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected, type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt **(2)** and click on **Generate (3)**.
 
       ![](./media/g10.png)
 
@@ -155,11 +164,11 @@ In this task, you'll Explore a model in the Completions playground that involves
 
       ![](./media/nls101.png)
 
-      >**Note** : The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
+      >**Note:** The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
 
-      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
+      >**Note:** You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
-4. At the bottom of the page, note the number of **tokens** detected in the text. Tokens are the basic units of a prompt - essentially words or word parts in the text.
+4. At the bottom of the page, note the number of **tokens** detected in the text. Tokens are the basic units of a prompt - essentially, words or word parts in the text.
 
       ![](./media/g11.png)  
 
@@ -183,7 +192,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       ![](./media/g13.png)
 
-1. Subsequently click on **Continue**.
+1. Subsequently, click on **Continue**.
 
       ![](./media/g14.png)
    
@@ -193,13 +202,13 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. Enter the following message and response in the designated boxes:
 
-      - **User**: `What are different types of artificial intelligence?` **(1)**
+      - **User:** `What are different types of artificial intelligence?` **(1)**
     
-      - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(2)**
+      - **Assistant:** `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(2)**
 
          ![](./media/g16.png)
    
-         > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+         > **Note:** Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 1. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
@@ -209,7 +218,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       ![](./media/NO-7a.png)
    
-      > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
+      > **Note:** You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
 1. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
 
@@ -225,7 +234,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Chat Configuration** pane select **Parameter (1)** , set the following parameter values:
+1. In the **Chat Configuration** pane select **Parameter (1)**, set the following parameter values:
       
       - Max response: **500 (2)**
      
@@ -245,7 +254,6 @@ In this task, you'll explore prompts and parameters by experimenting with differ
       - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
 
       - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
-      
       ```
 
 3. Review the **results**, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
@@ -258,7 +266,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
        
       - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
-### Task 6: Explore code-generation
+### Task 6: Explore code generation
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 

@@ -44,9 +44,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
   
        ![](../media/openai3.png "Create Azure OpenAI resource")
 
-4. Then click **Create**.
+4. Click on **Create**.
 
-5. Once the deployment is complete, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
+5. Once the deployment is completed, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
+
+   > **Note:** If prompted to the **openai-<inject key="DeploymentID" enableCopy="false"></inject>** RG, scroll down & select the **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>** resource from the Resources section.
 
 6. On the **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>** blade to capture the Keys and Endpoint values:
 
@@ -71,23 +73,15 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
+1. From the left navigation pane, click on **Overview (1)** and click on **Go to Azure AI Foundry portal (2)**. 
 
-   ![](../media/openai8.png)
-
-1. On **Azure AI services | Azure OpenAI** blade, select **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>**
-
-   ![](../media/OpenAI_select.png)
-
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry**.
-
-    ![](../media/imagee.png)
+   ![](../media/openai88.png)
 
 1. If prompted, **Discover an even better Azure AI Studio experience**, click **Close**.
 
       ![](../media/pop-upclose.png)
 
-1. Select **Deployments (1)** under Shared resources, click on **+ Deploy model (2)**, Choose **Deploy base model (3)**.
+1. From the left navigation pane, select **Deployments (1)** under Shared resources, click on **+ Deploy model (2)**, Choose **Deploy base model (3)**.
 
     ![](../media/04022025(1).png "Create a new deployment")
 
@@ -97,7 +91,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     >**Note** : If the **GPT-35-Turbo** model isn't available, choose **GPT-35-Turbo-16k** or select **GPT-4o-mini**, and follow the below steps. 
 
-7. Within the **Deploy model** pop-up interface, enter the following details:
+7. Within the **Deploy model** pop-up interface, click on **Customize** and enter the following details:
     
     - **Deployment name (1)**: text-turbo
     
@@ -112,10 +106,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - Click on **Deploy (6)**
   
         ![](../media/it1.png)
-
-      >**Note:** If the options shown in the above screenshot are not visible, click on **Customize**.
-
-         ![](../media/CustomiseModel.png)
 
 8. This will deploy a model that you will be playing around with as you proceed.
 
@@ -168,7 +158,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     
     - Click on **Create (6)**
 
-       ![](../media/openai2.png "Create storage advanced settings")
+       ![](../media/task3step5.png "Create storage advanced settings")
 
 1. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
@@ -259,7 +249,7 @@ In this task, you will complete key parts of the application to enable it to use
 
      ![](../media/it3.png)    
      
-1. Navigate to the folder for your preferred language and install the necessary packages.
+1. Navigate to the folder for your preferred language and install the necessary packages using below commands in Azure Cloud Shell.
 
      **C#**:
 
@@ -439,7 +429,7 @@ In this task, you will run your configured app to send a request to your model a
 
         > **Note:** The above image shows the example for the Python.  
 
-1. When prompted, enter the text `What hike should I do near Rainier?`.
+1. When prompted, enter the text `What hike should I do near Rainier?` and click on `Enter`.
 
     - **C#**:
 

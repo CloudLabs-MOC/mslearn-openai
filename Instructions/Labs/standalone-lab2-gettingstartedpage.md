@@ -1,6 +1,6 @@
-# Integrate Azure OpenAI into your App
+# Lunch and Learn: Integrate Azure OpenAI into your App
 
-## Overall Estimated Duration: 60 minutes
+### Overall Estimated Duration: 60 minutes
 
 ## Overview
 
@@ -20,7 +20,7 @@ Understand how to deploy OpenAI models in Azure, configure them, and secure them
 
 - **Develop Practical AI-Powered Applications**: Acquire hands-on experience in building AI-powered applications, applying Azure OpenAI capabilities effectively in real-world scenarios.
 
-## Pre-Requisites
+## Prerequisites
 
 You should have basic knowledge and understanding of the following:
 
@@ -37,6 +37,8 @@ This architecture allows users to leverage advanced AI capabilities by starting 
 ![](../media/28-08-2024.png "Architecture Diagram")
 
 ## Explanation of Components
+
+The architecture for this lab involves the following key components:
 
 - **Resource Group**: A Resource Group is a container in Azure used to manage and organize related Azure resources. It facilitates access control, monitoring, and billing by grouping resources together and streamlining their management.
 

@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/4600faca-194b-4177-b904-63c51afe40d8)# Lab 06:  Add your data for RAG with Azure OpenAI Service
+## Lab 06:  Add your data for RAG with Azure OpenAI Service
 
 ## Lab scenario
 The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics, or blend it with results from the pre-trained model.
