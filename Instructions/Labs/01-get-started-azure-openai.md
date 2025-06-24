@@ -23,9 +23,9 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/tel-11.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **Azure OpenAI (1)** from left pane and click on **Create (2)**.
+1. On **AI Foundry | Azure OpenAI** blade, select **Azure OpenAI (1)** from left pane and click on **Create (2)**.
 
-   ![](../media/tel-10.png)
+   ![](../media/m1.task1.1.png)
 
 1. Create an **Azure OpenAI** resource with the following settings then click on **Next** thrice and then click on **Create**.
     - **Subscription**: Default - Pre-assigned subscription. **(1)**
@@ -49,12 +49,13 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-   <validation step="917cb723-2d65-4411-90f9-0150a7636494" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="917cb723-2d65-4411-90f9-0150a7636494" />
 
 ### Task 2: Deploy a model
 
@@ -64,9 +65,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/tel-11.png)
 
-2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**.
+2. On the **AI Foundry** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**.
 
-      ![](../media/update07.png)
+      ![](../media/m1.task2.1.png)
 
 3. In **Overview (1)** section, click on **Go to Azure AI Foundry portal (2)**, it will navigate to **Azure AI Foundry portal**.
 
@@ -90,7 +91,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Enable dynamic quota**: Enabled (6)
       - Click on **Deploy** (7)
   
-           ![](../media/gpt-4omini.png)
+           ![](../media/m1.task2.2.png)
 
            >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
 
@@ -108,21 +109,22 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - Click on **Customize**.
       - **Model version**: 0914 (Default) (3)
       - **Tokens per Minute Rate Limit (thousands)**: 20K (4)
-      - **Enable dynamic quota**: Enabled (5)
-      - Click on **Deploy** (6)
+      - **Content Filter**: DefaultV2 (5)
+      - **Enable dynamic quota**: Enabled (6)
+      - Click on **Deploy** (7)
   
-      ![](../media/image1b.png)
+      ![](../media/m1.task2.3.png)
 
 10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
       > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
 
-   <validation step="0afa9e73-8b9e-4edf-b61b-fa953a5d5b23" />
-   
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="0afa9e73-8b9e-4edf-b61b-fa953a5d5b23" />
 
 ### Task 3: Explore a model in the Completions playground
 

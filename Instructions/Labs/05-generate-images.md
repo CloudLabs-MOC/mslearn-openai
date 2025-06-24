@@ -26,21 +26,21 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
       ![](../media/tel-11.png)
 
-2. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
+2. On the **AI Foundry** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
 
-      ![](../media/tel-10.png)
+      ![](../media/m1.task1.1.png)
 
-3. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
+3. Create an **Azure OpenAI** resource with the following settings click on **Next (6)** twice and subsequently click on **Create**:
    
-      - **Subscription**: Default - Pre-assigned subscription.
-      - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **Region**: Select <inject key="Region" enableCopy="false" />
-      - **Name**: OpenAI-Lab05-<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **Pricing tier**: Standard S0
+      - **Subscription**: Default - Pre-assigned subscription. **(1)**
+      - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> **(2)**
+      - **Region**: Select Australia East **(3)**
+      - **Name**: OpenAI-Lab05-<inject key="Deployment-ID" enableCopy="false"></inject> **(4)**
+      - **Pricing tier**: Standard S0 **(5)**
 
            ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
-           >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
+           >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Australia East** regions.
 
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -52,13 +52,12 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
            ![](../media/ui3.png "Keys and Endpoints")
 
-<validation step="d1fdf614-83d8-4c1a-b9c7-c9adf003d03f" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+<validation step="d1fdf614-83d8-4c1a-b9c7-c9adf003d03f" />
 
 ### Task 2: Explore image generation in the DALL-E playground
 
@@ -68,9 +67,9 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
       ![](../media/tel-11.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab05-<inject key="Deployment-ID" enableCopy="false"></inject>**
+1. On **AI Foundry | Azure OpenAI** blade, select **OpenAI-Lab05-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-      ![](../media/update07.png)
+      ![](../media/m1.task2.1.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
 
@@ -84,19 +83,21 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
    ![](../media/dalle31.png)
 
-1. In Deploy model dall-e-3 Provide the following details and click on **Deploy**.
+1. In Deploy model dall-e-3 Provide the following details and click on **Deploy (3)**.
 
-   - **Deployment name**: Dalle3
-   - **Deployment Type**: Standard
+   - **Deployment name**: Dalle3 **(1)**
+   - **Deployment Type**: Standard **(2)**
    - leave the other details default
-              
+
+     ![](../media/m5.task1.1.png)  
+             
 1. Now ,From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Prompt (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image.
    
-      ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/image_gen.jpg)
+      ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/m5.task1.2.png)
 
 1. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
 
-      ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/new_1.jpg)
+      ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/m1.task1.4.png)
 
 ### Task 3: Use the REST API to generate images
 
@@ -208,12 +209,12 @@ In this task, you will explore the code used to call the REST API and generate a
     - The response header from the initial request includes an **operation-location** value that is used for the subsequent callback to get the results.
     - The code polls the callback URL until the status of the image-generation task is *succeeded*, and then extracts and displays a URL for the generated image.
 
-<validation step="46dc5a95-0801-4085-b021-c775e7b1b06b" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="46dc5a95-0801-4085-b021-c775e7b1b06b" />
 
 ### Task 4: Run the app
 
@@ -272,9 +273,11 @@ In this task, you will run the reviewed code to generate some images.
 3. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
    ![](../media/link.jpg "Keys and Endpoints")
+
+   ![](../media/m5.task1.3.png "Keys and Endpoints") 
    
 4. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
-
+ 
 ## Summary
 
 In this lab, you have accomplished the following:

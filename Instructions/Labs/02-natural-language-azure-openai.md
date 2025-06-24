@@ -52,12 +52,12 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
            ![](../media/ui3.png "Keys and Endpoints")
 
-<validation step="b6d08e8e-f2a3-4066-a698-2a324f4493dd" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="b6d08e8e-f2a3-4066-a698-2a324f4493dd" />
 
 ### Task 2: Deploy a model
 
@@ -96,7 +96,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
   
-           ![](../media/i2-2.png)
+           ![](../media/m2.task1.1.png)
 
 
 7. This will deploy a model that you will be playing around with as you proceed.
@@ -105,13 +105,12 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
-<validation step="69a18560-a442-467a-be09-b5663806dd0a" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+<validation step="69a18560-a442-467a-be09-b5663806dd0a" />
 
 ### Task 3: Set up an application in Cloud Shell
 
@@ -255,7 +254,10 @@ In this task, you will complete key parts of the application to enable it to use
 
      >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
 
-7. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
+7. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**. 
+
+     ![](../media/appsettings.png)
+
 
 8. Navigate to the folder for your preferred language and install the necessary packages
 

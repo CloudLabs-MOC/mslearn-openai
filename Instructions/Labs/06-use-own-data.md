@@ -25,18 +25,17 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/tel-11.png)
 
-2. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
+2. On the **AI Foundry** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
 
-   ![](../media/tel-10.png)
+   ![](../media/m1.task1.1.png)
 
-
-3. Create an **Azure OpenAI** resource with the following settings click on **Next** three times and subsequently click on **Create**:
+3. Create an **Azure OpenAI** resource with the following settings click on **Next (6)** three times and subsequently click on **Create**:
    
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Region**: Select **France Central**.
-    - **Name**: OpenAI-Lab06-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
+    - **Subscription**: Default - Pre-assigned subscription. **(1)**
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> **(2)**
+    - **Region**: Select **East US**. **(3)**
+    - **Name**: OpenAI-Lab06-<inject key="Deployment-ID" enableCopy="false"></inject> **(4)**
+    - **Pricing tier**: Standard S0 **(5)**
 
       ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
@@ -50,13 +49,12 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
         ![](../media/ui3.png "Keys and Endpoints")
 
-<validation step="cafb7718-6bf1-4fe9-88b8-d1ed6d7c4c58" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+<validation step="cafb7718-6bf1-4fe9-88b8-d1ed6d7c4c58" />
 
 ### Task 2: Deploy a model
 
@@ -66,9 +64,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="Deployment-ID	" enableCopy="false"></inject>**
+2. On **AI Foundry | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="Deployment-ID	" enableCopy="false"></inject>**
 
-   ![](../media/update07.png)
+   ![](../media/m1.task2.1.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
 
@@ -85,39 +83,39 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       ![](../media/T2S6.png)
    
 7. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: text-turbo(1)
-      - Deployment type: Standard(2)
+      - Deployment name: text-turbo **(1)**
+      - Deployment type: Standard **(2)**
       - Click on Customize
-      - Model version: 2024-07-18 (Default)(3)
-      - Tokens per Minute Rate Limit (thousands): 8K (4)
-      - Enable dynamic quota: Enabled (5)
-      - Click on Deploy (6)
+      - Model version: 2024-07-18 (Default)**(3)**
+      - Tokens per Minute Rate Limit (thousands): 8K **(4)**
+      - Enable dynamic quota: Enabled **(5)**
+      - Click on Deploy to selected resources **(6)**
   
-           ![](../media/T2S7.png)
+           ![](../media/m6.task1.1.png)
 
      
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
 7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
-<validation step="863492e4-6930-40bf-ab9f-e1ffb7e21a95" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+<validation step="863492e4-6930-40bf-ab9f-e1ffb7e21a95" />
+
 ### Task 3: Observe normal chat behavior without adding your own data
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
-1. In the **Playground** section, select the **Chat** page. The **Chat** playground page consists of three main sections:
+1. In the **Playground** section, select the **Chat (1)** page. The **Chat** playground page consists of three main sections:
      - **Setup** - used to configure settings for the model deployment.
      - **Give the model instructions and context** - used to set the context for the model's responses.
     - **Chat session** - used to submit chat messages and view responses.
 
-2. In the **Setup** section, ensure that your model deployment `text-turbo` is selected.
-3. In the **Give the model instructions and context** area, select the default system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information*.
+2. In the **Setup** section, ensure that your model deployment `text-turbo` **(2)** is selected.
+3. In the **Give the model instructions and context** area, select the default system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information* **(3)**.
 4. In the **Chat session**, submit the following queries, and review the responses:
 
     ```
@@ -127,9 +125,9 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
     ```
     What are some facts about New York?
     ```
+    ![](../media/m5.task1.4.png)
 
     Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
-
 
 ### Task 4: Connect your data in the chat playground
 
@@ -147,19 +145,19 @@ In this task, you will observe how the base model responds to queries without an
 
 4. Create a **Storage Account** resource with the following settings:
 
-    - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Primary service**: Azure Blob Storage or Azure Lake Storage Gen 2
-    - **Redundancy**: Locally-redundant storage (LRS)
-    - Click **Next**.
+    - **Subscription**: Default - Pre-assigned subscription 
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> **(1)**
+    - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject> **(2)**
+    - **Region**: Select <inject key="Region" enableCopy="false" /> **(3)**
+    - **Primary service**: Azure Blob Storage or Azure Lake Storage Gen 2 **(4)**
+    - **Redundancy**: Locally-redundant storage (LRS) **(5)**
+    - Click **Next (6)**.
   
-      ![](../media/create-storage-account.png "Create storage account")
+      ![](../media/m5.task1.5.png "Create storage account")
 
-    - **Allow enable anonymous access on individual containers**: check in the box to enable under **Advanced** section. Click on **Review + Create**  and subsequently click on **Create**
+    - **Allow enable anonymous access on individual containers (1)**: check in the box to enable under **Advanced** section. Click on **Review + Create (2)**  and subsequently click on **Create**
 
-      ![](../media/image4.5.png "allow blob access")
+      ![](../media/m5.task1.6.png "allow blob access")
 
 5. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
@@ -167,34 +165,34 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/3.png "upload files")
 
-7. On **Storage Account | Container** blade, select **Containers** from Data Storage and click on **+ Container**.
+7. On **Storage Account | Container** blade, select **Containers (1)** from Data Storage and click on **+ Add container (2)**.
 
-     ![](../media/create-container.png "upload files")
+     ![](../media/m6.task1.3.png "upload files")
 
-8. Create a container with the name **openaidatasource** and enable Anonymous access level for container.
+8. Create a container with the name **openaidatasource (1)** and enable Anonymous access level for container **(2)** and click on **Create (3)**
 
-      ![](../media/image4.6.png "create container")
+      ![](../media/m6.storage.png "create container")
 
 9. Click on the container you just created and 
  upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
 
       ![](../media/image4.7.png "upload files")
 
-10. In the **Azure portal**, search for **Azure AI search** and select **Azure AI search**.
+10. In the **Azure portal**, search for **Azure AI search (1)** and select **Azure AI search (2)**.
 
-11.  On **Azure AI services | AI search** blade, click on **+ Create**.
+    ![](../media/m6.final.png "upload files")
 
-     ![](../media/5.png "upload files")
+11.  On **AI Foundry | AI search** blade, click on **+ Create**.
 
-12. Create an **AI Search** resource with the following settings and click on **Review + Create** and subsequenly click on **Create**
+12. Create an **AI Search** resource with the following settings and click on **Review + Create (5)** and subsequenly click on **Create**
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Service name**: cognitive-search-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Location**:Select <inject key="Region" enableCopy="false" />
-    - **Pricing tier**: Basic
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> **(1)**
+    - **Service name**: cognitive-search-<inject key="Deployment-ID" enableCopy="false"></inject> **(2)**
+    - **Location**:Select <inject key="Region" enableCopy="false" /> **(3)**
+    - **Pricing tier**: Basic **(4)**
 
-      ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
+      ![](../media/m6.task1.5.png "upload files")
 
 13. Wait until your search resource has been deployed.
 
@@ -210,16 +208,17 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/chat_playground.png)
    
-17. In the **Add data**, enter the following values for your data source and then click on **Next**.
+17. In the **Add data**, enter the following values for your data source and then click on **Next (8)**.
 
-    - **Select data source**: Azure Blob Storage(preview)
-    - **Select Azure Blob storage resouce**: *Choose the storage resource you created*
-    - **Select storage container**: *Choose the storage container you created*
-    - **Select Azure AI Search resource**: *Choose the search resource you created*
-    - **Enter the index name**: margiestravel
-    - **Indexer schedule**: Once
+    - **Select data source**: Azure Blob Storage(preview) **(1)**
+    - **Subscription**:  Select the default subscription **(2)**
+    - **Select Azure Blob storage resouce**: *Choose the storage resource you created* **(3)**
+    - **Select storage container**: *Choose the storage container you created* **(4)**
+    - **Select Azure AI Search resource**: *Choose the search resource you created* **(5)**
+    - **Enter the index name**: margiestravel **(6)**
+    - **Indexer schedule**: Once **(7)**
    
-       ![](../media/image4.8.png "Add data configurations")
+       ![](../media/m6.task1.6.png "Add data configurations")
 
 18. Click on next to proceed with **Data Management**
    
@@ -227,20 +226,20 @@ In this task, you will observe how the base model responds to queries without an
 
       ![](../media/datamanagement.png "Add data")
 
-20. On the **Data connection** page select the **API key** , Click on the **Next**
+20. On the **Data connection** page select the **API key (1)** , Click on the **Next (2)**
 
-       ![](../media/API_key.jpg "Add data")
+       ![](../media/m5.task1.7.png "Add data")
    
 22. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **setup** pane.
 
        ![](../media/review.jpg "Add data")
 
-<validation step="cf9a74ba-2501-47a6-a819-b42218c0a9da" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="cf9a74ba-2501-47a6-a819-b42218c0a9da" />
 
 ### Task 5: Chat with a model grounded in your data
 
@@ -268,11 +267,11 @@ In this task, you will use a short command-line application running in Cloud She
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+3. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
       ![](../media/cloudshell-getting-started.png)
 
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+4. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
       ![](../media/cloudshell-mount-strg-account.png)
 
