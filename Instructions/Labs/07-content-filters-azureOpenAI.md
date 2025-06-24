@@ -27,13 +27,13 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/m1.task1.1.png)
 
-3. Create an **Azure OpenAI** resource with the following settings and click **Next** twice and click on **Create**
+3. Create an **Azure OpenAI** resource with the following settings and click **Next (6)** twice and click on **Create**
    
-      - **Subscription**: Default - Pre-assigned subscription
-      - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **Region**: Select <inject key="Region" enableCopy="false" />
-      - **Name**: OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **Pricing tier**: Standard S0
+      - **Subscription**: Default - Pre-assigned subscription **(1)**
+      - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> **(2)**
+      - **Region**: Select <inject key="Region" enableCopy="false" /> **(3)**
+      - **Name**: OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject> **(4)**
+      - **Pricing tier**: Standard S0 **(5)**
 
            ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
