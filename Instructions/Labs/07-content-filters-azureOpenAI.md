@@ -23,29 +23,28 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI (1)** blade, click on **Create (2)**.
+2. On **AI Foundry | Azure OpenAI (1)** blade, click on **Create (2)**.
 
-   ![](../media/tel-10.png)
+   ![](../media/m1.task1.1.png)
 
-3. Create an **Azure OpenAI** resource with the following settings and click **Next** twice and click on **Create**
+3. Create an **Azure OpenAI** resource with the following settings and click **Next (6)** twice and click on **Create**
    
-      - **Subscription**: Default - Pre-assigned subscription
-      - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **Region**: Select <inject key="Region" enableCopy="false" />
-      - **Name**: OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **Pricing tier**: Standard S0
+      - **Subscription**: Default - Pre-assigned subscription **(1)**
+      - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> **(2)**
+      - **Region**: Select <inject key="Region" enableCopy="false" /> **(3)**
+      - **Name**: OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject> **(4)**
+      - **Pricing tier**: Standard S0 **(5)**
 
            ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-
-<validation step="50622248-632f-4437-97cf-9c3f82092308" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+<validation step="50622248-632f-4437-97cf-9c3f82092308" />
 
 ### Task 2: Deploy a model
 
@@ -55,9 +54,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI (1)** blade, select **OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**
+2. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**
 
-   ![](../media/update07.png)
+   ![](../media/m1.task2.1.png)
 
 3. In the Azure OpenAI resource pane, select 
    **Overview (1)** from the left-hand menu, then click on **Go to Azure AI Foundry portal (2)**. This will navigate you to **Azure AI Foundry portal**.
@@ -71,19 +70,19 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/ui1.png "Create a new deployment")
 
-6. Search for **GPT-35-TURBO**, click on **Confirm**
+6. Search for **GPT-35-TURBO (1)**, click on **Confirm (2)**
    
      ![](../media/new04-1.png)
 
 7. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: 35turbo(1)
-      - Deployment type: Standard(2)
-      - Model version: 0125(Default)(3)      
-      - Tokens per Minute Rate Limit (thousands): 10K (4)
-      - Enable dynamic quota: Enabled (5)
-      - Click on Deploy (6)
+      - Deployment name: **35turbo(1)**
+      - Deployment type: **Standard(2)**
+      - Model version: **0125(Default)(3)**     
+      - Tokens per Minute Rate Limit (thousands): **10K (4)**
+      - Enable dynamic quota: **Enabled (5)**
+      - Click on **Deploy (6)**
   
-           ![](../media/i3-1.png)
+           ![](../media/m4.task1.1.png)
 
            >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
 
@@ -91,13 +90,12 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for natural language generation and chat scenarios.
 
-<validation step="a75cfc42-9bee-4829-858b-0612e685f83f" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+<validation step="a75cfc42-9bee-4829-858b-0612e685f83f" />
 
 ### Task 3: Generate natural language output
 
@@ -112,6 +110,8 @@ In this task, you will observe how the model behaves in a conversational interac
     ```
 
 3. The model will likely respond with some text describing some cultural attributes of Scottish people. While the description may not be applicable to every person from Scotland, it should be fairly general and inoffensive.
+
+   ![](../media/m7.task1.1.png)
 
 4. In the **Setup** section, change the **Give the model instructions and context** to the following text then click on **Apply changes** and subsequently click on **Continue** to save the message.
 
@@ -128,13 +128,17 @@ In this task, you will observe how the model behaves in a conversational interac
 
 7. Observe the output, which should hopefully indicate that the request to be racist and derogative is not supported. This prevention of offensive output is the result of the default content filters in Azure OpenAI.
 
+   ![](../media/m7.task1.2.png)
+
 ### Task 4: Explore content filters
 
 In this task, you will apply content filters to prompts and completions to prevent the generation of potentially harmful or offensive language.
 
-1. In Azure AI Foundry portal, view the **Content filters**  in **Safety + security** option under **Shared resources** from the left navigation menu.
+1. In Azure AI Foundry portal, click on the **Guardrails + Controls (1)** page from the left navigation menu.
 
-2. Select **+ Create content filter** and review the default settings for a content filter.
+2. Select **Content filters (2)**, under that click on **+ Create content filter (3)** and review the default settings for a content filter. 
+
+   ![](../media/m7.task1.3.png)
 
     Content filters are based on restrictions for four categories of potentially harmful content:
 

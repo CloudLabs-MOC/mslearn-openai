@@ -23,9 +23,9 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/tel-11.png)
 
-2. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
+2. On the **AI Foundry** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
 
-   ![](../media/tel-10.png)
+   ![](../media/m1.task1.1.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -50,13 +50,12 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
            ![](../media/ui3.png "Keys and Endpoints")        
 
-<validation step="b2bea034-1f21-46f4-9d53-c1def354425e" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+<validation step="b2bea034-1f21-46f4-9d53-c1def354425e" />
 
 ### Task 2: Deploy a model
 
@@ -66,9 +65,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/tel-11.png)
 
-1.  On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then select **OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject>**
+1.  On the **AI Foundry** page, select **Azure OpenAI (1)** from the left pane, then select **OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-    ![](../media/update07.png)
+    ![](../media/m1.task2.1.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
 
@@ -94,7 +93,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - Enable dynamic quota: **Enabled (5)**
       - Click on Deploy **(6)**
   
-           ![](../media/i3-1.png)     
+           ![](../media/m4.task1.1.png)     
         
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
@@ -222,7 +221,7 @@ In this task, you will complete key parts of the application to enable it to use
     - **C#**: `appsettings.json`
     - **Python**: `.env`
 
-3. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+3. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file.
 
     ```
     <Project Sdk="Microsoft.NET.Sdk">
@@ -313,35 +312,32 @@ In this task, you will complete key parts of the application to enable it to use
 
    ```csharp
      // Format and send the request to the model
-       var chatCompletionsOptions = new ChatCompletionsOptions()
-       {
-           Messages =
-           {
-               new ChatRequestSystemMessage(systemPrompt),
-               new ChatRequestUserMessage(userPrompt)
-           },
-           Temperature = 0.7f,
-           MaxTokens = 1000,
-           DeploymentName = oaiDeploymentName
-       };
-   
-       // Get response from Azure OpenAI
-       Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-   
-       ChatCompletions completions = response.Value;
-       string completion = completions.Choices[0].Message.Content;
+        
+    var chatCompletionsOptions = new ChatCompletionOptions()
+    {
+     Temperature = 0.7f,
+     MaxOutputTokenCount = 800
+    };
+
+    // Get response from Azure OpenAI
+    ChatCompletion response = await chatClient.CompleteChatAsync(
+     [
+         new SystemChatMessage(systemPrompt),
+         new UserChatMessage(userPrompt),
+     ],
+     chatCompletionsOptions);
     ```
 
     **Python**
      `code-generation.py`
 
       ```python
-    # Format and send the request to the model
+     # Format and send the request to the model
     messages =[
         {"role": "system", "content": system_message},
         {"role": "user", "content": user_message},
     ]
-    
+
     # Call the Azure OpenAI model
     response = client.chat.completions.create(
         model=model,
