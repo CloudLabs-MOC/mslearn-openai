@@ -19,15 +19,15 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Provision an Azure OpenAI resource
 
-In this task, you will provision an Azure OpenAI resource within your Azure subscription. This step is essential to access OpenAI models and retrieve the endpoint and API key required to authenticate your application.
+In this task, you will review the provisioned Azure OpenAI resource within your Azure subscription. This step is essential to access OpenAI models and retrieve the endpoint and API key required to authenticate your application.
 
-1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)** from Services section.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from Services section.
 
    ![](../media/select-openai-1607.png)
 
 1. On the **AI Foundry | Azure OpenAI** page, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/180625(12).png)
+   ![](../media/L2T1S2.png)
 
 1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -35,7 +35,7 @@ In this task, you will provision an Azure OpenAI resource within your Azure subs
       - Copy **Key 1 (3)**, and save it securely in a text editor (e.g., Notepad) for use in later steps.
       - Next, copy the **Endpoint (4)** by clicking the copy icon, and save it in the same location.
 
-        ![](../media/180625(13).png "Keys and Endpoints")
+        ![](../media/L2T1S3.png "Keys and Endpoints")
 
 ## Task 2: Set up an application in Cloud Shell
 
@@ -43,7 +43,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/L2T2S1.png)
 
     >**Note:** If you can't find Cloud Shell, click on the **ellipsis (...) (1)** and then select **Cloud Shell (2)** from the menu.
 
@@ -76,7 +76,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
 7. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-    ![](../media/nlpe19.png)
+    ![](../media/L2T2S7.png)
 
 8. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -173,7 +173,6 @@ In this task, you will configure the application to connect with the Azure OpenA
     ```bash
     cd Python
     python -m venv labenv
-   ./labenv/bin/Activate.ps1
     pip install python-dotenv openai==1.65.2 --user
     ```
 

@@ -11,10 +11,9 @@ In this lab, you will complete the following tasks:
 
 - Task 1: Provision an Azure OpenAI resource
 - Task 2: Deploy a model
-- Task 3: Explore a model in the Completions playground
-- Task 4: Use the Chat playground
-- Task 5: Explore prompts and parameters 
-- Task 6: Explore code generation
+- Task 3: Use the Chat playground
+- Task 4: Explore prompts and parameters 
+- Task 5: Explore code generation
 
 ## Task 1: Provision an Azure OpenAI resource
 
@@ -24,15 +23,15 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/select-openai-1607.png)
 
-2. On **AI Foundry | Azure OpenAI** blade, click on **+ Create**.
+2. On **AI Foundry | Azure OpenAI**, click on **Azure OpenAI (1)** blade, and then click on **+ Create (2)** and choose **Azure OpenAI (3)**.
 
-   ![](../media/180625(01).png)
+   ![](../media/L1T1S2.png)
 
 3. Fill in the required details on the **Create Azure OpenAI** page:
    
     - Subscription: Default - Pre-assigned subscription **(1)**
     - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
-    - Region: Select **Sweden Central (3)**
+    - Region: Select **<inject key="Region" enableCopy="false" /> (3)**
     - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - Pricing tier: **Standard S0 (5)**
   
@@ -71,57 +70,27 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/deploy-model-1607.png)
 
-1. On the **Select a model** page, search for **gpt-4o-mini (1)**, then select **gpt-4o-mini (2)**, and then click on **Confirm (3)**
+1. In the **Select a model** window, search for **gpt-4.1-mini (1)**, then select the **gpt-4.1-mini (Chat completion) (2)** model from the list. Click **Confirm (3)** to proceed with the deployment.
 
-   ![](../media/select-gpt-model-1607.png)
+   ![](../media/L1T2S4.png)
 
 1. Click on **Customize**.
    
-   ![](../media/get-started-openai-lab1-6.png)   
+   ![](../media/L1T2S5.png)   
 
 1. Within the **Deploy model** pop-up interface, enter the following details:
 
       - Deployment name: **my-gpt-model (1)**
-      - Deployment type: **Standard (2)**
-      - Model version: **2024-07-18 (Default) (3)**
-      - Tokens per Minute Rate Limit (thousands): **8K (4)**
+      - Deployment type: **Global Standard (2)**
+      - Model version: **2025-04-14 (Default) (3)**
+      - Tokens per Minute Rate Limit (thousands): **10K (4)**
       - Content filter: **DefaultV2 (5)**
-      - Enable dynamic quota: **Enabled (6)**
-      - Click on **Deploy** **(7)**
+      - Click on **Deploy** **(6)**
   
-           ![](../media/get-started-openai-lab1-2.png)
+           ![](../media/L1T2S6.png)
 
-           >**Note**: gpt-4o-mini is supported only for chat completions, and it is not supported for completions API.
-
-1. Click the **back arrow** to return to the previous screen, then in the left pane under **Shared Resources**, select **Deployments (1)**. Next, click **+ Deploy Model (2)** and choose **Deploy base model (3)**.
-
-      ![](../media/back-to-deployments-1607.png)
-
-      ![](../media/deploy-model-1607.png)
-
-1. On the **Select a model** page, search for **gpt-35-turbo-instruct (1)**, then select **gpt-35-turbo-instruct (2)**, and then click on **Confirm (3)**.
-
-   ![](../media/select-turbo-model-1607.png)
-
-1. Click on **Customize**.
-
-   ![](../media/get-started-openai-lab1-7.png)
-   
-1. Within the **Deploy model** pop-up interface, enter the following details:
-      - Deployment name: **gpt-35-turbo-instruct (1)**
-      - Deployment type: **Standard (2)**
-      - Model version: **0914 (Default) (3)**
-      - Tokens per Minute Rate Limit (thousands): **20K (4)**
-      - Content filter: **DefaultV2 (5)**      
-      - Enable dynamic quota: **Enabled (6)**
-      - Click on **Deploy** **(7)**
-  
-        ![](../media/get-started-openai-lab1-3.png)
-
-1. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
-
-      > **Note**: You can ignore any error related to the assignment of roles to view the quota limits. 
-   
+1. With the deployed model, now you can experiment with the chat completion tasks as you go along.
+ 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -129,56 +98,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    <validation step="3b4a472e-f956-45d8-b828-3e2cc01c2e88" />
 
-## Task 3: Explore a model in the Completions playground
-
-In this task, you'll explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
-
-1. In the Azure OpenAI Foundry portal, navigate to the left pane and select **Playgrounds (1) -> Completions (2)**.
-
-   ![](../media/select-completions-1607.png)
-
-2. On the **Completions** page:
-
-   * Ensure that **gpt-35-turbo-instruct (1)** is selected under **Deployments**.
-   * In the **Prompt (2)** text box, enter the following prompt:
-
-     ```
-     Generate a quiz of 5 questions. For each question, provide me with the answer options and the correct answer.
-     ```
-
-   * Click **Generate (3)** to submit the prompt and receive the response.
-
-     ![](../media/170725\(02\).png)
-
-      >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
-
-3. The response consists of a quiz based on the example in the prompt.
-
-    ![](../media/nls101.png)
-
-   >**Note:** The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
-
-   >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
-
-4. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially, words or word parts in the text.
-
-5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
-
-      ![](../media/NO-3a.png)
-
-      ![](../media/L1T3S5.2-1407.png)
-    
-6. Close the **Sample Code** window once you’ve reviewed the content.
-
-## Task 4: Use the Chat playground
+## Task 3: Use the Chat playground
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
 1. Navigate to the **Shared resources** section in the left-hand menu and select **Deployments (1)**. From the list of available deployments, choose **my-gpt-model**, then click on **Open in playground (2)**. This action will launch the **Chat Playground**, where you can interact with the deployed model in a conversational interface.
 
-   ![](../media/170725(03).png)
+   ![](../media/L1T3S1.png)
 
-   ![](../media/170725(04).png)
+   ![](../media/L1T3S1i.png)
 
 2. In the **Setup** pane:
 
@@ -189,13 +117,13 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
      ```
    * Click **Apply changes (2)** and confirm by selecting **Continue** on the prompt.
 
-      ![](../media/L1T4S2-1607.png)
+      ![](../media/L1T3S2.png)
 
-      ![](../media/L1T4S3-1407.png)
+      ![](../media/L1T3S2i.png)
    
 1. In the **Setup (1)** section, click on **+ Add section (2)** box, then click on **Examples (3)**.
 
-      ![](../media/170725(05).png)
+      ![](../media/L1T3S3.png)
 
 1. Enter the following message and response in the designated boxes:
 
@@ -217,7 +145,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       ![](../media/L1T4S5.1-1607.png)
 
-      ![](../media/L1T4S3-1407.png)
+      ![](../media/L1T3S2i.png)
    
 1. In the query box at the bottom of the page, enter the below-mentioned text **(1)**. Use the **Send (2)** button to submit the message and view the response.
 
@@ -231,7 +159,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. Review the response.
 
-   ![](../media/L1T4S7-1407.png)
+   ![](../media/L1T3S7.png)
 
 1. After reviewing the response, submit the following follow-up message:
 
@@ -241,7 +169,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-     ![](../media/170725(06).png)
+     ![](../media/L1T3S8.png)
 
 1. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
@@ -249,7 +177,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       ![](../media/170725(07).png)
 
-## Task 5: Explore prompts and parameters
+## Task 4: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
@@ -286,7 +214,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
        
       - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
-## Task 6: Explore code generation
+## Task 5: Explore code generation
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
@@ -298,15 +226,15 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
    * Click **Apply changes (2)** and then **Continue** when prompted.
 
-     ![](../media/L1T6S1-1607.png)
+     ![](../media/L1T5S1.png)
 
-     ![](../media/L1T4S3-1407.png)
+     ![](../media/L1T3S2i.png)
 
 2. In the **Chat session** pane, select the **Clear chat** button, then select **Clear** from the pop-up window to clear the chat history and start a new session.
 
       ![](../media/clear-history-1607.png)
 
-      ![](../media/L1T6S2.2-1407.png)
+      ![](../media/L1T5S2i.png)
 
 4. Enter the following prompt:
 
@@ -316,14 +244,14 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 5. Review the generated Python code snippet. The model should return a valid function definition that multiplies two inputs and returns the result.
 
-     ![](../media/task-6-lasta.png)
+     ![](../media/L1T5S4.png)
 
 ## Summary
 
 In this lab,
 - You provisioned an **Azure OpenAI resource** to integrate generative AI capabilities into your applications.
-- You **deployed two models** (gpt-4o-mini for chat and gpt-35-turbo-instruct for completions) using the Azure AI Foundry portal.
-- You explored the models in the **Completions and Chat playgrounds**, experimented with prompts and parameters, and tested the model’s **code generation abilities**.
+- You **deployed a model** (gpt-4.1-mini for chat completion) using the Azure AI Foundry portal.
+- You explored the model in the **Chat playground**, experimented with prompts and parameters, and tested the model’s **code generation abilities**.
 
 
 ### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
