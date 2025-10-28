@@ -68,7 +68,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy base model (3)**.
 
-   ![](../media/deploy-model-1607.png)
+   ![](../media/L1T2S3.png)
 
 1. In the **Select a model** window, search for **gpt-4.1-mini (1)**, then select the **gpt-4.1-mini (Chat completion) (2)** model from the list. Click **Confirm (3)** to proceed with the deployment.
 
