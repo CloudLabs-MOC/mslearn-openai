@@ -46,7 +46,7 @@ Welcome to your Get Started with Azure OpenAI Service Workshop! We've prepared a
  
 Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](./media/ll1.png)
+![](./media/guide.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -62,13 +62,13 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](./media/envtab.png)
+![](./media/envt.png)
  
 ## Utilizing the Split Window Feature
  
 For your convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](./media/splittab.png)
+![](./media/splitwin.png)
  
 ## Managing Your Virtual Machine
  
@@ -92,7 +92,7 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-       ![Enter Your Password](./media/sc900-image-2.png)
+       ![](./media/tpwrd.png)
 
       > **Note:** If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if Ask Later Option is Not Visible](#steps-to-proceed-with-mfa-setup-if-ask-later-option-is-not-visible)
  
