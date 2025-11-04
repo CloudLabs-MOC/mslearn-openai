@@ -21,11 +21,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the result.
 
-   ![](./media/g1.png)
+   ![](./media/azureai.png)
 
-2. On  **AI Foundary | Azure OpenAI** blade, click on **+ Create**.
+2. On  **AI Foundary | Azure OpenAI** blade, select **Azure OpenAI(1)** from the left menu, click on **+ Create(2)** and select **Azure OpenAI(3)**
 
-   ![](./media/e1t1p2.png)
+   ![](./media/createazai.png)
 
 3. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
     
@@ -39,11 +39,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Pricing tier: **Standard S0 (5)**
   
-      ![](./media/e1t1p3.png)
+      ![](./media/clicknext.png)
 
 4. Under the **Review + submit** tab, click on **Create**.
 
-      ![](./media/e1t1p4.png)
+      ![](./media/clickcreate.png)
 
 5. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
