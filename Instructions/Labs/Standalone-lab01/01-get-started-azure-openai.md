@@ -63,7 +63,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, which will navigate to **Azure AI Foundry**.
 
-    ![](./media/openai_resource1.png)
+    ![](./media/gotofoundry.png)
 
 1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
@@ -71,7 +71,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Search for **gpt-4o-mini (1)** in the search bar, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
 
-   ![](./media/g4.png)
+   ![](./media/model.png)
 
    >**Note:** If pop-up window **Unlock the full capabilities of Azure Al Foundry with projects** appears, click **Continue with existing setup**
 
@@ -79,7 +79,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 1. Within the **Deploy model gpt-4o-mini** pop-up interface, click on **Customize**.
 
-   ![](./media/g5.png)
+   ![](./media/customize.png)
 
 1. Within the **Deploy model gpt-4o-mini** pop-up interface, enter the following details:
 
