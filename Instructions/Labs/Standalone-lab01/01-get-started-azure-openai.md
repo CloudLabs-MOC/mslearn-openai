@@ -83,9 +83,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Within the **Deploy model gpt-4o-mini** pop-up interface, enter the following details:
 
-      - Deployment name: **my-gpt-model (2)**
+      - Deployment name: **my-gpt-model (1)**
 
-      - Deployment type: **Standard (1)**
+      - Deployment type: **Standard (2)**
 
       - Model version:**2024-07-18 (Default) (3)**
 
