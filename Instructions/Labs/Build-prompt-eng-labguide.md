@@ -145,7 +145,7 @@ In this task, you will explore how prompt engineering impacts model behavior in 
 
    ![](../media/17022025(10).png)
 
-1. Next in the selected **text-turbo (version:0125) (1)** deployment, update the system message to include instructions `You are an AI assistant helping write Python code. Complete the app based on the provided comments **(2)**. Click **Apply changes** **(3)** and subsequently click on **Continue (4)** in the pop-up.
+1. Next in the selected **text-turbo (version:0125) (1)** deployment, update the system message to include instructions `You are an AI assistant helping write Python code`. Complete the app based on the provided comments **(2)**. Click **Apply changes** **(3)** and subsequently click on **Continue (4)** in the pop-up.
 
    ![](../media/17022025(11).png)
 
