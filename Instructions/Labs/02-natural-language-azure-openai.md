@@ -83,31 +83,30 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/ui1.png "Create a new deployment")
 
-5. Search for **gpt-35-turbo-16k** and click on **Confirm**
+5. Search for **gpt-4.1-mini** and click on **Confirm**
 
-      ![](../media/new04.png)
+      ![](../media/gpt-4.1-ttg.png)
 
 6. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: text-turbo(1)
-      - Model version: 0613(Default)(2)
-      - Deployment type: Standard(3)
+      - Model version: 2025-04-14(Default)(2)
+      - Deployment type: Global Standard(3)
       - Tokens per Minute Rate Limit (thousands): 10K (4)
-      - Enable dynamic quota: Enabled (5)
-      - Click on Deploy (6)
+      - Click on Deploy (5)
   
-           ![](../media/i2.png)
+           ![](../media/gpt-4.2-ttg.png)
 
            >**Note:** If the options shown in the screenshot is not visible, click on **Customize**.
 
-           ![](../media/imagecustomize.png)
+           ![](../media/gpt-4.3-ttg.png)
 
-           >**Note** : if the **gpt-35-turbo-16k(1)** model isn't available, choose **gpt-35-turbo(2)**
+           >**Note** : if the **gpt-4.1-mini(1)** model isn't available, choose **gpt-4.1(2)**
 
 7. This will deploy a model that you will be playing around with as you proceed.
 
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
-   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
+   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **4.1-mini** model series in the **GPT-4** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
 <validation step="69a18560-a442-467a-be09-b5663806dd0a" />
 
