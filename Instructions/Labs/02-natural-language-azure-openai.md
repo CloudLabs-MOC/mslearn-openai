@@ -98,7 +98,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
            ![](../media/i2-2.png)
 
-
 7. This will deploy a model that you will be playing around with as you proceed.
 
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
@@ -161,7 +160,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-   cd azure-openai/Labfiles/02-azure-openai-api
+   cd azure-openai/Labfiles/02-use-own-data
     ```
 
    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
