@@ -71,27 +71,26 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/ui1.png "Create a new deployment")
 
-6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+6. Search for **gpt-4.1-mini**, click on **Confirm**
    
-     ![](../media/new04.png)
+     ![](../media/gpt-4.1-ttg.png)
 
 7. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: 35turbo(1)
-      - Model version: 0613(Default)(2)
-      - Deployment type: Standard(3)
+      - Deployment name: gpt-4.1-mini(1)
+      - Model version: 2025-04-14(Default)(2)
+      - Deployment type: Global Standard(3)
       - Tokens per Minute Rate Limit (thousands): 10K (4)
-      - Enable dynamic quota: Enabled (5)
       - Click on Deploy (6)
   
-           ![](../media/i3.png)
+           ![](../media/gpt-4diffrent.png)
 
            >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
 
-           ![](../media/imagecustomize.png)
+           ![](../media/gpt-4.3-ttg.png)
 
-           >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
+           >**Note**: If **gpt-4.1-mini** is not available, please choose **gpt-4.1**.
 
-> **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for natural language generation and chat scenarios.
+> **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **4.1 mini** model series in the **GPT-4** model family in this exercise, which is highly capable for natural language generation and chat scenarios.
 
 <validation step="a75cfc42-9bee-4829-858b-0612e685f83f" />
 
