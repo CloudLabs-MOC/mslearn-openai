@@ -57,25 +57,24 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
      ![](../media/dev-08.png)
 
-1. On the Select a model page, search for **gpt-35-turbo-instruct (1)** model, select **gpt-35-turbo-instruct (chat completion) (2)** model from the list, and then click on **Confirm (3)**.
+1. On the Select a model page, search for **gpt-4.1-mini (1)** model, select **gpt-35-turbo-instruct (chat completion) (2)** model from the list, and then click on **Confirm (3)**.
 
-     ![](../media/L1T2S6-1607.png)
+     ![](../media/gpt-4.1-ttg.png)
    
 1. On the **Deploy gpt-35-turbo-instruct** interface, click on **Customize (1)** and enter the details as mentioned below, then click on **Deploy (9)** :
 
    | Settings | Action |
    | -- | -- |
-   | **Deployment name (2)** | gpt-35-turbo-instruct |
-   | **Deployment type (3)** | Standard |
+   | **Deployment name (2)** | gpt-4.1-mini |
+   | **Deployment type (3)** | Global Standard |
    | **Model version upgrade policy (4)** | Upgrade once new default version becomes available. |
-   | **Model version (5)** | 0914 (Default) |
+   | **Model version (5)** | 2025-04-14(Default) |
    | **Tokens per Minute Rate Limit (thousands) (6)** | 20K |
    | **Content Filter (7)** | DefaultV2 |
-   | **Enable dynamic quota(8)** | Enabled |
 
-      ![](../media/L1T2S7.1-1607.png)
+      ![](../media/gpt-4.2-ttg.png)
 
-      ![](../media/L1T2S7.2-1607.png)
+      ![](../media/gpt-4diffrent.png)
 
 1. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
