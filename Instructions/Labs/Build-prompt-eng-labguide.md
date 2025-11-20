@@ -24,9 +24,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/gg_ex2_1_1.png)
 
-1. In the **AI Foundry | Azure Open AI** page, under the **Use with AI Foundry** section, select **Azure OpenAI (1)** from the left pane. Then, click **+ Create (2)** at the top to provision a new Azure OpenAI resource.
+1. In the **Microsoft Foundry | Azure Open AI** page, under the **Use with Foundry** section, select **Azure OpenAI (1)** from the left pane. Then, click **+ Create (2)** at the top and select **Azure OpenAI** to provision a new Azure OpenAI resource.
 
-   ![](../media/gg_ex2_1_2.png)
+   ![](../media/foundry5.png)
 
 1. In the **Create Azure OpenAI** pane, configure a new **Azure OpenAI** resource using the following settings:
 
@@ -72,17 +72,17 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/gg_ex2_1_7.png)
 
-1. On **AI Foundry | Azure OpenAI** blade under the **Use with AI Foundry** section, select **Azure OpenAI (1)** from the left pane and select **OpenAI-Lab01-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**.
+1. On **Microsoft Foundry | Azure OpenAI** blade under the **Use with Foundry** section, select **Azure OpenAI (1)** from the left pane and select **OpenAI-Lab01-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**.
 
-   ![](../media/T2S2-2107.png)
+   ![](../media/foundry1.png)
 
-1. In the Azure OpenAI resource page, click on the **Overview (1)** page and click on **Go to Azure AI Foundry portal (2)**. It will navigate to the **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource page, click on the **Overview (1)** page and click on **Go to Foundry portal (2)**. It will navigate to the **Microsoft Foundry portal**.
     
-   ![](../media/gg_ex2_1_9.png)
+   ![](../media/foundry2.png)
 
-1. In the Azure AI Foundry portal, under **Shared resources**, select **Deployments (1)** from the left pane. Click on **Deploy model (2)** and choose **Deploy base model (3)** from the dropdown.
+1. In the Microsoft Foundry portal, under **Shared resources**, select **Deployments (1)** from the left pane. Click on **Deploy model (2)** and choose **Deploy base model (3)** from the dropdown.
 
-   ![](../media/gg_ex2_1_11.png)
+   ![](../media/foundry6.png)
 
 1. In the **Select a model** window, search for **gpt-4.1-mini (1)**, then select the **gpt-4.1-mini (Chat completion) (2)** model from the list. Click **Confirm (3)** to proceed with the deployment.
 
@@ -118,11 +118,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 ## Task 3: Apply prompt engineering in chat playground
 
-In this task, you will explore how prompt engineering impacts model behavior in the Azure AI Foundry Playground. You'll experiment with prompt styles, system messages, and example-based guidance to generate structured Python code and improve content classification accuracy.
+In this task, you will explore how prompt engineering impacts model behavior in the Microsoft Foundry Playground. You'll experiment with prompt styles, system messages, and example-based guidance to generate structured Python code and improve content classification accuracy.
 
-1. In [Azure AI Foundry](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** under **Playgrounds** section in the left pane.
+1. In [Microsoft Foundry](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** under **Playgrounds** section in the left pane.
 
-   ![](../media/gg_ex2_1_15.png)
+   ![](../media/foundry7.1.png)
 
 1. In the **Setup** section at the top, select **text-turbo (version:0125)** **(1)**, input `You are a helpful AI assistant` **(2)** as the model's instructions and context, then click on **Apply changes (3)**. Finally, click on **Continue (4)** in the pop-up.
 
@@ -764,7 +764,7 @@ In this task, you will run your configured app to send a request to your model a
 
 In this lab, you have accomplished the following:
 - Provision an Azure OpenAI resource
-- Deploy an OpenAI model within the Azure OpenAI Foundry
+- Deploy an OpenAI model within the Microsoft Foundry
 - Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
 ## You have successfully completed the lab. Click on Next >> to proceed to the next lab.
