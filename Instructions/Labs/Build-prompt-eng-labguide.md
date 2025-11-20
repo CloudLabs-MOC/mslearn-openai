@@ -84,7 +84,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/gg_ex2_1_11.png)
 
-1. In the **Select a model** window, search for **gpt-4.1-mini (1)**, then select the **gpt-35-turbo (Chat completion) (2)** model from the list. Click **Confirm (3)** to proceed with the deployment.
+1. In the **Select a model** window, search for **gpt-4.1-mini (1)**, then select the **gpt-4.1-mini (Chat completion) (2)** model from the list. Click **Confirm (3)** to proceed with the deployment.
 
    ![](../media/L2T2S5.png)
 

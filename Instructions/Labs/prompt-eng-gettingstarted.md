@@ -80,9 +80,9 @@ After completing the task, hit the **Validate** button under the Validation tab 
 
 ## Lab Guide Zoom In/Zoom Out
 
-To adjust the zoom level in the lab environment, click the **A↕ (1)** icon next to the timer and select a preferred zoom option from the **dropdown menu (2)**.
+To adjust the zoom level in the lab environment, click the **A↕** icon next to the timer and select a preferred zoom option from the **dropdown menu**.
 
-   ![Manage Your Virtual Machine](../media/gs_1_2.png)
+   ![Manage Your Virtual Machine](../media/zoom.png)
 
 ## Let's Get Started with Azure Portal
 
@@ -94,19 +94,21 @@ To adjust the zoom level in the lab environment, click the **A↕ (1)** icon nex
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-       ![Enter Your Username](../media/sc900-image-1.png)
+       ![Enter Your Username](../media/GS3.png)
  
 1. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-       ![Enter Your Password](../media/sc900-image-2.png)
+       ![Enter Your Password](../media/GS4.png)
     
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
-   ![](../media/gs_1_6.png)
+   ![](../media/GS5.png)
  
 1. If a **Welcome to Microsoft Azure** page appears, simply click **Cancel** to skip the tour.
+
+   ![](../media/WelcomeEng.png)
 
 ## Support Contact
 
