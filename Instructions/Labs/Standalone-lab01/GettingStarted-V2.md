@@ -17,7 +17,7 @@ Understand how to deploy Azure OpenAI Service, enabling you to integrate and exp
 Participants should have basic knowledge and understanding of the following :
 
 - **Azure Portal:** For managing and provisioning Azure resources.
-- **Azure AI Foundry:** For deploying models, configuring and experimenting with their capabilities, including features such as the Chat playgrounds.
+- **Microsoft Foundry:** For deploying models, configuring and experimenting with their capabilities, including features such as the Chat playgrounds.
 
 ## Architecture
 
@@ -36,7 +36,7 @@ The flow of the lab will be to use an existing Resource Group, then create and d
 
 - **Azure OpenAI Service:** The managed service that brings OpenAI’s generative models, such as GPT-4o-mini, into the Azure ecosystem. It provides secure, scalable endpoints to use language models for tasks like chat, summarization, Q\&A, or code generation, while also supporting enterprise-grade features such as quotas, authentication, and monitoring.
 
-- **Azure AI Foundry:** A unified workspace where you deploy, test, and interact with AI models. It provides tools like the Chat Playground for experimenting with conversational use cases, and configuration options for prompts, parameters, and system instructions. Foundry also integrates with observability and monitoring features, making it the primary interface for fine-tuning and experimenting with deployed models.
+- **Microsoft Foundry:** A unified workspace where you deploy, test, and interact with AI models. It provides tools like the Chat Playground for experimenting with conversational use cases, and configuration options for prompts, parameters, and system instructions. Foundry also integrates with observability and monitoring features, making it the primary interface for fine-tuning and experimenting with deployed models.
 
 ## Getting Started with the Lab
 

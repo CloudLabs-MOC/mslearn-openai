@@ -246,11 +246,11 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 In this lab, you have accomplished the following:
 - Provisioned an Azure OpenAI resource.
-- Deployed an Azure OpenAI model within the Azure OpenAI Foundry.
+- Deployed an Azure OpenAI model within the Microsoft Foundry.
 - Used the chat playground to utilise the functionalities of prompts, parameters, and code generation.
 
 ### Conculsion
-By completing this hands-on lab, you’ve gained practical experience with Azure OpenAI Service and Azure AI Foundry. You started by provisioning an Azure OpenAI resource and deploying model that support both conversational and instruction-based scenarios. You then explored the Chat playground, experimenting with prompts, parameters, and few-shot examples to shape model responses. Finally, you tested the model’s ability to generate code, highlighting its potential for developer productivity.
+By completing this hands-on lab, you’ve gained practical experience with Azure OpenAI Service and Microsoft Foundry. You started by provisioning an Azure OpenAI resource and deploying model that support both conversational and instruction-based scenarios. You then explored the Chat playground, experimenting with prompts, parameters, and few-shot examples to shape model responses. Finally, you tested the model’s ability to generate code, highlighting its potential for developer productivity.
 
 These exercises introduced not just the mechanics of deploying and interacting with models, but also how to configure them for different use cases, whether that’s conversational AI, educational Q\&A, or programming assistance. With this foundation, you’re now better equipped to integrate Azure OpenAI into real-world applications that demand scalability, flexibility, and secure access through the Azure ecosystem.
 
