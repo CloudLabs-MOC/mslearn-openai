@@ -24,9 +24,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/gg_ex2_1_1.png)
 
-1. In the **Microsoft Foundry | Azure Open AI** page, under the **Use with Foundry** section, select **Azure OpenAI (1)** from the left pane. Then, click **+ Create (2)** at the top and select **Azure OpenAI** to provision a new Azure OpenAI resource.
+1. In the **Microsoft Foundry | Azure Open AI** page, under the **Use with Foundry** section, select **Azure OpenAI (1)** from the left pane. Then, click on **+ Create (2)** and select **Azure OpenAI (3)**
 
-   ![](../media/foundry5.png)
+   ![](../media/foundry05.png)
 
 1. In the **Create Azure OpenAI** pane, configure a new **Azure OpenAI** resource using the following settings:
 
@@ -74,7 +74,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. On **Microsoft Foundry | Azure OpenAI** blade under the **Use with Foundry** section, select **Azure OpenAI (1)** from the left pane and select **OpenAI-Lab01-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**.
 
-   ![](../media/foundry1.png)
+   ![](../media/foundry01.png)
 
 1. In the Azure OpenAI resource page, click on the **Overview (1)** page and click on **Go to Foundry portal (2)**. It will navigate to the **Microsoft Foundry portal**.
     
@@ -107,7 +107,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
         > **Note:** You can ignore the "Failed to fetch deployments quota information" notification.
         
-        > **Note:** Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model; however, deployment and usage of other models you deploy will work in the same way.
+        > **Note:** Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **gpt-4.1-mini** model series in the **GPT-4.1** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model; however, deployment and usage of other models you deploy will work in the same way.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
