@@ -94,41 +94,9 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
  
        ![](./media/tpwrd.png)
 
-      > **Note:** If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if Ask Later Option is Not Visible](#steps-to-proceed-with-mfa-setup-if-ask-later-option-is-not-visible)
- 
 4. In the **Stay signed in?** pop-up, click **No**.
 
    ![](./media/2025-07-08(1).png)
- 
-5. In the **Welcome to Microsoft Azure** window, click **Cancel** to skip the tour.
-
-   ![](./media/2025-07-08(2).png)
-
-## Steps to Proceed with MFA Setup if Ask Later Option is Not Visible
-
-   > **Note:** Continue with the exercises if MFA is already enabled or the option is unavailable.
-
-1. At the **"More information required"** prompt, select **Next**.
-
-1. On the **"Keep your account secure"** page, select **Next** twice.
-
-1. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
-
-   - Open **Google Play Store** (Android) or **App Store** (iOS).
-   - Search for **Microsoft Authenticator** and tap **Install**.
-   - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
-
-1. A **QR code** will be displayed on your computer screen.
-
-1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
-
-1. After scanning, click **Next** to proceed.
-
-1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
-       
-1. If prompted to stay signed in, you can click **No**.
-
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
  
 ## Support Contact
 
