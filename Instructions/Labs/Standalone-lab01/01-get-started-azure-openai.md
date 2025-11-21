@@ -61,9 +61,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, which will navigate to **Azure AI Foundry**.
+1. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to **Azure AI Foundry**.
 
-    ![](./media/gotofoundry.png)
+    ![](./media/T2S1.png)
 
 1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
@@ -71,7 +71,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Search for **gpt-4o-mini (1)** in the search bar, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
 
-   ![](./media/model.png)
+   ![](./media/T2S3.png)
 
    >**Note:** If pop-up window **Unlock the full capabilities of Azure Al Foundry with projects** appears, click **Continue with existing setup**
 
@@ -234,7 +234,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-      ![](./media/task-6-lasta.png)
+      ![](./media/T5S6.png)
 
 ## Summary
 
