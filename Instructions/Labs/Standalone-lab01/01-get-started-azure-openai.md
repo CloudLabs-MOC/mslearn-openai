@@ -39,11 +39,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Pricing tier: **Standard S0 (5)**
   
-      ![](./media/clicknext.png)
+      ![](./media/SS7.png)
 
 4. Under the **Review + submit** tab, click on **Create**.
 
-      ![](./media/clickcreate.png)
+      ![](./media/SS8.png)
 
 5. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -67,11 +67,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
-    ![](./media/e1t2p2.png)
+    ![](./media/SS2.png)
 
 1. Search for **gpt-4o-mini (1)** in the search bar, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
 
-   ![](./media/SS2.png)
+   ![](./media/T2S3.png)
 
    >**Note:** If pop-up window **Unlock the full capabilities of Microsoft Foundry with projects** appears, click **Continue with existing setup**
 
@@ -150,7 +150,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
       ![](./media/e1t4p5.png)
    
-         > **Note:** Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+      > **Note:** Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 1. Save the changes by clicking on **Apply changes**.
 
