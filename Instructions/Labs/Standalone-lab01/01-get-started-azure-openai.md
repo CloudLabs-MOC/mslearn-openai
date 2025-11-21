@@ -23,9 +23,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](./media/azureai.png)
 
-2. On  **AI Foundary | Azure OpenAI** blade, select **Azure OpenAI(1)** from the left menu, click on **+ Create(2)** and select **Azure OpenAI(3)**
+2. On  **Microsoft Foundry | Azure OpenAI** blade, select **Azure OpenAI(1)** from the left menu, click on **+ Create(2)** and select **Azure OpenAI(3)**
 
-   ![](./media/createazai.png)
+   ![](./media/SS1.png)
 
 3. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
     
@@ -39,11 +39,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Pricing tier: **Standard S0 (5)**
   
-      ![](./media/clicknext.png)
+      ![](./media/SS7.png)
 
 4. Under the **Review + submit** tab, click on **Create**.
 
-      ![](./media/clickcreate.png)
+      ![](./media/SS8.png)
 
 5. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -63,17 +63,17 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry | Azure OpenAI**.
 
-    ![](./media/T2S1.png)
+    ![](./media/SS4.png)
 
 1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
-    ![](./media/e1t2p2.png)
+    ![](./media/SS2.png)
 
 1. Search for **gpt-4o-mini (1)** in the search bar, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
 
    ![](./media/T2S3.png)
 
-   >**Note:** If pop-up window **Unlock the full capabilities of Azure Al Foundry with projects** appears, click **Continue with existing setup**
+   >**Note:** If pop-up window **Unlock the full capabilities of Microsoft Foundry with projects** appears, click **Continue with existing setup**
 
       ![](./media/e1t2p2(1).png)
    
@@ -122,7 +122,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
 1. In the **Playgrounds** section, select the **Chat (1)** page, and ensure that the **my-gpt-model(version:2024-07-18) (2)** model is selected in the configuration pane.
 
-      ![](./media/e1t4p1.png)  
+      ![](./media/SS3.png)  
 
 1. In the **Setup** section, in the **Give the model instructions and context** box, replace the existing text with the following statement: **`The system is an AI teacher that helps people learn about AI`** **(1)** and click on **Apply changes (2)**. 
 
@@ -138,13 +138,19 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
 1. Enter the following message and response in the designated boxes:
 
-      - **User:** `What are the different types of artificial intelligence?` **(1)**
+      - **User:** 
+      ```
+      What are the different types of artificial intelligence?
+      ``` 
     
-      - **Assistant:** `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(2)**
+      - **Assistant:** 
+      ```
+      There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
+      ``` 
 
-         ![](./media/e1t4p5.png)
+      ![](./media/e1t4p5.png)
    
-         > **Note:** Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+      > **Note:** Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 1. Save the changes by clicking on **Apply changes**.
 
@@ -240,11 +246,11 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 In this lab, you have accomplished the following:
 - Provisioned an Azure OpenAI resource.
-- Deployed an Azure OpenAI model within the Azure OpenAI Foundry.
+- Deployed an Azure OpenAI model within the Microsoft Foundry.
 - Used the chat playground to utilise the functionalities of prompts, parameters, and code generation.
 
 ### Conculsion
-By completing this hands-on lab, you’ve gained practical experience with Azure OpenAI Service and Azure AI Foundry. You started by provisioning an Azure OpenAI resource and deploying model that support both conversational and instruction-based scenarios. You then explored the Chat playground, experimenting with prompts, parameters, and few-shot examples to shape model responses. Finally, you tested the model’s ability to generate code, highlighting its potential for developer productivity.
+By completing this hands-on lab, you’ve gained practical experience with Azure OpenAI Service and Microsoft Foundry. You started by provisioning an Azure OpenAI resource and deploying model that support both conversational and instruction-based scenarios. You then explored the Chat playground, experimenting with prompts, parameters, and few-shot examples to shape model responses. Finally, you tested the model’s ability to generate code, highlighting its potential for developer productivity.
 
 These exercises introduced not just the mechanics of deploying and interacting with models, but also how to configure them for different use cases, whether that’s conversational AI, educational Q\&A, or programming assistance. With this foundation, you’re now better equipped to integrate Azure OpenAI into real-world applications that demand scalability, flexibility, and secure access through the Azure ecosystem.
 
