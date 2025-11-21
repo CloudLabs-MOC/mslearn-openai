@@ -39,9 +39,9 @@ Let's go ahead and launch the Azure OpenAI playground to learn about prompt engi
 
    ![](../media/17-12-24(1).png)
 
-1. On **Microsoft Foundry | Azure OpenAI** pane, select **OpenAIService-<inject key="Deployment-ID" enableCopy="false"></inject>**
+1. On **Microsoft Foundry | Azure OpenAI** blade under the **Use with Foundry** section, select **Azure OpenAI (1)** from the left pane and select **OpenAIService-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/foundry1.png)
+   ![](../media/foundry01.png)
 
 1. In the **Overview (1)** page of Azure OpenAI resource, click on **Go to Foundry portal (2)**. It will navigate to the **Microsoft Foundry portal**.
 
