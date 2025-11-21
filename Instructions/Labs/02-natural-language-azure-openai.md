@@ -25,9 +25,9 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **Azure OpenAI (1)** from left pane and click on **Create (2)**.
+2. On the **AI Foundry** page, select **Azure OpenAI (1)** from the menu on the left, then click **+ Create (2)**.
 
-   ![](../media/tel-10.png)
+   ![](../media/itp1.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -67,24 +67,25 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI (1)** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>** **(2)**
+2. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>** **(2)**
 
-   ![](../media/update07.png)
+   ![](../media/itp9.png)
 
-3. In the Azure OpenAI resource pane, select 
-   **Overview (1)** from the left-hand menu, then click on **Go to Azure AI Foundry portal (2)**. This will navigate you to **Azure AI Foundry portal**.
+3. In the Azure OpenAI resource pane, select **Overview (1)** from the left-hand menu, then click on **Go to Azure AI Foundry portal (2)**. This will navigate you to **Azure AI Foundry portal**.
 
    ![](../media/update08.png)
 
    >**Note :** If the pop-up **Discover an even better Azure AI Studio experience** appears, click **Close** to dismiss it.
 
-4. Click on **Deployments (1)**, click on **+ Deploy Model**, choose **Deploy Base Model (2).**
+4. From the left navigation pane, select **Deployments (1)** under Shared resources, click on **+ Deploy model (2)**, Choose **Deploy base model (3)**.
 
-      ![](../media/ui1.png "Create a new deployment")
+    ![](../media/itp2.png "Create a new deployment")
 
-5. Search for **gpt-35-turbo (1)** and click on **Confirm (2)**
+5. On the **Select a Model** pane, search for **gpt-35-turbo (1)**, select it from the results **(2)**, and click **Confirm (3)** to proceed.
 
-      ![](../media/new04-1.png)
+    ![](../media/itp3.png "Create a new deployment")
+
+    >**Note** : If the **GPT-35-Turbo** model isn't available, choose **GPT-35-Turbo-16k** or select **GPT-4o-mini**, and follow the below steps. 
 
 6. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: text-turbo(1)
@@ -96,7 +97,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - Click on **Deploy** (6)
   
            ![](../media/i2-2.png)
-
 
 7. This will deploy a model that you will be playing around with as you proceed.
 
@@ -160,7 +160,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-   cd azure-openai/Labfiles/02-azure-openai-api
+   cd azure-openai/Labfiles/02-use-own-data
     ```
 
    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.

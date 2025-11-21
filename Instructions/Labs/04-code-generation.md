@@ -100,14 +100,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **35 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
 
-<validation step="f0a7d271-5b5c-40c2-80a0-9e7889b96f1f" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-
 ### Task 3: Generate code in chat playground
 
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.

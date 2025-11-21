@@ -1,20 +1,20 @@
 # Lunch and Learn: Integrate Azure OpenAI into your App
 
-### Overall Estimated Duration: 60 minutes
+### Overall Estimated Duration: 60 Minutes
 
 ## Overview
 
-The purpose of the lab is to enable you to effectively integrate Azure OpenAI Service into your applications, focusing on AI-driven functionalities. Through this lab, you will create and configure an Azure OpenAI resource, deploy and interact with a language model, and build a command-line application in Azure Cloud Shell. Additionally, you will learn to manage conversation history to enhance the contextual relevance of AI responses. This lab offers a professional, hands-on approach to understanding and applying Azure OpenAI capabilities in real-world scenarios.
+The purpose of the lab is to enable you to effectively integrate Azure OpenAI Service into your applications, focusing on AI-driven functionalities. Through this lab, you will create and configure an Azure OpenAI resource, deploy and interact with a language model, and build a command line application in Azure Cloud Shell. Additionally, you will learn to manage conversation history to enhance the contextual relevance of AI responses. This lab offers a professional, hands-on approach to understanding and applying Azure OpenAI capabilities in real world scenarios.
 
 ## Objective
 
-Understand how to deploy OpenAI models in Azure, configure them, and secure them with API keys. Gain skills in Command-line interfaces. By the end of this lab, you will be able to:
+Understand how to deploy OpenAI models in Azure, configure them, and secure them with API keys. Gain skills in Command-line interfaces. By the end of this lab, you will be able to perform the below:
 
 - **Azure OpenAI Integration**: Gain proficiency in integrating Azure OpenAI Service into your applications to leverage AI-driven functionalities.
 
 - **Create and Configure Azure OpenAI Resources**: Gain experience in setting up and configuring an Azure OpenAI resource to facilitate the deployment of language models.
 
-- **Deploy and Interact with Language Models**: Successfully deploy a language model and use a command-line application in Azure Cloud Shell to interact with it, understanding its role in processing natural language.
+- **Deploy and Interact with Language Models**: Successfully deploy a language model and use a command line application in Azure Cloud Shell to interact with it, understanding its role in processing natural language.
 
 - **Manage Conversation History**: Learn how to manage conversation history to ensure that AI responses remain contextually relevant and meaningful.
 
@@ -44,7 +44,7 @@ The architecture for this lab involves the following key components:
 
 - **OpenAI Resource**: An OpenAI resource in Azure supports the deployment and management of OpenAI models. It provides the necessary infrastructure and APIs for utilizing advanced AI capabilities, such as natural language processing and generation.
 
-- **Cloud Shell App**: A Cloud Shell app is an interactive, browser-based command-line tool provided by Azure. It enables you to manage and configure Azure resources directly from the portal, offering a convenient environment for executing scripts and commands.
+- **Cloud Shell App**: A Cloud Shell app is an interactive, browser based command line tool provided by Azure. It enables you to manage and configure Azure resources directly from the portal, offering a convenient environment for executing scripts and commands.
 
 ## Getting Started with the Lab
 
@@ -52,83 +52,65 @@ Once the environment is provisioned, a virtual machine (JumpVM) and lab guide wi
 
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and **lab guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/itg1.png)
+![Access Your VM and Lab Guide](../media/GettingStarted-8.png)
 
-### Virtual Machine & Lab Guide
- 
+## Virtual Machine & Lab Guide
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
- 
-## Exploring Your Lab Resources
- 
-To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
- 
-   ![Explore Lab Resources](../media/itg2.png)
- 
-## Utilizing the Split Window Feature
- 
-For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
-   ![Use the Split Window Feature](../media/itg3.png)
- 
+## Exploring Your Lab Resources
+To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
+
+![](../media/GettingStarted-0.png)
+
+## Utilizing the Split Window Feature
+For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
+
+![](../media/GettingStarted-1.png)
+
 ## Managing Your Virtual Machine
- 
-Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
- 
-![Manage Your Virtual Machine](../media/itg-4.png)
+Feel free to **start, restart, or stop (2)** your virtual machine as needed from the **Resources (2)** tab. Your experience is in your hands!
+
+![](../media/GettingStarted-2.png)
 
 ## Lab Guide Zoom In/Zoom Out
- 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-![Manage Your Virtual Machine](../media/ZOOMINOUT.png)
+To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
-## Lab Validation
-
-1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
-
-   ![Inline Validation](../media/itg5.png)
-
-1. If you need any assistance, please contact us at Cloudlabs-support@spektrasystems.com.
-
-## Lab Duration Extension
-
-1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
-
-    ![Manage Your Virtual Machine](../media/gext.png)
-
-    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
-
-2. Click **OK** to extend your lab duration.
- 
-   ![Manage Your Virtual Machine](../media/gext2.png)
-
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
+![](../media/GettingStarted-3.png)
 
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your virtual machine, click on the **Azure Portal** icon as shown below:
 
-   ![Launch Azure Portal](../media/sc900-image(1).png)
+   ![](../media/GettingStarted-7.png)
 
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
- 
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
- 
-       ![Enter Your Username](../media/sc900-image-1.png)
- 
-3. Next, provide your password:
- 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
- 
-       ![Enter Your Password](../media/sc900-image-2.png)
- 
-4. If prompted to stay signed in, you can click **No**.
- 
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
-  
-   ![Click on cancel](../media/imageae.png)
+1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. In that enter the following email/username, and click on **Next (2)**. 
+
+   * **Email/Username**: <inject key="AzureAdUserEmail"></inject> **(1)**
+   
+     ![](../media/GettingStarted-4.png)
+     
+1. Now enter the following password and click on **Sign in (2)**.
+   
+   * **Password**: <inject key="AzureAdUserPassword"></inject> **(1)**
+   
+     ![](../media/GettingStarted-5.png)
+
+     >**Note:** If prompted to Enter Temporary Access Pass, enter the following **Password**: <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+
+     ![](../media/GS-0.png) 
+       
+1. If prompted to stay signed in, you can click **No**.
+    
+     ![](../media/GettingStarted-6.png)
+
+1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
+
+1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
+1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe Later** to skip the tour.
 
 ## Support Contact
  
