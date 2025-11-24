@@ -46,85 +46,74 @@ The architecture for this lab involves the following key components:
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
 
-   ![](../media/cor-op-rt-g-2.png "Lab Environment")
-
 ## Accessing Your Lab Environment
 
-1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your email address provided during registration. You can start, stop, and restart virtual machines from the **Resources** tab.
+1. Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
 
-   ![](../media/cor-op-rt-g-3.png "Lab Environment")
+   ![](../media/getting-started1.png "Lab Environment")
 
-## Managing Your Virtual Machine
+## Virtual Machine & Lab Guide
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
- 
-   ![](../media/cor-op-rt-g-6.png "Lab Environment")
-
-## Utilizing the Split Window Feature
- 
-For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
- 
-   ![](../media/cor-op-rt-g-4.png "Lab Environment")
+Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
 
 ## Lab Guide Zoom In/Zoom Out
 
-1. To adjust the zoom level for the environment page, click the **A↕ icon (1)** next to the timer, and then select the desired zoom percentage from the list **(2)**. 
+1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![Manage Your Virtual Machine](../media/cor-op-rt-g-5.png)
+   ![Manage Your Virtual Machine](../media/zoominout1.png)
 
-## Login to Azure Portal
-
-1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
-
-   ![](../media/cor-op-rt-g-7.png "Lab Environment")
-   
-1. On **Sign into Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**. 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>
-   
-     ![](../media/image7.png "Enter Email")
-     
-1. Now enter the following password and click on **Sign in**.
-   * Password: <inject key="AzureAdUserPassword"></inject>
-   
-     ![](../media/image8.png "Enter Password")
-     
-1. If you see the pop-up **Action Required**, click **Ask Later**.
-
-     ![](../media/asklater.png "Action required window")
-     
-    > If you are getting popup **save password**, then select **Save & Turn on** option.
-       
-1. If you see the pop-up **Stay Signed in?**, click **No**.
-
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
-
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
-
-1. Now you will see Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
-
-     ![](../media/select-rg.png "Resource groups")
-
-1. Confirm you have a resource group **openai-<inject key="Deployment-id" enableCopy="false"/>** present as shown in the below screenshot. You need to use the **openai-<inject key="Deployment-id" enableCopy="false"/>** resource group throughout the entire process of lab execution.
-
-     ![](../media/rg.png "Resource groups")
-   
-1. Use **Next** button from lower right corner to move on to the next page.
-
-   ![](../media/next1.png "Resource groups")
-
-
-This hands-on lab empowers participants to master Azure OpenAI Service by guiding them through setup, SDK integration, and prompt engineering. It also covers code generation, image creation with DALL-E, RAG data integration, and content filtering for comprehensive learning.
-
-## Support Contact
+## Exploring Your Lab Resources
  
+To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
+
+   ![](../media/env1.png)
+
+## Utilizing the Split Window Feature
+ 
+For your convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
+
+![](../media/splitwin1.png)
+  
+## Managing Your Virtual Machine
+ 
+Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+ 
+![Manage Your Virtual Machine](../media/RT1.png)
+
+## Let's Get Started with Azure Portal
+ 
+1. On your virtual machine, click on the **Azure Portal** icon as shown below:
+ 
+      ![Launch Azure Portal](../media/sc900-image(1).png)
+    
+2. You'll see the **Sign in to continue to Microsoft Azure** tab. Here, enter your credentials:
+ 
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+ 
+       ![Enter Your Username](../media/sc900-image-1.png)
+ 
+3. Next, provide your password:
+ 
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+ 
+       ![](../media/pwrd1.png)
+ 
+4. In the **Stay signed in?** pop-up, click **No**.
+
+   ![](../media/2025-07-08(1).png)
+ 
+## Support Contact
+
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
 Learner Support Contacts:
+
 - Email Support: cloudlabs-support@spektrasystems.com
+
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-  ![](../media/n14.png)
+![Start Your Azure Journey](../media/nextpage1.png)
 
-### Happy Learning!!
+## Happy Learning!!
