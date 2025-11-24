@@ -23,9 +23,9 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI (1)** blade, click on **Create (2)**.
+2. In the **Microsoft Foundry | Azure Open AI** page, under the **Use with Foundry** section, select **Azure OpenAI (1)** from the left pane. Then, click on **+ Create (2)** and select **Azure OpenAI (3)**.
 
-   ![](../media/tel-10.png)
+   ![](../media/SS1.png)
 
 3. Create an **Azure OpenAI** resource with the following settings and click **Next** twice and click on **Create**
    
@@ -55,25 +55,23 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI (1)** blade, select **OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**
+2. On **Microsoft Foundry | Azure OpenAI** blade under the **Use with Foundry** section, select **Azure OpenAI (1)** from the left pane and select **OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**
 
-   ![](../media/update07.png)
+   ![](../media/foundry01.png)
 
-3. In the Azure OpenAI resource pane, select 
-   **Overview (1)** from the left-hand menu, then click on **Go to Azure AI Foundry portal (2)**. This will navigate you to **Azure AI Foundry portal**.
+3. In the Azure OpenAI resource page, click on the **Overview (1)** page and click on **Go to Foundry portal (2)**. It will navigate to the **Microsoft Foundry portal**.
 
-   ![](../media/update08.png)
+   ![](../media/foundry2.png)
 
    >**Note :** If the pop-up **Discover an even better Azure AI Studio experience** appears, click **Close** to dismiss it.
 
-4. Click on **Deployments (1)** under **Shared 
-   Resources**, then select **+ Deploy Model**. Next, choose **Deploy Base Model (2).**
+4. In the **Microsoft Foundry portal**, under Shared resources, select **Deployments (1)** from the left pane. Click on **Deploy model (2)** and choose **Deploy base model (3)** from the dropdown.
 
-      ![](../media/ui1.png "Create a new deployment")
+      ![](../media/SS2.png "Create a new deployment")
 
-6. Search for **GPT-35-TURBO**, click on **Confirm**
+6. Search for **gpt-4.1-mini**, click on **Confirm**
    
-     ![](../media/new04-1.png)
+     ![](../media/SS00.png)
 
 7. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: 35turbo(1)
@@ -87,9 +85,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
            >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
 
-           ![](../media/imagecustomize.png)
+           ![](../media/SS001.png)
 
-> **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for natural language generation and chat scenarios.
+> **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **gpt-4.1-mini** model series in the **GPT-4.1** model family in this exercise, which is highly capable for natural language generation and chat scenarios.
 
 <validation step="a75cfc42-9bee-4829-858b-0612e685f83f" />
 
