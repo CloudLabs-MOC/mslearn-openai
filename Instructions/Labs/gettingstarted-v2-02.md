@@ -60,25 +60,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 
 1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![Manage Your Virtual Machine](../media/zoominout.png)
+   ![Manage Your Virtual Machine](../media/zoominout1.png)
 
 ## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-   ![](../media/envt.png)
+   ![](../media/env1.png)
 
 ## Utilizing the Split Window Feature
  
 For your convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
 
-![](../media/splitwin.png)
+![](../media/splitwin1.png)
   
 ## Managing Your Virtual Machine
  
 Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/resourcetab.png)
+![Manage Your Virtual Machine](../media/RT1.png)
 
 ## Let's Get Started with Azure Portal
  
@@ -96,7 +96,7 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-       ![](../media/tpwrd.png)
+       ![](../media/pwrd1.png)
  
 4. In the **Stay signed in?** pop-up, click **No**.
 
@@ -114,6 +114,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![Start Your Azure Journey](../media/nextpage.png)
+![Start Your Azure Journey](../media/nextpage1.png)
 
 ## Happy Learning!!
