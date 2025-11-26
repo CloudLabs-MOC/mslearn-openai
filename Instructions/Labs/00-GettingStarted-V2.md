@@ -92,7 +92,7 @@ To adjust the zoom level in the lab environment, click the **A↕ (1)** icon nex
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-       ![Enter Your Password](../media/sc900-image-2.png)
+       ![Enter Your Password](../media/pwrd1.png)
     
 1. If prompted to **Stay signed in**, you can click **No**.
  
