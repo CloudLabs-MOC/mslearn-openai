@@ -55,7 +55,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="917cb723-2d65-4411-90f9-0150a7636494" />
+<validation step="8aae5f66-b7a9-4963-bf1f-8db101bab3db" />
 
 ## Task 2: Deploy a model
 
@@ -114,7 +114,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="0afa9e73-8b9e-4edf-b61b-fa953a5d5b23" />
+<validation step="29d502af-cb10-4d86-80b8-e1d97420284f" />
    
 ## Task 3: Use the Chat playground
 
