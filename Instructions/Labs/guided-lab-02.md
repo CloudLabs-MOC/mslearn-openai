@@ -1,4 +1,4 @@
-# Lab 01 Use Azure OpenAI SDKs in your App
+# Lab 01: Use Azure OpenAI SDKs in your App
 
 ### Estimated Duration: 120 Minutes
 
@@ -36,6 +36,13 @@ In this task, you will review the provisioned Azure OpenAI resource within your 
       - Next, copy the **Endpoint (4)** by clicking the copy icon, and save it in the same location.
 
         ![](../media/keys.png)
+
+<validation step="b6d08e8e-f2a3-4066-a698-2a324f4493dd" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 2: Set up an application in Cloud Shell
 
@@ -103,12 +110,12 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
       ![](../media/code-editor.png)  
 
+<validation step="69a18560-a442-467a-be09-b5663806dd0a" />
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-<validation step="fc003b3d-0ba1-468e-9271-917c42e5eabb" />
 
 ## Task 3: Configure your application
 
@@ -457,6 +464,13 @@ In this task, you will configure the application to connect with the Azure OpenA
 1. To save the changes made to the file, right-click on the blank space in the file text editor and hit **Save**.
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+
+<validation step="4eb72f2c-5f15-42b7-9637-abdaf9e30be5" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 4: Test your application
 
