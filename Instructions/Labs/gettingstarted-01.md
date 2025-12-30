@@ -28,9 +28,7 @@ The architecture leverages Azure OpenAI Service to deploy and explore OpenAI mod
 
 ## Architecture Diagram
 
-![](../media/DevgenAI-Arch-1-3.png "Lab Environment")
-
-![](../media/DevgenAI-Arch-4-7.png "Lab Environment")
+![](../media/l1-arch.png "Lab Environment")
 
 ## Explanation of Components
 
@@ -53,7 +51,7 @@ We've prepared a seamless environment for you to explore and learn about the con
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![](../media/guide.png)
+   ![](../media/l1-g1.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -63,25 +61,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![](../media/envt.png)
+   ![](../media/g2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
- ![](../media/splitwin.png)
+ ![](../media/g3.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![](../media/resources.png)
+![](../media/g4.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
-   ![](../media/zoom.png)
+   ![](../media/l1-g2.png)
 
 ## Let's Get Started with Azure Portal
 
