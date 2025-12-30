@@ -21,9 +21,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the result.
 
-   ![](../media/azureai.png)
+   ![](../media/l1-12-0.png)
 
-2. On  **AI Foundary | Azure OpenAI** blade, select **Azure OpenAI(1)** from the left menu, click on **+ Create(2)** and select **Azure OpenAI(3)**
+2. On  **Microsoft Foundary | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
 
    ![](../media/va1.png)
 
@@ -47,7 +47,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 5. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
-      ![](../media/e1t1p5.png)
+      ![](../media/l1-12-2.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - Hit the Validate button for the corresponding task.
@@ -55,7 +55,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="9ab1a143-84ef-420e-8713-2cacb6c0a63a" />
+<validation step="917cb723-2d65-4411-90f9-0150a7636494" />
 
 ## Task 2: Deploy a model
 
@@ -71,7 +71,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
 
-   ![](../media/va4.png) 
+   ![](../media/l1-12-3.png) 
 
    >**Note:** If pop-up window **Unlock the full capabilities of Azure Microsoft Foundry with projects** appears, click **Continue with existing setup**
 
@@ -85,7 +85,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Deployment name: **my-gpt-model (1)**
 
-      - Deployment type: **Global Standard (2)**
+      - Deployment type: **Standard (2)**
 
       - Model version: **2025-04-14 (Default) (3)**
 
@@ -95,9 +95,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Click on **Deploy (6)**
 
-        ![](../media/deploy4.1.png)
-      
-        
+        ![](../media/l1-12-4.png)
+         
 1. This will deploy a model that you will be playing around with as you proceed.
 
     > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
@@ -111,7 +110,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
+<validation step="0afa9e73-8b9e-4edf-b61b-fa953a5d5b23" />
    
 ## Task 3: Use the Chat playground
 
@@ -163,7 +162,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
 1. Review the response, note that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-      ![](../media/ml.png)
+      ![](../media/l1-12-5.png)
 
 1. Use the **</>View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
@@ -242,6 +241,4 @@ In this task, you'll explore code generation by testing the AI model’s ability
 In this lab, you provisioned an Azure OpenAI resource, deployed a model using Azure Microsoft Foundry, and explored its capabilities in the Chat playground, including testing prompts, adjusting parameters, and evaluating the model’s ability to generate code for your applications.
 
 
-### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
-     
-   ![](../media/next2.png)
+### You have successfully completed the lab.
