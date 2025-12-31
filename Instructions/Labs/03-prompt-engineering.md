@@ -125,13 +125,15 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
    ![](../media/l3-12-1.png)
 
-1. Update the  **Give the model instructions and context(1)** with the text mentioned below, and click on **Apply changes(2)**. 
+1. Update the  **Give the model instructions and context(1)** with the text mentioned below, and click on **Apply changes(2)**.  
 
    ```
    You are an AI assistant that helps people find information.
    ```
 
    ![](../media/l3-12-6.png)
+
+   > **Note:** If the Apply changes button is greyed out, it means this instruction is already set — no further action is needed.
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -851,4 +853,4 @@ In this lab, you explored how prompt engineering can influence the behavior of a
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
-![Launch Azure Portal](../media/g-next.png)
+![Launch Azure Portal](../media/l3-next.png)

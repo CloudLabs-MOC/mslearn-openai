@@ -58,7 +58,7 @@ Once the environment is provisioned, a virtual machine (JumpVM) and lab guide wi
 
 Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
 
-   ![](../media/getting-started1.png "Lab Environment")
+   ![](../media/l3-labvm.png "Lab Environment")
 
 ## Virtual Machine & Lab Guide
  
@@ -68,7 +68,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![Manage Your Virtual Machine](../media/zoominout1.png)
+   ![Manage Your Virtual Machine](../media/l3-zoom.png)
 
 ## Exploring Your Lab Resources
  
@@ -96,19 +96,19 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
     
 2. You'll see the **Sign in to continue to Microsoft Azure** tab. Here, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
        ![Enter Your Username](../media/sc900-image-1.png)
  
 3. Next, provide your password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
        ![](../media/tpwrd.png)
  
 4. In the **Stay signed in?** pop-up, click **No**.
 
-   ![](../media/staysign.png)
+    ![](../media/staysign.png)
  
 ## Support Contact
 
@@ -122,6 +122,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![Start Your Azure Journey](../media/g-next.png)
+![Start Your Azure Journey](../media/l3-next.png)
 
 ## Happy Learning!!
