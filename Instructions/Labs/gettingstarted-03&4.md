@@ -1,16 +1,20 @@
-# Integrate Azure OpenAI into your app
+
+# Utilize Prompt Engineering and Code Generation with Azure OpenAI Service
 
 ### Overall Estimated Duration: 2 Hours
 
 ## Overview
 
-This lab explores the Azure OpenAI Service, enabling integration of OpenAI's advanced AI models into applications. You'll provision the service, deploy a model, configure an application in Cloud Shell, test its functionality, and manage conversation history for improved user interactions.
+This lab explores the Azure OpenAI Service, where you'll provision the service, deploy a model, apply prompt engineering, generate code using the Chat playground and configure and run an application in Cloud Shell, and enhance user interactions.
 
 ## Objective
 
-This lab provides hands-on experience with Azure OpenAI resources, including provisioning a resource, deploying a model, setting up and configuring an application in Cloud Shell, testing its functionality, and maintaining conversation history. By the end of this lab, you will be able to:
+This lab provides hands-on experience with Azure OpenAI resources, covering tasks such as provisioning a resource, deploying a model, applying prompt engineering techniques, generating code using the Chat playground, and setting up, configuring, and running an application using Cloud Shell. By the end of this lab, you will be able to:
 
-- **Use Azure OpenAI SDKs in your app:** This hands-on exercise demonstrates how to integrate Azure OpenAI SDKs into your application to improve AI capabilities. Participants will integrate and use Azure OpenAI SDKs within their application.
+- **Utilize prompt engineering in your app:** This hands-on exercise demonstrates how to use prompt engineering methods to improve AI interactions in your application. Participants will use prompt engineering strategies to enhance the performance and relevance of AI.
+
+- **Generate and improve code with Azure OpenAI Service:** The goal of this hands-on exercise is to demonstrate how to effectively generate and refine code using Azure OpenAI. Participants will improve their abilities to create and refine code with Azure OpenAI Service tools and approaches.
+
 
 ## Pre-requisites
 
@@ -22,11 +26,13 @@ This lab provides hands-on experience with Azure OpenAI resources, including pro
 
 ## Architecture
 
-The architecture leverages Azure OpenAI Service to provision a resource, deploy models, and set up an application in Cloud Shell. The workflow involves configuring, testing, and maintaining the application, enabling efficient AI-driven solutions with Azure’s scalability and secure infrastructure.
+The architecture uses Azure OpenAI Service to provision resources, deploy models, and set up an application in Cloud Shell. It involves configuring, testing, and maintaining the application for efficient AI-driven solutions with Azure’s scalability and security.
 
 ## Architecture Diagram
 
- ![](../media/lab2-arch.png)
+ ![](../media/lab3-arch.png)
+
+ ![](../media/lab4-arch.png)
 
 ## Explanation of Components
 
@@ -36,6 +42,8 @@ The architecture for this lab involves the following key components:
 
 - **Model Deployment:** Deploy an OpenAI model to enable functionality for testing and application use cases.
 
+- **Code Generation:** Generate code in the Chat playground to enhance the model’s capabilities and assist with development tasks.
+
 - **Application Setup:** Set up an application in Cloud Shell to interact with the deployed model and test its capabilities.
 
 - **Application Configuration:** Configure the application to meet specific requirements, ensuring seamless integration with Azure OpenAI services.
@@ -44,13 +52,13 @@ The architecture for this lab involves the following key components:
 
 ## Getting Started with Lab
 
-Welcome to your Get Started with Azure OpenAI Service Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience.
+Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
 
 ## Accessing Your Lab Environment
 
 Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
 
-   ![](../media/l2-g1.png "Lab Environment")
+   ![](../media/getting-started1.png "Lab Environment")
 
 ## Virtual Machine & Lab Guide
  
@@ -60,7 +68,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![Manage Your Virtual Machine](../media/l2-g2.png)
+   ![Manage Your Virtual Machine](../media/zoominout1.png)
 
 ## Exploring Your Lab Resources
  

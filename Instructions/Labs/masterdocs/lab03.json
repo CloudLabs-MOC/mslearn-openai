@@ -1,16 +1,20 @@
 [
   {
-    "Name": "Lab 03: Utilize prompt engineering in your app",
+    "Name": "Lab 03&4: Utilize Prompt Engineering and Code Generation with Azure OpenAI Service",
     "Language": "English",
     "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/00-GettingStarted-V2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Managed-labs/Instructions/Labs/gettingstarted-03&4.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/03-prompt-engineering.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Managed-labs/Instructions/Labs/03-prompt-engineering.md",
         "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Managed-labs/Instructions/Labs/04-code-generation.md",
+        "Order": 3
       }
     ]
   }

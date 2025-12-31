@@ -11,18 +11,119 @@ When working with the Azure OpenAI Service, how developers shape their prompts g
 ## Lab Objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Apply prompt engineering in the chat playground
-- Task 2: Set up an application in Cloud Shell
-- Task 3: Configure your application
-- Task 4: Run your application
+- Task 1: Provision an Azure OpenAI resource
+- Task 2: Deploy a model
+- Task 3: Apply prompt engineering in the chat playground
+- Task 4: Set up an application in Cloud Shell
+- Task 5: Configure your application
+- Task 6: Run your application
 
-## Task 1: Apply prompt engineering in chat playground
+### Task 1: Provision an Azure OpenAI resource
+
+In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
+
+   ![](../media/l1-12-0.png)
+
+1. On  **Microsoft Foundary | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
+
+   ![](../media/va1.png)
+
+1. Create an **Azure OpenAI** resource with the following settings 
+
+    - **Subscription**: Default - Pre-assigned subscription (1).
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
+    - **Region**: Select **<inject key="Region" enableCopy="false"></inject>** (3)
+    - **Name**: OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
+    - **Pricing tier**: Standard S0 (5)
+    -  Click on **Next** (6)
+  
+         ![](../media/l3-12-0.png "Create Azure OpenAI resource")
+
+1. Click on **Next** twice and subsequently click on **Create** 
+
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+
+     ![](../media/l1-12-2.png)
+
+1. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (2)** under **Resource Management (1)**.
+      - Click on **Show Keys (3)**.
+      - Copy **Key 1 (4)** and ensure to paste it in a text editor such as Notepad for future reference.
+      - Finally copy the **Endpoint (5)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+
+          ![](../media/e1t1p5a.png "Keys and Endpoints")
+
+<validation step="92fd5d61-ee1f-44aa-b7cc-4545c53b5b92" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+### Task 2: Deploy a model
+
+In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
+
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
+
+   ![](../media/l1-12-0.png)
+
+1. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**
+
+   ![](../media/l3-12-01.png)
+
+1. In the Azure OpenAI resource pane, select 
+   **Overview (1)** from the left-hand menu, then click on **Go to Foundry portal (2)**. This will navigate you to **Microsoft Foundry**.
+
+   ![](../media/l3-12-02.png)
+
+1. Click on **Deployments (1)** under **Shared 
+   Resources**, then select **+ Deploy Model (2)**. Next, choose **Deploy Base Model (3).**
+
+      ![](../media/va3.png "Create a new deployment")
+
+1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
+
+   ![](../media/l1-12-3.png) 
+
+   >**Note:** If pop-up window **Unlock the full capabilities of Azure Microsoft Foundry with projects** appears, click **Continue with existing setup**
+
+      ![](../media/e1t2p2(1).png)
+
+1. Within the **Deploy model gpt-4.1-mini** pop-up interface, click on **Customize**.
+
+   ![](../media/custom4.1.png)
+
+1. Within the **Deploy model gpt-4.1-mini** pop-up interface, enter the following details and click on **Deploy (7)**
+
+   | Settings | Action |
+   | -- | -- |
+   | **Deployment name** | **text-turbo (1)** |
+   | **Deployment type** | **Standard (2)**|
+   | **Model version upgrade policy** | **Upgrade once new default version becomes available. (3)** |
+   | **Model version** | **2025-04-14 (Default) (4)**|
+   | **Tokens per Minute Rate Limit (thousands)** | **10K (5)** |
+   | **Content Filter** | **DefaultV2**|
+   | **Enable dynamic quota** |**Enabled (6)**|
+
+    ![](../media/deploy4.1.png)
+   
+<validation step="e3805450-2e13-40c4-80fa-58a0cd695e6e" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+## Task 3: Apply prompt engineering in chat playground
 
 In this task, you'll explore how prompt engineering influences model behavior by experimenting with different instructions and examples in the Chat playground. You'll learn to guide the model's responses—ranging from article categorization to code generation—by modifying system prompts and adding few-shot examples.
 
-1. In [Microsoft Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and verify that the **my-gpt-model (2)** model is selected in the Deployment.
+1. In [Microsoft Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and verify that the **text-turbo (2)** model is selected in the Deployment.
 
-   ![](../media/chatplay.png)
+   ![](../media/l3-12-1.png)
 
 1. Update the  **Give the model instructions and context(1)** with the text mentioned below, and click on **Apply changes(2)**. 
 
@@ -30,7 +131,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
    You are an AI assistant that helps people find information.
    ```
 
-   ![](../media/findinfoo.png)
+   ![](../media/l3-12-6.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -61,7 +162,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
    You are a news aggregator that categorizes news articles.
    ```
 
-   ![](../media/newsaggre.png)
+   ![](../media/l3-12-3.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -116,7 +217,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. Click on the **Apply changes** button to save your changes.
 
-   ![](../media/up2eg.png)
+   ![](../media/l3-12-4.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -145,7 +246,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
    You are an AI assistant that helps people find information.
    ```
 
-   ![](../media/findinfoo.png)
+   ![](../media/l3-12-6.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -169,7 +270,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
    You are a coding assistant helping write Python code.
    ```
 
-   ![](../media/pyassis.png)
+   ![](../media/l3-12-7.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -185,7 +286,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
       ![](../media/pyop.png)
 
-## Task 2: Set up an application in Cloud Shell
+## Task 4: Set up an application in Cloud Shell
 
 In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Cloud Shell on Azure. Open a new browser tab to work with Cloud Shell.
 
@@ -214,6 +315,8 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     cd mslearn-openai/Labfiles/03-prompt-engineering
     ```
 
+    ![](../media/l3-12-8.png)
+
     Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
 
 1. Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
@@ -224,7 +327,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    ![](../media/giteditor.png)
 
-## Task 3: Configure your application
+## Task 5: Configure your application
 
 In this task, you will complete key parts of the provided C# or Python application to enable it to use your Azure OpenAI resource with asynchronous API calls, as both apps feature the same functionality.
 
@@ -239,7 +342,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     - **Endpoint**: The endpoint URL from your Azure OpenAI resource.
     - **Key1**: The primary key from your Azure OpenAI resource.
-    - **Deployment Name**: Set this to **my-gpt-model** (the name of your model deployment).
+    - **Deployment Name**: Set this to **text-turbo** (the name of your model deployment).
     After updating these values, save the file by right-clicking it in the left pane.
 
    > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
@@ -636,7 +739,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
 1. To save the changes made to the file, right-click on the file from the left pane and hit **Save**.
 
-## Task 4: Run your application
+## Task 6: Run your application
 
 In this task, you will run your configured app to send a request to your model and observe the response. You'll notice that the only difference between the options is the content of the prompt, while all other parameters (such as token count and temperature) remain consistent across requests.
 
@@ -711,4 +814,4 @@ In this lab, you explored how prompt engineering can influence the behavior of a
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
-![Launch Azure Portal](../media/4next.png)
+![Launch Azure Portal](../media/g-next.png)

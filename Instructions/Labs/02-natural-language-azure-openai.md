@@ -24,7 +24,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the result.
 
-   ![](../media/azureai.png)
+   ![](../media/l1-12-0.png)
 
 1. On  **Microsoft Foundry | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
 

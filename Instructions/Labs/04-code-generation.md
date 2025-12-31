@@ -21,9 +21,9 @@ In this lab, you will complete the following tasks:
 
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
-1. In [Microsoft Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and make sure that **my-gpt-model (2)** is selected.
+1. In [Microsoft Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and make sure that **text-turbo (2)** is selected.
 
-   ![](../media/chatmodelv.png)
+   ![](../media/l3-12-1.png)
    
 1. In the **Chat session** section, enter the following prompt and press *Enter*.
 
@@ -129,18 +129,18 @@ In this task, you will complete key parts of the application to enable it to use
 
     - **Endpoint**: The endpoint URL from your Azure OpenAI resource.
     - **Key1**: The primary key from your Azure OpenAI resource.
-    - **Deployment Name**: Set this to **my-gpt-model** (the name of your model deployment).
+    - **Deployment Name**: Set this to **text-turbo** (the name of your model deployment).
     After updating these values, save the file by right-clicking it in the left pane.
 
    > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 
    - **C#:**
 
-      ![](../media/app-settings-c-1807.png)
+      ![](../media/l4.png)
 
    - **Python:**
 
-      ![](../media/env-p-1807.png)
+      ![](../media/l4-2.png)
 
 1. Navigate to the folder for your preferred language and install the necessary packages. Enter the below-mentioned command to add the `Azure.AI.OpenAI` package to your project, which is necessary for integrating with Azure OpenAI services.
 
@@ -231,6 +231,4 @@ If you would like to see the full response from Azure OpenAI, you can set the `p
 
 In this lab, you explored how to use Azure OpenAI Service to generate, explain, and improve code using natural language prompts. You generated code in different programming languages, explained existing code, and simplified functions using the chat playground. You also set up a command-line application in Cloud Shell, configured it to use your Azure OpenAI resource, and ran the application to automate code tasks such as adding comments, writing unit tests, and fixing bugs.
 
-### Congratulations on completing the lab! Click Next >> to continue to the next lab.
-
-![](../media/next5.png)
+### Congratulations on completing the lab!

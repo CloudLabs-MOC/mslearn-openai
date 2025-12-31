@@ -1,16 +1,24 @@
 [
   {
-    "Name": "Lab 04: Generate and improve code with Azure OpenAI Service",
+    "Name": "Lab 05,6&7: Generate and improve code with Azure OpenAI Service",
     "Language": "English",
     "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/00-GettingStarted-V2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Managed-labs/Instructions/Labs/00-GettingStarted-V2.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/04-code-generation.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Managed-labs/Instructions/Labs/05-generate-images.md",
         "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Managed-labs/Instructions/Labs/06-use-own-data.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Managed-labs/Instructions/Labs/07-content-filters-azureOpenAI.md",
+        "Order": 4
       }
     ]
   }
