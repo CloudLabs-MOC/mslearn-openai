@@ -183,7 +183,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/aisrchportal.png)
 
-1. On **Microsoft Foundry | AI search* blade, click on **+ Create**.
+1. On **Microsoft Foundry | AI search** blade, click on **+ Create**.
 
     ![](../media/l6-12-5.png)
 
@@ -248,7 +248,15 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/ingdone.png)   
 
-## Task 3: Chat with a model grounded in your data
+<validation step="cf9a74ba-2501-47a6-a819-b42218c0a9da" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
+## Task 4: Chat with a model grounded in your data
 
 In this task, you will ask the same questions as before in the chat section after adding your data, and observe how the responses differ.
 
@@ -270,7 +278,7 @@ In this task, you will ask the same questions as before in the chat section afte
 
     >**Note:** **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
-## Task 4: Set up an application in Cloud Shell
+## Task 5: Set up an application in Cloud Shell
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate integration with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
@@ -307,7 +315,7 @@ In this task, you will use a short command-line application running in Cloud She
    code .
     ```
 
-## Task 5: Configure your application
+## Task 6: Configure your application
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
@@ -466,7 +474,7 @@ In this task, you will complete key parts of the application to enable it to use
 
 1. Save the changes to the code file.
 
-## Task 6: Run your application
+## Task 7: Run your application
 
 In this task, you will run your configured app to send a request to your model and observe the response, noting that the only difference between options is the prompt content while all other parameters (such as token count and temperature) remain consistent.
 

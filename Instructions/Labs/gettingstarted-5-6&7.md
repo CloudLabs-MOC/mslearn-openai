@@ -5,13 +5,18 @@
 
 ## Overview
 
-This lab explores the Azure OpenAI Service, where you'll provision the service, explore image-generation in the DALL-E playground, use the REST API to generate images, configure and run an application, and enhance your ability to create AI-driven applications.
+This lab explores the Azure OpenAI Service by guiding you through provisioning an Azure OpenAI resource, deploying models, and working with both text and image generation capabilities. You will generate natural language responses, create images using the DALL-E playground and REST API, and interact with models grounded in your own data through the chat playground. You will also set up, configure, and run an application to see these capabilities in action, strengthening your ability to build end-to-end AI-driven applications using Azure OpenAI.
 
 ## Objective
 
-This lab provides hands-on experience with Azure OpenAI resources, covering tasks such as provisioning a resource, deploying a model, exploring image generation in the DALL-E playground, using the REST API to generate images, setting up and configuring an application in Cloud Shell, and running the application. By the end of this lab, you will be able to:
+In this lab, you will gain hands-on experience with Azure OpenAI resources. You will provision resources and deploy models, explore image generation using the DALL·E playground and the REST API, connect and interact with your own data in the chat playground, set up, configure, and run applications using Cloud Shell, and finally generate natural language responses while applying content filtering to manage and regulate AI-generated outputs. By the end of this lab, you will be able to:
 
 - **Generate images with a DALL-E model:** The goal of this hands-on activity is to produce and alter images using the DALL-E model. To attain the intended visual results, participants will develop and alter images using the DALL-E model.
+
+- **Add your data for RAG using Azure OpenAI Service:** This hands-on exercise will help you integrate your data with the Azure OpenAI Service for Retrieval-Augmented Generation (RAG) to improve AI responses. Participants will integrate data into the Azure OpenAI Service to boost AI-powered retrieval and generation.
+
+- **Explore content filters in Azure OpenAI:** This hands-on exercise demonstrates how to construct and maintain content filters in Azure OpenAI to control and refine generated outputs. Participants will learn about and implement content filters in Azure OpenAI to control and refine created material.
+
 
 ## Pre-requisites
 
