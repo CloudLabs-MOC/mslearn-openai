@@ -32,13 +32,13 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
      ![](../media/va1.png)
 
-3. Create an **Azure OpenAI** resource with the following settings, click on **Next** thrice and subsequently click on **Create**:
+3. Create an **Azure OpenAI** resource with the following settings, click on **Next (6)** thrice and subsequently click on **Create**:
    
-      - **Subscription**: Default - Pre-assigned subscription.
-      - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **Region**: Select <inject key="Region" enableCopy="false" />
-      - **Name**: OpenAI-Lab06-<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **Pricing tier**: Standard S0
+      - **Subscription**: Default - Pre-assigned subscription. **(1)**
+      - **Resource group**: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+      - **Region**: Select **<inject key="Region" enableCopy="false" /> (3)**
+      - **Name**: **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+      - **Pricing tier**: Standard S0 **(5)**
 
         ![](../media/l3-12-0.png)
 
@@ -48,7 +48,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
      ![](../media/l1-12-2.png)
 
-5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+5. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
@@ -135,11 +135,12 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
 1. Provide the following details:
 
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **File share**: file
+    - **Subscription**: Default - Pre-assigned subscription **(1)**.
+    - **Resource group**: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - **Region**: Select **<inject key="Region" enableCopy="false" /> (3)**
+    - **Storage account name**: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - **File share**: none **(5)**
+    - Click **Create (6)**
 
       ![](../media/csacreate.png)
     
