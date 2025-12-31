@@ -33,9 +33,9 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 1. Create an **Azure OpenAI** resource with the following settings 
 
     - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
+    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
     - **Region**: Select **<inject key="Region" enableCopy="false"></inject>** (3)
-    - **Name**: OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
+    - **Name**: OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject> (4)
     - **Pricing tier**: Standard S0 (5)
     -  Click on **Next** (6)
   
@@ -47,7 +47,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
      ![](../media/l1-12-2.png)
 
-1. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (2)** under **Resource Management (1)**.
       - Click on **Show Keys (3)**.
       - Copy **Key 1 (4)** and ensure to paste it in a text editor such as Notepad for future reference.
@@ -55,7 +55,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
           ![](../media/e1t1p5a.png "Keys and Endpoints")
 
-<validation step="92fd5d61-ee1f-44aa-b7cc-4545c53b5b92" />
+<validation step="0dcf92c3-7549-43f6-83c4-410dcd397bad" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -70,7 +70,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/l1-12-0.png)
 
-1. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**
+1. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then select **OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject>** **(2)**
 
    ![](../media/l3-12-01.png)
 
@@ -110,7 +110,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](../media/deploy4.1.png)
    
-<validation step="e3805450-2e13-40c4-80fa-58a0cd695e6e" />
+<validation step="96148048-6e12-4fcc-9cd0-0cf21ae8a2a3" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -356,6 +356,13 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     ```
 
    ![](../media/giteditor.png)
+
+<validation step="6b36e274-ddf7-4456-98c7-cdc11fbe2c89" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 5: Configure your application
 
