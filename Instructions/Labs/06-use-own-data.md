@@ -198,6 +198,8 @@ In this task, you will observe how the base model responds to queries without an
    | **Pricing tier** | Change the Pricing tier to **Basic (4)** |
 
    ![](../media/reviewaisrch2.png)
+   
+    > **Note:** If **East US** is not available due to high demand, select **East US 2**, **Australia East**, or any other available supported region.
 
 1. Once the deployment is successful, click on **Go to resource** to go to the deployed search service. 
 

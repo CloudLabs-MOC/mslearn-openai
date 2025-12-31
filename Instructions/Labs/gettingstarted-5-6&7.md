@@ -32,7 +32,11 @@ The architecture utilizes Azure OpenAI Service to provision resources, deploy mo
 
 ## Architecture Diagram
 
- ![](../media/lab5.JPG)
+ ![](../media/l5-arch.png)
+
+ ![](../media/l6-arch.png)
+
+ ![](../media/l7-arch.png)
 
 ## Explanation of Components
 
@@ -46,6 +50,20 @@ The architecture for this lab involves the following key components:
 
 - **Run the Application:** Execute the application to validate the image generation functionality and confirm proper interaction with the deployed model.
 
+- **Model Deployment:** Deploy an OpenAI model to access and utilize its functionality for testing and application use cases.
+
+- **Chat Behavior Exploration:** Observe the normal chat behavior without adding custom data, interacting with the model's default capabilities.
+
+- **Data Integration:** Connect your own data to the chat playground to ground the model’s responses in your custom content.
+
+- **Chat with Data-Driven Model:** Interact with a model grounded in your own data, enhancing the relevance and accuracy of the responses.
+
+- **Application Configuration:** Configure the application to ensure smooth integration with Azure OpenAI services and meet specific requirements.
+
+- **Run the Application:** Execute the application to validate the image generation functionality and confirm proper interaction with the deployed model.
+
+- **Natural Language Output Generation:** Generate natural language output using the deployed model to process and understand data, enhancing the application’s capabilities.
+
 ## Getting Started with Lab
 
 Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
@@ -54,7 +72,7 @@ Once the environment is provisioned, a virtual machine (JumpVM) and lab guide wi
 
 1. Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
 
-   ![](../media/getting-started1.png "Lab Environment")
+   ![](../media/l5-labvm.png "Lab Environment")
 
 ## Virtual Machine & Lab Guide
  
@@ -62,9 +80,9 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 
 ## Lab Guide Zoom In/Zoom Out
 
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![Manage Your Virtual Machine](../media/zoominout1.png)
+   ![Manage Your Virtual Machine](../media/l5-zoom.png)
 
 ## Exploring Your Lab Resources
  
@@ -104,7 +122,7 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
  
 4. In the **Stay signed in?** pop-up, click **No**.
 
-   ![](../media/staysign.png)
+    ![](../media/staysign.png)
  
 ## Support Contact
 

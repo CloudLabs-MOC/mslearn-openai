@@ -24,7 +24,7 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **[Azure portal](https://portal.azure.com/)**, search for **Azure OpenAI** and select **Azure OpenAI**.
+1. In the **[Azure portal](https://portal.azure.com/)**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
       ![](../media/l1-12-0.png)
 
@@ -69,7 +69,7 @@ In this task, you will use the DALL-E playground in the Microsoft Foundry portal
 
 > **Note:** This task relies on the DALL·E quota limit available in your Azure OpenAI resource. If the deployment fails, it may be due to quota restrictions on the existing resource. 
 
-> To resolve this, create a new Azure OpenAI resource (as done in **Lab 01**) in a supported region such as **East US** or **Australia East**, and then attempt to deploy the DALL·E model again.
+> To resolve this, create a new Azure OpenAI resource in a supported region such as **East US** or **Australia East**, and then attempt to deploy the DALL·E model again.
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
@@ -332,7 +332,7 @@ In this task, you will run the reviewed code to generate some images.
 
    ![](../media/dev-genai-june-10.png)
 
-1. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
+1. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt and once done close the cloudshell.
 
 ## Summary
 
