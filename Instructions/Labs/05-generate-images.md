@@ -1,6 +1,6 @@
 # Lab 05: Generate images with a DALL-E model
 
-## Estimated Duration: 50 Minutes
+## Estimated Duration: 45 Minutes
 
 ## Lab Overview
 
@@ -138,11 +138,11 @@ In this task, you will use a simple Python or C# app to generate images by calli
     - **Subscription**: Default - Pre-assigned subscription **(1)**.
     - **Resource group**: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     - **Region**: Select **<inject key="Region" enableCopy="false" /> (3)**
-    - **Storage account name**: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - **Storage account name**: **stg<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - **File share**: none **(5)**
     - Click **Create (6)**
 
-      ![](../media/csacreate.png)
+      ![](../media/l5-12-st.png)
     
 1. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
 
@@ -328,7 +328,7 @@ In this task, you will run the reviewed code to generate some images.
     
 1. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
-   ![](../media/l5-12-11.jpg "Keys and Endpoints")
+   ![](../media/l5-12-11.png "Keys and Endpoints")
 
    ![](../media/dev-genai-june-10.png)
 
@@ -340,4 +340,6 @@ In this lab, you have accomplished the following:
 -   Understand the concepts of image generation via the DALL-E model.
 -   Implement image generation into your applications using this model
 
-### You have successfully completed the lab.
+### You have successfully completed the lab.Click Next >> to continue to the next lab.
+
+![Launch Azure Portal](../media/l5-next.png)

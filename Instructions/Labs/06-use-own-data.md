@@ -1,6 +1,6 @@
 # Lab 06: Add your data for RAG with Azure OpenAI Service
 
-## Estimated Duration: 75 Minutes
+## Estimated Duration: 60 Minutes
 
 ## Lab Overview
 
@@ -12,22 +12,81 @@ The Azure OpenAI Service enables you to use your own data with the intelligence 
 
 In this lab, you will complete the following tasks:
 
-- Task 1: Observe normal chat behavior without adding your own data
-- Task 2: Connect your data in the chat playground
-- Task 3: Chat with a model grounded in your data
-- Task 4: Set up an application in Cloud Shell
-- Task 5: Configure your application
-- Task 6: Run your application
+- Task 1: Deploy a model
+- Task 2: Observe normal chat behavior without adding your own data
+- Task 3: Connect your data in the chat playground
+- Task 4: Chat with a model grounded in your data
+- Task 5: Set up an application in Cloud Shell
+- Task 6: Configure your application
+- Task 7: Run your application
 
-## Task 1: Observe normal chat behavior without adding your own data
+### Task 1: Deploy a model
+
+In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
+
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
+
+      ![](../media/l1-12-0.png)
+
+2. On the **Microsoft Foundry | Azure OpenAI** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>(2)**
+
+      ![](../media/l5-12-1.png)
+
+3. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to the **Microsoft Foundry portal**.
+
+      ![](../media/l5-12-2.png)
+
+1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
+
+    ![](../media/l6-12-1.png)
+
+1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
+
+   ![](../media/l1-12-3.png) 
+
+   >**Note:** If pop-up window **Unlock the full capabilities of Azure Microsoft Foundry with projects** appears, click **Continue with existing setup**
+
+      ![](../media/e1t2p2(1).png)
+   
+1. Within the **Deploy model gpt-4.1-mini** pop-up interface, click on **Customize**.
+
+   ![](../media/custom4.1.png)
+
+1. Within the **Deploy model gpt-4.1-mini** pop-up interface, enter the following details:
+
+      - Deployment name: **text-turbo (1)**
+
+      - Deployment type: **Standard (2)**
+
+      - Model version: **2025-04-14 (Default) (3)**
+
+      - Tokens per Minute Rate Limit (thousands): **10K (4)**
+
+      - Content filter: **DefaultV2 (5)**
+
+      - Enable dynamic quota: **Enabled (6)**
+
+      - Click on **Deploy (7)**
+
+        ![](../media/l6-12-2.png)
+
+
+<validation step="863492e4-6930-40bf-ab9f-e1ffb7e21a95" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+        
+## Task 2: Observe normal chat behavior without adding your own data
 
 In this task, you will observe how the base model responds to queries without any grounding data.
 
 1. In [Microsoft Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane.
 
-2. In the **Deployment** section in Chat page, ensure that your model deployment **my-gpt-model (2)** is selected.
+2. In the **Deployment** section in Chat page, ensure that your model deployment **text-turbo (2)** is selected.
 
-   ![](../media/chatmodelv.png)
+   ![](../media/l3-12-1.png)
 
 3. In the **Setup** area, for the **Give the model instructions and context(1)**, provide the following message and click on **Apply changes(2)**.
 
@@ -55,7 +114,7 @@ In this task, you will observe how the base model responds to queries without an
 
     Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London or San Francisco. You'll likely get complete responses about areas or neighbourhoods, and some general facts about the city.
 
-## Task 2: Connect your data in the chat playground
+## Task 3: Connect your data in the chat playground
 
 In this task, you will observe how the base model responds to queries without any grounding data before connecting Azure OpenAI to your data.
    
@@ -73,12 +132,12 @@ In this task, you will observe how the base model responds to queries without an
    | -- | -- |
    | **Subscription** | Default - Pre-assigned subscription **(1)** |
    | **Resource group** | **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)** |
-   | **Storage account name** | **storage1<inject key="DeploymentID" enableCopy="false"></inject> (3)** |
+   | **Storage account name** | **storage<inject key="DeploymentID" enableCopy="false"></inject> (3)** |
    | **Region** | Select **<inject key="Region" enableCopy="false" /> (4)** |
    | **Primary Service** | Azure Blob Storage or Azure Data Lake Storage Gen 2 **(5)** |
    | **Redundancy** | Locally-redundant storage (LRS) **(6)** |
   
-    ![](../media/strgcreatenext.png)
+    ![](../media/l6-12-3.png)
 
 1. Under the **Advanced** tab, provide the following details:
 
@@ -114,7 +173,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. Search for and go to location `C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data` (1). Select all the **PDF files (2)** and click on **Open (3)**. Then click on **Upload** to upload all PDF files. 
 
-    ![](../media/L6T2S9-0205-3.png)
+    ![](../media/l6-12-4.png)
 
 1. Verify the **openaidatasource** container after all files are uploaded.
 
@@ -124,9 +183,9 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/aisrchportal.png)
 
-1. On **Microsoft Foundry | AI search (1)** blade, click on **+ Create (2)**.
+1. On **Microsoft Foundry | AI search* blade, click on **+ Create**.
 
-    ![](../media/aisearchcreate2.png)
+    ![](../media/l6-12-5.png)
 
 1. On the **Create an AI Search** resource page, enter the following settings under the **Basics** tab and click on **Review + create (5)** and subsequently click on **Create**.
 
@@ -154,7 +213,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. In **Microsoft Foundry portal**, navigate to the **Chat (1)** section under **Playgrounds** followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
 
-    ![](../media/chatadd.png)
+    ![](../media/l6-12-6.png)
    
 1. On the **Add data** window, enter the following values for under the **Data source** and then click on **Next (7)** to proceed with **Data Management**.
 
@@ -263,13 +322,13 @@ In this task, you will complete key parts of the application to enable it to use
 
     - **Azure OpenAI endpoint**: Paste the endpoint URL from your Azure OpenAI resource (found on the Keys and Endpoint page in the Azure portal).
     - **Azure OpenAI key**: Paste the key from your Azure OpenAI resource (also on the Keys and Endpoint page).
-    - **Deployment name**: Enter the name of your model deployment (e.g., `my-gpt-model` from the Deployments page in the Azure Microsoft Foundry portal).
+    - **Deployment name**: Enter the name of your model deployment (e.g., `text-turbo` from the Deployments page in the Azure Microsoft Foundry portal).
     - **Azure AI Search endpoint**: Paste the endpoint URL for your AI Search service (copied earlier or found in the overview page for your AI Search resource).
     - **Azure AI Search key**: Paste the admin key for your AI Search resource (available on the Keys page).
     - **Search index name**: Enter `margiestravel` as the index name.
     - Save your changes after updating these values.
 
-        ![](../media/L6T5S3-1807.png)
+        ![](../media/l6-12-7.png)
 
 1. If you're using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
 
@@ -369,6 +428,8 @@ In this task, you will complete key parts of the application to enable it to use
     });
     ```
 
+    ![](../media/l6-12-8.png)
+
     For **Python**: ownData.py
 
     ```python
@@ -401,6 +462,8 @@ In this task, you will complete key parts of the application to enable it to use
     )
     ```
 
+    ![](../media/l6-12-9.png)
+
 1. Save the changes to the code file.
 
 ## Task 6: Run your application
@@ -424,7 +487,7 @@ In this task, you will run the reviewed code to generate some images.
 
 3. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
 
-    ![](../media/tellabt.png)
+    ![](../media/l6-12-10.png)
 
 ## Summary
 
@@ -432,4 +495,4 @@ In this lab, you connected your own data to the Azure OpenAI Service for Retriev
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
-![Launch Azure Portal](../media/7next.png)
+![Launch Azure Portal](../media/l5-next.png)
