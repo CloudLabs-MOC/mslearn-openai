@@ -294,9 +294,39 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![](../media/cshell.png)
 
-   > **Note:** If you open the Cloud Shell for the first time, you will be prompted to choose the type of shell. Please choose **Bash**.
+    >**Note:** If you can't find Cloud Shell, click on the **ellipsis (...) (1)** and then select **Cloud Shell (2)** from the menu.
 
-   >  ![](../media/bash.png)
+    ![](../media/180625(14).png)
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+
+     ![](../media/bash.png)
+
+1. Within the **Getting started** page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
+
+     ![](../media/mountstrg.png)
+
+1. Within the **Mount storage account** page, select **I want to create a storage account (1)** and click **Next (2)**.
+
+    ![](../media/csanext.png)
+
+1. Within the **Create storage account** page, enter the following details:
+
+    - Subscription: Choose the **Default subscription (1)**.
+
+    - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    
+    - Region: **<inject key="Region" enableCopy="false" /> (3)**
+
+    - Storage account name: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+
+    - File share: Create a new file share named **none (5)**
+
+    - Click **Create (6)**
+
+        ![](../media/csacreate.png)
+
+1. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
 1. Once the terminal opens, click on **Settings(1)** and select **Go to Classic version(2)**.
 
