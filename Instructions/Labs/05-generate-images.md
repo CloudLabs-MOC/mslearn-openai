@@ -1,6 +1,6 @@
-# Lab 05: Generate images with a DALL-E model (READ-ONLY)
+# Lab 05: Generate images with a DALL-E model
 
-## Estimated Duration: 75 Minutes
+## Estimated Duration: 50 Minutes
 
 ## Lab Overview
 
@@ -12,80 +12,149 @@ The Azure OpenAI Service includes an image-generation model named DALL-E. You ca
 
 In this lab, you will complete the following tasks:
 
-- Task 1: Explore image generation in the DALL-E playground
-- Task 2: Use the REST API to generate images
-    - Task 2.1: Prepare the app environment
-    - Task 2.2: Configure your application
-    - Task 2.3: View application code
-- Task 3: Run the app
+- Task 1: Provision an Azure OpenAI resource
+- Task 2: Explore image-generation in the DALL-E playground
+- Task 3: Use the REST API to generate images
+- Task 3.1: Prepare the app environment
+- Task 3.2: Configure your application
+- Task 3.3: View application code
+- Task 4: Run the app
 
-## Task 1: Explore image generation in the DALL-E playground
+### Task 1:  Provision an Azure OpenAI resource
 
-In this task, you will use the DALL-E playground in the Azure Microsoft Foundry portal to experiment with image generation.
+In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-> **Note:** This task relies on the DALL·E quota limit available in your Azure OpenAI resource. If the model deployment fails, it may be due to quota restrictions on the existing resource. 
+1. In the **[Azure portal](https://portal.azure.com/)**, search for **Azure OpenAI** and select **Azure OpenAI**.
+
+      ![](../media/l1-12-0.png)
+
+2. On the **Microsoft Foundry | Azure OpenAI** page, select **Azure OpenAI (1)** from the left pane, click **+ Create (2)** drop-down and click on **Azure OpenAI (3)**.
+
+     ![](../media/va1.png)
+
+3. Create an **Azure OpenAI** resource with the following settings, click on **Next** thrice and subsequently click on **Create**:
+   
+      - **Subscription**: Default - Pre-assigned subscription.
+      - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
+      - **Region**: Select <inject key="Region" enableCopy="false" />
+      - **Name**: OpenAI-Lab06-<inject key="Deployment-ID" enableCopy="false"></inject>
+      - **Pricing tier**: Standard S0
+
+        ![](../media/l3-12-0.png)
+
+        >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
+
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+
+     ![](../media/l1-12-2.png)
+
+5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (1)** under **Resource Management**.
+      - Click on **Show Keys (2)**.
+      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+
+        ![](../media/e1t1p5a.png "Keys and Endpoints")
+
+<validation step="cafb7718-6bf1-4fe9-88b8-d1ed6d7c4c58" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+## Task 2: Explore image generation in the DALL-E playground
+
+In this task, you will use the DALL-E playground in the Microsoft Foundry portal to experiment with image generation.
+
+> **Note:** This task relies on the DALL·E quota limit available in your Azure OpenAI resource. If the deployment fails, it may be due to quota restrictions on the existing resource. 
 
 > To resolve this, create a new Azure OpenAI resource (as done in **Lab 01**) in a supported region such as **East US** or **Australia East**, and then attempt to deploy the DALL·E model again.
 
-1. On the Azure portal, type **Azure OpenAI (1)** in the search box and select **Azure OpenAI (2)** from the results.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
-      ![](../media/azureai.png)
+      ![](../media/l1-12-0.png)
 
-2. On the **Microsoft Foundry | Azure Open AI** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+2. On the **Microsoft Foundry | Azure OpenAI** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>(2)**
 
-      ![](../media/update07-1.png)
+      ![](../media/l5-12-1.png)
 
-3. In the Azure OpenAI resource page, click on **Go to Microsoft Foundry portal**, which will navigate to the **Azure Microsoft Foundry portal**.
+3. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to the **Microsoft Foundry portal**.
 
-      ![](../media/dev-genai-june-1.png)
+      ![](../media/l5-12-2.png)
 
 4. On the **Microsoft Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)**.
 
-      ![](../media/deploy-model-1607.png)
+      ![](../media/l5-12-3.png)
 
-5. In the Select a model page, search for **dall-e-3 (1)**, select **dall-e-3 (Text to image) (2)** model, and click on **Confirm (3)**
+5. In the **Select a model** page, search for **dall-e-3 (1)**, select **dall-e-3 (Text to image) (2)** model, and click on **Confirm (3)**
 
-      ![](../media/dallsearch.png)
+      ![](../media/l5-12-4.png)
 
-6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3 (1)**, Click on **customize (2)** and make the **capacity 1K(Tokens per minute) OR 3 as (Request per Minute Rate Limit) (3)** and click on **Deploy (4)**.
+6. Within the **Deploy model** pop-up interface, enter the **Deployment name** as **Dalle3 (1)**, Click on **Customize (2)** and make the **Requests per Minute Rate Limit: 3 (3)** and click on **Deploy (4)**.
 
-      ![](../media/dallcustom.png)
+      ![](../media/l5-12-5.png)
 
-      ![](../media/dallrpm.png)
+      ![](../media/l5-12-6.png)
               
-4. From the left navigation pane, navigate to **Images (1)** under **Playgrounds**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, **An elephant on a skateboard**), and then select **Generate (3)** to view the **resulting image (4)**.
+4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, `An elephant on a skateboard`), and then select **Generate (3)** to view the **resulting image (4)**.
    
-      ![](../media/eleskt.png)
+      ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/l5-12-7.png)
 
-5. Modify the prompt to provide a more specific description. For example, **An elephant on a skateboard in the style of Picasso**. Then generate the new image and review the results.
+5. Modify the prompt to provide a more specific description. For example, `An elephant on a skateboard in the style of Picasso`. Then generate the new image and review the results.
 
-      ![](../media/elepicso.png)
+      ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/l5-12-8.png)
 
       > **Note:** The image may appear differently than shown in the screenshot. 
 
-## Task 2: Use the REST API to generate images 
+## Task 3: Use the REST API to generate images 
 
 The Azure OpenAI service provides a REST API that you can use to submit prompts for content generation, including images generated by a DALL-E model.
 
-### Task 2.1: Prepare the app environment
+### Task 3.1: Prepare the app environment
 
 In this task, you will use a simple Python or C# app to generate images by calling the REST API and running the code in the Cloud Shell console interface within the Azure portal.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal. 
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![](../media/cshell.png)
+    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
     > **Note:** If a **Cloud Shell timed out** pop-up appears, click **Reconnect**.
 
-2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is **Switch to PowerShell**. If it's *Bash*, select **Switch to Bash** and choose **Confirm** from the pop-up box.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-    ![](../media/dev-genai-june-4.png)
+     ![](../media/bash.png)
 
-3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
+1. Within the **Getting started** page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
 
-   ![](../media/classic.png)
+     ![](../media/mountstrg.png)
 
-4. Navigate to the folder for the language of your preference by running the appropriate command.
+1. On the **Mount storage account** screen, select **I want to create a storage account (1)** and click on **Next (2)**.
+
+    ![](../media/csanext.png)
+
+1. Provide the following details:
+
+    - **Subscription**: Default - Pre-assigned subscription.
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
+    - **Region**: Select <inject key="Region" enableCopy="false" />
+    - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>
+    - **File share**: file
+
+      ![](../media/csacreate.png)
+    
+1. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+
+   ![](../media/classic-cloudshell.png)
+
+1. Run the below commands:
+
+    ```
+    rm -r mslearn-openai -f
+    git clone https://github.com/CloudLabs-MOC/mslearn-openai
+    ```
+
+1. Navigate to the folder for the language of your preference by running the appropriate command.
 
     **C#**
 
@@ -99,13 +168,15 @@ In this task, you will use a simple Python or C# app to generate images by calli
     cd mslearn-openai/Labfiles/05-image-generation/Python
     ```
 
-6. Use the following command to open the built-in code editor and see the code files you will be working with.
+1. Use the following command to open the built-in code editor and see the code files you will be working with.
 
     ```bash
    code .
     ```
-   
-### Task 2.2: Configure your application
+
+    ![](../media/l5-12-9.png)
+
+### Task 3.2: Configure your application
 
 In this task, you will use a configuration file in the application to store the details needed to connect to your Azure OpenAI service account.
 
@@ -114,22 +185,22 @@ In this task, you will use a configuration file in the application to store the 
     - C#: `appsettings.json`
     - Python: `.env`
     
-2. In the configuration file, enter the following values for your Azure OpenAI service:
+2. Update the configuration values to include the **Endpoint**, **Key1** and **Deployment name: Dalle3** for your Azure OpenAI service. Then, save the file by right-clicking the file in the left pane.
 
-    - **Endpoint**: The endpoint URL from your Azure OpenAI resource.
-    - **Key1**: The primary key from your Azure OpenAI resource.
-    - **Deployment Name**: Set this to **Dalle3** (the name of your image generation model deployment).
-    After updating these values, save the file by right-clicking it in the left pane.
-
-    > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
+    > **Tip:** You can adjust the split at the top of the cloud shell pane to see the Azure portal and get the endpoint and key values from the **Keys and Endpoint** page for your Azure OpenAI service.
 
 3. If you are using **Python**, you'll also need to install the **python-dotenv** package used to read the configuration file. In the console prompt pane, ensure the current folder is **~/azure-openai/Labfiles/05-image-generation/Python**. Then enter this command:
 
     ```bash
-   pip install --user python-dotenv
+   pip install python-dotenv
     ```
+      > **Note:** If you receive a permission error after executing the installation command as shown in the image, please run the command below for installation/
+      >    ![](../media/L2T3S9python-0205.png)
+      > ```bash
+      > pip install --user python-dotenv
+      > ```
 
-1. If you're using **C#**, navigate to `generate_image.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
+1. If you're using **C#**, navigate to `generate_image.csproj`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file.
 
     ```
     <Project Sdk="Microsoft.NET.Sdk">
@@ -156,7 +227,7 @@ In this task, you will use a configuration file in the application to store the 
     </Project>
     ```    
 
-     ![](../media/u47-1.png)    
+     ![](../media/l5-12-10.png)    
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 
@@ -182,6 +253,8 @@ In this task, you will use a configuration file in the application to store the 
      ```
 
       >**Note:** These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.
+      
+      >**Note:** If the commands do not execute as a bunch, kindly run them one by one.
 
 1. Enter the following command to restore the workload.
 
@@ -202,10 +275,14 @@ In this task, you will use a configuration file in the application to store the 
     **Python**
 
     ```bash
-   pip install --user requests
+   pip install requests
     ```
+      > **Note:** If you receive a permission error after executing the pip install command, please use the below command to install.
+      > ```
+      > pip install --user requests
+      > ```
 
-### Task 2.3: View application code
+### Task 3.3: View application code
 
 In this task, you will explore the code used to call the REST API and generate an image.
 
@@ -216,27 +293,22 @@ In this task, you will explore the code used to call the REST API and generate a
 
 2. Review the code that the file contains, noting the following key features:
 
-    - The code sends HTTPS requests to your Azure OpenAI endpoint, using the service key from the configuration file in the request header.
-    - The image generation workflow involves two REST API calls: the first initiates the image generation process, and the second retrieves the results.
-    - The initial request includes:
-      - The prompt provided by the user describing the desired image
-      - The number of images to generate (set to 1)
-      - The desired image resolution
-    - The response to the initial request contains an **operation-location** header, which provides a callback URL for polling the status of the image generation.
-    - The code repeatedly polls the callback URL until the image generation status is *succeeded*, then extracts and displays the URL of the generated image.
+   >**Note:** Right-click on the file from the left pane, and hit **Save**
+   
+    - The code makes HTTPS requests to the endpoint for your service, including the key for your service in the header. Both of these values are obtained from the configuration file.
+    - The process consists of <u>two</u> REST requests: One to initiate the image-generation request, and another to retrieve the results.
+    The initial request includes the following data:
+        - The user-provided prompt that describes the image to be generated
+        - The number of images to be generated (in this case, 1)
+        - The resolution (size) of the image to be generated.
+    - The response header from the initial request includes an **operation-location** value that is used for the subsequent callback to get the results.
+    - The code polls the callback URL until the status of the image-generation task is *succeeded*, and then extracts and displays a URL for the generated image.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-<validation step="0ee48188-10fe-43f5-b696-a2d993d7d714" />
-
-## Task 3: Run the app
+## Task 4: Run the app
 
 In this task, you will run the reviewed code to generate some images.
 
-1. In the **Cloudshell** bash terminal, navigate to the folder for your preferred language.
+1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
 1. In the console prompt pane, enter the appropriate command to run your application:
 
@@ -251,20 +323,20 @@ In this task, you will run the reviewed code to generate some images.
     ```bash
     python generate-image.py
     ```
-1. When prompted, enter a description for an image. For example, *A giraffe flying a kite*.
+1. When prompted, enter a description for an image. For example, **A giraffe flying a kite**.
     
 1. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
-   ![](../media/urlgir.png)
+   ![](../media/l5-12-11.jpg "Keys and Endpoints")
 
-   ![](../media/kitegir.png)
+   ![](../media/dev-genai-june-10.png)
 
 1. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
 
 ## Summary
 
-In this lab, you explored the DALL-E playground in the Azure Microsoft Foundry portal to generate images based on natural language prompts. You also examined a simple application that uses the REST API to generate images with a DALL-E model and ran the application in the Cloud Shell console within the Azure portal.
+In this lab, you have accomplished the following:
+-   Understand the concepts of image generation via the DALL-E model.
+-   Implement image generation into your applications using this model
 
-### Congratulations on completing the lab! Click Next >> to continue to the next lab.
-
-![Launch Azure Portal](../media/6next.png)
+### You have successfully completed the lab.
