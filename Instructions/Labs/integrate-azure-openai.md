@@ -24,9 +24,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/Update-0.png)
 
-2. On the **AI Foundry** page, select **Azure OpenAI (1)** from the menu on the left, then click **+ Create (2)**.
+2. On the **Microsoft Foundry** page, select **Azure OpenAI (1)** from the menu on the left, then click **+ Create (2)**, then click **Azure OpenAI (3)**.
 
-   ![](../media/Update-1.png)
+   ![](../media/L1T1S2.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -75,9 +75,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](../media/Uptask2-0.png)
 
-1. In the Azure OpenAI resource **Overview (1)** page, click on **Go to Azure AI Foundry portal (2)**.
+1. In the Azure OpenAI resource **Overview (1)** page, click on **Go to Foundry portal (2)**.
 
-   ![](../media/Uptask2-1.png)
+   ![](../media/L1T2S3.png)
 
 1. From the left navigation pane, select **Deployments (1)** under Shared resources, click on **+ Deploy model (2)**, Choose **Deploy base model (3)**.
 
