@@ -547,16 +547,16 @@ Now that your app has been set up, you can just run it to send your request to y
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then, enter the following command to run the application.
 
     - **C#:**
-      
-      `cd mslearn-openai/Labfiles/01-app-develop/CSharp/`
-      
-      `dotnet run`
+      ```
+      cd mslearn-openai/Labfiles/01-app-develop/CSharp/      
+      dotnet run
+      ```
     
     - **Python:**
-      
-      `cd mslearn-openai/Labfiles/01-app-develop/Python/`
-      
-      `python application.py`
+      ```
+      cd mslearn-openai/Labfiles/01-app-develop/Python/
+      python application.py
+      ```
 
     > **Tip:** You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
