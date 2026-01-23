@@ -18,9 +18,9 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure Open AI (1)** and select **Azure OpenAI (2)**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../media/Update-0.png)
+   ![](../media/L1T1S1.png)
 
 2. On the **Microsoft Foundry** page, select **Azure OpenAI (1)** from the menu on the left, then click **+ Create (2)**, then click **Azure OpenAI (3)**.
 
@@ -65,9 +65,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **Azure Open AI (1)** and select **Azure OpenAI (2)**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../media/Update-0.png)
+   ![](../media/L1T1S1.png)
 
 1. On **Microsoft Foundry | Azure OpenAI (1)** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2).**
 
