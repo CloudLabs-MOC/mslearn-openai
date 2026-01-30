@@ -1,4 +1,4 @@
-# Lab 01: Get started with Azure OpenAI Service
+# Lab: Get started with Azure OpenAI Service
 
 ### Estimated Duration: 120 Minutes
 
