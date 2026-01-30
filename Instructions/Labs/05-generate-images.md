@@ -1,4 +1,4 @@
-# Lab 05: Generate images with a DALL-E model
+# Lab: Generate images with a DALL-E model
 
 ## Estimated Duration: 45 Minutes
 
