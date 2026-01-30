@@ -1,4 +1,4 @@
-# Lab 04: Generate and improve code with Azure OpenAI Service
+# Lab: Generate and improve code with Azure OpenAI Service
 
 ## Estimated Duration: 60 Minutes
 
