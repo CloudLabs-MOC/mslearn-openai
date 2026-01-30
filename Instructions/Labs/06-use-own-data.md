@@ -1,4 +1,4 @@
-# Lab 06: Add your data for RAG with Azure OpenAI Service
+# Lab: Add your data for RAG with Azure OpenAI Service
 
 ## Estimated Duration: 60 Minutes
 
