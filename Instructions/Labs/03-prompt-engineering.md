@@ -1,4 +1,4 @@
-# Lab 03: Utilize prompt engineering in your App
+# Lab: Utilize prompt engineering in your App
 
 ## Estimated Duration: 60 Minutes
 
