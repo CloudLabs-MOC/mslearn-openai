@@ -1,4 +1,4 @@
-# Get Started With OpenAI And Build Natural Language Solution
+# Get Started with OpenAI and Build Natural Language Solution
 
 ### Overall Estimated Duration: 4 Hours
 
