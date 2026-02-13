@@ -21,9 +21,9 @@ As you have already deployed OpenAI services in the previous exercise, you're re
 
    ![](../media/search.png)
 
-1. On **AI Foundry | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID	" enableCopy="false"></inject>**
+1. On **Microsoft Foundry | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID	" enableCopy="false"></inject>**
 
-   ![](../media/L1T1S2-2107.png)
+   ![](../media/L2T1S2.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Foundry portal**. It will navigate to **Microsoft Foundry | Azure OpenAI**.
 
