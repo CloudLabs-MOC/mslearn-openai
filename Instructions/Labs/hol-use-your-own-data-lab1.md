@@ -26,9 +26,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/search.png)
 
-2. On **AI Foundry | Azure OpenAI (1)** blade, click on **Create (2)**.
+2. On **Microsoft Foundry | Azure OpenAI (1)** blade, click on **Create (2)**, click on **Azure OpenAI (3)**.
 
-   ![](../media/L1T1S2-2107.png)
+   ![](../media/L1T1S2.png)
 
 3. Create an **Azure OpenAI** resource with the following settings and then click on **Next (6)** thrice.
    
@@ -85,20 +85,20 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
    ![](../media/L1T2S5-2107.png)
 
-1. In the **Select a model** window, select **gpt-35-turbo (1)** and click on **Confirm (2)**.
+1. In the **Select a model** window, select **gpt-4o-mini (1)** and click on **Confirm (2)**.
 
-   ![](../media/L1T2S6-2107.png)
+   ![](../media/L1T2S6.png)
 
 1. Click on **Customize**.
 
-   ![](../media/L1T2S7-2107.png)
+   ![](../media/L1T2S7.png)
 
 1. Within the **Deploy model** pop-up interface, enter the following details:
     
     - **Deployment name**: **text-turbo (1)**
     - **Deployment type**: **Standard (2)**
-    - **Model version**: **0125 (3)** ( Check the Deployment name after changing the model version. If it is changed, please update it to **text-turbo**)
-    - Click on customize to reduce **Tokens per Minute Rate Limit (thousands)**: **20K (4)**
+    - **Model version**: **2024-07-18 (Default) (3)** ( Check the Deployment name after changing the model version. If it is changed, please update it to **text-turbo**)
+    - Click on customize to reduce **Tokens per Minute Rate Limit**: **20K (4)**
     - Click on **Deploy (5)**
   
    ![](../media/L1T2S8-2107.png)
@@ -127,11 +127,9 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
     - **Chat session** - used to submit chat messages and view responses.
     - **Configuration** - used to configure settings for the model deployment.
 
-3. In the **Configuration** section, ensure that your model deployment **`text-turbo(version:0125)`(1)** is selected.
+3. In the **Setup** area, ensure that your model deployment **`text-turbo(version:2024-07-18 (Default))`(1)** is selected. Select the Default system message to set the context for the chat session. The default system message is **`You are an AI assistant that helps people find information`(2)**.
 
-4. In the **Setup** area, select the Default system message to set the context for the chat session. The default system message is **`You are an AI assistant that helps people find information`(2)**.
-
-      ![](../media/u8.png)
+      ![](../media/L1T3S3.png)
    
       >**Note:** On the **Update system message?** pop-up, select **Continue**.
 
@@ -162,7 +160,7 @@ In this task ,you will add your data in the chat playground to see how it respon
 
 1. On **Storage Account** page, click on **+ Create**.
 
-      ![](../media/L1T4S2-2107.png)
+      ![](../media/L1T4S2.png)
 
 1. Create a **Storage Account** resource with the following settings:
 
@@ -214,9 +212,9 @@ In this task ,you will add your data in the chat playground to see how it respon
 
       ![](../media/u22.png)
 
-2.  On **AI Foundry | AI search (1)** blade, click on **Create (2)**.
+2.  On **Microsoft Foundry | AI search (1)** blade, click on **Create (2)**.
 
-      ![](../media/L1T4S14-2107.png "upload files")
+      ![](../media/L1T4S14.png "upload files")
 
 3. Create an **AI Search** resource with the following settings and click on **Review + create (6)**. 
 
