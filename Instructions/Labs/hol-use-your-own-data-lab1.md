@@ -101,7 +101,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
     - Click on customize to reduce **Tokens per Minute Rate Limit**: **20K (4)**
     - Click on **Deploy (5)**
   
-   ![](../media/L1T2S8-2107.png)
+   ![](../media/L1T2S8.png)
 
 1. This will deploy a model that you will be playing around with as you proceed.
 
