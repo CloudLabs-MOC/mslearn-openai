@@ -25,32 +25,32 @@ As you have already deployed OpenAI services in the previous exercise, you're re
 
    ![](../media/L1T1S2-2107.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource pane, click on **Go to Foundry portal**. It will navigate to **Microsoft Foundry | Azure OpenAI**.
 
-   ![](../media/L1T2S3-2107.png)
+   ![](../media/L2T1S3.png)
 
 1. After navigating to Azure AI Studio, if prompted, click on **Close** on the pop-up.
 
 1. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
 
-   ![](../media/ui1.png)
+   ![](../media/L2T1S5.png)
 
-1. In the **Select a model** window, select **gpt-35-turbo (1)** and click on **Confirm (2)**.
+1. In the **Select a model** window, select **gpt-4o-mini (1)** and click on **Confirm (2)**.
 
-   ![](../media/mew5.png)
+   ![](../media/L1T2S6.png)
 
 1. Click on **Customize**.
 
-   ![](../media/u3.png)
+   ![](../media/L1T2S7.png)
 1. Within the **Deploy model** pop-up interface, enter the following details:
     
-    - Deployment name: **text-turbo-35 (1)**
+    - Deployment name: **text-turbo-4o (1)**
     - Deployment type: **Standard (2)**
-    - Model version: **0125 (3)** ( Check the Deployment name after changing the model version. If it is changed please update it to **text-turbo-35**)
+    - Model version: **2024-07-18 (Default) (3)** ( Check the Deployment name after changing the model version. If it is changed please update it to **text-turbo-4o**)
     - Click on customise to reduce **Tokens per Minute Rate Limit (thousands)**: **10K (4)**
     - Click on **Deploy** (5)
   
-      ![](../media/u32.png)
+      ![](../media/L2T1S8.png)
 
 1. This will deploy a model that you will be playing around with as you proceed.
 
