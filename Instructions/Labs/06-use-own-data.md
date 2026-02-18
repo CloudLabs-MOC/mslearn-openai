@@ -27,7 +27,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 1. On the **Microsoft Foundry | Azure OpenAI** page, Click on **+ Create (1)** from the list, select **Azure OpenAI (2)**
 
-   ![](../media/upimg1.png)
+   ![](../media/uupimg1.png)
 
 1. Create an **Azure OpenAI** resource with the following settings click on **Next** three times and subsequently click on **Create**:
    
@@ -43,7 +43,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 1. If you are not able to see the left menu, click on **Service menu**.
 
-   ![](../media/upimg2.png) 
+   ![](../media/uupimg2.png) 
 
 1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -66,20 +66,20 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. On **Microsoft Foundry | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/upimg3.png)
+   ![](../media/uupimg3.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Foundry portal** it will navigate to **Microsoft Foundry portal**.
 
-   ![](../media/upimg4.png)
+   ![](../media/uupimg4.png)
 
 1. Click on **Deployments (1)** under **Shared 
    Resources**, then select **+ Deploy Model (2)**. Next, choose **Deploy Base Model (3).**
 
-      ![](../media/upimg5.png)
+      ![](../media/uupimg5.png)
 
 1. Search for **gpt-4.1-mini (1)**, click on **Confirm (2)**
 
-      ![](../media/upimg6.png)
+      ![](../media/uupimg6.png)
    
 1. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: text-turbo
@@ -88,8 +88,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - Tokens per Minute Rate Limit (thousands): 20K
       - Click on Deploy
   
-           ![](../media/upimg7.png)
-           ![](../media/upimg8up.png) 
+           ![](../media/uupimg7.png)
+           ![](../media/uupimg8up.png) 
 
 1. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
@@ -109,7 +109,7 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
      - **Give the model instructions and context** - used to set the context for the model's responses.
     - **Chat session** - used to submit chat messages and view responses.
 
-      ![](../media/upimg9.png)
+      ![](../media/uupimg9.png)
 
 1. In the **Chat session**, submit the following queries, and review the responses:
 
@@ -131,7 +131,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. Once the github window is opened, click on the download button as shown to download the datasets (brouchers.zip) file and extract it in your labvm.
 
-   ![](../media/upimg19.png)
+   ![](../media/uupimg19.png)
    
 1. In the **Azure portal**, search for **Storage Account** and select **Storage accounts**.
 
@@ -151,8 +151,8 @@ In this task, you will observe how the base model responds to queries without an
     - **Redundancy**: Locally-redundant storage (LRS)
     - Click **Next**.
   
-      ![](../media/upimg11.png)
-      ![](../media/upimg12.png)
+      ![](../media/uupimg11.png)
+      ![](../media/uupimg12.png)
 
     - **Allow enable anonymous access on individual containers**: check in the box to enable under **Advanced** section. Click on **Review + Create**  and subsequently click on **Create**
 
@@ -166,7 +166,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. On **Storage Account | Container** blade, select **Containers** from Data Storage and click on **+ Add Container**.
 
-     ![](../media/upimg14.png)
+     ![](../media/uupimg14.png)
 
 1. Create a container with the name **openaidatasource** and enable Anonymous access level for container.
 
@@ -179,7 +179,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. In the **Azure portal**, search for **Azure AI search** and select **Azure AI search**.
 
-     ![](../media/upimg15.png)
+     ![](../media/uupimg15.png)
 
 1.  On **Azure AI services | AI search** blade, click on **+ Create**.
 
@@ -207,11 +207,11 @@ In this task, you will observe how the base model responds to queries without an
 
 1. In **Microsoft Foundry portal**, Navigate to the **Chat**(1) playground followed by select *Add your data*(2) in the setup pane and click on **+ Add a data source**(3).
 
-    ![](../media/upimg16.png)
+    ![](../media/uupimg16.png)
 
     >If you are not able to see this option, please click on **Show Setup** icon to see the setup menu.
 
-    ![](../media/upimg10.png)
+    ![](../media/uupimg10.png)
 
 1. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
@@ -271,7 +271,7 @@ In this task, you will use a short command-line application running in Cloud She
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
-    ![](../media/upimg17.png)
+    ![](../media/uupimg17.png)
 
 1. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
@@ -290,7 +290,7 @@ In this task, you will use a short command-line application running in Cloud She
     - **File share**: Create a new file share named **none** (5)
     - Click **Create** (6)
 
-        ![](../media/upimg18.png)
+        ![](../media/uupimg18.png)
 
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
