@@ -199,7 +199,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. Navigate to the **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
 
-       ![](../media/x689.png)
+    ![](../media/x689.png)
 
 1. From the left navigation pane,click on **Keys** under Settings and copy the primary key or secondary key and paste it in a notepad file for later use.
 
@@ -228,15 +228,15 @@ In this task, you will observe how the base model responds to queries without an
    
 1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
-      ![](../media/datamanagement.png "Add data")
+    ![](../media/datamanagement.png "Add data")
 
 1. On the **Data connection** page select the **API key** , Click on the **Next**
 
-       ![](../media/API_key.jpg "Add data")
+    ![](../media/API_key.jpg "Add data")
    
 1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **setup** pane.
 
-       ![](../media/review.jpg "Add data")
+    ![](../media/review.jpg "Add data")
 
 <validation step="cf9a74ba-2501-47a6-a819-b42218c0a9da" />
 
