@@ -40,7 +40,7 @@ The architecture flow involves using the Azure OpenAI Service to integrate your 
  
 Once you're ready to dive in, your virtual machine and **Lab guide** will be right at your fingertips within your web browser.
 
-   ![](../media/u40.png)
+   ![](../media/guidepage.png)
 
 ## Virtual Machine & Lab Guide
  

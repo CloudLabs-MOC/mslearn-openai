@@ -38,7 +38,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - Pricing tier: **Standard S0 (5)**
   
-      ![](../media/L1T1S3-2107.png "Create Azure OpenAI resource")
+       ![](../media/L1T1S3-2107.png "Create Azure OpenAI resource")
     
 4. Click on **Create**.
 
@@ -53,7 +53,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-      ![](../media/L1T1S6-2107.png "Keys and Endpoints")
+         ![](../media/L1T1S6-2107.png "Keys and Endpoints")
 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
@@ -101,7 +101,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
     - Click on customize to reduce **Tokens per Minute Rate Limit**: **20K (4)**
     - Click on **Deploy (5)**
   
-   ![](../media/L1T2S8.png)
+         ![](../media/L1T2S8.png)
 
 1. This will deploy a model that you will be playing around with as you proceed.
 
