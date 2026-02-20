@@ -195,6 +195,8 @@ In this task, you will observe how the base model responds to queries without an
 
       ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
 
+      > In the above mentioned region, if Basic SKU is not available, please choose any other region from the available list and continue with the lab. This happens due to the high traffic in a single region for AI Search.
+
 1. Wait until your search resource has been deployed.
 
 1. Navigate to the **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
