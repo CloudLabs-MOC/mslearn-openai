@@ -114,7 +114,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 <validation step="69a18560-a442-467a-be09-b5663806dd0a" />
 
-    > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+> **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
 ## Task 3: Set up an application in Cloud Shell
 
@@ -163,6 +163,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
     ![](../media/classic.png)
 
 1. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
+    >**Tip**: You can right-click to paste in the terminal
 
     ```bash
    rm -r mslearn-openai -f
@@ -261,8 +262,9 @@ In this task, you will configure the application to connect with the Azure OpenA
     python -m venv labenv
     pip install python-dotenv openai==1.65.2 --user
     ```
+    >**Note:** If you want to return to the previous folder to choose a different language, use `cd ..` command in the terminal.
 
-1. Navigate to your preferred language folder, replace the comment **Add Azure OpenAI package** with code to add the Azure OpenAI SDK library:
+1. Navigate to your preferred language folder, replace the comment **Add Azure OpenAI package** with the code to add the Azure OpenAI SDK library:
 
     **C#:** Program.cs
 
@@ -656,5 +658,3 @@ In this task, you will run the application and interact with the Azure OpenAI mo
 In this lab, you used your Azure OpenAI resource to build and test an application with the Azure OpenAI SDK by configuring the development environment, integrating required credentials, and running the sample app to observe how different prompts influence AI-generated responses.
 
 ### Congratulations on completing the lab!
-
-   ![](../media/next3.png)
