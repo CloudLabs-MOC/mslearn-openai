@@ -23,7 +23,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](./media/azureai.png)
 
-2. On  **Microsoft Foundry | Azure OpenAI** blade, select **Azure OpenAI(1)** from the left menu, click on **+ Create(2)** and select **Azure OpenAI(3)**
+2. On  **Microsoft Foundry | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
 
    ![](./media/SS1.png)
 
@@ -69,25 +69,25 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](./media/SS2.png)
 
-1. Search for **gpt-4o-mini (1)** in the search bar, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
+1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
 
-   ![](./media/T2S3.png)
+   ![](./media/img-01-03.png)
 
    >**Note:** If pop-up window **Unlock the full capabilities of Microsoft Foundry with projects** appears, click **Continue with existing setup**
 
       ![](./media/e1t2p2(1).png)
    
-1. Within the **Deploy model gpt-4o-mini** pop-up interface, click on **Customize**.
+1. Within the **Deploy model gpt-4.1-mini** pop-up interface, click on **Customize**.
 
-   ![](./media/customize.png)
+   ![](./media/img-01-04.png)
 
-1. Within the **Deploy model gpt-4o-mini** pop-up interface, enter the following details:
+1. Within the **Deploy model gpt-4.1-mini** pop-up interface, enter the following details:
 
       - Deployment name: **my-gpt-model (1)**
 
       - Deployment type: **Standard (2)**
 
-      - Model version:**2024-07-18 (Default) (3)**
+      - Model version:**2025-04-14 (Default) (3)**
 
       - Tokens per Minute Rate Limit (thousands): **10K (4)**
 
@@ -97,15 +97,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Click on **Deploy (7)**
 
-        ![](./media/e1t2p5.png)
+        ![](./media/img-01-05.png)
       
-        >**Note:** gpt-4o-mini is supported only for chat completions, and it is not supported for the completions API.
+        >**Note:** gpt-4.1-mini is supported only for chat completions, and it is not supported for the completions API.
         
 1. This will deploy a model that you will be playing around with as you proceed.
 
     > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
    
-    > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4o-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+    > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -122,11 +122,11 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
 1. In the **Playgrounds** section, select the **Chat (1)** page, and ensure that the **my-gpt-model(version:2024-07-18) (2)** model is selected in the configuration pane.
 
-      ![](./media/SS3.png)  
+      ![](./media/img-01-06.png)  
 
 1. In the **Setup** section, in the **Give the model instructions and context** box, replace the existing text with the following statement: **`The system is an AI teacher that helps people learn about AI`** **(1)** and click on **Apply changes (2)**. 
 
-      ![](./media/e1t4p2.png)
+      ![](./media/img-01-07.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -168,25 +168,25 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
 1. Review the response and then submit the following message to continue the conversation: **`How is it related to machine learning?`**
 
-      ![](./media/model_response.png)
+      ![](./media/img-01-08.png)
 
 1. Review the response, note that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-1. Use the **</>View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+1. Use the **</>View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far. After review, close the sample code page.
 
-      ![](./media/image5a.png)
+      ![](./media/img-01-09.png)
 
 ## Task 4: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Chat Configuration** pane select **Parameters (1)**, set the following parameter values:
+1. In the **Chat Playground** pane, select **Parameters (1)** (scroll down if necessary), and set the following parameter values:
       
-      - Max response: **500 (2)**
+      - Max Completion Tokens: **500 (2)**
      
       - Temperature: **0 (3)**
    
-          ![](./media/image6.png)
+          ![](./media/img-01-10-01.png)
       
 2. Submit the following message as a query in a chat session
 
@@ -204,7 +204,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 3. Review the **results**, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
-      ![](./media/g18.png)
+      ![](./media/img-01-11.png)
    
 4. Observe the following about the prompt and parameters you used:
 
@@ -218,7 +218,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. In the **Setup pane**, under the **Give the model instructions and context** box, enter the system message: **`You are a Python developer.`** **(1)** then save the changes by clicking on **Apply changes (2)**.
 
-      ![](./media/e1t6p1.png)
+      ![](./media/img-01-12.png)
 
 1. In the **Update system message?** pop-up window, click on **Continue**.
 
@@ -240,7 +240,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-      ![](./media/T5S6.png)
+      ![](./media/img-01-13.png)
 
 ## Summary
 
