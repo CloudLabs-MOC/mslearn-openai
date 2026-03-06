@@ -26,32 +26,41 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/op-rt-g-11.png)
 
-1. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
+1. On  **Microsoft Foundry | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
 
-   ![](../media/tel-10.png)
+   ![](../media/SS1.png)
 
-1. Create an **Azure OpenAI** resource with the following settings 
-
-    - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
-    - **Region**: Select **France Central** (3)
-    - **Name**: OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
-    - **Pricing tier**: Standard S0 (5)
-    -  Click on **Next** (6)
+1. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
+    
+    - Subscription: **Default Subscription (1)**
+    
+    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    
+    - Region: **<inject key="Region" enableCopy="false"></inject> (3)**
+    
+    - Name: **OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    
+    - Pricing tier: **Standard S0 (5)**
   
-         ![](../media/op-rt-g-12.png "Create Azure OpenAI resource")
+        ![](../media/op-rt-g-12.png "Create Azure OpenAI resource")
 
-1. Click on **Next** twice and subsequently click on **Create** 
+1. Under the **Review + submit** tab, click on **Create**.
 
-1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+    ![](../media/SS8.png)
 
-1. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+
+    ![](../media/img-01-28.png)
+
+1. To capture the Keys and Endpoints values, on **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+
+      - On the left navigation menu, expand **Resource Management (1)** and select **Keys and Endpoint (2)**.
+
+      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
+
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-          ![](../media/ui3.png "Keys and Endpoints")
+          ![](../media/img-01-29.png "Keys and Endpoints")
 
 <validation step="92fd5d61-ee1f-44aa-b7cc-4545c53b5b92" />
 
@@ -64,23 +73,13 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
+1. In the Azure OpenAI resource pane, navigate back to the **Overview** page and click **Go to Foundry portal**. This will take you to **Microsoft Foundry**.
 
-   ![](../media/tel-11.png)
+    ![](../media/va2.png)
 
-1. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**
+1. Select the **Deployments (1)** from the left pane under **Shared resources**, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
-   ![](../media/update07.png)
-
-1. In the Azure OpenAI resource pane, select 
-   **Overview (1)** from the left-hand menu, then click on **Go to Azure AI Foundry portal (2)**. This will navigate you to **Azure AI Foundry portal**.
-
-   ![](../media/update08.png)
-
-1. Click on **Deployments (1)** under **Shared 
-   Resources**, then select **+ Deploy Model**. Next, choose **Deploy Base Model (2).**
-
-      ![](../media/ui1.png "Create a new deployment")
+    ![](../media/va3.png)
 
 1. Search for **gpt-4o (1)**, select it from the list **(2)**, and then click **Confirm (3)**.
 
@@ -116,123 +115,174 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
+1. Navigate back to [Microsoft Foundry](https://ai.azure.com/) portal, from the left navigation pane, select **Chat (1)** and verify that the **text-turbo (2)** model is selected in the Deployment.
 
-1. In the **Setup** section at the top, enter `You are a helpful AI assistant` **(1)** under Give the model instructions and context and click on **Apply changes (2)** and subsequently click on **Continue**.
+1. Update the  **Give the model instructions and context (1)** with the text mentioned below, and click on **Apply changes (2)**. 
 
-    ![](../media/op-rt-g-6.png)
-
-    >**Note**: If the **Setup** option is not visible, click on **Show set** to display it.
-
-1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
-
-    ```code
-   1. Create a list of animals
-   2. Create a list of whimsical names for those animals
-   3. Combine them randomly into a list of 25 animal and name pairs
     ```
-    >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
+    You are an AI assistant that helps people find information.
+   ```
 
-1. The model will probably provide a satisfactory response to the prompt, presented as a numbered list. While this is a decent answer, it doesn't meet our specific needs.
+    ![](../media/findinfoo.png)
 
-1. Next, update the Give the model instructions and context to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments` **(1)**. Click **Apply changes (2)** and subsequently click on **Continue**.
+1. In the **Update system message?** window, click on **Continue**.
 
-    ![](../media/op-rt-g-7.png)
+      ![](../media/19.png)
 
-1. Format the instructions as python comments. Send the following prompt to the model.
+1. In the **Chat session**, submit the following query:
 
-    ```code
-   # 1. Create a list of animals
-   # 2. Create a list of whimsical names for those animals
-   # 3. Combine them randomly into a list of 25 animal and name pairs
+    ```prompt
+    What kind of article is this?
+    ---
+    Severe drought likely in California
+    
+    Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+    
+    In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+    
+    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning that the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-1. The model should correctly respond with complete python code doing what the comments requested.
+1. The response describes the article. However, suppose you want a more specific format for article categorization.
+  
+   ![](../media/img-01-35.png)
 
-1. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the Give the model instructions and context and enter `You are a helpful AI assistant` again, and **Apply changes** your changes and subsequently click on **Continue**. This will create a new chat session.
+1. In the **Setup** section, change the **Give the model instructions and context (1)** to the below text and click on **Apply changes (2)**. 
 
-1. Send the following prompt to the model.
+   ```
+   You are a news aggregator that categorizes news articles.
+   ```
 
-    ```code
-   Severe drought likely in California
+   ![](../media/img-01-36.png)
 
-   Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
-   
-   In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
-   
-   Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/19.png)
+
+1. Under the new system message, select the **Add section (1)** button, and choose **Examples (2)**. Then add the following example.
+
+   ![](../media/addsectioneg.png)
+
+   **User:**
+    
+    ```prompt
+    What kind of article is this?
+    ---
+    New York Baseballers Win Big Against Chicago
+    
+    New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3-run homerun late in the bottom of the 7th inning.
+    
+    Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
+    
+    The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but they were unable to get the runner home to score.
     ```
-
-1. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
-
-1. In the **Setup** section near the Give the model instructions and context, select the **+ Add section** button. then click on **Examples** Add the following example.
-
-    ![](../media/example1-1.png)
-
-    **User:**
-
-    ```code
-      New York Baseballers Wins Big Against Chicago
-
-      New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
-
-      Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
-
-      The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
-    ```
-
+    
     **Assistant:**
-       
-    ```code
+    
+    ```prompt
     Sports
-    ```
+      ```
 
 1. Add another example with the following text.
 
     **User:**
-
-    ```code
+    
+    ```prompt
+    Categorize this article:
+    ---
     Joyous moments at the Oscars
-
-    The Oscars this past week where quite something!
-
+    
+    The Oscars this past week were quite something!
+    
     Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
     These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
-
-    From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
+    
+    From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrow's rerun of all the festivities.
     ```
-
+    
     **Assistant:**
-
-    ```code
+    
+    ```prompt
     Entertainment
     ```
 
-1. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
+1. Click on the **Apply changes** button to save your changes.
 
-    ```code
+   ![](../media/w3.png)
+
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/19.png)
+
+1. In the **Chat session** section, resubmit the following prompt:
+
+    ```prompt
+    What kind of article is this?
+    ---
     Severe drought likely in California
-
+    
     Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
-
+    
     In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
-
-    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+    
+    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning that the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-1. This time the model should respond with an appropriate classification, even without instructions.
+    The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
+
+   ![](../media/img-01-37.png)
+
+1. Set the **Give the model instructions and context (1)** to the text mentioned below. Save the changes by clicking on **Apply changes (2)**.
+   ```
+   You are an AI assistant that helps people find information.
+   ```
+
+   ![](../media/findinfoo.png)
+
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/19.png)
+
+1. In the **Chat session** section, submit the following prompt:
+
+    ```prompt
+    # 1. Create a list of animals
+    # 2. Create a list of whimsical names for those animals
+    # 3. Combine them randomly into a list of 25 animal and name pairs
+    ```
+    The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you wanted was for the model to write a Python program that performs the tasks you described?
+
+   ![](../media/img-01-38.png)
+
+1. Change the **Give the model instructions and context (1)** to the text mentioned below, and **Apply changes (2)** the changes.
+
+   ```
+   You are a coding assistant helping write Python code.
+   ```
+
+   ![](../media/img-01-39.png)
+
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/19.png)
+
+1. Submit the following prompt to the model:
+
+      ```
+      Write a Python function named Multiply that multiplies two numeric parameters.
+      ```
+
+1. Review the response, which should include sample Python code that meets the requirement in the prompt.
+
+      ![](../media/img-01-40.png)
 
 ### Task 4: Set up an application in Cloud Shell
 
 In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Cloud Shell on Azure. Open a new browser tab to work with Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. Navigate to **Azure portal**, select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
-
-    >**Note :** If you don't see the Cloud Shell icon, click on the **ellipsis** button and select **Cloud Shell**.
-
-     ![](../media/open1.png)
+    ![](../media/cshell.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
@@ -249,7 +299,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 1. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(2)
+    - **Resource group**: Select **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** (2)
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (3)
     - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
@@ -261,9 +311,9 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
-1. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-   ![](../media/classic-cloudshell.png)
+   ![](../media/classic.png)
 
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `mslearn-openai`.
 
@@ -304,7 +354,23 @@ In this task, you will complete key parts of the provided C# or Python applicati
     - C#: `appsettings.json`
     - Python: `.env`
     
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model's name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+1. In the configuration file, enter the following values for your Azure OpenAI service:
+
+    - **Endpoint**: The endpoint URL from your Azure OpenAI resource.
+    - **Key1**: The primary key from your Azure OpenAI resource.
+    - **Deployment Name**: Set this to **text-turbo** (the name of your model deployment).
+    After updating these values, save the file by right-clicking it in the left pane.
+
+        > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
+
+        - **C#:**
+
+            ![](../media/q2.png) 
+
+        - **Python:**
+     
+            ![](../media/q3.png)
+    
 
 1. If you're using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
 
@@ -695,7 +761,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-1. To save the changes made to the file, right-click on the file from the left pane and hit **Save**.
+1. To save the changes made to the file, right-click on the file from the left pane and hit **Save** or press `CTRL+S`.
 
 ### Task 6: Run your application
 
@@ -726,44 +792,50 @@ In this task, you will run your configured app to send a request to your model a
 
 1. For the first iteration, Type **1** which selects the **Basic prompt (no prompt engineering)**, and press enter for **Enter a number to select a prompt**.
 
-1. The AI tool will take the **System prompt** as `You are an AI assistant` and the **User prompt** as `Write an intro for a new wildlife Rescue`
+1. The AI tool will take the,
 
-     ![](../media/L3T4S5-1707.png)
+   -  **System prompt:** `You are an AI assistant`
+   -  **User prompt:** `Write an intro for a new wildlife Rescue`
+
+        ![](../media/L3T4S5-1707.png)
 
 1. Observe the output. The model will likely produce a good generic introduction to a wildlife rescue.
 
 1. Next, enter **2** to select **Prompt with email formatting and basic system message** and press enter for **Enter a number to select a prompt**.
 
-1. This time it will take the **System prompt** as `You are an AI assistant helping to write emails` and the **User prompt** as `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants - Call for donations to be given at our website`
+1. This time it will take the,
 
-     ![](../media/L3T4S8-1707.png)
+   - **System prompt:** `You are an AI assistant helping to write emails`
+   - **User prompt:** `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants - Call for donations to be given at our website`
+
+        ![](../media/L3T4S8-1707.png)
 
 1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
 
 1. Next, enter **3** to select **Prompt with formatting and specifying content** and press enter for **Enter a number to select a prompt**.
 
-1. Observe, it will take the **System prompt** as `You are an AI assistant helping to write emails` and the **User prompt** as `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website \n\n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
+1. Observe, it will take the,
 
-     ![](../media/L3T4S11-1707.png)
+   - **System prompt:** `You are an AI assistant helping to write emails`
+   - **User prompt:** `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website \n\n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
+
+        ![](../media/w8.png)
 
 1. Observe the output and see how the email has changed based on your clear instructions.
 
 1. Next, enter **4** to select **Prompt adjusting system message to be light and use jokes** and press enter for **Enter a number to select a prompt**.
 
-1. It will take the **System prompt** as `You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented and you always include at least two jokes.` and the **User prompt** as `Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
+1. It will take the,
 
-     ![](../media/L3T4S14-1707.png)
+   - **System prompt:** `You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented, and you always include at least two jokes.`
+   - **User prompt:** `Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
+
+        ![](../media/L3T4S14-1707.png)
 
 11. Observe the output. This time, you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
 
 ## Summary
 
-In this lab, you have accomplished the following:
-
-- Provisioned an **Azure OpenAI resource**.  
-- Deployed a **GPT-4o model** in the **Azure AI Foundry portal**.  
-- Applied **prompt engineering** in the chat playground.  
-- Set up and configured an **application in Cloud Shell**.  
-- Ran the app to observe how different prompts influence model responses.  
+In this lab, you explored how prompt engineering can influence the behavior of an AI model. You experimented with different system messages and few-shot examples in the chat playground to see how they affected the model's responses. You also set up a simple application in Cloud Shell that interacts with your Azure OpenAI model, allowing you to see how different prompts yield different results while keeping other parameters constant.
 
 ### You have successfully completed the lab.
