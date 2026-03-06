@@ -26,7 +26,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/op-rt-g-11.png)
 
-1. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
+1. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**, select **Azure OpenAI (3)** from dropdown.
 
    ![](../media/tel-10.png)
 
@@ -77,7 +77,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/update08.png)
 
-1. Click on **Deployments (1)** under **Shared 
+1. On left pane scroll down and Click on **Deployments (1)** under **Shared 
    Resources**, then select **+ Deploy Model**. Next, choose **Deploy Base Model (2).**
 
       ![](../media/ui1.png "Create a new deployment")
@@ -304,7 +304,10 @@ In this task, you will complete key parts of the provided C# or Python applicati
     - C#: `appsettings.json`
     - Python: `.env`
     
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model's name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, use **deployment name** as `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+
+> **Note :** Model endpoint syntax  
+>  `https://<project-name>.cognitiveservices.azure.com/`
 
 1. If you're using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
 
@@ -332,6 +335,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     </Project>
     ```    
+>  **Note:** Replace **net8.0** with **net9.0** in the code **PropertyGroup** section. See the image below for the correct versions.
 
      ![](../media/L3T3S4-1707.png)    
 
