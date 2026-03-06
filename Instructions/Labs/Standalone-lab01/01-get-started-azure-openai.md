@@ -138,14 +138,14 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 1. Enter the following message and response in the designated boxes:
 
       - **User:** 
-      ```
-      What are the different types of artificial intelligence?
-      ``` 
+            ```
+            What are the different types of artificial intelligence?
+            ``` 
     
       - **Assistant:** 
-      ```
-      There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
-      ``` 
+            ```
+            There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
+            ``` 
 
       ![](./media/e1t4p5.png)
    

@@ -819,7 +819,7 @@ In this task, you will run your configured app to send a request to your model a
    - **System prompt:** `You are an AI assistant helping to write emails`
    - **User prompt:** `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website \n\n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
 
-        ![](../media/w8.png)
+        ![](../media/w8-1.png)
 
 1. Observe the output and see how the email has changed based on your clear instructions.
 
