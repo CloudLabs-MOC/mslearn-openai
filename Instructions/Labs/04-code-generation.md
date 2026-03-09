@@ -23,7 +23,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 1. In [Microsoft Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and make sure that **text-turbo (2)** is selected.
 
-   ![](../media/l3-12-1.png)
+   ![](../media/lab3-02-8.png)
    
 1. In the **Chat session** section, enter the following prompt and press *Enter*.
 
@@ -31,7 +31,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     Write a function in Python that takes a character and a string as input, and returns how many times that character appears in the string
     ```
     
-   ![](../media/pyprog.png)
+   ![](../media/lab4-02-1.png)
 
 1. Observe the output. The model will likely respond with a function, with some explanation of what the function does and how to call it.
 
@@ -40,7 +40,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
    Do the same thing, but this time write it in C#.
    ```
 
-   ![](../media/cprog.png)
+   ![](../media/lab4-02-2.png)
 
 1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task, such as reversing the input string.
 
@@ -60,7 +60,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     end
     ```
 
-   ![](../media/ruby.png)
+   ![](../media/lab4-02-3.png)
 
 1. Observe the output, which explains what the function does.
 
@@ -70,7 +70,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
    Can you simplify the function?
    ```   
 
-   ![](../media/simpfun.png)
+   ![](../media/lab4-02-4.png)
 
 1. Submit the below-mentioned prompt to add comments to the code.
 
@@ -78,7 +78,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
       Add some comments to the function.
       ```
 
-      ![](../media/comments.png)
+      ![](../media/lab4-02-5.png)
 
 1. Observe the output, which includes comments explaining what each part of the function does. 
 

@@ -32,11 +32,11 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 1. Create an **Azure OpenAI** resource with the following settings 
 
-    - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **Region**: Select **<inject key="Region" enableCopy="false"></inject>** (3)
-    - **Name**: OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **Pricing tier**: Standard S0 (5)
+    - **Subscription:** Default - Pre-assigned subscription **(1)**.
+    - **Resource group:** **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - **Region:** Select **<inject key="Region" enableCopy="false"></inject>** (3)
+    - **Name:** **OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - **Pricing tier:** **Standard S0 (5)**
     -  Click on **Next** (6)
   
          ![](../media/l3-12-0.png "Create Azure OpenAI resource")
@@ -53,7 +53,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - Copy **Key 1 (4)** and ensure to paste it in a text editor such as Notepad for future reference.
       - Finally copy the **Endpoint (5)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-          ![](../media/e1t1p5a.png "Keys and Endpoints")
+        ![](../media/e1t1p5a.png "Keys and Endpoints")
 
 <validation step="0dcf92c3-7549-43f6-83c4-410dcd397bad" />
 
@@ -125,7 +125,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
    ![](../media/l3-12-1.png)
 
-1. Update the  **Give the model instructions and context(1)** with the text mentioned below, and click on **Apply changes(2)**.  
+1. Update the  **Give the model instructions and context (1)** with the text mentioned below, and click on **Apply changes (2)**.  
 
    ```
    You are an AI assistant that helps people find information.
@@ -133,7 +133,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
    ![](../media/l3-12-6.png)
 
-   > **Note:** If the Apply changes button is greyed out, it means this instruction is already set — no further action is needed.
+   > **Note:** If the Apply changes button is greyed out, it means this instruction is already set no further action is needed.
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -158,7 +158,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
    The response describes the article. However, suppose you want a more specific format for article categorization.
   
 
-1. In the **Setup** section, change the **Give the model instructions and context(1)** to the below text and click on **Apply changes(2)**. 
+1. In the **Setup** section, change the **Give the model instructions and context (1)** to the below text and click on **Apply changes (2)**. 
 
    ```
    You are a news aggregator that categorizes news articles.
@@ -239,11 +239,11 @@ In this task, you'll explore how prompt engineering influences model behavior by
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning that the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-    The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
+    - The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
 
-   ![](../media/2egchat.png)
+      ![](../media/lab3-02-1.png)
 
-1. Set the **Give the model instructions and context(1)** to the text mentioned below. Save the changes by clicking on **Apply changes(2)**.
+1. Set the **Give the model instructions and context (1)** to the text mentioned below. Save the changes by clicking on **Apply changes (2)**.
    ```
    You are an AI assistant that helps people find information.
    ```
@@ -262,9 +262,9 @@ In this task, you'll explore how prompt engineering influences model behavior by
     # 3. Combine them randomly into a list of 25 animal and name pairs
     ```
 
-    The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you wanted was for the model to write a Python program that performs the tasks you described?
+    - The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you wanted was for the model to write a Python program that performs the tasks you described?
 
-   ![](../media/loa.png)
+     ![](../media/lab3-02-2.png)
 
 1. Change the **Give the model instructions and context(1)** to the text mentioned below, and **Apply changes(2)** the changes.
 
@@ -286,7 +286,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-      ![](../media/pyop.png)
+      ![](../media/lab3-02-3.png)
 
 ## Task 4: Set up an application in Cloud Shell
 
@@ -306,7 +306,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. Within the **Getting started** page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
 
-     ![](../media/mountstrg.png)
+     ![](../media/lab3-02-4.png)
 
 1. Within the **Mount storage account** page, select **I want to create a storage account (1)** and click **Next (2)**.
 
@@ -314,15 +314,15 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. Within the **Create storage account** page, enter the following details:
 
-    - Subscription: Choose the **Default subscription (1)**.
+    - **Subscription:** Choose the **Default subscription (1)**.
 
-    - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - **Resource group:** Select **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     
-    - Region: **<inject key="Region" enableCopy="false" /> (3)**
+    - **Region:** **<inject key="Region" enableCopy="false" /> (3)**
 
-    - Storage account name: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - **Storage account name:** **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
 
-    - File share: Create a new file share named **none (5)**
+    - **File share:** Create a new file share named **none (5)**
 
     - Click **Create (6)**
 
@@ -347,7 +347,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     cd mslearn-openai/Labfiles/03-prompt-engineering
     ```
 
-    ![](../media/l3-12-8.png)
+    ![](../media/lab3-02-5.png)
 
     Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
 
@@ -379,9 +379,9 @@ In this task, you will complete key parts of the provided C# or Python applicati
     
 1. In the configuration file, enter the following values for your Azure OpenAI service:
 
-    - **Endpoint**: The endpoint URL from your Azure OpenAI resource.
-    - **Key1**: The primary key from your Azure OpenAI resource.
-    - **Deployment Name**: Set this to **text-turbo** (the name of your model deployment).
+    - **Endpoint:** The endpoint URL from your Azure OpenAI resource.
+    - **Key1:** The primary key from your Azure OpenAI resource.
+    - **Deployment Name:** Set this to **text-turbo** (the name of your model deployment).
     After updating these values, save the file by right-clicking it in the left pane.
 
    > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
@@ -421,7 +421,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     </Project>
     ```    
 
-     ![](../media/L3T3S4-1707.png)    
+     ![](../media/lab3-02-5.1.png)    
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 
@@ -776,7 +776,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-1. To save the changes made to the file, right-click on the file from the left pane and hit **Save**.
+1. Use the **CTRL+S** command to save your changes to the code file. You can keep it open (in case you need to edit the code to fix any errors) or use the **CTRL+Q** command to close the code editor while keeping the cloud shell command line open.
 
 ## Task 6: Run your application
 
@@ -832,7 +832,7 @@ In this task, you will run your configured app to send a request to your model a
    - **System prompt:** `You are an AI assistant helping to write emails`
    - **User prompt:** `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website \n\n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
 
-        ![](../media/L3T4S11-1707.png)
+        ![](../media/lab3-02-6.png)
 
 1. Observe the output and see how the email has changed based on your clear instructions.
 
@@ -843,7 +843,7 @@ In this task, you will run your configured app to send a request to your model a
    - **System prompt:** `You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented, and you always include at least two jokes.`
    - **User prompt:** `Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
 
-        ![](../media/L3T4S14-1707.png)
+        ![](../media/lab3-02-7.png)
 
 11. Observe the output. This time, you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
 
