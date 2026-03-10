@@ -4,23 +4,22 @@
 
 ## Lab Overview
 
-In this lab, you will learn how to connect your own data to the Azure OpenAI Service for Retrieval-Augmented Generation (RAG).
-
-The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics or blend it with results from the pre-trained model.
+In this lab, you will learn how to implement Retrieval-Augmented Generation (RAG) using Azure OpenAI Service. You will provision an Azure OpenAI resource, deploy a language model, and observe how the model responds before and after connecting it to your own data. You will store documents in Azure Blob Storage, index them using Azure AI Search, and connect the data source in the Chat playground. Finally, you will configure and run a sample application in Cloud Shell to query the model using your indexed data.
 
 ## Lab Objectives
 
 In this lab, you will complete the following tasks:
 
-- Task 1: Deploy a model
-- Task 2: Observe normal chat behavior without adding your own data
-- Task 3: Connect your data in the chat playground
-- Task 4: Chat with a model grounded in your data
-- Task 5: Set up an application in Cloud Shell
-- Task 6: Configure your application
-- Task 7: Run your application
+- Task 1: Provision an Azure OpenAI resource
+- Task 2: Deploy a model
+- Task 3: Observe normal chat behavior without adding your own data
+- Task 4: Connect your data in the chat playground
+- Task 5: Chat with a model grounded in your data
+- Task 6: Set up an application in Cloud Shell
+- Task 7: Configure your application
+- Task 8: Run your application
 
-### Task 0:  Provision an Azure OpenAI resource
+### Task 1:  Provision an Azure OpenAI resource
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
@@ -63,7 +62,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 <validation step="cafb7718-6bf1-4fe9-88b8-d1ed6d7c4c58" />
 
-### Task 1: Deploy a model
+### Task 2: Deploy a model
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
@@ -121,7 +120,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
         
-## Task 2: Observe normal chat behavior without adding your own data
+## Task 3: Observe normal chat behavior without adding your own data
 
 In this task, you will observe how the base model responds to queries without any grounding data.
 
@@ -147,7 +146,7 @@ In this task, you will observe how the base model responds to queries without an
 
     Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London or San Francisco. You'll likely get complete responses about areas or neighbourhoods, and some general facts about the city.
 
-## Task 3: Connect your data in the chat playground
+## Task 4: Connect your data in the chat playground
 
 In this task, you will observe how the base model responds to queries without any grounding data before connecting Azure OpenAI to your data.
    
@@ -295,7 +294,7 @@ In this task, you will observe how the base model responds to queries without an
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-## Task 4: Chat with a model grounded in your data
+## Task 5: Chat with a model grounded in your data
 
 In this task, you will ask the same questions as before in the chat section after adding your data, and observe how the responses differ.
 
@@ -317,7 +316,7 @@ In this task, you will ask the same questions as before in the chat section afte
 
     >**Note:** **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
-## Task 5: Set up an application in Cloud Shell
+## Task 6: Set up an application in Cloud Shell
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate integration with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
@@ -377,7 +376,7 @@ In this task, you will use a short command-line application running in Cloud She
    code .
     ```
 
-## Task 6: Configure your application
+## Task 7: Configure your application
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
@@ -536,7 +535,7 @@ In this task, you will complete key parts of the application to enable it to use
 
 1. Save the changes to the code file.
 
-## Task 7: Run your application
+## Task 8: Run your application
 
 In this task, you will run your configured app to send a request to your model and observe the response, noting that the only difference between options is the prompt content while all other parameters (such as token count and temperature) remain consistent.
 
@@ -561,7 +560,7 @@ In this task, you will run the reviewed code to generate some images.
 
 ## Summary
 
-In this lab, you connected your own data to the Azure OpenAI Service for Retrieval-Augmented Generation (RAG). You observed how the base model responds to queries without any grounding data, connected your data in the chat playground, and chatted with a model grounded in your data. You also set up an application in Cloud Shell, configured it to use your Azure OpenAI resource and AI search service, and ran the application to see how it integrates with the Azure OpenAI model.
+In this lab, you provisioned an Azure OpenAI resource, deployed a model, and observed the model’s responses without grounding data. You then uploaded documents to Azure Blob Storage, indexed them with Azure AI Search, and connected the data source to enable RAG-based responses. Finally, you configured and ran an application in Cloud Shell to query the model using your connected data.
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
