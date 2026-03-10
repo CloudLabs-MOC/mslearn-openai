@@ -113,6 +113,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 In this task, you will configure the application to connect with the Azure OpenAI resource. You will update configuration files with your environment credentials and implement the client logic to interact with the deployed model.
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
+1. To quit the code environment, right-click anywhere and select Quit
 
 1. If you are using the **C#** language, kindly open the **CSharp.csproj** file and replace it with the following code and save the file.
 

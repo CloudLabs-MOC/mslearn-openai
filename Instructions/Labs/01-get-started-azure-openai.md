@@ -4,7 +4,7 @@
 
 ## Lab overview
 
-In this lab, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using the Azure AI Foundry portal to deploy and explore OpenAI models. Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. 
+In this lab, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using the Microsoft Foundry portal to deploy and explore OpenAI models. Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability and integration of services provided by the Azure cloud platform. 
 
 ## Lab Objectives
 In this lab, you will complete the following tasks:
@@ -23,7 +23,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/select-openai-1607.png)
 
-2. On **AI Foundry | Azure OpenAI**, click on **Azure OpenAI (1)** blade, and then click on **+ Create (2)** and choose **Azure OpenAI (3)**.
+2. On **Microsoft Foundry | Azure OpenAI**, click on **Azure OpenAI (1)** blade and then click on **+ Create (2)** and choose **Azure OpenAI (3)**.
 
    ![](../media/L1T1S2.png)
 
@@ -62,11 +62,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/180625(03).png)
 
-1. On the **Azure OpenAI** resource page, click **Overview (1)**, then select **Go to Azure AI Foundry portal (2)** to navigate to the **Azure AI Foundry portal**.
+1. On the **Azure OpenAI** resource page, click **Overview (1)**, then select **Go to Microsoft Foundry portal (2)** to navigate to the **Microsoft Foundry portal**.
 
    ![](../media/goto-aiportal-1607.png)
 
-1. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy base model (3)**.
+1. On the **Microsoft Foundry portal** page, select **Deployments (1)** under **Shared resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy base model (3)**.
 
    ![](../media/L1T2S3.png)
 
@@ -134,7 +134,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
     
       - **Assistant (2)**:
         ```
-        There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
+        There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical) and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
         ``` 
 
          ![](../media/L1T4S4-1607.png)
@@ -171,7 +171,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
      ![](../media/L1T3S8.png)
 
-1. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+1. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages and the sequence of *user* and *assistant* messages in the chat session so far.
 
       ![](../media/image5a.png)
 
@@ -182,9 +182,9 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
 1. In the **Chat Configuration** pane, go to **Parameters (1)** and set the following values:
-
-   * **Max response tokens (2)**: 500
-   * **Temperature (3)**: 0 (for deterministic responses)
+   * **Past messages included(2)**: 10
+   * **Max Completion tokens (3)**: 500
+   * **Temperature (4)**: 0 (for deterministic responses)
 
      ![](../media/image6.png)
       
@@ -195,7 +195,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
       Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
 
-      - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution, you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
+      - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution, you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists and so on.*
 
       - Object detection machine learning models are trained to classify individual objects within an image and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicles.*
 
@@ -250,8 +250,8 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 In this lab,
 - You provisioned an **Azure OpenAI resource** to integrate generative AI capabilities into your applications.
-- You **deployed a model** (gpt-4.1-mini for chat completion) using the Azure AI Foundry portal.
-- You explored the model in the **Chat playground**, experimented with prompts and parameters, and tested the model’s **code generation abilities**.
+- You **deployed a model** (gpt-4.1-mini for chat completion) using the Microsoft Foundry portal.
+- You explored the model in the **Chat playground**, experimented with prompts and parameters and tested the model’s **code generation abilities**.
 
 
 ### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
