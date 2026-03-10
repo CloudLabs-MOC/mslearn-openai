@@ -147,7 +147,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. On **Storage Account**, go to **Container (1)** section under **Data Storage** and click on **+ Add Container (2)** to create a new container.
 
-    ![](../media/lab6-02-4)
+    ![](../media/lab6-02-4.png)
 
 1. On the **New container** creation page, enter the container name as **openaidatasource (1)**, then set the **Anonymous access level** to **Container (anonymous read access for containers and blobs) (2)**. Once both fields are configured, click on the **Create (3)** button..
 

@@ -75,7 +75,7 @@ In this task, you will apply content filters to prompts and completions to preve
 
     ![](../media/contentfil.png)
 
-1. Enter a name for the content filter and click **Next** to continue.
+1. In the **Add basic information** step, leave the default **Name** value unchanged, and then select **Next** to continue.
 
     ![](../media/lab6-02-13.png)
 
