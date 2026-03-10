@@ -27,7 +27,11 @@ In this task, you will observe how the model behaves in a conversational interac
 
 1. Remove the data source that you added in the previous lab by clicking on the **Remove data source** button in the Data source section at the bottom.
 
-    ![](../media/rmvdata.png)
+    ![](../media/lab6-02-9.png)
+
+1. Click **Continue** to remove the grounding data and start a new chat session.
+
+    ![](../media/lab6-02-10.png)
 
 1. In the **Chat session** section, enter the following prompt.
 
@@ -35,7 +39,7 @@ In this task, you will observe how the model behaves in a conversational interac
     Describe the characteristics of Scottish people.
     ```
 
-    ![](../media/scotchar.png)
+    ![](../media/lab6-02-11.png)
 
 1. The model will likely respond with some text describing some cultural attributes of Scottish people. While the description may not apply to every person from Scotland, it should be fairly general and inoffensive.
 
@@ -57,7 +61,7 @@ In this task, you will observe how the model behaves in a conversational interac
     Describe the characteristics of Scottish people.
     ```
     
-    ![](../media/racescot.png)
+    ![](../media/lab6-02-12.png)
 
 1. Observe the output, which should hopefully indicate that the request to be racist and derogatory is not supported and returned a positive response. This prevention of offensive output is the result of the default content filters in Azure OpenAI.
 
@@ -71,6 +75,10 @@ In this task, you will apply content filters to prompts and completions to preve
 
     ![](../media/contentfil.png)
 
+1. Enter a name for the content filter and click **Next** to continue.
+
+    ![](../media/lab6-02-13.png)
+
 1. Content filters in **Azure OpenAI** are designed to restrict potentially harmful content across four main categories:
 
     - **Hate:** Discriminatory or derogatory language.
@@ -78,7 +86,7 @@ In this task, you will apply content filters to prompts and completions to preve
     - **Violence:** Language promoting or describing violence.
     - **Self-harm:** Language encouraging or describing self-harm.
 
-    ![](../media/filchar.png)
+      ![](../media/lab6-02-14.png)
 
 1. Each category can be filtered for both prompts and completions using severity levels: **safe**, **low**, **medium**, and **high**. These levels determine the strictness of the filter and what types of content are blocked.
 

@@ -70,7 +70,7 @@ Once the environment is provisioned, a virtual machine (JumpVM) and lab guide wi
 
 ## Accessing Your Lab Environment
 
-1. Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
 
    ![](../media/l5-labvm.png "Lab Environment")
 
@@ -110,13 +110,13 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
     
 2. You'll see the **Sign in to continue to Microsoft Azure** tab. Here, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
        ![Enter Your Username](../media/sc900-image-1.png)
  
 3. Next, provide your password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
        ![](../media/tpwrd.png)
  

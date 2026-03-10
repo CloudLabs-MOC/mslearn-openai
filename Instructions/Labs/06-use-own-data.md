@@ -88,29 +88,19 @@ In this task, you will observe how the base model responds to queries without an
 
    ![](../media/l3-12-1.png)
 
-3. In the **Setup** area, for the **Give the model instructions and context(1)**, provide the following message and click on **Apply changes(2)**.
-
-   > **Note:** If the Apply changes button is greyed out, it means this instruction is already set — no further action is needed.
-
-    ```
-    You are an AI assistant that helps people find information.
-    ```
-
-   ![](../media/findinfoo.png)
-
 4. In the **Chat session** on the right side, submit the following queries, and review the responses:
 
     ```
     I'd like to take a trip to New York. Where should I stay?
     ```
 
-   ![](../media/nystay.png)
+   ![](../media/lab6-02-1.png)
 
     ```
     What are some facts about New York?
     ```
 
-   ![](../media/nyfact.png)
+   ![](../media/lab6-02-2.png)
 
     Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London or San Francisco. You'll likely get complete responses about areas or neighbourhoods, and some general facts about the city.
 
@@ -122,9 +112,9 @@ In this task, you will observe how the base model responds to queries without an
 
    ![](../media/strgact.png)
 
-1. On **Storage Centre** page, from left pane expand **Object storage(1)** and select **Blob Storage(2)** and then click on **+ Create(3)**.
+1. On **Storage Centre | Blob Storage** page, select **+ Create**.
 
-   ![](../media/strgcreate.png)
+   ![](../media/lab6-02-3.png)
 
 1. On the **Create a storage account** page, under the **Basic** tab, enter the following details and click on **Next (7)**:
 
@@ -155,9 +145,9 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/gtr.png)
 
-1. On **Storage Account**, go to **Container (1)** section under Data Storage and click on **+ Add Container (2)** to create a new container.
+1. On **Storage Account**, go to **Container (1)** section under **Data Storage** and click on **+ Add Container (2)** to create a new container.
 
-    ![](../media/L6T2S7-0205-1.png "upload files")
+    ![](../media/lab6-02-4)
 
 1. On the **New container** creation page, enter the container name as **openaidatasource (1)**, then set the **Anonymous access level** to **Container (anonymous read access for containers and blobs) (2)**. Once both fields are configured, click on the **Create (3)** button..
 
@@ -171,7 +161,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/bff.png)
 
-1. Search for and go to location `C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data` (1). Select all the **PDF files (2)** and click on **Open (3)**. Then click on **Upload** to upload all PDF files. 
+1. Search for and go to location `C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data` **(1)**. Select all the **PDF files (2)** and click on **Open (3)**. Then click on **Upload** to upload all PDF files. 
 
     ![](../media/l6-12-4.png)
 
@@ -187,7 +177,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/l6-12-5.png)
 
-1. On the **Create an AI Search** resource page, enter the following settings under the **Basics** tab and click on **Review + create (5)** and subsequently click on **Create**.
+1. On the **Create an AI Search** resource page, enter the following settings under the **Basics** tab and click on **Review + create (5)**.
 
    | Settings | Action |
    | -- | -- |
@@ -201,6 +191,10 @@ In this task, you will observe how the base model responds to queries without an
    
     > **Note:** If **East US** is not available due to high demand, select **East US 2**, **Australia East**, or any other available supported region.
 
+1. Then click on **Create**.
+
+    ![](../media/lab6-02-5.png)
+
 1. Once the deployment is successful, click on **Go to resource** to go to the deployed search service. 
 
    ![](../media/2gtrai.png)
@@ -209,7 +203,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/cogurl.png)
 
-1. From the left navigation pane, under **Settings(1)** click on **Keys(2)** and **copy the primary key or secondary key(3)** and paste it into a notepad for later use.
+1. From the left navigation pane, under **Settings (1)** click on **Keys (2)** and **copy the primary key or secondary key (3)** and paste it into a notepad for later use.
 
     ![](../media/cogkeys.png)
 
@@ -248,7 +242,7 @@ In this task, you will observe how the base model responds to queries without an
   
 1. Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data** tab in the  **Assistant setup** pane.
 
-    ![](../media/ingdone.png)   
+    ![](../media/lab6-02-6.png)   
 
 <validation step="cf9a74ba-2501-47a6-a819-b42218c0a9da" />
 
@@ -268,13 +262,13 @@ In this task, you will ask the same questions as before in the chat section afte
    I'd like to take a trip to New York. Where should I stay?
    ```
 
-   ![](../media/trrpny.png)
+   ![](../media/lab6-02-7.png)
 
    ```
    What are some facts about New York?
    ```
 
-   ![](../media/factsnyy.png)
+   ![](../media/lab6-02-8.png)
 
 2. You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
 
@@ -286,11 +280,34 @@ In this task, you will use a short command-line application running in Cloud She
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-      ![](../media/cshell.png)
+    ![](../media/cshell.png)
 
-2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is **Switch to PowerShell**. If it's *Bash*, select **Switch to Bash** and choose **Confirm** from the pop-up box.
+    >**Note:** If you can't find Cloud Shell, click on the **ellipsis (...) (1)** and then select **Cloud Shell (2)** from the menu.
 
-    ![](../media/dev-genai-june-4.png)
+    ![](../media/180625(14).png)
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+
+     ![](../media/bash.png)
+
+1. Within the **Getting started** page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
+
+     ![](../media/lab3-02-4.png)
+
+1. Within the **Mount storage account** page, select **I want to create a storage account (1)** and click **Next (2)**.
+
+    ![](../media/csanext.png)
+
+1. Within the **Create storage account** page, enter the following details:
+
+    - **Subscription:** Default - Pre-assigned subscription **(1)**.
+    - **Resource group:** **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - **Region:** Select **<inject key="Region" enableCopy="false" /> (3)**
+    - **Storage account name:** **stg<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - **File share:** none **(5)**
+    - Click **Create (6)**
+
+      ![](../media/l5-12-st.png)
 
 3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
