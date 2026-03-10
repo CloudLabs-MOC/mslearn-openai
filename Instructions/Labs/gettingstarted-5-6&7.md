@@ -5,13 +5,11 @@
 
 ## Overview
 
-This lab explores the Azure OpenAI Service by guiding you through provisioning an Azure OpenAI resource, deploying models, and working with both text and image generation capabilities. You will generate natural language responses, create images using the DALL-E playground and REST API, and interact with models grounded in your own data through the chat playground. You will also set up, configure, and run an application to see these capabilities in action, strengthening your ability to build end-to-end AI-driven applications using Azure OpenAI.
+This lab explores the capabilities of Azure OpenAI Service by working with Retrieval-Augmented Generation (RAG) and content filtering. You will connect your own data to Azure OpenAI using Azure AI Search and Blob Storage, interact with a model grounded in your data, and configure and run an application in Cloud Shell. Additionally, you will examine how Azure OpenAI content filters help prevent harmful or offensive outputs and learn how to review and configure content filtering settings to support responsible AI practices.
 
 ## Objective
 
-In this lab, you will gain hands-on experience with Azure OpenAI resources. You will provision resources and deploy models, explore image generation using the DALL·E playground and the REST API, connect and interact with your own data in the chat playground, set up, configure, and run applications using Cloud Shell, and finally generate natural language responses while applying content filtering to manage and regulate AI-generated outputs. By the end of this lab, you will be able to:
-
-- **Generate images with a DALL-E model:** The goal of this hands-on activity is to produce and alter images using the DALL-E model. To attain the intended visual results, participants will develop and alter images using the DALL-E model.
+In this lab, you will gain hands-on experience with Azure OpenAI resources. You will provision resources and deploy models, connect and interact with your own data in the chat playground, set up, configure, and run applications using Cloud Shell, and finally generate natural language responses while applying content filtering to manage and regulate AI-generated outputs. By the end of this lab, you will be able to:
 
 - **Add your data for RAG using Azure OpenAI Service:** This hands-on exercise will help you integrate your data with the Azure OpenAI Service for Retrieval-Augmented Generation (RAG) to improve AI responses. Participants will integrate data into the Azure OpenAI Service to boost AI-powered retrieval and generation.
 
@@ -22,7 +20,7 @@ In this lab, you will gain hands-on experience with Azure OpenAI resources. You 
 
 - **Development Skills:** Basic programming knowledge and experience with APIs and SDKs.
 
-- **AI Concepts:** Understanding prompt engineering, code development, and image generation using models such as DALL-E.
+- **AI Concepts:** Understanding prompt engineering and code development.
 
 - **Content Management:** Understanding data integration for RAG and content filtering techniques.
 
@@ -31,8 +29,6 @@ In this lab, you will gain hands-on experience with Azure OpenAI resources. You 
 The architecture utilizes Azure OpenAI Service to provision resources, deploy models, and configure an application in Cloud Shell. It involves setting up, testing, and running the application, enabling AI-driven solutions powered by Azure's scalability and security.
 
 ## Architecture Diagram
-
- ![](../media/l5-arch.png)
 
  ![](../media/l6-arch.png)
 
@@ -43,12 +39,6 @@ The architecture utilizes Azure OpenAI Service to provision resources, deploy mo
 The architecture for this lab involves the following key components:
 
 - **Azure OpenAI Resource:** Provision an Azure OpenAI resource to access OpenAI’s advanced AI models, enabling integration with custom applications.
-
-- **DALL-E Playground:** Explore image generation capabilities using the DALL-E playground to create custom images based on text prompts.
-
-- **REST API for Image Generation:** Use the REST API to generate images programmatically, integrating image generation into your application.
-
-- **Run the Application:** Execute the application to validate the image generation functionality and confirm proper interaction with the deployed model.
 
 - **Model Deployment:** Deploy an OpenAI model to access and utilize its functionality for testing and application use cases.
 

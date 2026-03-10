@@ -9,16 +9,12 @@
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Managed-labs/Instructions/Labs/05-generate-images.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Managed-labs/Instructions/Labs/06-use-own-data.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Managed-labs/Instructions/Labs/06-use-own-data.md",
-        "Order": 3
-      },
-      {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Managed-labs/Instructions/Labs/07-content-filters-azureOpenAI.md",
-        "Order": 4
+        "Order": 3
       }
     ]
   }

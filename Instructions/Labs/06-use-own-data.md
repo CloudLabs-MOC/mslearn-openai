@@ -1,6 +1,6 @@
 # Lab: Add your data for RAG with Azure OpenAI Service
 
-## Estimated Duration: 60 Minutes
+## Estimated Duration: 90 Minutes
 
 ## Lab Overview
 
@@ -19,6 +19,49 @@ In this lab, you will complete the following tasks:
 - Task 5: Set up an application in Cloud Shell
 - Task 6: Configure your application
 - Task 7: Run your application
+
+### Task 0:  Provision an Azure OpenAI resource
+
+In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+
+1. In the **[Azure portal](https://portal.azure.com/)**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
+
+      ![](../media/l1-12-0.png)
+
+2. On the **Microsoft Foundry | Azure OpenAI** page, select **Azure OpenAI (1)** from the left pane, click **+ Create (2)** drop-down and click on **Azure OpenAI (3)**.
+
+     ![](../media/va1.png)
+
+3. Create an **Azure OpenAI** resource with the following settings, click on **Next (6)** thrice and subsequently click on **Create**:
+   
+      - **Subscription:** Default - Pre-assigned subscription. **(1)**
+      - **Resource group:** **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+      - **Region:** Select **<inject key="Region" enableCopy="false" /> (3)**
+      - **Name:** **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+      - **Pricing tier**: Standard S0 **(5)**
+
+        ![](../media/l3-12-0.png)
+
+        >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
+
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+
+     ![](../media/l1-12-2.png)
+
+5. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (1)** under **Resource Management**.
+      - Click on **Show Keys (2)**.
+      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+
+        ![](../media/e1t1p5a.png "Keys and Endpoints")
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="cafb7718-6bf1-4fe9-88b8-d1ed6d7c4c58" />
 
 ### Task 1: Deploy a model
 

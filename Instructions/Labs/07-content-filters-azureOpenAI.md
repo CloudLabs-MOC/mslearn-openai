@@ -1,6 +1,6 @@
 # Lab: Explore content filters in Azure OpenAI
 
-## Estimated Duration: 15 Minutes
+## Estimated Duration: 30 Minutes
 
 ## Lab Overview
 
