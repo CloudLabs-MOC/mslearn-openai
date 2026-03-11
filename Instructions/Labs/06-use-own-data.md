@@ -255,7 +255,7 @@ In this task, you will observe how the base model responds to queries without an
    | Setting | Action |
    | -- | -- |
    | **Select data source** | Azure Blob Storage (preview) **(1)** |
-   | **Select Azure Blob storage resource** | *Choose the storage resource **storage1<inject key="DeploymentID" enableCopy="false"></inject> (2)** you created* (If it isn’t visible, try clicking Refresh next to the storage account) |
+   | **Select Azure Blob storage resource** | *Choose the storage resource **storage<inject key="DeploymentID" enableCopy="false"></inject> (2)** you created* (If it isn’t visible, try clicking Refresh next to the storage account) |
    | **Select Storage container** | **openaidatasource (3)** |
    | **Select Azure AI Search resource** | *Choose **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject> (4)** search resource you created* |
    | **Enter the index name** | **margiestravel (5)** |
