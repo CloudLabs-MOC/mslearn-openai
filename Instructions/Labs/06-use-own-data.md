@@ -82,11 +82,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       ![](../media/uupimg6.png)
    
 1. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: text-turbo
-      - Deployment type: Standard
-      - Click on Customize
-      - Tokens per Minute Rate Limit (thousands): 20K
-      - Click on Deploy
+      - **Deployment name:** text-turbo **(1)**
+      - **Deployment type:** Standard **(2)**
+      - Click on **Customize**
+      - Tokens per Minute Rate Limit (thousands): **20K (3)**
+      - Click on **Deploy (4)**
   
            ![](../media/uupimg7.png)
            ![](../media/uupimg8up.png) 
