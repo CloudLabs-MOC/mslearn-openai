@@ -127,17 +127,25 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 
 In this task, you will observe how the base model responds to queries without any grounding data before connecting Azure OpenAI to your data.
 
-1. Copy and paste the following URL into the browser to download the file:
+1. Copy and paste the following URL into the browser to open the dataset in **GitHub**:
 
     ```
     https://github.com/CloudLabsAI-Azure/mslearn-openai-data/blob/5d0e51c7c8d42b90612a0c4809bb7582a721acd0/Labfiles/02-use-own-data/data/brochures.zip
     ```
 
-1. Once the github window is opened, click on the download button as shown to download the datasets (brouchers.zip) file and extract it in your labvm.
+1. Once the **GitHub** page opens, click the **Download** button as shown in the image below to download the **brochures.zip** dataset to your **Lab VM**.
 
    ![](../media/uupimg19.png)
+
+1. In **File Explorer**, navigate to **Downloads (1)**, right-click the **brochures (2)** compressed folder that you downloaded earlier, and select **Extract All… (3)**.
+
+   ![](../media/L067.png)
+
+1. In the **Extract Compressed (Zipped) Folders** window, keep the default extraction location and click **Extract (4)** to extract the files.
+
+   ![](../media/L068.png)
    
-1. In the **Azure portal**, search for **Storage Account (1)** and select **Storage accounts (2)**.
+1. Navigate back to the **Azure portal**, search for **Storage Account (1)**, and select **Storage accounts (2)**.
 
    ![](../media/06L2.png)
 
@@ -168,18 +176,33 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/3.png "upload files")
 
-1. On **Storage Account | Container** blade, select **Containers (1)** from Data Storage and click on **+ Add Container (2)**.
+1. In the **Storage account** page, expand **Data storage (1)**, select **Containers (2)**, and then click **+ Add container (3)**.
 
-     ![](../media/uupimg14.png)
+     ![](../media/L063.png)
 
 1. In the **New container** pane, enter **openaidatasource (1)** in the **Name** field, set the **Anonymous access level (2)** to **Container (anonymous read access for containers and blobs)**, and then click **Create (3)**.
 
       ![](../media/image4.60.png "create container")
 
-1. Click on the container you just created and 
- upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
+1. In the **Containers** page of the **Storage account**, locate and select the **openaidatasource (1)** container that was created in the **previous task**.
 
-      ![](../media/image4.7.png "upload files")
+      ![image](../media/L064.png)
+
+1. In the **openaidatasource** container page, click **Upload (2)** from the top menu. In the **Upload blob** pane that appears, select **Browse for files (3)**, locate the file you downloaded earlier, and select it to upload.
+
+      ![image](../media/L065.png)
+
+1. In the **Upload blob** file explorer window, navigate to **Downloads (1)** and open the **brochures (2)** folder that was downloaded and extracted during **Step 1 of Task 4**.
+
+      ![image](../media/L064.png)
+
+1. Select **all the brochure files (3)** in the folder and click **Open (4)** to upload them to the **openaidatasource** container.
+
+      ![image](../media/L069.png)
+
+1. Verify that all **6 files (5)** are selected in the **Upload blob** pane, and then click **Upload (6)** to upload the files to the container.
+
+      ![image](../media/L0611.png)
 
 1. In the **Azure portal**, search for **Azure AI search** and select **Azure AI search**.
 
