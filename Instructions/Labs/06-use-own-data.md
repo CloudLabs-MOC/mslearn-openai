@@ -192,7 +192,7 @@ In this task, you will observe how the base model responds to queries without an
 
       ![image](../media/L065.png)
 
-1. In the **Upload blob** file explorer window, navigate to **Downloads (1)** and open the **brochures (2)** folder that was downloaded and extracted during **Step 1 of Task 4**.
+1. In the **Upload blob** file explorer window, navigate to **Downloads (1)** and open the **brochures (2)** folder that was downloaded and extracted during **Step 4 of Task 4**.
 
       ![image](../media/L064.png)
 
@@ -202,70 +202,86 @@ In this task, you will observe how the base model responds to queries without an
 
 1. Verify that all **6 files (5)** are selected in the **Upload blob** pane, and then click **Upload (6)** to upload the files to the container.
 
-      ![image](../media/L0611.png)
+     ![image](../media/L0611.png)
 
-1. In the **Azure portal**, search for **Azure AI search** and select **Azure AI search**.
+1. Verify the **openaidatasource container** after all files are **uploaded**.
 
-     ![](../media/uupimg15.png)
+      ![image](../media/fileuploaded0.png)
 
-1.  On **Azure AI services | AI search** blade, click on **+ Create**.
+1. On the Azure portal, type **AI Search (1)** in the search box and select **AI Search (2)** from the results.
 
-     ![](../media/5.png "upload files")
+    ![](../media/aisrchportal1.png)
 
-1. Create an **AI Search** resource with the following settings and click on **Review + Create** and subsequenly click on **Create**
+1. On **Microsoft Foundry | AI search** blade, click on **+ Create**.
 
-    - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Service name**: cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Location**:Select <inject key="Region" enableCopy="false" />
-    - **Pricing tier**: Basic
+    ![](../media/l6-12-51.png)
 
-      ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
+1. On the **Create an AI Search** resource page, enter the following settings under the **Basics** tab and click on **Review + create (5)**.
 
-      > In the above mentioned region, if Basic SKU is not available, please choose any other region from the available list and continue with the lab. This happens due to the high traffic in a single region for AI Search.
+   | Settings | Action |
+   | -- | -- |
+   | **Subscription** | Default - Pre-assigned subscription |
+   | **Resource group** | **openai-<inject key="DeploymentID" enableCopy="false"></inject> (1)** |
+   | **Service name** | **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject> (2)** |
+   | **Location** | Select **<inject key="Region" enableCopy="false" /> (3)** |
+   | **Pricing tier** | Change the Pricing tier to **Basic (4)** |
 
-1. Wait until your search resource has been deployed.
-
-1. Navigate to the **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
-
-    ![](../media/x689.png)
-
-1. From the left navigation pane,click on **Keys** under Settings and copy the primary key or secondary key and paste it in a notepad file for later use.
-
-      ![](../media/x690.png)
-
-1. In **Microsoft Foundry portal**, Navigate to the **Chat**(1) playground followed by select *Add your data*(2) in the setup pane and click on **+ Add a data source**(3).
-
-    ![](../media/uupimg16.png)
-
-    >If you are not able to see this option, please click on **Show Setup** icon to see the setup menu.
-
-    ![](../media/uupimg10.png)
-
-1. In the **Add data**, enter the following values for your data source and then click on **Next**.
-
-    - **Select data source**: Azure Blob Storage(preview)
-    - **Select Azure Blob storage resouce**: *Choose the storage resource you created*
-    - **Select storage container**: *Choose the storage container you created*
-    - **Select Azure AI Search resource**: *Choose the search resource you created*
-    - **Enter the index name**: margiestravel
-    - **Indexer schedule**: Once
+   ![](../media/reviewaisrch21.png)
    
-       ![](../media/image4.8.png "Add data configurations")
+    > **Note:** If **East US** is not available due to high demand, select **East US 2**, **Australia East**, or any other available supported region.
 
-1. Click on next to proceed with **Data Management**
+1. Then click on **Create**.
+
+    ![](../media/lab6-02-51.png)
+
+1. Once the deployment is successful, click on **Go to resource** to go to the deployed search service. 
+
+   ![](../media/2gtrai1.png)
+
+1. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page, copy the URL and paste it in a text editor such as Notepad for later use.
+
+    ![](../media/cogurl1.png)
+
+1. From the left navigation pane, under **Settings (1)** click on **Keys (2)** and **copy the primary key or secondary key (3)** and paste it into a notepad for later use.
+
+    ![](../media/cogkeys1.png)
+
+1. In **Microsoft Foundry portal**, navigate to the **Chat (1)** section under **Playgrounds** followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
+
+    ![](../media/l6-12-61.png)
    
-1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
+1. On the **Add data** window, enter the following values for under the **Data source** and then click on **Next (7)** to proceed with **Data Management**.
 
-    ![](../media/datamanagement.png "Add data")
-
-1. On the **Data connection** page select the **API key** , Click on the **Next**
-
-    ![](../media/API_key.jpg "Add data")
+   | Setting | Action |
+   | -- | -- |
+   | **Select data source** | Azure Blob Storage (preview) **(1)** |
+   | **Select Azure Blob storage resource** | *Choose the storage resource **storage1<inject key="DeploymentID" enableCopy="false"></inject> (2)** you created* (If it isn’t visible, try clicking Refresh next to the storage account) |
+   | **Select Storage container** | **openaidatasource (3)** |
+   | **Select Azure AI Search resource** | *Choose **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject> (4)** search resource you created* |
+   | **Enter the index name** | **margiestravel (5)** |
+   | **Indexer schedule** | **Once (6)** |
    
-1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **setup** pane.
+    ![](../media/addds1.png)
+   
+1. On the **Data management** page select the **Keyword (1)** search type from the drop-down, and then select **Next (2)**.
 
-    ![](../media/review.jpg "Add data")
+    ![](../media/dmnext1.png)
+
+1. On the **Data connection** page select the **API key (1)** , Click on the **Next (2)**
+
+    ![](../media/dconcn1.png)
+   
+1. On the **Review and finish** page select **Save and close**, which will add your data.
+
+    ![](../media/refin1.png)
+
+1. This may take a few minutes, during which you need to keep your window open.
+       
+    ![](../media/ingprcs1.png)
+  
+1. Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data** tab in the  **Assistant setup** pane.
+
+    ![](../media/lab6-02-61.png)   
 
 <validation step="cf9a74ba-2501-47a6-a819-b42218c0a9da" />
 
