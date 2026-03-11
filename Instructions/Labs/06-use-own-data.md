@@ -127,15 +127,19 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 
 In this task, you will observe how the base model responds to queries without any grounding data before connecting Azure OpenAI to your data.
 
-1. Copy the URL (https://github.com/CloudLabsAI-Azure/mslearn-openai-data/blob/5d0e51c7c8d42b90612a0c4809bb7582a721acd0/Labfiles/02-use-own-data/data/brochures.zip) and paste it in the browser. 
+1. Copy and paste the following URL into the browser to download the file:
+
+    ```
+    https://github.com/CloudLabsAI-Azure/mslearn-openai-data/blob/5d0e51c7c8d42b90612a0c4809bb7582a721acd0/Labfiles/02-use-own-data/data/brochures.zip
+    ```
 
 1. Once the github window is opened, click on the download button as shown to download the datasets (brouchers.zip) file and extract it in your labvm.
 
    ![](../media/uupimg19.png)
    
-1. In the **Azure portal**, search for **Storage Account** and select **Storage accounts**.
+1. In the **Azure portal**, search for **Storage Account (1)** and select **Storage accounts (2)**.
 
-   ![](../media/1.png)
+   ![](../media/06L2.png)
 
 1. On **Storage Account** page, click on **Create**.
 
@@ -144,15 +148,15 @@ In this task, you will observe how the base model responds to queries without an
 1. Create a **Storage Account** resource with the following settings:
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account name**: storage<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Preffered storage type**: Azure Blob Storage or Azure Lake Storage Gen 2
-    - **Redundancy**: Locally-redundant storage (LRS)
-    - Click **Next**.
+    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> **(1)**
+    - **Storage account name**: storage<inject key="DeploymentID" enableCopy="false"></inject> **(2)**
+    - **Region**: Select <inject key="Region" enableCopy="false" /> **(3)**
+    - **Preffered storage type**: Azure Blob Storage or Azure Lake Storage Gen 2 **(4)**
+    - **Redundancy**: Locally-redundant storage (LRS) **(5)**
+    - Click **Next (6)**.
   
       ![](../media/uupimg11.png)
-      ![](../media/uupimg12.png)
+      ![](../media/uupimg120.png)
 
     - **Allow enable anonymous access on individual containers**: check in the box to enable under **Advanced** section. Click on **Review + Create**  and subsequently click on **Create**
 
