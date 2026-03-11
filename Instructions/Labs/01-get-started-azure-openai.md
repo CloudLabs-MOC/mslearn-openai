@@ -37,7 +37,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
   
       ![](../media/nlpe1.png "Create Azure OpenAI resource")
 
-      >**Note:** Ensure the resource is deployed in the **Sweden Central** region.
+      >**Note:** Ensure the resource is deployed in the **EastUS** region.
 
 4. Click **Next** on each tab without changing anything.
 
