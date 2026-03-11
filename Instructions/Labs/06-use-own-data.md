@@ -168,13 +168,13 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/3.png "upload files")
 
-1. On **Storage Account | Container** blade, select **Containers** from Data Storage and click on **+ Add Container**.
+1. On **Storage Account | Container** blade, select **Containers (1)** from Data Storage and click on **+ Add Container (2)**.
 
      ![](../media/uupimg14.png)
 
-1. Create a container with the name **openaidatasource** and enable Anonymous access level for container.
+1. In the **New container** pane, enter **openaidatasource (1)** in the **Name** field, set the **Anonymous access level (2)** to **Container (anonymous read access for containers and blobs)**, and then click **Create (3)**.
 
-      ![](../media/image4.6.png "create container")
+      ![](../media/image4.60.png "create container")
 
 1. Click on the container you just created and 
  upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
