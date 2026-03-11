@@ -290,21 +290,28 @@ In this task, you will observe how the base model responds to queries without an
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 5: Chat with a model grounded in your data
 
-In this task, you will ask the same questions as before after adding your data, and observe how the responses differ.
+## Task 5: Chat with a model grounded in your data
+
+In this task, you will ask the same questions as before in the chat section after adding your data, and observe how the responses differ.
+
+1. In the **Chat** session on the right side, submit the following queries, and review the responses:
 
    ```
    I'd like to take a trip to New York. Where should I stay?
    ```
 
+   ![](../media/lab6-02-71.png)
+
    ```
    What are some facts about New York?
    ```
 
-You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided.
+   ![](../media/lab6-02-81.png)
 
-Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
+2. You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
+
+    >**Note:** **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
 ### Task 6: Set up an application in Cloud Shell
 
