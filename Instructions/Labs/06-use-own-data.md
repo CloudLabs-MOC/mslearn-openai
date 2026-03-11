@@ -309,58 +309,60 @@ In this task, you will ask the same questions as before in the chat section afte
 
    ![](../media/lab6-02-81.png)
 
-2. You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
+1. You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
 
     >**Note:** **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
-### Task 6: Set up an application in Cloud Shell
+## Task 6: Set up an application in Cloud Shell
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate integration with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-      ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
+    ![](../media/cshell1.png)
 
-1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
+    >**Note:** If you can't find Cloud Shell, click on the **ellipsis (...) (1)** and then select **Cloud Shell (2)** from the menu.
 
-    ![](../media/uupimg17.png)
+    ![](../media/180625(14)1.png)
 
-1. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-      ![](../media/cloudshell-getting-started.png)
+     ![](../media/bash11.png)
 
-1. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+1. Within the **Getting started** page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
 
-      ![](../media/cloudshell-mount-strg-account.png)
+     ![](../media/lab3-02-41.png)
 
-1. Within the **Advanced settings** pane, enter the following details:
+1. Within the **Mount storage account** page, select **I want to create a storage account (1)** and click **Next (2)**.
 
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
-    - **Storage account name**: str<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create** (6)
+    ![](../media/csanext1.png)
 
-        ![](../media/uupimg18.png)
+1. Within the **Create storage account** page, enter the following details:
 
-1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+    - **Subscription:** Default - Pre-assigned subscription **(1)**.
+    - **Resource group:** **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - **Region:** Select **<inject key="Region" enableCopy="false" /> (3)**
+    - **Storage account name:** **stg<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - **File share:** none **(5)**
+    - Click **Create (6)**
 
-1. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+      ![](../media/l5-12-st1.png)
 
-   ![](../media/classic-cloudshell.png)
+1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+   ![](../media/classic1.png)
 
+1. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise.
+
+     ```
+     rm -r mslearn-openai -f
+     git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
+     ```
+
+1. After the repo has been cloned, navigate to the folder containing the chat application code files
+   
     ```bash
-   rm -r azure-openai -f
-   git clone https://github.com/CloudLabsAI-Azure/mslearn-openai-data.git azure-openai
-    ```
-
-1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
-
-    ```bash
-   cd azure-openai/Labfiles/02-use-own-data
+    cd mslearn-openai/Labfiles/02-use-own-data
     ```
 
     Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
@@ -368,8 +370,8 @@ In this task, you will use a short command-line application running in Cloud She
 1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
-    code .
-    ```  
+   code .
+    ```
 
 ### Task 7: Configure your application
 
