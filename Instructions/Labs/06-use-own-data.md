@@ -262,6 +262,10 @@ In this task, you will observe how the base model responds to queries without an
    | **Indexer schedule** | **Once (6)** |
    
     ![](../media/addds1.png)
+
+     > **Note:** If the created **Storage Account**, **Storage Container**, or other required resources are not visible in the list, click the **Refresh** icon as shown in the image to reload the available options.
+
+      ![](../media/L0620.png)
    
 1. On the **Data management** page select the **Keyword (1)** search type from the drop-down, and then select **Next (2)**.
 
