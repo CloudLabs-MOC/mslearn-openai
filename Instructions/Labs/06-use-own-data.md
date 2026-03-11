@@ -377,116 +377,162 @@ In this task, you will use a short command-line application running in Cloud She
    code .
     ```
 
-### Task 7: Configure your application
+## Task 7: Configure your application
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
 1. In the code editor, expand the language folder for your preferred language.
 
+1. Open the configuration file for your language.
 
-1. Navigate to the folder for your preferred language and install the necessary packages.
+    - **C#**: `appsettings.json`
+    - **Python**: `.env`
 
-    **C#**:
+1. Update the configuration file for your chosen language with the following values:
+
+    - **Azure OpenAI endpoint**: Paste the endpoint URL from your Azure OpenAI resource (found on the Keys and Endpoint page in the Azure portal).
+    - **Azure OpenAI key**: Paste the key from your Azure OpenAI resource (also on the Keys and Endpoint page).
+    - **Deployment name**: Enter the name of your model deployment (e.g., `text-turbo` from the Deployments page in the Azure Microsoft Foundry portal).
+    - **Azure AI Search endpoint**: Paste the endpoint URL for your AI Search service (copied earlier or found in the overview page for your AI Search resource).
+    - **Azure AI Search key**: Paste the admin key for your AI Search resource (available on the Keys page).
+    - **Search index name**: Enter `margiestravel` as the index name.
+    - Save your changes after updating these values.
+
+        ![](../media/l6-12-7.png)
+
+1. If you're using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
+
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>12</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Azure.AI.OpenAI" Version="2.1.0" />
+        <PackageReference Include="Azure.Search.Documents" Version="11.6.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    </Project>
+    ```    
+
+    ![](../media/L6T5S4-1807.png)    
+
+1. Navigate to the **CSharp** folder and install the necessary packages. These commands set up the environment for a local installation of the .NET SDK in Cloud Shell.
 
     ```
     cd CSharp
     export DOTNET_ROOT=$HOME/.dotnet
     export PATH=$DOTNET_ROOT:$PATH
     mkdir -p $DOTNET_ROOT
-    ```     
+    ```   
 
-    > **Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
-    - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
+    - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory).
     - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
-    - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+    - `mkdir -p $DOTNET_ROOT` This creates the directory where the .NET runtime and SDK will be installed.
 
-1. Run the following command to install the required SDK version locally:     
+1. Run the following command to install the required SDK version locally. These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.    
 
-    ```
+     ```
      wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
      chmod +x dotnet-install.sh
      ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
-    ```
+     ``` 
 
-    >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
-
-1. Enter the following command to restore the workload.
+1. Enter the following command to restore any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
 
     ```
     dotnet workload restore
     ```
 
-     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
-
-1. Navigate to the folder for your preferred language and install the necessary packages.
-
-     **C#**:
+1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
 
     ```
-    cd CSharp
-    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
-    dotnet add package Azure.AI.OpenAI --prerelease
-    dotnet add package Azure.Search.Documents
+    dotnet add package Azure.AI.OpenAI --version 2.1.0
+    dotnet add package Azure.Search.Documents --version 11.6.0
     ```
 
-    **Python**:
+1. If you prefer **Python**, navigate to the **Python** folder and install the necessary packages using the commands below:
 
     ```
     cd Python
-    pip install python-dotenv --user
-    pip install openai==1.56.2 --user
+    python -m venv labenv
+    ./labenv/bin/Activate.ps1
+    pip install --user python-dotenv openai==1.65.2
     ```
 
-1. In the code editor from the left navigation pane, in the **CSharp** or **Python** folder, open the configuration file for your preferred language
+1. In the code editor, replace the comment **Configure your data source** with code to your index as a data source for chat completion:
 
-    - **C#**: appsettings.json
-    - **Python**: .env
-
-1. Update the configuration values to include:
-    - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task alternatively it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal)
-    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Microsoft Foundry portal that is **text-turbo**).
-    - The endpoint for your AI search service (Which you copied in the previous task alternatively it is available in the **Url** value on the overview page for your AI search resource in the Azure portal).
-    - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
-    - The name of the search index (which should be `margiestravel`).
-
-         ![](../media/x676.png)
-
-1. Open the code file for your preferred language, and replace the comment ***Configure your data source*** with code to add the Azure OpenAI SDK library:
-
-    **C#**: ownData.cs
+    For **C#**: OwnData.cs
 
     ```csharp
-    AzureSearchChatDataSource ownDataConfig = new()
+    // Configure your data source
+    // Extension methods to use data sources with options are subject to SDK surface changes. Suppress the warning to acknowledge this and use the subject-to-change AddDataSource method.
+    #pragma warning disable AOAI001
+     
+    ChatCompletionOptions chatCompletionsOptions = new ChatCompletionOptions()
     {
-        Endpoint = new Uri(azureSearchEndpoint),
-        Authentication = DataSourceAuthentication.FromApiKey(azureSearchKey),
-        IndexName = azureSearchIndex
+       MaxOutputTokenCount = 600,
+       Temperature = 0.9f,
     };
+     
+    chatCompletionsOptions.AddDataSource(new AzureSearchChatDataSource()
+    {
+       Endpoint = new Uri(azureSearchEndpoint),
+       IndexName = azureSearchIndex,
+       Authentication = DataSourceAuthentication.FromApiKey(azureSearchKey),
+    });
     ```
 
-    **Python**: ownData.py
+    ![](../media/l6-12-8.png)
+
+    For **Python**: ownData.py
 
     ```python
     # Configure your data source
-    extension_config = {
-        "data_sources": [
+    text = input('\nEnter a question:\n')
+     
+    completion = client.chat.completions.create(
+        model=deployment,
+        messages=[
             {
-                "type": "azure_search",
-                "parameters": {
-                    "endpoint": azure_search_endpoint,
-                    "index_name": azure_search_index,
-                    "authentication": {
-                        "type": "api_key",
-                        "key": azure_search_key,
+                "role": "user",
+                "content": text,
+            },
+        ],
+        extra_body={
+            "data_sources":[
+                {
+                    "type": "azure_search",
+                    "parameters": {
+                        "endpoint": os.environ["AZURE_SEARCH_ENDPOINT"],
+                        "index_name": os.environ["AZURE_SEARCH_INDEX"],
+                        "authentication": {
+                            "type": "api_key",
+                            "key": os.environ["AZURE_SEARCH_KEY"],
+                        }
                     }
                 }
-            }
-        ]
-    }
+            ],
+        }
+    )
     ```
-    > **Note**: Ensure that the indentation is correct when copying and pasting the Python code.
 
-1. Review the rest of the code, noting the use of the *extensions* in the request body that is used to provide information about the data source settings.
+    ![](../media/l6-12-9.png)
 
 1. Save the changes to the code file.
 
@@ -496,16 +542,22 @@ In this task, you will run your configured app to send a request to your model a
 
 In this task, you will run the reviewed code to generate some images.
 
-1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+1. In the **Cloudshell** bash terminal, navigate to the folder for your preferred language.
 
-1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+2. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python ownData.py`
 
-    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+        >**Note**: If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command:
+        
+        ```
+        pip install --user --upgrade openai
+        ```
 
-1. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
+3. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
+
+    ![](../media/l6-12-1011.png)
 
 ## Summary
 
