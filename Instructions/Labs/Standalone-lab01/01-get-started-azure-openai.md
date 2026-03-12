@@ -106,6 +106,14 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
    
     > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Hit the Validate button for the corresponding task.
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="0afa9e73-8b9e-4edf-b61b-fa953a5d5b23" />
    
 ## Task 3: Use the Chat playground
 
@@ -130,14 +138,14 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 1. Enter the following message and response in the designated boxes:
 
       - **User:** 
-      ```
-      What are the different types of artificial intelligence?
-      ``` 
+            ```
+            What are the different types of artificial intelligence?
+            ``` 
     
       - **Assistant:** 
-      ```
-      There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
-      ``` 
+            ```
+            There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
+            ``` 
 
       ![](./media/e1t4p5.png)
    
