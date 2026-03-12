@@ -65,8 +65,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/foundry2.png)
 
-   >**Note :** If the pop-up **Discover an even better Azure AI Studio experience** appears, click **Close** to dismiss it.
-
 1. In the **Microsoft Foundry portal**, under Shared resources, select **Deployments (1)** from the left pane. Click on **Deploy model (2)** and choose **Deploy base model (3)** from the dropdown.
 
       ![](../media/SS2.png "Create a new deployment")
