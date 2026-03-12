@@ -1,22 +1,22 @@
-# Generate images with a DALL-E model
+# Generate images with a gpt-image-1-mini model
 
 ### Overall Estimated Duration: 1 hour
 
 ## Overview
 
-This lab explores the Azure OpenAI Service, where you'll provision the service, explore image-generation in the DALL-E playground, use the REST API to generate images, configure and run an application, and enhance your ability to create AI-driven applications.
+This lab explores the Azure OpenAI Service, where you'll provision the service, explore image-generation in the gpt-image-1-mini playground, use the REST API to generate images, configure and run an application, and enhance your ability to create AI-driven applications.
 
 ## Objective
 
-This lab provides hands-on experience with Azure OpenAI resources, covering tasks such as provisioning a resource, deploying a model, exploring image generation in the DALL-E playground, using the REST API to generate images, setting up and configuring an application in Cloud Shell, and running the application. By the end of this lab, you will be able to:
+This lab provides hands-on experience with Azure OpenAI resources, covering tasks such as provisioning a resource, deploying a model, exploring image generation in the gpt-image-1-mini playground, using the REST API to generate images, setting up and configuring an application in Cloud Shell, and running the application. By the end of this lab, you will be able to:
 
-- **Generate images with a DALL-E model:** The goal of this hands-on activity is to produce and alter images using the DALL-E model. To attain the intended visual results, participants will develop and alter images using the DALL-E model.
+- **Generate images with a gpt-image-1-mini model:** The goal of this hands-on activity is to produce and alter images using the gpt-image-1-mini model. To attain the intended visual results, participants will develop and alter images using the gpt-image-1-mini model.
 
 ## Pre-requisites
 
 - **Development Skills:** Basic programming knowledge and experience with APIs and SDKs.
 
-- **AI Concepts:** Understanding prompt engineering, code development, and image generation using models such as DALL-E.
+- **AI Concepts:** Understanding prompt engineering, code development, and image generation using models such as gpt-image-1-mini.
 
 - **Content Management:** Understanding data integration for RAG and content filtering techniques.
 
@@ -34,7 +34,7 @@ The architecture for this lab involves the following key components:
 
 - **Azure OpenAI Resource:** Provision an Azure OpenAI resource to access OpenAI’s advanced AI models, enabling integration with custom applications.
 
-- **DALL-E Playground:** Explore image generation capabilities using the DALL-E playground to create custom images based on text prompts.
+- **gpt-image-1-mini Playground:** Explore image generation capabilities using the gpt-image-1-mini playground to create custom images based on text prompts.
 
 - **REST API for Image Generation:** Use the REST API to generate images programmatically, integrating image generation into your application.
 
@@ -42,7 +42,7 @@ The architecture for this lab involves the following key components:
 
 ## Getting Started with Lab
 
-Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
+Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
 
 ## Accessing Your Lab Environment
 
@@ -56,7 +56,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 
 ## Lab Guide Zoom In/Zoom Out
 
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+1. To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
    ![Manage Your Virtual Machine](../media/zoominout1.png)
 
@@ -115,3 +115,4 @@ Now, click on **Next** from the lower right corner to move on to the next page.
 ![Start Your Azure Journey](../media/nextpage1.png)
 
 ## Happy Learning!!
+
