@@ -26,7 +26,7 @@ The architecture utilizes Azure OpenAI Service to provision resources, deploy mo
 
 ## Architecture Diagram
 
- ![](../media/Arch1.png)
+ ![](../media/Arch01.png)
 
 ## Explanation of Components
 
