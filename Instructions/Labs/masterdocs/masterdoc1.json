@@ -5,11 +5,11 @@
     "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Instructor-track/Instructions/Labs/00-GettingStarted-V2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/refs/heads/Instructor-track/Instructions/Labs/00-GettingStarted-V2.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Instructor-track/Instructions/Labs/01-get-started-azure-openai.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/refs/heads/Instructor-track/Instructions/Labs/01-get-started-azure-openai.md",
         "Order": 2
       },
       {
@@ -24,15 +24,15 @@
     "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Spanish-Content/Instructions/Labs/00-GettingStarted-V2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/refs/heads/Spanish-Content/Instructions/Labs/00-GettingStarted-V2.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Spanish-Content/Instructions/Labs/01-get-started-azure-openai.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/refs/heads/Spanish-Content/Instructions/Labs/01-get-started-azure-openai.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Spanish-Content/Instructions/Labs/02-combined.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/refs/heads/Spanish-Content/Instructions/Labs/02-combined.md",
         "Order": 3
       }
     ]
@@ -43,15 +43,15 @@
     "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Portuguese-Content/Instructions/Labs/00-GettingStarted-V2-Portuguese.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/refs/heads/Portuguese-Content/Instructions/Labs/00-GettingStarted-V2-Portuguese.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Portuguese-Content/Instructions/Labs/01-get-started-azure-openai-Portuguese.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/refs/heads/Portuguese-Content/Instructions/Labs/01-get-started-azure-openai-Portuguese.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Portuguese-Content/Instructions/Labs/02-natural-language-azure-openai-Portuguese.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/refs/heads/Portuguese-Content/Instructions/Labs/02-natural-language-azure-openai-Portuguese.md",
         "Order": 3
       }
     ]
