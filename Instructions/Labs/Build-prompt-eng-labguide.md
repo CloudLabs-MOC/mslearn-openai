@@ -97,7 +97,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Deployment type:** GlobalStandard **(2)**
     - **Model version:** 2025-04-14(Default) **(3)**
     - **Tokens per Minute Rate Limit (thousands):** 10K **(4)**
-    **Deploy** **(5)**
+    - **Deploy** **(5)**
 
     >**Note:** Click on the customize and collapse button to expand the other options.
 
