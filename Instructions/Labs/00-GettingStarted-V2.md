@@ -79,24 +79,24 @@ Tras completar la tarea, pulse el botón **Validar** en la pestaña Validación 
 ## Comenzando con el Portal de Azure
  
 1. En LabVM, haga clic en el acceso directo **Azure Portal** del navegador Microsoft Edge, que se crea en el escritorio.
- 
+
    ![Inicie el Portal de Azure](../media/sc900-image(1).png)
  
-2. Verá la pestaña **Iniciar sesión en Microsoft Azure**. Aquí, ingrese sus credenciales:
+1. Verá la pestaña **Iniciar sesión en Microsoft Azure**. Aquí, ingrese sus credenciales:
  
    - **Correo electrónico/Nombre de usuario:** <inject key="AzureAdUserEmail"></inject>
  
        ![Ingrese Su Nombre de usuario](../media/upd-5.png)
  
-3. A continuación, proporcione su contraseña:
+1. A continuación, proporcione su contraseña:
  
    - **Contraseña:** <inject key="AzureAdUserPassword"></inject>
  
        ![Ingrese Su Contraseña](../media/upd-6.png)
  
-4. Si se le solicita que permanezca conectado, puede hacer clic en "No".
+1. Si se le solicita que permanezca conectado, puede hacer clic en "No".
  
-5. Si aparece una ventana emergente de **Bienvenido a Microsoft Azure**, simplemente haga clic en **Cancelar** para omitir la visita guiada.
+1. Si aparece una ventana emergente de **Bienvenido a Microsoft Azure**, simplemente haga clic en **Cancelar** para omitir la visita guiada.
  
 ## Contacto de Soporte
 
