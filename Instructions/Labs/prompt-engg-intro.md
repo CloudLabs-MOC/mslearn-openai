@@ -1,4 +1,4 @@
-# Lab-01: Introduction to Prompt Engineering & Microsoft Foundry
+# Lab-01: Introduction to Prompt Engineering & Microsoft Foundry [Read Only]
 
 ### Estimated Duration: 60 Minutes
 
