@@ -10,10 +10,9 @@ En este laboratorio, completará las siguientes tareas:
 
 - Tarea 1: Aprovisionar un recurso de Azure OpenAI
 - Tarea 2: Implementar un modelo
-- Tarea 3: Explorar un modelo en el Área de juegos (Playground) Completions
-- Tarea 4: Utilizar el Área de juegos Chat
-- Tarea 5: Explorar prompts y parámetros 
-- Tarea 6: Explorar la generación de código
+- Tarea 3: Utilizar el Área de juegos Chat
+- Tarea 4: Explorar prompts y parámetros 
+- Tarea 5: Explorar la generación de código
 
 ### Tarea 1: Aprovisionar un recurso de Azure OpenAI
 
@@ -21,11 +20,11 @@ En esta tarea, creará un recurso de Azure en Azure Portal, seleccionando el ser
 
 1. En el **Portal de Azure**, busque **OpenAI (1)** y seleccione **Azure OpenAI (2)**.
 
-   ![](../media/select-openai-1607(upd-1).png)
+   ![](../media/L1T1S1.png)
 
-2. En la hoja **AI Foundry | Azure OpenAI**, haga clic en **+ Crear**.
+2. En la hoja **AI Foundry | Azure OpenAI**, haga clic en **+ Crear (1)** entonces **Azure OpenAI (2)**.
 
-   ![](../media/180625(01)(upd-2).png)
+   ![](../media/L1T1S2.png)
 
 3. Complete los detalles requeridos en la página **Crear Azure OpenAI**:
    
@@ -35,7 +34,7 @@ En esta tarea, creará un recurso de Azure en Azure Portal, seleccionando el ser
     - **Nombre**: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - **Plan de tarifa**: **Standard S0 (5)**
   
-      ![](../media/nlpe1(upd-3).png "Crear recurso de Azure OpenAI")
+      ![](../media/L1T1S3.png "Crear recurso de Azure OpenAI")
 
     >**Nota:** Asegúrese de que el recurso esté implementado en la región **Sweden Central**.
 
@@ -62,67 +61,34 @@ En esta tarea, implementará una instancia de modelo de IA específica dentro de
 
     ![](../media/180625(03)(upd-5).png)
 
-1. En la página de recursos de **Azure OpenAI**, haga clic en **Información general (1)** y seleccione **Go to Azure AI Foundry portal (2)** para acceder al **portal de Azure AI Foundry**.
+1. En la página de recursos de **Azure OpenAI**, haga clic en **Información general (1)** y seleccione **Ir al portal de Foundry (2)** para acceder al **portal de Azure AI Foundry**.
 
-    ![](../media/goto-aiportal-1607(upd-6).png)
+    ![](../media/L1T2S2.png)
 
 1. En la página **Portal de Azure AI Foundry**, seleccione **Implementaciones (1)** en **Recursos compartidos** en el panel izquierdo. A continuación, haga clic en **+ Implementar modelo (2)** y seleccione **Implementación del modelo base (3)**.
 
-    ![](../media/deploy-model-1607(upd-7).png)
+    ![](../media/L1T2S3.png)
 
-1. En la ventana **Seleccionar un modelo**, busque **gpt-4o-mini (1)**, luego seleccione **gpt-4o-mini (2)** y haga clic en **Confirmar (3)**.
+1. En la ventana **Seleccionar un modelo**, busque **gpt-4.1-mini (1)**, luego seleccione **gpt-4.1-mini (2)** y haga clic en **Confirmar (3)**.
 
-    ![](../media/select-gpt-model-1607(upd-8).png)
+    ![](../media/L1T2S4.png)
 
 1. Haga clic en **Personalizar**.
 
-    ![](../media/get-started-openai-lab1-6(upd-9).png)
+    ![](../media/L1T2S5.png)
 
 1. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
     
     - Nombre de implementación: **my-gpt-model (1)** 
-    - Tipo de implementación: **Estándar (2)**
-    - Versión de modelo: **2024-07-18 (Predetermindado) (3)**
-    - Tokens por límite de velocidad por minuto (miles): **8K (4)**
+    - Tipo de implementación: **Estándar global(2)**
+    - Versión de modelo: **2025-04-14 (Predetermindado) (3)**
+    - Tokens por límite de velocidad por minuto (miles): **10K (4)**
     - Filtro de contenido: **DefaultV2 (5)**
-    - Habilitar cuota dinámica: **Habilitado (6)**
-    - Haga clic en **Implementar** **(7)**
+    - Haga clic en **Implementar** **(6)**
   
-      ![](../media/get-started-openai-lab1-2(upd-10).png)
+      ![](../media/L1T2S6.png)
 
-         > **Nota**: gpt-4o-mini solo se admite para la finalización del chat y no para la API de finalización.
-
-1. Haga clic en la **flecha atrás** para volver a la pantalla anterior. A continuación, en el panel izquierdo, en **Recursos compartidos**, seleccione **Implementaciones (1)**. Luego, haga clic en **+ Implementar modelo (2)** y seleccione **Implementación del modelo base (3)**.
-
-    ![](../media/back-to-deployments-1607(upd-11).png)
-
-    ![](../media/deploy-model-1607(upd-7).png)
-
-1. En la ventana **Seleccionar un modelo**, busque **gpt-35-turbo-instruct (1)**, luego seleccione **gpt-35-turbo-instruct (2)** y haga clic en **Confirmar (3)**.
-
-    ![](../media/select-turbo-model-1607(upd-12).png)
-
-1. Haga clic en **Personalizar**.
-
-    ![](../media/get-started-openai-lab1-7(upd-13).png)
-
-
-1. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
-    
-    - Nombre de implementación: **gpt-35-turbo-instruct (1)** 
-    - Tipo de implementación: **Estándar (2)**
-    - Versión de modelo: **0914 (Predeterminado) (3)**
-    - Tokens por límite de velocidad por minuto (miles): **20K (4)**
-    - Filtro de contenido: **DefaultV2 (5)**
-    - Habilitar cuota dinámica: **Habilitado (6)**
-    - Haga clic en **Implementar** (7)
-
-       ![](../media/get-started-openai-lab1-3(upd-14).png)
-
-
-11. Esto implementará modelos con los que puede experimentar tanto para tareas de chat como de finalización a medida que avanza.
-
-      > **Nota**: Puede ignorar cualquier error relacionado con la asignación de roles para ver los límites de cuota.
+1. Con el modelo desplegado, ahora puedes experimentar con las tareas de finalización de chat a medida que avanzas.
 
       > ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
       > - Pulse el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 
@@ -131,55 +97,13 @@ En esta tarea, implementará una instancia de modelo de IA específica dentro de
 
    <validation step="3b4a472e-f956-45d8-b828-3e2cc01c2e88" />
 
-
-### Tarea 3: Explorar un modelo en el Área de juegos (Playground) Completions
-
-En esta tarea, explorará un modelo en el área de juegos de Finalizaciones, lo que implica interactuar con el modelo de IA para probar y refinar sus respuestas mediante ejemplos de entrada y salida en tiempo real.
-
-1. En el portal de Azure OpenAI Foundry, navegue al panel izquierdo y seleccione **Patios de juego (1) -> Finalizaciones (2)**.
-
-   ![](../media/select-completions-1607(upd-15).png) 
-
-2. En la página **Finalizaciones**: 
-
-    * Asegúrese de que **gpt-35-turbo-instruct (1)** esté seleccionado en **Implementaciones**
-    * En el cuadro de texto **Prompt (2)**, introduzca el siguiente prompt: 
-    
-    ```
-         Generate a quiz of 5 questions. For each question, provide me with the answer options and the correct answer.
-    ```
-    
-    * Haga clic en **Generate (3)** para enviar el prompt y recibir la respuesta.
-
-    ![](../media/170725(02)(upd-16).png)
-
-     > **Nota**: La muestra de texto resumido consta de un prompt que proporciona texto para indicarle al modelo qué tipo de respuesta se requiere e incluye información contextual.
-
-3. La respuesta consiste en un cuestionario basado en el ejemplo del prompt.
-
-    ![](../media/nls101(upd-17).png)
-
-      > **Nota**: El resultado del chat puede variar. La captura de pantalla se proporciona solo como referencia y es posible que no refleje exactamente el mismo resultado.
-
-      > **Nota**: Puede utilizar el botón Regenerar para volver a enviar el mensaje (se han realizado nuevos cambios) y tenga en cuenta que la respuesta puede variar de la original. Un modelo de IA generativa puede producir un nuevo lenguaje cada vez que se llama.
-
-4. En la parte inferior de la página, anote la cantidad de **tokens** detectados en el texto. Los tokens son las unidades básicas de un prompt: esencialmente palabras o partes de palabras en el texto.
-
-5. Utilice el botón **Ver código** para ver el código que una aplicación cliente usaría para enviar el mensaje. Puede seleccionar su lenguaje de programación preferido. El mensaje contiene el texto que envió al modelo. La solicitud se envía a la API de *Finalizaciones* de su servicio Azure OpenAI.
-
-    ![](../media/NO-3a(upd-18).png)
-
-    ![](../media/L1T3S5.2-1407(upd-19).png)
-
-6. Cierre la ventana **Código de muestra** una vez que haya revisado el contenido.
-
-### Tarea 4: Utilizar el Área de juegos Chat
+### Tarea 3: Utilizar el Área de juegos Chat
 
 En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo de IA y probar sus capacidades conversacionales mediante una interfaz de chat simulada.
 
 1. Vaya a la sección **Recursos compartidos** en el menú de la izquierda y seleccione **Implementaciones (1)**. En la lista de implementaciones disponibles, elija **my-gpt-model** y haga clic en **Abrir en Área de juegos (2)**. Esta acción iniciará el **Área de juegos de chat**, donde podrá interactuar con el modelo implementado en una interfaz conversacional.
 
-    ![](../media/170725(03).png)
+    ![](../media/L1T3S1.png)
 
     ![](../media/170725(04)(upd-21).png)
 
@@ -193,13 +117,13 @@ En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo 
 
     * Haga clic en **Aplicar cambios (2)** y confirme seleccionando **Continuar** en el prompt.
 
-      ![](../media/L1T4S2-1607(upd-22).png)
+      ![](../media/L1T3S2.png)
 
       ![](../media/L1T4S3-1407(upd-23).png)
 
 1. En la sección **Configuración (1)**, haga clic en el cuadro **+ Agregar sección (2)** y, a continuación, en **Ejemplos (3)**.
 
-      ![](../media/170725(05)(upd-24).png)
+      ![](../media/L1T3S3.png)
 
 1. Ingrese el siguiente mensaje y respuesta en las casillas designadas:
 
@@ -213,7 +137,7 @@ En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo 
         There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
         ``` 
 
-         ![](../media/L1T4S4-1607(upd-25).png)
+         ![](../media/L1T3S4.png)
 
     > **Nota**: Se utilizan algunos ejemplos para proporcionar al modelo ejemplos de los tipos de respuestas que se esperan. El modelo intentará reflejar el tono y el estilo de los ejemplos en sus propias respuestas.
   
@@ -229,7 +153,7 @@ En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo 
    What is artificial intelligence?
    ```
 
-   ![](../media/L1T4S6-1607(upd-28).png)
+   ![](../media/L1T3S6.png)
 
       > **Nota**: Es posible que reciba una respuesta indicando que la implementación de API aún no está lista. Si es así, espere unos minutos y vuelva a intentarlo.
 
@@ -262,7 +186,7 @@ En esta tarea, explorará prompts y parámetros experimentando con diferentes en
     - **Respuesta máxima (tokens)**: 500 **(2)**
     - **Temperatura**: 0 **(3)** (para respuestas deterministas)
 
-      ![](../media/image6(upd-33).png)
+      ![](../media/L1T5S1.png)
    
 2. En el cuadro de entrada del chat, introduzca el mensaje **(1)** y haga clic en **Enviar (2)** para enviarlo.
 
@@ -278,7 +202,7 @@ En esta tarea, explorará prompts y parámetros experimentando con diferentes en
       - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
       ```
 
-    ![](../media/L1T5S2-1607(upd-34).png)
+    ![](../media/L1T5S2.png)
 
 
 3. Revise los resultados, que deben consistir en preguntas de opción múltiple que un maestro podría usar para evaluar a los estudiantes sobre los temas de visión por computadora en el mensaje. La respuesta total debe ser menor que la longitud máxima especificada como parámetro.

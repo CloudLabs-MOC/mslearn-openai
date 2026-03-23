@@ -22,7 +22,7 @@ En esta tarea, aprovisionará un recurso de Azure OpenAI dentro de su suscripci�
 
 1. En el **Portal de Azure**, busque **OpenAI (1)** y seleccione **Azure OpenAI (2)** en la sección de Servicios.
 
-   ![](../media/select-openai-1607(upd-1).png)
+   ![](../media/L1T1S1.png)
 
 2. En la página **AI Foundry  | Azure OpenAI**, seleccione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
@@ -42,8 +42,7 @@ En esta tarea, configurará un entorno de desarrollo con Azure Cloud Shell. Clon
 
 1. En el [portal de Azure](https://portal.azure.com?azure-portal=true), seleccione el botón **[>_]** (*Cloud Shell*) en la parte superior de la página a la derecha del cuadro de búsqueda. Se abrirá un panel de Cloud Shell en la parte inferior del portal.
 
-   ![Captura de pantalla de cómo iniciar Cloud Shell haciendo clic en el ícono a la derecha del cuadro de búsqueda superior](../media/cloudshell-launch-portal.png#lightbox)
-
+   ![](../media/L2T2S1.png)
    
    >**Nota:** Si no puede encontrar Cloud Shell, haga clic en los **puntos suspensivos (...) (1)** y luego seleccione **Cloud Shell (2)** del menú.
 
@@ -55,11 +54,11 @@ En esta tarea, configurará un entorno de desarrollo con Azure Cloud Shell. Clon
 
 3. En el panel Comenzar, seleccione **Montar cuenta de almacenamiento (1)**, seleccione su **Suscripción de la cuenta de almacenamiento (2)** en el menú desplegable y haga clic en **Aplicar (3)**.
 
-   ![](../media/cloudshell-getting-started.png)
+   ![](../media/L2T2S3.png)
 
 4. En el panel **Montar cuenta de almacenamiento**, seleccione **Quiero crear una cuenta de almacenamiento (1)** y haga clic en **Siguiente (2)**.
 
-   ![](../media/cloudshell-mount-strg-account.png)
+   ![](../media/L2T2S4.png)
 
 5. En la página **Crear cuenta de almacenamiento**, ingrese los siguientes detalles:
 
@@ -70,13 +69,13 @@ En esta tarea, configurará un entorno de desarrollo con Azure Cloud Shell. Clon
     - Recurso compartido de archivos: Cree un nuevo recurso compartido de archivos llamado **none** **(5)**
     - Haga clic en **Crear** **(6)**
 
-      ![](../media/nlpe18(upd).png "Crear almacenamiento - configuración avanzada")
+      ![](../media/L2T2S5.png "Crear almacenamiento - configuración avanzada")
 
 6. Tenga en cuenta que puede cambiar el tamaño del Cloud Shell arrastrando la barra separadora en la parte superior de la página o usando los íconos **&#8212;**, **&#9723;** y **X** en la parte superior derecha de la página para minimizar, maximizar y cerrar el panel. Para obtener más información sobre el uso de Azure Cloud Shell, consulte la [documentación de Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
 
 7. Una vez que se abra la terminal, haga clic en **Configuración (1)** y seleccione **Ir a la versión clásica (2)**.
 
-   ![](../media/nlpe19(upd).png)
+   ![](../media/L2T2S7.png)
 
 8. Una vez que se inicie la terminal, ingrese el siguiente comando para descargar la aplicación de muestra y guárdela en una carpeta llamada `mslearn-openai`.
 
@@ -152,11 +151,11 @@ En esta tarea, configurará la aplicación para que se conecte al recurso de Azu
 
     - C#:
      
-      ![](../media/nlp26.png)   
+      ![](../media/L2T3S4-1.png)   
 
     - Python:
      
-      ![](../media/nlp27.png)           
+      ![](../media/L2T3S4-1.png)           
 
        > **Nota:** Puede obtener los valores del extremo y la clave de Azure OpenAI desde la sección **Claves y punto de conexión** del recurso de Azure OpenAI bajo **Administración de recursos**.
 

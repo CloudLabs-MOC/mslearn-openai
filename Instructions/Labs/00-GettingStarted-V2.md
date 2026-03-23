@@ -62,13 +62,13 @@ Para mayor comodidad, puede abrir la guía de laboratorio en una ventana separad
  
 Siéntase libre de **Iniciar, Detener o Reiniciar (2)** su máquina virtual cuando lo necesite desde la pestaña **Recursos (1)**. ¡Su experiencia está en sus manos!
  
-![Administre Su Máquina Virtual](../media/upd-3.png)
+![Administre Su Máquina Virtual](../media/GS3.png)
 
 ### Acercar/Alejar Guía de laboratorio
 
 Para ajustar el nivel de zoom de la página del entorno, haga clic en el icono **A↕: 100%** ubicado junto al temporizador en el entorno del laboratorio.
 
-   ![Manage Your Virtual Machine](../media/nlsg2.png)
+   ![Manage Your Virtual Machine](../media/GS4.png)
 
 ## Validación de Laboratorio
 
