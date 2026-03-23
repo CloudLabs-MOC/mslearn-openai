@@ -24,9 +24,9 @@ En esta tarea, aprovisionará un recurso de Azure OpenAI dentro de su suscripci�
 
    ![](../media/L1T1S1.png)
 
-2. En la página **AI Foundry  | Azure OpenAI**, seleccione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. En la página **SDK de Microsoft Foundry  | Azure OpenAI**, seleccione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/180625(12)(upd).png)
+   ![](../media/L1T1S2.png)
 
 3. Para capturar los valores de las Claves y Punto de conexión, en la hoja **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**:
       - Seleccione **Claves y punto de conexión (1)** debajo de **Administración de recursos**.
@@ -161,19 +161,19 @@ En esta tarea, configurará la aplicación para que se conecte al recurso de Azu
 
 5. Navegue de vuelta al Cloudshell e instale los paquetes necesarios para su lenguaje preferido:
 
-  **C#:** 
-  ```
-   cd CSharp
-   dotnet add package Azure.AI.OpenAI --version 2.1.0
-  ```
+    **C#:** 
+    ```
+    cd CSharp
+    dotnet add package Azure.AI.OpenAI --version 2.1.0
+    ```
 
-  **Python:** 
-  ```
-    cd Python
-    python -m venv labenv
-   ./labenv/bin/Activate.ps1
-    pip install python-dotenv openai==1.65.2 --user
-  ```
+    **Python:** 
+    ```
+        cd Python
+        python -m venv labenv
+    ./labenv/bin/Activate.ps1
+        pip install python-dotenv openai==1.65.2 --user
+    ```
     
 
 6. Navegue hasta la carpeta de su lenguaje preferido, reemplace el comentario **Add Azure OpenAI package** con código para agregar la biblioteca Azure OpenAI SDK:

@@ -22,7 +22,7 @@ En esta tarea, creará un recurso de Azure en Azure Portal, seleccionando el ser
 
    ![](../media/L1T1S1.png)
 
-2. En la hoja **AI Foundry | Azure OpenAI**, haga clic en **+ Crear (1)** entonces **Azure OpenAI (2)**.
+2. En la hoja **SDK de Microsoft Foundry | Azure OpenAI**, haga clic en **+ Crear (1)** entonces **Azure OpenAI (2)**.
 
    ![](../media/L1T1S2.png)
 
@@ -59,7 +59,7 @@ En esta tarea, implementará una instancia de modelo de IA específica dentro de
 
 1. Desde el **portal de Azure**, diríjase a su recurso de OpenAI **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**.
 
-    ![](../media/180625(03)(upd-5).png)
+    ![](../media/L1T2S1.png)
 
 1. En la página de recursos de **Azure OpenAI**, haga clic en **Información general (1)** y seleccione **Ir al portal de Foundry (2)** para acceder al **portal de Azure AI Foundry**.
 
@@ -105,7 +105,7 @@ En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo 
 
     ![](../media/L1T3S1.png)
 
-    ![](../media/170725(04)(upd-21).png)
+    ![](../media/L1T3S1-2.png)
 
 1. En la sección **Configuración**:
 
@@ -159,17 +159,17 @@ En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo 
 
 1. Revise la respuesta.
 
-    ![](../media/L1T4S7-1407(upd-29).png)
+    ![](../media/L1T3S7.png)
 
 1. Después de revisar la respuesta, envíe el siguiente mensaje de seguimiento:
 
    ```
-   How is it related to machine learning?
+    How is it related to machine learning?
    ```
-
+   
 1. Revise la respuesta y observe que se conserva el contexto de la interacción anterior (para que el modelo entienda que "eso" se refiere a inteligencia artificial).
 
-     ![](../media/170725(06)(upd-30).png)
+     ![](../media/L1T3S9.png)
 
 1. Utilice el botón **Ver código** para ver el código de la interacción. El mensaje consta del mensaje del *sistema*, los ejemplos breves de mensajes de *usuario* y *asistente*, y la secuencia de mensajes de *usuario* y *asistente* en la sesión de chat hasta el momento.
 
@@ -177,7 +177,7 @@ En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo 
 
       ![](../media/170725(07)(upd-32).png)
 
-### Tarea 5: Explorar prompts y parámetros 
+### Tarea 4: Explorar prompts y parámetros 
 
 En esta tarea, explorará prompts y parámetros experimentando con diferentes entradas y configuraciones para ajustar las respuestas y el comportamiento del modelo de IA.
 
@@ -215,7 +215,7 @@ En esta tarea, explorará prompts y parámetros experimentando con diferentes en
     
     - Los parámetros incluyen *Temperatura*, que controla el grado en el que la generación de respuestas incluye un elemento de aleatoriedad. El valor **0** utilizado en su envío minimiza la aleatoriedad, lo que da como resultado respuestas estables y predecibles.
 
-### Tarea 6: Explorar la generación de código
+### Tarea 5: Explorar la generación de código
 
 En esta tarea, explorará la generación de código probando la capacidad del modelo de IA para generar y sugerir fragmentos de código según diversas indicaciones y requisitos de programación.
 
