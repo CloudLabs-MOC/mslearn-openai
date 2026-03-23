@@ -97,17 +97,17 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Deployment type:** GlobalStandard **(2)**
     - **Model version:** 2025-04-14(Default) **(3)**
     - **Tokens per Minute Rate Limit (thousands):** 10K **(4)**
-    **Deploy** **(5)**
+    - **Deploy** **(5)**
 
-        >**Note:** Click on the customize and collapse button to expand the other options.
+    >**Note:** Click on the customize and collapse button to expand the other options.
 
-        ![](../media/L2T2S7.png)
+    ![](../media/L2T2S7.png)
 
-        >**Note:** If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once it's deployed.
+    >**Note:** If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once it's deployed.
 
-        > **Note:** You can ignore the "Failed to fetch deployments quota information" notification.
-        
-        > **Note:** Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **gpt-4.1-mini** model series in the **GPT-4.1** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model; however, deployment and usage of other models you deploy will work in the same way.
+    >**Note:** You can ignore the "Failed to fetch deployments quota information" notification.
+    
+    >**Note:** Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **gpt-4.1-mini** model series in the **GPT-4.1** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model; however, deployment and usage of other models you deploy will work in the same way.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -145,7 +145,7 @@ In this task, you will explore how prompt engineering impacts model behavior in 
 
    ![](../media/17022025(10).png)
 
-1. Next in the selected **text-turbo (version:0125) (1)** deployment, update the system message to include instructions `You are an AI assistant helping write Python code`. Complete the app based on the provided comments **(2)**. Click **Apply changes** **(3)** and subsequently click on **Continue (4)** in the pop-up.
+1. Next in the selected **text-turbo (version:0125) (1)** deployment, update the system message to include instructions `You are an AI assistant helping write Python code. Complete the app based on the provided comments` **(2)**. Click **Apply changes** **(3)** and subsequently click on **Continue (4)** in the pop-up.
 
    ![](../media/17022025(11).png)
 
@@ -384,6 +384,9 @@ In this task, you will complete key parts of the provided C# or Python applicati
          
          // Get response from Azure OpenAI
          Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+
+             ChatCompletions completions = response.Value;
+             string completion = completions.Choices[0].Message.Content;
     ```
 
     **Python:** prompt-engineering.py
