@@ -265,7 +265,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    ![](../media/classic-cloudshell-prompt.png) 
 
-<validation step="8d41eaac-eee1-47ac-8bf3-ea2e2e5b3343" />
+<validation step="b83818f3-0527-485b-85c5-57c7f0149fe1" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
