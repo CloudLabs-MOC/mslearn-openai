@@ -2,9 +2,9 @@
 
 ## Lab scenario
 
-When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
+When working with the Azure OpenAI Service, how developers shape their prompts greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
 
-In scenario for this exercise, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
+In the scenario for this exercise, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -18,9 +18,9 @@ In this lab, you will complete the following tasks:
 
 ## Estimated time: 60 minutes
 
-### Task 1: Provision an Azure OpenAI resource
+## Task 1: Provision an Azure OpenAI resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -49,7 +49,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it into a text editor such as Notepad for later use.
 
           ![](../media/ui3.png "Keys and Endpoints")
 
@@ -69,22 +69,21 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
    ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**. It will navigate to **Azure AI Studio**.
 
    ![](../media/update08.png)
    
-
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
       ![](../media/ui1.png "Create a new deployment")
 
-6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+1. Search for **GPT-35-TURBO-16K**, click on **Confirm**
 
-8.  Within the Deploy model pop-up interface, enter the following details:
+1.  Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: text-turbo(1)
       - Model version: 0613(Default)(2)
       - Deployment type: Standard(3)
@@ -98,7 +97,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
  > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
-   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
+   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model; however, the deployment and usage of other models you deploy will work in the same way.
    
 <validation step="e3805450-2e13-40c4-80fa-58a0cd695e6e" />
 
@@ -121,11 +120,13 @@ In this task, you will examine how prompt engineering improves model responses i
    2. Create a list of whimsical names for those animals
    3. Combine them randomly into a list of 25 animal and name pairs
     ```
-    >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
+    >**Note:** Kindly refresh the screen in case you encounter any error message and perform the above step again.
 
 4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
-5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
-6. Format the instructions as python comments. Send the following prompt to the model.
+
+5. Next, update the system message to include instructions `You are an AI assistant helping write Python code. Complete the app based on the provided comments`. Click **Apply changes** and subsequently click on **Continue**.
+
+6. Format the instructions as Python comments. Send the following prompt to the model.
 
     ```code
    # 1. Create a list of animals
@@ -133,8 +134,10 @@ In this task, you will examine how prompt engineering improves model responses i
    # 3. Combine them randomly into a list of 25 animal and name pairs
     ```
 
-7. The model should correctly respond with complete python code doing what the comments requested.
-8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
+7. The model should correctly respond with complete Python code doing what the comments requested.
+
+8. Next, we'll see the impact of a few-shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
+
 9. Send the following prompt to the model.
 
     ```code
@@ -203,7 +206,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 14. This time the model should respond with an appropriate classification, even without instructions.
 
-### Task 4: Set up an application in Cloud Shell
+## Task 4: Set up an application in Cloud Shell
 
 In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Cloud Shell on Azure. Open a new browser tab to work with Cloud Shell.
 
@@ -262,12 +265,12 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    ![](../media/classic-cloudshell-prompt.png) 
 
-<validation step="b83818f3-0527-485b-85c5-57c7f0149fe1" />
+<validation step="8d41eaac-eee1-47ac-8bf3-ea2e2e5b3343" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 5: Configure your application
 
@@ -710,8 +713,6 @@ In this task, you will run your configured app to send a request to your model a
     ```prompt
     What animal is the favorite of children at Contoso?
     ```
-
-   
 
 ## Summary
 
