@@ -81,13 +81,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/Uptask2-2.png "Create a new deployment")
 
-1. On the Select a model page, search for **gpt-4o (1)** model, select **gpt-4o (chat completion) (2)** model from the list, and then click on **Confirm (3)**.
+1. On the Select a model page, search for **gpt-4.1 (1)** model, select **gpt-4.1 (2)** model from the list, and then click on **Confirm (3)**.
 
-   ![](../media/Uptask2-3.png)
+   ![](../media/E1T2S5.png)
 
-1. On the **Deploy gpt-4o** interface, click on **Customize** under Deployment details to edit the fields.
+1. On the **Deploy gpt-4.1** interface, click on **Customize** under Deployment details to edit the fields.
 
-   ![](../media/Uptask2-4.png)
+   ![](../media/E1T2S6.png)
 
 1. Enter the details as mentioned below, then click on **Deploy (8):**
 
@@ -96,14 +96,12 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     | Deployment name | **text-turbo** **(1)** |
     | Deployment type | **Standard** **(2)** |
     | Model version upgrade policy | **Upgrade once new default version becomes available.** **(3)** |
-    | Model version | **2024-11-20** **(4)** |
+    | Model version | **2025-04-14 (Default)** **(4)** |
     | Tokens per Minute Rate Limit (thousands) | **10K** **(5)** |
     | Content filter | **DefaultV2** **(6)**|
     | Enable dynamic quota | **Enabled** **(7)** |
 
-    ![](../media/Text-turbo.png)
-
-> **Note:** gpt-4o is supported only for chat completions, and it is not supported for the completions API.
+    ![](../media/E1T2S7.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task.
