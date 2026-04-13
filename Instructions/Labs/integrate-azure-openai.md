@@ -83,11 +83,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. On the Select a model page, search for **gpt-4.1 (1)** model, select **gpt-4.1 (2)** model from the list, and then click on **Confirm (3)**.
 
-   ![](../media/Uptask2-3.png)
+   ![](../media/E1T2S5.png)
 
 1. On the **Deploy gpt-4.1** interface, click on **Customize** under Deployment details to edit the fields.
 
-   ![](../media/Uptask2-4.png)
+   ![](../media/E1T2S6.png)
 
 1. Enter the details as mentioned below, then click on **Deploy (8):**
 
@@ -101,7 +101,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     | Content filter | **DefaultV2** **(6)**|
     | Enable dynamic quota | **Enabled** **(7)** |
 
-    ![](../media/Text-turbo.png)
+    ![](../media/E1T2S7.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task.
