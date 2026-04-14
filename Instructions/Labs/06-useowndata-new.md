@@ -213,7 +213,7 @@ In this task, you will complete key parts of the application to enable it to use
     </Project>
     ```    
 
-    ![](../media/new/f3.png)    
+     ![](../media/new/f3.png)    
 
 1. Navigate to the **CSharp** folder and install the necessary packages. These commands set up the environment for a local installation of the .NET SDK in Cloud Shell.
 
@@ -422,7 +422,7 @@ In this task, you will run the reviewed code to generate some images.
 
 ## Summary
 
-In this lab, you connected your own data to the Azure OpenAI Service for Retrieval-Augmented Generation (RAG). You observed how the base model responds to queries without any grounding data, connected your data in the chat playground, and chatted with a model grounded in your data. You also set up an application in Cloud Shell, configured it to use your Azure OpenAI resource and AI search service, and ran the application to see how it integrates with the Azure OpenAI model.
+In this lab, you began by evaluating how an Azure OpenAI model responds without grounding data to understand its baseline behavior. You then created an assistant with file search capabilities and connected it to a vector store containing your custom data, enabling grounded responses. By comparing outputs before and after grounding, you observed how Retrieval-Augmented Generation (RAG) improves the relevance and accuracy of responses. You also set up a development environment in Azure Cloud Shell, explored the provided application code, and configured it with your Azure OpenAI credentials and assistant details. Finally, you executed the application to interact programmatically with a grounded AI model, completing an end-to-end implementation of a RAG-based solution.
 
 ### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
      

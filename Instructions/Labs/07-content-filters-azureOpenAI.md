@@ -25,14 +25,6 @@ In this task, you will observe how the model behaves in a conversational interac
 
     ![](../media/aiset.png)
 
-1. Remove the data source that you added in the previous lab by clicking on the **Remove data source** button in the Data source section at the bottom.
-
-    ![](../media/new/11.png)
-
-1. Click **Continue** to remove the grounding data and start a new chat session.
-
-    ![](../media/new/12.png)
-
 1. In the **Chat session** section, enter the following prompt.
 
     ```code

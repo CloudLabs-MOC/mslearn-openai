@@ -262,7 +262,7 @@ In this task, you will run the reviewed code to generate some images.
     ```
 3. When prompted, enter a description for an image. For example, `A giraffe flying a kite` **(1)**.
     
-4. Wait for the image to be generated—you’ll see a success message indicating that the image has been saved. **Copy (2)** the image name, then run the command ``download <image name>`` **(3)**. A **pop-up (4)** will appear at the bottom-left of the Cloud Shell; click it to download and view the generated image. opnfiledwn
+4. Wait for the image to be generated—you’ll see a success message indicating that the image has been saved. **Copy (2)** the image name, then run the command ``download <image name>`` **(3)**. A **pop-up (4)** will appear at the bottom-right of the Cloud Shell; click it to download and view the generated image. opnfiledwn
 
     ![](../media/fildn.png)
 
