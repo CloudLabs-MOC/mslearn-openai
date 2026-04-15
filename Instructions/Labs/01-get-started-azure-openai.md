@@ -36,8 +36,6 @@ En esta tarea, creará un recurso de Azure en Azure Portal, seleccionando el ser
   
       ![](../media/L1T1S3.png "Crear recurso de Azure OpenAI")
 
-    >**Nota:** Asegúrese de que el recurso esté implementado en la región **Sweden Central**.
-
 4. Haga clic en **Siguiente (6)** en cada pestaña sin cambiar nada.
 
 5. Por último, haga clic en **Revisar + crear** y, a continuación, haga clic en **Crear** para iniciar la implementación.
