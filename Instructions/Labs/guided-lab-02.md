@@ -4,9 +4,9 @@
 
 ## Lab Overview
 
-In the lab, you will perform the role of a software developer who has been tasked to implement an app that can use generative AI to help provide hiking recommendations. The techniques used in the exercise can be applied to any app that utilizes Azure OpenAI APIs.
+In this lab, you will perform the role of a software developer who has been tasked to implement an app that can use generative AI to help provide hiking recommendations. The techniques used in the exercise can be applied to any app that utilizes Azure OpenAI APIs.
 
-With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your application.
+With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI Service provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your application.
 
 ## Lab Objectives
 
@@ -22,11 +22,11 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the result.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the results.
 
    ![](../media/img-01-18.png)
 
-1. On  **Microsoft Foundry | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
+1. On the **Microsoft Foundry | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
 
    ![](../media/va1.png)
 
@@ -42,7 +42,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Pricing tier: **Standard S0 (5)**
 
-    - Click **Next (6)** thrice to navigate to the **Review + submit** tab.
+    - Click **Next (6)** three times to navigate to the **Review + submit** tab.
   
       ![](../media/clicknext.png)
 
@@ -60,7 +60,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
     
-    - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+    - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
     
         ![](../media/img-01-19.png "Keys and Endpoints")
 
@@ -79,7 +79,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](../media/va2.png)
 
-1. Select the **Deployments (1)** from the left pane under **Shared resources**, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
+1. Select **Deployments (1)** from the left pane under **Shared resources**, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
     ![](../media/va3.png)
 
@@ -108,7 +108,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
         ![](../media/deploy4.1.png)
 
-1. This will deploy a model that you will be playing around with as you proceed.
+1. This will deploy a model that you will use as you proceed as you proceed.
+
+    > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
 <validation step="69a18560-a442-467a-be09-b5663806dd0a" />
 
@@ -117,13 +119,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-    > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
-
 ## Task 3: Set up an application in Cloud Shell
 
 In this task, you will set up a development environment using Azure Cloud Shell. You will clone the sample application repository, prepare the workspace, and open the code editor to begin integrating Azure OpenAI services.
 
-1. Open [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. Open the **[Azure portal](https://portal.azure.com?azure-portal=true)**, select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
      ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/L2T2S1.png)
 
@@ -165,7 +165,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
     ![](../media/classic.png)
 
-8. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
+8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r mslearn-openai -f
@@ -203,7 +203,7 @@ In this task, you will configure the application to connect with the Azure OpenA
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
 
-1. If you are using the **C#** language, kindly open the **CSharp.csproj** file and replace it with the following code and save the file using **Ctrl+S**.
+1. If you are using the **C#** language, open the **CSharp.csproj** file and replace it with the following code and save the file using **Ctrl+S**.
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
@@ -236,7 +236,7 @@ In this task, you will configure the application to connect with the Azure OpenA
     
     - Python: `.env`
     
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo` and then save the file by right-clicking on the blank space in the file text editor and hit **Save** or use **Ctrl+S**.
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo` and then save the file by right-clicking on the blank space in the file text editor and click **Save** or use **Ctrl+S**.
 
     - **C#:**
      
@@ -364,7 +364,7 @@ In this task, you will configure the application to connect with the Azure OpenA
 
      ![](../media/L2T3S8-py.png)  
 
-1. Before you can save the file, please make sure your code looks similar to the code provided below.
+1. Before you can save the file, ensure your code looks similar to the code provided below.
 
     **C#:** Program.cs
       
@@ -577,13 +577,13 @@ In this task, you will run the application and interact with the Azure OpenAI mo
 
     ![](../media/img-01-22.png)   
    
-     >**Note:** System message should given in system.txt in C# or Python. Follow the same steps for the remaining prompts.
+     >**Note:** The system message should be given in `system.txt` in C# or Python. Follow the same steps for the remaining prompts.
 
-1. In the terminal, press **Enter** a key to continue.
+1. In the terminal, press **Enter** to continue.
 
     ![](../media/img-01-23.png) 
    
-1. In the Enter User message, give the following message.
+1. In the Enter user message prompt, give the following message.
 
    **User message:**
    
@@ -593,7 +593,7 @@ In this task, you will run the application and interact with the Azure OpenAI mo
 
     ![](../media/new/w1.png)   
 
-    >**Note:** User message should given in terminal in C# or Python. Follow the same steps for the remaining prompts.
+    >**Note:** The user message should be entered in the terminal in C# or Python. Follow the same steps for the remaining prompts.
 
 1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 
