@@ -39,8 +39,6 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
   
        ![](../media/create-openai-2107.png "Create Azure OpenAI resource")
 
-       >**Note:** Make sure you are deploying OpenAI resource in **France Central** Region.
-
 1. Click **Next** twice to navigate to the **Review + submit** tab, then click **Create** to deploy the Azure OpenAI resource.
 
    ![](../media/create-openai2-2107.png)
