@@ -84,11 +84,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Select a model** window, search for **gpt-4.1-mini (1)**, then select the **gpt-4.1-mini (Chat completion) (2)** model from the list. Click **Confirm (3)** to proceed with the deployment.
 
-   ![](../media/L2T2S5.png)
+   ![](../media/L2T2P5.png)
 
 1. On the **Deploy gpt-4.1-mini** screen, click **Customize** to modify deployment details.
 
-   ![](../media/L2T2S6.png)
+   ![](../media/L2T2P6.png)
 
 1. Within the **Deploy model** interface, enter the following details:
     - **Deployment name:** text-turbo **(1)**
@@ -99,7 +99,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     >**Note:** Click on the customize and collapse button to expand the other options.
 
-    ![](../media/L2T2S7.png)
+    ![](../media/L2T2P7.png)
 
     >**Note:** If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once it's deployed.
 
