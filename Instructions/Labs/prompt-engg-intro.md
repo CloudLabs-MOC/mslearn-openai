@@ -204,23 +204,44 @@ Not all the components are required for a prompt, and the format depends on the 
 
 There are many parameters that you can adjust to change the performance of your model:
 
-- **Temperature** - Controls randomness. Lowering the temperature means that the model produces more repetitive and deterministic responses. Increasing the temperature results in more unexpected or creative responses. Try adjusting the temperature or Top P, but not both.
-
-- **Max length (tokens)** - Set a limit on the number of tokens per model response. The API supports a maximum of 4000 tokens shared between the prompt (including system message, examples, message history, and user query) and the model's response. One token is roughly four characters for typical English text.
-
-- **Stop sequences** - Make responses stop at a desired point, such as the end of a sentence or list. Specify up to four sequences where the model will stop generating further tokens in a response. The returned text won't contain the stop sequence.
-
-- **Top probabilities (Top P)** - Similar to temperature, this controls randomness but uses a different method. Lowering Top P narrows the model’s token selection to likelier tokens. Increasing Top P lets the model choose from tokens with both high and low likelihood. Try adjusting the temperature or Top P, but not both.
-
-- **Frequency penalty** - Reduces the chance of repeating a token proportionally based on how often it has appeared in the text so far. This decreases the likelihood of repeating the same text in a response.
-
-- **Presence penalty** - Reduce the chance of repeating any token that has appeared in the text at all so far. This increases the likelihood of introducing new topics in a response.
-
-- **Pre-response text** - Insert text after the user’s input and before the model’s response. This can help prepare the model for a response.
-
-- **Post-response text** - Insert text after the model’s generated response to encourage further user input, as when modeling a conversation.
-
-- **Max response** - Set a limit on the number of tokens per model response. The API supports a maximum of 4000 tokens shared between the prompt (including system message, examples, message history, and user query) and the model's response. One token is roughly four characters for typical English text.
+- **Temperature:**  Controls randomness. Lower values make responses more deterministic and consistent. Higher values make responses more creative and varied. Adjust either Temperature or Top P, but not both.
+ 
+- **Top probabilities (Top P):** Controls randomness using nucleus sampling. Lower values restrict token selection to more likely options, while higher values allow more diverse outputs. Use as an alternative to Temperature.
+ 
+- **Max output tokens:** Sets the maximum number of tokens the model can generate in the response. Unlike earlier versions, this applies only to output. Modern models support much larger total context sizes.
+ 
+- **Stop sequences:** – Defines sequences where the model should stop generating further tokens. You can specify multiple stop conditions, and the response will not include the stop sequence.
+ 
+ - **Frequency penalty:** Reduces repetition by penalizing tokens based on how frequently they appear in the generated text. Helps avoid repeated phrases.
+ 
+ - **Presence penalty:** Encourages introducing new topics by penalizing tokens that have already appeared at least once in the response.
+ 
+- **Instructions (System message):**  Provides high-level guidance to the model on behavior, tone, and response style. This replaces older concepts like pre-response text and is the primary way to control model behavior.
+ 
+- **Response format / structured output:** Allows enforcing specific output formats such as JSON, making responses easier to parse and integrate into applications.
+ 
+- **Tools / function calling:** Enables the model to interact with external systems or APIs by triggering predefined functions based on user input.
+ 
+ - **Streaming:**  Allows receiving the response incrementally (token-by-token), improving responsiveness in interactive applications.
+ 
+- **Top probabilities (Top P):** Controls randomness using nucleus sampling. Lower values restrict token selection to more likely options, while higher values allow more diverse outputs. Use as an alternative to Temperature.
+ 
+- **Max output tokens:** Sets the maximum number of tokens the model can generate in the response. Unlike earlier versions, this applies only to output. Modern models support much larger total context sizes.
+ 
+- **Stop sequences:** Defines sequences where the model should stop generating further tokens. You can specify multiple stop conditions, and the response will not include the stop sequence.
+ 
+ - **Frequency penalty:** Reduces repetition by penalizing tokens based on how frequently they appear in the generated text. Helps avoid repeated phrases.
+ 
+ - **Presence penalty:** Encourages introducing new topics by penalizing tokens that have already appeared at least once in the response.
+ 
+- **Instructions (System message):**  Provides high-level guidance to the model on behavior, tone, and response style. This replaces older concepts like pre-response text and is the primary way to control model behavior.
+ 
+- **Response format / structured output:** Allows enforcing specific output formats such as JSON, making responses easier to parse and integrate into applications.
+ 
+- **Tools / function calling:** Enables the model to interact with external systems or APIs by triggering predefined functions based on user input.
+ 
+ - **Streaming:**  Allows receiving the response incrementally (token-by-token), improving responsiveness in interactive applications.
+ 
 
 The Current token count is viewable from the Chat playground. Since the API calls are priced by token, and it's possible to set a max response token limit, you'll want to keep an eye out for the current token count to make sure the conversation-in doesn't exceed the max response token count.
 

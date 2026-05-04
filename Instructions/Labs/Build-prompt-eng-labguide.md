@@ -295,7 +295,6 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     ```
     cd CSharp
-    irm https://dot.net/v1/dotnet-install.ps1 | iex
     ```
 
     **Python**
@@ -406,7 +405,17 @@ In this task, you will complete key parts of the provided C# or Python applicati
         max_tokens=800
     )
     ```
+1.  In the function that calls the Write response to console, add the code to format. 
+ 
+    **C#**: Program.cs 
 
+     ```
+    // Write response to console
+             Console.WriteLine($"\nResponse:\n{completion}\n\n");
+    ```     
+
+    **Python:** No changes required in prompt-engineering.py file.
+        
 1. The  modified code should look as shown below:
 
     **C#**
