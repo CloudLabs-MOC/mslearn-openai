@@ -93,7 +93,7 @@ University: MIT
 City: Cambridge, MA, USA
 ```
 
-Note that you could have used the Zero-Shot prompt for this example as well. But One-Shot prompts are more flexible and can be used to fine-tune the model to your needs.
+**Note** that you could have used the Zero-Shot prompt for this example as well. But One-Shot prompts are more flexible and can be used to fine-tune the model to your needs.
 
 Here's a Zero-Shot Prompt equivalent.
 
@@ -166,7 +166,7 @@ JSON:
 }
 ```
 
-Note that the output is not what we want here, but there haven't been enough examples to understand if the goal is to extract key entities or certain entities only.
+**Note** that the output is not what we want here, but there haven't been enough examples to understand if the goal is to extract key entities or certain entities only.
 
 A few shots prompt will clarify this.
 

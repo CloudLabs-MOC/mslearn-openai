@@ -41,11 +41,11 @@ Let's go ahead and launch the Azure OpenAI playground to learn about prompt engi
 
 1. On **Microsoft Foundry | Azure OpenAI** blade under the **Use with Foundry** section, select **Azure OpenAI (1)** from the left pane and select **OpenAIService-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/foundry01.png)
+   ![](../media/L1P2.png)
 
 1. In the **Overview (1)** page of Azure OpenAI resource, click on **Go to Foundry portal (2)**. It will navigate to the **Microsoft Foundry portal**.
 
-     ![](../media/foundry2.png)    
+     ![](../media/L1P3.png)    
 
 1. In the **Microsoft Foundry | Azure OpenAI Service** pane, click on **Chat** under  **Playgrounds** from the left menu.
 
@@ -68,29 +68,29 @@ Here is a basic example of a simple prompt:
 
 *Prompt:*
 ```
-GPT-3 is
+GPT-4 is
 ```
 *Output:*
 
-`GPT-3, or Generative Pre-trained Transformer 3, is a state-of-the-art language processing AI model developed by OpenAI. It is capable of performing a wide range of natural language processing tasks, such as text generation, translation, summarization, and more. GPT-3 has been praised for its ability to generate human-like text and has been widely used in various applications such as chatbots, content generation, and language understanding tasks.`
+`GPT-4 is a large multimodal model developed by OpenAI, capable of understanding and generating text and images. It represents the fourth generation of the Generative Pre-trained Transformer series. GPT-4 can perform a wide range of tasks, including complex reasoning, creative writing, coding, and answering questions across many domains. It is more reliable, creative, and able to handle nuanced instructions better than its predecessor, GPT-3.5. GPT-4 is used in various applications, including chatbots, content creation, education, and more. If you'd like, I can provide more detailed information about its features, capabilities, or use cases.`
 
-The `Output:` is a series of strings that make sense given the context provided by our prompt of `"GPT3-3 is"`. However, the output may be unwanted or unexpected based on our use case. How can we refine or engineer our prompt to achieve our desired output?
+The `Output:` is a series of strings that make sense given the context provided by our prompt of `"GPT-4 is"`. However, the output may be unwanted or unexpected based on our use case. How can we refine or engineer our prompt to achieve our desired output?
 
 The first thing we can do is provide explicit instructions as to what we want the model to do with our previous prompt. This is what is meant by _prompt engineering_: refining the input to produce the best output from the LLM.
 
 *Prompt:*
 ```
-Tell me a joke that begins with: GPT-3 is
+Tell me a joke that begins with: GPT-4 is
 ```
 
 *Output:*
 
-`GPT-3 is so good at generating text that even Shakespeare would say, "To be or not to be, that is the question... but GPT-3 already knows the answer!"`
+`GPT-4 is so smart, it finished my homework before I even asked the question!`
 
 Did our instructions improve our output? Admittedly, this is not the funniest joke ever told. Unlike supervised learning problems, there is no easy error or loss metric to compare between the two outputs. Let's look at exactly what we asked the model to generate and what we received:
 | Requirement | Output Meets Requirement? | 
 |-------------|--------|
-| Begin with the words, "GPT-3 is" | Yes, the `Output:` began with the words "GPT-3 is" |
+| Begin with the words, "GPT-4 is" | Yes, the `Output:` began with the words "GPT-4 is" |
 | The output is in the form of a joke | An attempt was made |
 
 ---
