@@ -223,25 +223,6 @@ There are many parameters that you can adjust to change the performance of your 
 - **Tools / function calling:** Enables the model to interact with external systems or APIs by triggering predefined functions based on user input.
  
  - **Streaming:**  Allows receiving the response incrementally (token-by-token), improving responsiveness in interactive applications.
- 
-- **Top probabilities (Top P):** Controls randomness using nucleus sampling. Lower values restrict token selection to more likely options, while higher values allow more diverse outputs. Use as an alternative to Temperature.
- 
-- **Max output tokens:** Sets the maximum number of tokens the model can generate in the response. Unlike earlier versions, this applies only to output. Modern models support much larger total context sizes.
- 
-- **Stop sequences:** Defines sequences where the model should stop generating further tokens. You can specify multiple stop conditions, and the response will not include the stop sequence.
- 
- - **Frequency penalty:** Reduces repetition by penalizing tokens based on how frequently they appear in the generated text. Helps avoid repeated phrases.
- 
- - **Presence penalty:** Encourages introducing new topics by penalizing tokens that have already appeared at least once in the response.
- 
-- **Instructions (System message):**  Provides high-level guidance to the model on behavior, tone, and response style. This replaces older concepts like pre-response text and is the primary way to control model behavior.
- 
-- **Response format / structured output:** Allows enforcing specific output formats such as JSON, making responses easier to parse and integrate into applications.
- 
-- **Tools / function calling:** Enables the model to interact with external systems or APIs by triggering predefined functions based on user input.
- 
- - **Streaming:**  Allows receiving the response incrementally (token-by-token), improving responsiveness in interactive applications.
- 
 
 The Current token count is viewable from the Chat playground. Since the API calls are priced by token, and it's possible to set a max response token limit, you'll want to keep an eye out for the current token count to make sure the conversation-in doesn't exceed the max response token count.
 
