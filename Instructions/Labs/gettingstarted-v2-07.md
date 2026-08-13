@@ -95,8 +95,6 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
        ![](../media/pwrd1.png)
  
 4. In the **Stay signed in?** pop-up, click **No**.
-
-   ![](../media/2025-07-08(1).png)
  
 ## Support Contact
 
