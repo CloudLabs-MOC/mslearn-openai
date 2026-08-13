@@ -4,12 +4,13 @@
 The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics, or blend it with results from the pre-trained model.
 
 ## Lab objectives
+
 In this lab, you will complete the following tasks:
 
 - Task 1: Provision an Azure OpenAI resource
 - Task 2: Deploy a model
 - Task 3: Observe normal chat behavior without adding your own data
-- Task 4: Connect your data in the chat playground
+- Task 4: Create an AI Assistant with your own data
 - Task 5: Chat with a model grounded in your data
 - Task 6: Set up an application in Cloud Shell
 - Task 7: Configure your application
@@ -21,29 +22,31 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the results.
 
-   ![](../media/tel-11.png)
+   ![](../media/GM4.png)
 
 1. On the **Microsoft Foundry | Azure OpenAI** page, Click on **+ Create (1)** from the list, select **Azure OpenAI (2)**
 
    ![](../media/uupimg1.png)
 
-1. Create an **Azure OpenAI** resource with the following settings click on **Next** three times and subsequently click on **Create**:
+1. Create an **Azure OpenAI** resource with the following settings click on **Next (6)** three times and subsequently click on **Create**:
    
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
+    - **Subscription (1**: Default - Pre-assigned subscription.
+    - **Resource group (2)**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Region (3)**: <inject key="Region" enableCopy="false" />
+    - **Name (4)**: OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Pricing tier (5)**: Standard S0
 
-      ![](../media/azopenai123.png "Create Azure OpenAI resource")
+         ![](../media/IMG010.png "Create Azure OpenAI resource")
 
-1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+1. Under the **Review + submit** tab, click on **Create**.
 
-1. If you are not able to see the left menu, click on **Service menu**.
+      ![](../media/A0I4.png)
 
-   ![](../media/uupimg2.png) 
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+
+      ![](../media/AI5.png)
 
 1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -68,28 +71,31 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/uupimg3.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Foundry portal** it will navigate to **Microsoft Foundry portal**.
+1. In the Azure OpenAI resource pane, click on **Go to Foundry portal**. It will navigate to the **Microsoft Foundry portal**.
 
    ![](../media/uupimg4.png)
 
+   >**Note:** If the Create a Project pop-up appears, click **Cancel**. Then, on the top-right side, **turn off** the New Foundry toggle. If a feedback pop-up appears, click **Continue without feedback** and then select your **OpenAI Foundry resource**.
+   
 1. Click on **Deployments (1)** under **Shared 
    Resources**, then select **+ Deploy Model (2)**. Next, choose **Deploy Base Model (3).**
 
       ![](../media/uupimg5.png)
 
-1. Search for **gpt-4.1-mini (1)**, click on **Confirm (2)**
+1. In the **Select a model** pane, search for **gpt-5-mini (1)**, select the **gpt-5-mini (2)** model, and then select **Confirm (3)**.
 
-      ![](../media/uupimg6.png)
-   
-1. Within the Deploy model pop-up interface, enter the following details:
-      - **Deployment name:** text-turbo **(1)**
-      - **Deployment type:** Standard **(2)**
-      - Click on **Customize**
-      - Tokens per Minute Rate Limit (thousands): **20K (3)**
-      - Click on **Deploy (4)**
-  
-           ![](../media/uupimg7.png)
-           ![](../media/uupimg8up.png) 
+    ![Select GPT-5.4-mini model](../media/GM6.png)
+
+1. In the **Deploy gpt-5-mini** pane, configure the following settings and then select **Deploy (4)**.
+
+    | Setting | Value |
+    |----------|-------|
+    | **Deployment name (1)** | `text-turbo` |
+    | **Deployment type (2)** | **Global Standard** |
+    | **Tokens per Minute Rate Limit (3)** | `20K` |
+    | **Content filter** | **DefaultV2** |
+
+    ![Deploy GPT-5.4-mini](../media/GM7.png)
 
 1. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
@@ -145,154 +151,26 @@ In this task, you will observe how the base model responds to queries without an
 
    ![](../media/L068.png)
    
-1. Navigate back to the **Azure portal**, search for **Storage Account (1)**, and select **Storage accounts (2)**.
 
-   ![](../media/06L2.png)
+1. Navigate back to Foundry and from the left navigation pane click on **Assistants (1)**, under Deployment select your model **text-turbo (2)** and then click on **+ Create an assistant (3)**.    
 
-1. On **Storage Account** page, click on **Create**.
+    ![](../media/GM24.png)
 
-   ![](../media/2.png)
+1. Enter Assistant name as ``text-turbo-assistant`` **(1)** and ensure **text-turbo (2)** is selected under Deployments. Under **Tools** section enable **File Search (3)** and click on **+ Add Vector store (4)**
 
-1. Create a **Storage Account** resource with the following settings:
+    ![](../media/GM001.png)
 
-    - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> **(1)**
-    - **Storage account name**: storage<inject key="DeploymentID" enableCopy="false"></inject> **(2)**
-    - **Region**: Select <inject key="Region" enableCopy="false" /> **(3)**
-    - **Preffered storage type**: Azure Blob Storage or Azure Lake Storage Gen 2 **(4)**
-    - **Redundancy**: Locally-redundant storage (LRS) **(5)**
-    - Click **Next (6)**.
-  
-      ![](../media/uupimg11.png)
-      ![](../media/uupimg120.png)
+1. On the **Attach files to the assistant file search** click on **Select local files**.
 
-    - **Allow enable anonymous access on individual containers**: check in the box to enable under **Advanced** section. Click on **Review + Create**  and subsequently click on **Create**
+    ![](../media/GM26.png)
 
-      ![](../media/image4.5.png "allow blob access")
+1. In the **Open** window, navigate to the extracted **data** folder **(1)**. Select all the brochure PDF files **(2)** and then click **Open (3)** to upload them.
 
-1. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
+    ![](../media/GM27.png)
 
-1. On the deployment blade, click **Go to resource**.
+1. Now your Vector store will appear under **Files search (1)** section and also copy the **Assistant id (2)** and save in a notepad for later use.
 
-    ![](../media/3.png "upload files")
-
-1. In the **Storage account** page, expand **Data storage (1)**, select **Containers (2)**, and then click **+ Add container (3)**.
-
-     ![](../media/L063.png)
-
-1. In the **New container** pane, enter **openaidatasource (1)** in the **Name** field, set the **Anonymous access level (2)** to **Container (anonymous read access for containers and blobs)**, and then click **Create (3)**.
-
-      ![](../media/image4.60.png "create container")
-
-1. In the **Containers** page of the **Storage account**, locate and select the **openaidatasource (1)** container that was created in the **previous task**.
-
-      ![image](../media/L064.png)
-
-1. In the **openaidatasource** container page, click **Upload (2)** from the top menu. In the **Upload blob** pane that appears, select **Browse for files (3)**, locate the file you downloaded earlier, and select it to upload.
-
-      ![image](../media/L065.png)
-
-1. In the **Upload blob** file explorer window, navigate to **Downloads (1)** and open the **brochures (2)** folder that was downloaded and extracted during **Step 4 of Task 4**.
-
-      ![image](../media/L064.png)
-
-1. Select **all the brochure files (3)** in the folder and click **Open (4)** to upload them to the **openaidatasource** container.
-
-      ![image](../media/L069.png)
-
-1. Verify that all **6 files (5)** are selected in the **Upload blob** pane, and then click **Upload (6)** to upload the files to the container.
-
-     ![image](../media/L0611.png)
-
-1. Verify the **openaidatasource container** after all files are **uploaded**.
-
-      ![image](../media/fileuploaded0.png)
-
-1. On the Azure portal, type **AI Search (1)** in the search box and select **AI Search (2)** from the results.
-
-    ![](../media/aisrchportal1.png)
-
-1. On **Microsoft Foundry | AI search** blade, click on **+ Create**.
-
-    ![](../media/l6-12-51.png)
-
-1. On the **Create an AI Search** resource page, enter the following settings under the **Basics** tab and click on **Review + create (5)**.
-
-   | Settings | Action |
-   | -- | -- |
-   | **Subscription** | Default - Pre-assigned subscription |
-   | **Resource group** | **openai-<inject key="DeploymentID" enableCopy="false"></inject> (1)** |
-   | **Service name** | **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject> (2)** |
-   | **Location** | Select **<inject key="Region" enableCopy="false" /> (3)** |
-   | **Pricing tier** | Change the Pricing tier to **Basic (4)** |
-
-   ![](../media/reviewaisrch21.png)
-   
-    > **Note:** If **East US** is not available due to high demand, select **East US 2**, **Australia East**, or any other available supported region.
-
-1. Then click on **Create**.
-
-    ![](../media/lab6-02-51.png)
-
-1. Once the deployment is successful, click on **Go to resource** to go to the deployed search service. 
-
-   ![](../media/2gtrai1.png)
-
-1. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page, copy the URL and paste it in a text editor such as Notepad for later use.
-
-    ![](../media/cogurl1.png)
-
-1. From the left navigation pane, under **Settings (1)** click on **Keys (2)** and **copy the primary key or secondary key (3)** and paste it into a notepad for later use.
-
-    ![](../media/cogkeys1.png)
-
-1. In **Microsoft Foundry portal**, navigate to the **Chat (1)** section under **Playgrounds** followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
-
-    ![](../media/l6-12-61.png)
-   
-1. On the **Add data** window, enter the following values for under the **Data source** and then click on **Next (7)** to proceed with **Data Management**.
-
-   | Setting | Action |
-   | -- | -- |
-   | **Select data source** | Azure Blob Storage (preview) **(1)** |
-   | **Select Azure Blob storage resource** | *Choose the storage resource **storage<inject key="DeploymentID" enableCopy="false"></inject> (2)** you created* (If it isn’t visible, try clicking Refresh next to the storage account) |
-   | **Select Storage container** | **openaidatasource (3)** |
-   | **Select Azure AI Search resource** | *Choose **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject> (4)** search resource you created* |
-   | **Enter the index name** | **margiestravel (5)** |
-   | **Indexer schedule** | **Once (6)** |
-   
-    ![](../media/addds1.png)
-
-     > **Note:** If the created **Storage Account**, **Storage Container**, or other required resources are not visible in the list, click the **Refresh** icon as shown in the image to reload the available options.
-
-      ![](../media/L0620.png)
-   
-1. On the **Data management** page select the **Keyword (1)** search type from the drop-down, and then select **Next (2)**.
-
-    ![](../media/dmnext1.png)
-
-1. On the **Data connection** page select the **API key (1)** , Click on the **Next (2)**
-
-    ![](../media/dconcn1.png)
-   
-1. On the **Review and finish** page select **Save and close**, which will add your data.
-
-    ![](../media/refin1.png)
-
-1. This may take a few minutes, during which you need to keep your window open.
-       
-    ![](../media/ingprcs1.png)
-  
-1. Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data** tab in the  **Assistant setup** pane.
-
-    ![](../media/lab6-02-61.png)   
-
-<validation step="cf9a74ba-2501-47a6-a819-b42218c0a9da" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+    ![](../media/GM28.png)
 
 
 ## Task 5: Chat with a model grounded in your data
@@ -355,15 +233,14 @@ In this task, you will use a short command-line application running in Cloud She
 1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
    ![](../media/classic1.png)
-
-1. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise.
+4. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise.
 
      ```
      rm -r mslearn-openai -f
      git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
      ```
 
-1. After the repo has been cloned, navigate to the folder containing the chat application code files
+5. After the repo has been cloned, navigate to the folder containing the chat application code files.
    
     ```bash
     cd mslearn-openai/Labfiles/02-use-own-data
@@ -371,7 +248,7 @@ In this task, you will use a short command-line application running in Cloud She
 
     Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+5. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
    code .
@@ -383,22 +260,36 @@ In this task, you will complete key parts of the application to enable it to use
 
 1. In the code editor, expand the language folder for your preferred language.
 
-1. Open the configuration file for your language.
+1. Open the configuration file for your language and update the code.
 
     - **C#**: `appsettings.json`
+
+        ```json
+        {
+        "AzureOAIEndpoint": "Your OpenAI endpoint",
+        "AzureOAIKey": "Azure OpenAI Key",
+        "AssistantId": "Id of your Assistant"
+        }
+        ```
+
     - **Python**: `.env`
+
+        ```
+        AZURE_OAI_ENDPOINT=<Your OpenAI endpoint>
+        AZURE_OAI_KEY=<Azure OpenAI Key>
+        ASSISTANT_ID=<Id of your Assistant>
+        ```
 
 1. Update the configuration file for your chosen language with the following values:
 
     - **Azure OpenAI endpoint**: Paste the endpoint URL from your Azure OpenAI resource (found on the Keys and Endpoint page in the Azure portal).
     - **Azure OpenAI key**: Paste the key from your Azure OpenAI resource (also on the Keys and Endpoint page).
-    - **Deployment name**: Enter the name of your model deployment (e.g., `text-turbo` from the Deployments page in the Azure Microsoft Foundry portal).
-    - **Azure AI Search endpoint**: Paste the endpoint URL for your AI Search service (copied earlier or found in the overview page for your AI Search resource).
-    - **Azure AI Search key**: Paste the admin key for your AI Search resource (available on the Keys page).
-    - **Search index name**: Enter `margiestravel` as the index name.
+    - **AssistantId**: Enter the ID of your assistant that you created in Task 2.
     - Save your changes after updating these values.
 
-        ![](../media/l6-12-7.png)
+        ![](../media/GM40.png)
+
+        ![](../media/penv.png)
 
 1. If you're using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
 
@@ -430,28 +321,39 @@ In this task, you will complete key parts of the application to enable it to use
     </Project>
     ```    
 
-    ![](../media/L6T5S4-1807.png)    
+     ![](../media/new/f3.png)    
 
 1. Navigate to the **CSharp** folder and install the necessary packages. These commands set up the environment for a local installation of the .NET SDK in Cloud Shell.
 
+   For **C#:**
+
     ```
     cd CSharp
+    ```
+
+    ```
     export DOTNET_ROOT=$HOME/.dotnet
-    export PATH=$DOTNET_ROOT:$PATH
     mkdir -p $DOTNET_ROOT
-    ```   
+    ```
 
-    - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory).
-    - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
-    - `mkdir -p $DOTNET_ROOT` This creates the directory where the .NET runtime and SDK will be installed.
+     >**Note:** Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+     - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
+     - `mkdir -p $DOTNET_ROOT` This creates the directory where the .NET runtime and SDK will be installed.
 
-1. Run the following command to install the required SDK version locally. These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.    
+1. Run the following command to install the required SDK version locally:     
 
-     ```
-     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
-     chmod +x dotnet-install.sh
-     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
-     ``` 
+    ```
+    curl -fsSL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
+    chmod +x dotnet-install.sh
+    ``` 
+
+    ```
+    ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_ROOT
+    ```
+
+    ```
+    export PATH=$DOTNET_ROOT:$PATH
+    ```
 
 1. Enter the following command to restore any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
 
@@ -466,6 +368,11 @@ In this task, you will complete key parts of the application to enable it to use
     dotnet add package Azure.Search.Documents --version 11.6.0
     ```
 
+    ```
+    dotnet add package Azure.AI.OpenAI --prerelease
+    dotnet add package OpenAI --prerelease
+    ```
+
 1. If you prefer **Python**, navigate to the **Python** folder and install the necessary packages using the commands below:
 
     ```
@@ -475,64 +382,126 @@ In this task, you will complete key parts of the application to enable it to use
     pip install --user python-dotenv openai==1.65.2
     ```
 
-1. In the code editor, replace the comment **Configure your data source** with code to your index as a data source for chat completion:
+1. In the code editor, replace your entire file code.
 
     For **C#**: OwnData.cs
 
     ```csharp
-    // Configure your data source
-    // Extension methods to use data sources with options are subject to SDK surface changes. Suppress the warning to acknowledge this and use the subject-to-change AddDataSource method.
-    #pragma warning disable AOAI001
-     
-    ChatCompletionOptions chatCompletionsOptions = new ChatCompletionOptions()
-    {
-       MaxOutputTokenCount = 600,
-       Temperature = 0.9f,
-    };
-     
-    chatCompletionsOptions.AddDataSource(new AzureSearchChatDataSource()
-    {
-       Endpoint = new Uri(azureSearchEndpoint),
-       IndexName = azureSearchIndex,
-       Authentication = DataSourceAuthentication.FromApiKey(azureSearchKey),
-    });
-    ```
+    using System.ClientModel;
+    using Microsoft.Extensions.Configuration;
 
-    ![](../media/l6-12-8.png)
+    using Azure.AI.OpenAI;
+    using OpenAI.Assistants;
+    using OpenAI;
+
+    #pragma warning disable OPENAI001
+
+    // Get configuration settings  
+    IConfiguration config = new ConfigurationBuilder()
+        .AddJsonFile("appsettings.json")
+        .Build();
+
+    string oaiEndpoint = config["AzureOAIEndpoint"] ?? "";
+    string oaiKey = config["AzureOAIKey"] ?? "";
+    string assistantId = config["AssistantId"] ?? "";
+
+    // Initialize client
+    AzureOpenAIClient azureClient = new(new Uri(oaiEndpoint), new ApiKeyCredential(oaiKey));
+    AssistantClient assistantClient = azureClient.GetAssistantClient();
+
+    // Get input
+    Console.WriteLine("Enter a question:");
+    string text = Console.ReadLine() ?? "";
+
+    // Create thread
+    var thread = assistantClient.CreateThread().Value;
+
+    // Add message
+    assistantClient.CreateMessage(
+        thread.Id,
+        MessageRole.User,
+        new[] { MessageContent.FromText(text) }
+    );
+
+    // Run assistant (UPDATED)
+    var run = assistantClient.CreateRun(thread.Id, assistantId).Value;
+
+    // Wait for completion
+    while (run.Status == RunStatus.Queued || run.Status == RunStatus.InProgress)
+    {
+        Thread.Sleep(1000);
+        run = assistantClient.GetRun(thread.Id, run.Id).Value;
+    }
+
+    // Get messages
+    var messages = assistantClient.GetMessages(thread.Id);
+
+    // Print response
+    foreach (var msg in messages)
+    {
+        if (msg.Role == MessageRole.Assistant)
+        {
+            Console.WriteLine(msg.Content[0].Text);
+        }
+    }
+    ```
 
     For **Python**: ownData.py
 
     ```python
-    # Configure your data source
-    text = input('\nEnter a question:\n')
-     
-    completion = client.chat.completions.create(
-        model=deployment,
-        messages=[
-            {
-                "role": "user",
-                "content": text,
-            },
-        ],
-        extra_body={
-            "data_sources":[
-                {
-                    "type": "azure_search",
-                    "parameters": {
-                        "endpoint": os.environ["AZURE_SEARCH_ENDPOINT"],
-                        "index_name": os.environ["AZURE_SEARCH_INDEX"],
-                        "authentication": {
-                            "type": "api_key",
-                            "key": os.environ["AZURE_SEARCH_KEY"],
-                        }
-                    }
-                }
-            ],
-        }
+    import os
+    from openai import AzureOpenAI
+    import dotenv
+    import time
+
+    dotenv.load_dotenv()
+
+    endpoint = os.environ.get("AZURE_OAI_ENDPOINT")
+    api_key = os.environ.get("AZURE_OAI_KEY")
+    assistant_id = os.environ.get("ASSISTANT_ID")
+
+    client = AzureOpenAI(
+        azure_endpoint=endpoint,
+        api_key=api_key,
+        api_version="2024-05-01-preview"
     )
+
+    # Get user input
+    text = input('\nEnter a question:\n')
+
+    # Create thread
+    thread = client.beta.threads.create()
+
+    # Add message
+    client.beta.threads.messages.create(
+        thread_id=thread.id,
+        role="user",
+        content=text
+    )
+
+    # Run assistant
+    run = client.beta.threads.runs.create(
+        thread_id=thread.id,
+        assistant_id=assistant_id
+    )
+
+    # Wait for completion
+    while run.status in ["queued", "in_progress"]:
+        time.sleep(1)
+        run = client.beta.threads.runs.retrieve(
+            thread_id=thread.id,
+            run_id=run.id
+        )
+
+    # Get messages
+    messages = client.beta.threads.messages.list(thread_id=thread.id)
+
+    # Print response
+    for msg in messages.data:
+        if msg.role == "assistant":
+            print("\nAssistant:", msg.content[0].text.value)
     ```
 
-    ![](../media/l6-12-9.png)
 
 1. Save the changes to the code file.
 
@@ -557,7 +526,7 @@ In this task, you will run the reviewed code to generate some images.
 
 3. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
 
-    ![](../media/l6-12-1011.png)
+    ![](../media/optown.png)
 
 ## Summary
 

@@ -1,6 +1,6 @@
 # Utilize prompt engineering in your app
 
-### Overall Estimated Duration: 30 minutes
+### Overall Estimated Duration: 60 minutes
 
 ## Overview
 
@@ -44,13 +44,13 @@ The architecture for this lab involves the following key components:
 
 ## Getting Started with Lab
 
-1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
+Once the environment is provisioned, a virtual machine (JumpVM) and a lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number at the bottom of the lab guide to switch to different exercises.
 
 ## Accessing Your Lab Environment
 
-1. Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
 
-   ![](../media/img-01-24.png "Lab Environment")
+![](../media/img-01-24.png "Lab Environment")
 
 ## Virtual Machine & Lab Guide
  
@@ -58,21 +58,21 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 
 ## Lab Guide Zoom In/Zoom Out
 
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![Manage Your Virtual Machine](../media/img-01-27.png)
+![Manage Your Virtual Machine](../media/img-01-27.png)
 
 ## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-   ![](../media/img-01-25.png)
+![](../media/env-0707.png)
 
 ## Utilizing the Split Window Feature
  
 For your convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
 
-![](../media/img-01-26.png)
+![](../media/split-0707.png)
   
 ## Managing Your Virtual Machine
  
@@ -98,7 +98,9 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
  
        ![](../media/pwrd1.png)
  
-4. In the **Stay signed in?** pop-up, click **No**.
+4. In the **Stay signed in?** pop-up, click **Yes**.
+
+   ![](../media/stay-signed-0707.png)
  
 ## Support Contact
 

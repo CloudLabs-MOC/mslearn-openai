@@ -48,7 +48,7 @@ Welcome to your Get Started with Azure OpenAI Service Workshop! We've prepared a
 
 ## Accessing Your Lab Environment
 
-1. Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
 
    ![](../media/img-01-14.png "Lab Environment")
 
@@ -58,7 +58,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 
 ## Lab Guide Zoom In/Zoom Out
 
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
    ![Manage Your Virtual Machine](../media/img-01-15.png)
 
@@ -66,13 +66,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-   ![](../media/img-01-16.png)
+   ![](../media/env-0707.png)
 
 ## Utilizing the Split Window Feature
  
 For your convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
 
-![](../media/img-01-17.png)
+![](../media/split-0707.png)
   
 ## Managing Your Virtual Machine
  
@@ -98,7 +98,9 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
  
        ![](../media/pwrd1.png)
  
-4. In the **Stay signed in?** pop-up, click **No**.
+4. In the **Stay signed in?** pop-up, click **Yes**.
+
+   ![](../media/stay-signed-0707.png)
  
 ## Support Contact
 

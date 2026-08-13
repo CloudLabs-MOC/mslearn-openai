@@ -1,4 +1,5 @@
 # Lab 01: Utilize prompt engineering in your app
+## Estimated time: 60 minutes
 
 ## Lab scenario
 
@@ -16,11 +17,9 @@ In this lab, you will complete the following tasks:
 - Task 5: Configure your application
 - Task 6: Run your application
 
-## Estimated time: 60 minutes
-
 ### Task 1: Provision an Azure OpenAI resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal by selecting the OpenAI service and configuring settings such as the region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
@@ -34,15 +33,17 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
     
     - Subscription: **Default Subscription (1)**
     
-    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - Resource group: **openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)**
     
     - Region: **<inject key="Region" enableCopy="false"></inject> (3)**
     
-    - Name: **OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - Name: **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> (4)**
     
     - Pricing tier: **Standard S0 (5)**
   
         ![](../media/op-rt-g-12.png "Create Azure OpenAI resource")
+
+        >**Note:** If you encounter any deployment issues related to region availability or capacity, update the region to East US 2 and retry the deployment.
 
 1. Under the **Review + submit** tab, click on **Create**.
 
@@ -56,9 +57,9 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
       - On the left navigation menu, expand **Resource Management (1)** and select **Keys and Endpoint (2)**.
 
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
+      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
 
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it into a text editor such as Notepad for later use.
 
           ![](../media/img-01-29.png "Keys and Endpoints")
 
@@ -81,28 +82,27 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](../media/va3.png)
 
-1. Search for **gpt-4o (1)**, select it from the list **(2)**, and then click **Confirm (3)**.
+   >**Note:** If the Create a Project pop-up appears, click **Cancel**. Then, on the top-right side, **turn off** the New Foundry toggle. If a feedback pop-up appears, click **Continue without feedback** and then select your **OpenAI Foundry resource**.
 
-    ![](../media/op-rt-g-1.png)
+1. Search for **gpt-5-mini (1)**, select it from the list **(2)**, and then click **Confirm (3)**.
 
-1. On the **Deploy gpt-4o** interface, click on **Customize (1)** and enter the details as mentioned below, then click on **Deploy (9):**
+    ![](../media/T2S3-0707.png)
+
+1. On the **Deploy gpt-5-mini** interface, click on **Customize (1)** and enter the details as mentioned below, then click on **Deploy (9):**
 
    | Settings | Action |
    | -- | -- |
-   | **Deployment name** | **text-turbo (2)** |
-   | **Deployment type** | **Standard (3)**|
-   | **Model version upgrade policy** | **Upgrade once new default version becomes available. (4)** |
-   | **Model version** | 2024-11-20 **(5)**|
-   | **Tokens per Minute Rate Limit (thousands)** | **10K (6)** |
-   | **Content Filter** | **DefaultV2 (7)**|
-   | **Enable dynamic quota** |**Enabled (8)**|
+   | **Deployment name** | **text-turbo (1)** |
+   | **Deployment type** | **Global Standard (2)**|
+   | Click on **Customize** |
+   | **Model version upgrade policy** | **Upgrade once new default version becomes available. (3)** |
+   | **Model version** | 2025-08-07 **(4)**|
+   | **Tokens per Minute Rate Limit (thousands)** | **10K (5)** |
+   | **Content Filter** | **DefaultV2 (6)**|
+   | **Enable dynamic quota** |**Enabled (7)**|
   
-      ![](../media/op-rt-g-13.png)
-
-      ![](../media/cor-op-rt-g-1.png)
-   
-    >**Note:** gpt-4o is supported only for chat completions.
-
+      ![](../media/T2S4-0707.png)
+    
 <validation step="e3805450-2e13-40c4-80fa-58a0cd695e6e" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -124,6 +124,8 @@ In this task, you will examine how prompt engineering improves model responses i
    ```
 
     ![](../media/findinfoo.png)
+
+    >**Note:** If you can't see the setup section, click on Show setup.
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -153,7 +155,7 @@ In this task, you will examine how prompt engineering improves model responses i
    You are a news aggregator that categorizes news articles.
    ```
 
-   ![](../media/img-01-36.png)
+   ![](../media/T3S6-0707.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -205,7 +207,8 @@ In this task, you will examine how prompt engineering improves model responses i
     ```prompt
     Entertainment
     ```
-
+    >**Note:** Click Add section, then choose Examples again to add another example.
+   
 1. Click on the **Apply changes** button to save your changes.
 
    ![](../media/w3.png)
@@ -230,7 +233,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
     The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
 
-   ![](../media/img-01-37.png)
+   ![](../media/T3S13b-0707.png)
 
 1. Set the **Give the model instructions and context (1)** to the text mentioned below. Save the changes by clicking on **Apply changes (2)**.
    ```
@@ -252,7 +255,7 @@ In this task, you will examine how prompt engineering improves model responses i
     ```
     The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you wanted was for the model to write a Python program that performs the tasks you described?
 
-   ![](../media/img-01-38.png)
+   ![](../media/T3S15-0707.png)
 
 1. Change the **Give the model instructions and context (1)** to the text mentioned below, and **Apply changes (2)** the changes.
 
@@ -260,7 +263,7 @@ In this task, you will examine how prompt engineering improves model responses i
    You are a coding assistant helping write Python code.
    ```
 
-   ![](../media/img-01-39.png)
+   ![](../media/T3S16-0707.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -274,7 +277,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 1. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-      ![](../media/img-01-40.png)
+      ![](../media/T3S19-0707.png)
 
 ### Task 4: Set up an application in Cloud Shell
 
@@ -300,12 +303,14 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **Resource group**: Select **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** (2)
-    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (3)
+    - **CloudShell region**: **<inject key="Region" enableCopy="false"></inject> (3)**
     - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
     - Click **Create** (6)
 
         ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+        
+      >**Note:** If you encounter any deployment issues related to region availability or capacity, update the region to East US 2 and retry the deployment.
    
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -314,6 +319,8 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
    ![](../media/classic.png)
+
+   >**Note:** If the Settings icon is not visible, click on the (...) ellipses icon.
 
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `mslearn-openai`.
 
@@ -408,24 +415,24 @@ In this task, you will complete key parts of the provided C# or Python applicati
     ```
     cd CSharp
     export DOTNET_ROOT=$HOME/.dotnet
-    export PATH=$DOTNET_ROOT:$PATH
     mkdir -p $DOTNET_ROOT
     ```     
 
      >**Note:** Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
-     - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
-     - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
-     - `mkdir -p $DOTNET_ROOT` This creates the directory where the .NET runtime and SDK will be installed.
+
+     > - DOTNET_ROOT specifies where your .NET runtime and SDK are located (in your $HOME/.dotnet directory).
+     > - mkdir -p $DOTNET_ROOT This creates the directory where the .NET runtime and SDK will be installed.
 
 1. Run the following command to install the required SDK version locally:     
 
      ```
-     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
+     curl -fsSL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
      chmod +x dotnet-install.sh
-     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
+     ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_ROOT
+     export PATH=$DOTNET_ROOT:$PATH
      ```
 
-      >**Note:** These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.
+      >**Note:** These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.
 
 1. Enter the following command to restore the workload.
 
@@ -509,22 +516,20 @@ In this task, you will complete key parts of the provided C# or Python applicati
     **C#:** Program.cs - Add the code in **Create chat completion options** section
 
     ```csharp
-    // Format and send the request to the model
-         var chatCompletionsOptions = new ChatCompletionsOptions()
-          {
-              Messages =
-              {
-                  new ChatRequestSystemMessage(systemPrompt),
-                  new ChatRequestUserMessage(userPrompt)
-              },
-              Temperature = 0.7f,
-              MaxTokens = 800,
-              DeploymentName = oaiModelName
-          };
-           
-          // Get response from Azure OpenAI
-          Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-          var completions = response.Value;
+   // Format and send the request to the model
+    var chatCompletionsOptions = new ChatCompletionsOptions()
+    {
+        Messages =
+        {
+            new ChatRequestSystemMessage(systemPrompt),
+            new ChatRequestUserMessage(userPrompt)
+        },
+        DeploymentName = oaiModelName
+    };
+        
+    // Get response from Azure OpenAI
+    Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+    var completions = response.Value;
     ```
 
       ![](../media/L3T3S12c-1707.png)
@@ -532,20 +537,18 @@ In this task, you will complete key parts of the provided C# or Python applicati
     **Python:** prompt-engineering.py - Add the code in **Build the messages array** section
 
    ```python
-    # Format and send the request to the model
+   # Format and send the request to the model
     messages =[
-        {"role": "system", "content": system_message},
-        {"role": "user", "content": user_message},
+            {"role": "system", "content": system_message},
+            {"role": "user", "content": user_message},
     ]
-    
+
     print("\nSending request to Azure OpenAI model...\n")
 
-    # Call the Azure OpenAI model
+# Call the Azure OpenAI model
     response = await client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=0.7,
-        max_tokens=800
+    model=model,
+    messages=messages
     )
     ```
 
@@ -635,21 +638,19 @@ In this task, you will complete key parts of the provided C# or Python applicati
              
              // Create chat completion options
              // Format and send the request to the model
-              var chatCompletionsOptions = new ChatCompletionsOptions()
-               {
-                   Messages =
-                   {
-                       new ChatRequestSystemMessage(systemPrompt),
-                       new ChatRequestUserMessage(userPrompt)
-                   },
-                   Temperature = 0.7f,
-                   MaxTokens = 800,
-                   DeploymentName = oaiModelName
-               };
-                
-               // Get response from Azure OpenAI
-               Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-               var completions = response.Value;
+             var chatCompletionsOptions = new ChatCompletionsOptions()
+             {
+                 Messages =
+                 {
+                     new ChatRequestSystemMessage(systemPrompt),
+                     new ChatRequestUserMessage(userPrompt)
+                 },
+                 DeploymentName = oaiModelName
+             };
+                 
+             // Get response from Azure OpenAI
+             Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+             var completions = response.Value;
              
              // Write full response if needed
              if (printFullResponse)
@@ -694,14 +695,14 @@ In this task, you will complete key parts of the provided C# or Python applicati
                   api_key=azure_oai_key,  
                   api_version="2024-02-15-preview"
                   )
-             
+          
       
               while True:
                   print('1: Basic prompt (no prompt engineering)\n' +
-                        '2: Prompt with email formatting and basic system message\n' +
-                        '3: Prompt with formatting and specifying content\n' +
-                        '4: Prompt adjusting system message to be light and use jokes\n' +
-                        '\'quit\' to exit the program\n')
+                      '2: Prompt with email formatting and basic system message\n' +
+                      '3: Prompt with formatting and specifying content\n' +
+                      '4: Prompt adjusting system message to be light and use jokes\n' +
+                      '\'quit\' to exit the program\n')
                   command = input('Enter a number:')
                   if command == '1':
                       await call_openai_model(messages="../prompts/basic.txt", model=azure_oai_model, client=client)
@@ -737,15 +738,13 @@ In this task, you will complete key parts of the provided C# or Python applicati
                   {"role": "system", "content": system_message},
                   {"role": "user", "content": user_message},
           ]
-       
+      
           print("\nSending request to Azure OpenAI model...\n")
       
-       # Call the Azure OpenAI model
+      # Call the Azure OpenAI model
           response = await client.chat.completions.create(
-             model=model,
-             messages=messages,
-             temperature=0.7,
-             max_tokens=800
+          model=model,
+          messages=messages
           )
           
       

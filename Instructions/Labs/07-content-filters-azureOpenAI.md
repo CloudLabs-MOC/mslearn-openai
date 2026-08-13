@@ -17,13 +17,13 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Provision an Azure OpenAI resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the results.
 
-   ![](../media/AI1.png)
+   ![](../media/GM4.png)
 
-1. On  **AI Foundary | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
+1. On  **Microsoft Foundary | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
 
    ![](../media/AI2.png)
 
@@ -69,42 +69,30 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/SS2.png "Create a new deployment")
 
-1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
+1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)** and click on **Confirm (3)**.
 
-   ![](../media/AI6.png) 
+   ![](../media/GM6.png) 
 
    >**Note:** If pop-up window **Unlock the full capabilities of Azure Microsoft Foundry with projects** appears, click **Continue with existing setup**
 
       ![](../media/AI7.png)
    
-1. Within the **Deploy model gpt-4.1-mini** pop-up interface, click on **Customize**.
 
-   ![](../media/AI8.png)
+1. On the **Deploy gpt-5-mini** page, configure the deployment using the following settings, and then click **Deploy (6)**.
 
-1. Within the **Deploy model gpt-4.1-mini** pop-up interface, enter the following details:
+    | Setting | Value |
+    |----------|-------|
+    | **Deployment name (1)** | `35turbo` |
+    | **Deployment type (2)** | **Global Standard** |
+    | **Model version (3)** | `2025-08-07` |
+    | **Tokens per Minute Rate Limit (4)** | `20K` |
+    | **Content filter (5)** | **DefaultV2** |
 
-      - Deployment name: **35turbo (1)**
-
-      - Deployment type: **Standard (2)**
-
-      - Model version: **2025-04-14 (Default) (3)**
-
-      - Tokens per Minute Rate Limit (thousands): In between **10K (4)**
-
-      - Content filter: **DefaultV2 (5)**
-
-      - Enable dynamic quota: **Enabled (6)** 
-
-      - Click on **Deploy (7)**
-
-        ![](../media/AI0011.png)
+    ![](../media/GM007.png)
       
 1. This will deploy a model that you will be playing around with as you proceed.
 
     > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
-   
-    > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
-
 
 <validation step="a75cfc42-9bee-4829-858b-0612e685f83f" />
 
@@ -137,6 +125,8 @@ In this task, you will observe how the model behaves in a conversational interac
     ```
 
     ![](../media/l6-12-1211.png)
+
+    >**Note:** If you can't see the setup section, click on Show setup.
 
 1. In the **Update system message?** window, click on **Continue**.
 
