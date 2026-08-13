@@ -77,10 +77,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    >**Note:** If the Create a Project pop-up appears, click **Cancel**. Then, on the top-right side, **turn off** the New Foundry toggle. If a feedback pop-up appears, click **Continue without feedback** and then select your **OpenAI Foundry resource**.
    
-1. Click on **Deployments (1)** under **Shared 
-   Resources**, then select **+ Deploy Model (2)**. Next, choose **Deploy Base Model (3).**
+1. Click on **Deploy + Endpoint(1)** under **My Assets**, then select **+ Deploy Model (2)**. Next, choose **Deploy Base Model (3).**
 
-      ![](../media/uupimg5.png)
+      ![](../media/OPA1.png)
 
 1. In the **Select a model** pane, search for **gpt-5-mini (1)**, select the **gpt-5-mini (2)** model, and then select **Confirm (3)**.
 
@@ -111,6 +110,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
 1. In the **Playground** section, select the **Chat** page. The **Chat** playground page consists of three main sections:
+
+
      - **Setup** - used to configure settings for the model deployment.
      - **Give the model instructions and context** - used to set the context for the model's responses.
     - **Chat session** - used to submit chat messages and view responses.
