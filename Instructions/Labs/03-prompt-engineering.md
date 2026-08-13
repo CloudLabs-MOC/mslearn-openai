@@ -78,9 +78,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](../media/va2.png)
 
-1. Select the **Deployments (1)** from the left pane under **Shared resources**, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
+1. Select the **Models + endpoints (1)** from the left pane under ** My assets**, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
-    ![](../media/va3.png)
+    ![](../media/OPA1.png)
 
    >**Note:** If the Create a Project pop-up appears, click **Cancel**. Then, on the top-right side, **turn off** the New Foundry toggle. If a feedback pop-up appears, click **Continue without feedback** and then select your **OpenAI Foundry resource**.
 
@@ -147,7 +147,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 1. The response describes the article. However, suppose you want a more specific format for article categorization.
   
-   ![](../media/img-01-35.png)
+   ![](../media/T3S13b-0707.png)
 
 1. In the **Setup** section, change the **Give the model instructions and context (1)** to the below text and click on **Apply changes (2)**. 
 

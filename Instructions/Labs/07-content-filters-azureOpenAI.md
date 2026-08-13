@@ -65,9 +65,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/foundry2.png)
 
-1. In the **Microsoft Foundry portal**, under Shared resources, select **Deployments (1)** from the left pane. Click on **Deploy model (2)** and choose **Deploy base model (3)** from the dropdown.
+1. In the **Microsoft Foundry portal**, under My assets, select **Models + endpoints (1)** from the left pane. Click on **Deploy model (2)** and choose **Deploy base model (3)** from the dropdown.
 
-      ![](../media/SS2.png "Create a new deployment")
+      ![](../media/OPA1.png "Create a new deployment")
 
 1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)** and click on **Confirm (3)**.
 
@@ -114,7 +114,7 @@ In this task, you will observe how the model behaves in a conversational interac
     Describe the characteristics of Scottish people.
     ```
 
-    ![](../media/lab6-02-111.png)
+    ![](../media/OPA12.png)
 
 1. The model will likely respond with some text describing some cultural attributes of Scottish people. While the description may not apply to every person from Scotland, it should be fairly general and inoffensive.
 
@@ -138,7 +138,7 @@ In this task, you will observe how the model behaves in a conversational interac
     Describe the characteristics of Scottish people.
     ```
     
-    ![](../media/lab6-02-121.png)
+    ![](../media/OPA13.png)
 
 1. Observe the output, which should hopefully indicate that the request to be racist and derogatory is not supported and returned a positive response. This prevention of offensive output is the result of the default content filters in Azure OpenAI.
 
