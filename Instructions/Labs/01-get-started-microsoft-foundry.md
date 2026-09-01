@@ -1,8 +1,8 @@
-# 🚀 Lab 01: Get started with Microsoft Foundry
+#  Lab 01: Get started with Microsoft Foundry
 
 ### Estimated Duration: 120 Minutes
 
-## 🧭 Lab Scenario
+## 📘Lab Scenario
 
 You have recently joined **Contoso**, an organization that wants to bring generative AI into its internal learning platform. Learners currently rely on static course material, and the training team wants to know whether an AI assistant could answer questions in natural language, explain technical concepts on demand, and even help developers with sample code.
 
@@ -10,7 +10,7 @@ Before any application is built, your manager has asked you to evaluate the plat
 
 By the end of the lab, you'll have a working, tested model deployment along with the **project endpoint** and **API key** your team needs to call it from application code in the next lab.
 
-## 📘 Lab Overview
+## 📖 Lab Overview
 
 In this lab, you'll learn how to get started with **Microsoft Foundry** by provisioning a Foundry resource in Azure and using the Microsoft Foundry portal to deploy and explore generative AI models. Microsoft Foundry is the unified platform for building AI solutions on Azure  it gives you a single place to discover models, deploy them, test them interactively in the playground, and connect them to your own applications, all backed by the security, scalability and service integration of the Azure cloud platform. 
 
@@ -64,13 +64,13 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Microsoft Foundry resource to integrate advanced language capabilities into your applications.
 
-1. From the **Azure portal**, navigate to your foundry resource **foundry-<inject key="DeploymentID" enableCopy="false"></inject>**.
+1. From the **Azure portal**, navigate to your foundry resource **Foundry-lab-<inject key="DeploymentID" enableCopy="false"></inject>**.
 
-1. On the **Foundry** resource page, click **Overview**, then select **Go to Microsoft Foundry portal (2)** to navigate to the **Microsoft Foundry portal**.
+1. On the **Foundry** resource page, click **Overview**, then select **Go to Microsoft Foundry portal** to navigate to the **Microsoft Foundry portal**.
 
    ![](../media/l1-Foundry-3.png)
 
-1. You'll land on the new **Microsoft Foundry** portal. Ensure the **toggle (1)** is turned on — if it's disabled, enable it. Then copy the following values into Notepad, as you'll need them in later steps:
+1. You'll land on the new **Microsoft Foundry** portal. Ensure the **toggle (1)** is turned on  if it's disabled, enable it. Then copy the following values into Notepad, as you'll need them in later steps:
 
    - Project Endpoint **(2)** 
    - API key **(3)**
@@ -108,7 +108,7 @@ In this task, you'll deploy a specific AI model instance within your Microsoft F
 
 ## Task 3: Use the Playground
 
-In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
+In this task, you'll use the Playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
 1. Once the model is deployed, you'll be taken to the model **Playground**, where you can test it by providing instructions and prompts, review the responses it generates, and explore more of the model's AI capabilities.
 
@@ -278,8 +278,6 @@ In this lab,
 - You explored the model in the **Playground**, experimented with prompts and parameters and tested the model’s **code generation abilities**.
 
 
-### ✅ You have successfully completed the lab. Click on Next >> to proceed with the next lab.
-
-#### 🎉 Happy Learning!!!
+###  You have successfully completed the lab. Click on Next >> to proceed with the next lab.
      
    ![](../media/next-1507.png)
