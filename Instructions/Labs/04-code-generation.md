@@ -234,7 +234,7 @@ In this task, you will run your configured app to generate code for each use cas
 
 1. It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not removing pairs from the player's hand when they get a pair, and a few other bugs that require an understanding of card games to realize. This is a great example of how useful generative AI models can be to assist with code generation, but they can't be trusted as correct and need to be verified by the developer.
 
-If you would like to see the full response from Microsoft Foundry model, you can set the `printFullResponse` variable to `True` and re-run the app.
+1. If you would like to see the full response from Microsoft Foundry model, you can set the `printFullResponse` variable to `True` and re-run the app.
 
 ## 🧾 Summary
 

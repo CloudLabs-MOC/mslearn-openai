@@ -1,4 +1,4 @@
-# Develop Generative AI solutions with Microsoft Foundry 
+# Develop Generative AI Solutions with Microsoft Foundry 
 
 ## Overall Estimated Duration: 8 Hours
 
@@ -63,13 +63,13 @@ The architecture for this lab involves the following key components:
 
 # 🚀 Getting Started with the lab environment
  
-Welcome to your **Develop Generative AI solutions with Microsoft Foundry!**. We've prepared a seamless environment for you to explore and learn about the connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
+Welcome to your **Develop Generative AI Solutions with Microsoft Foundry!**. We've prepared a seamless environment for you to explore and learn about the connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
  
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![](../media/guideee.png)
+   ![](../media/Develop-genai-lab-vm-guide.png)
 
 ## Virtual Machine & Lab Guide
  

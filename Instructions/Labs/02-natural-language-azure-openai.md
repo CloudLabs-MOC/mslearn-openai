@@ -74,7 +74,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 5. Within the **Create storage account** page, enter the following details:
 
     - Subscription: Choose the Default subscription **(1)**.
-    - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - Resource group: Select **foundry-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     - Region: **<inject key="Region" enableCopy="false" /> (3)**
     - Storage account name: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - File share: Create a new file share named **none** **(5)**
@@ -84,7 +84,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-8. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
+8. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `mslearn-openai`.
 
     ```bash
    rm -r mslearn-openai -f

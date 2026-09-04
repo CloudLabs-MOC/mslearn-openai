@@ -34,7 +34,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. On the model page, make sure the **Playground** tab is selected. The playground lets you experiment with the model and test its capabilities. In the **Instructions** box, you can provide a system message that tells the model how to behave in response to the prompts you send.
 
-      - Existing text - `You are an AI assistant that helps people find informations`. 
+    - Existing text - `You are an AI assistant that helps people find informations`. 
 
 1. In the **Chat session**, **submit (2)** the following query **(1)**:
 
