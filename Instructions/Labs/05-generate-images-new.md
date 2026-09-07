@@ -18,9 +18,11 @@ In this lab, you will complete the following tasks:
 
 - Task 1: Explore image generation in the gpt-image-1.5 playground
 - Task 2: Use the REST API to generate images
+
     - Task 2.1: Prepare the app environment
     - Task 2.2: Configure your application
     - Task 2.3: View application code
+    
 - Task 3: Run the app
 
 ## Task 1: Explore image generation in the gpt-image-1.5 playground
