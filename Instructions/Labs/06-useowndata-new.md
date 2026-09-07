@@ -303,7 +303,7 @@ In this task, you will complete key parts of the application to enable it to use
 
 1. In the code editor, replace your entire file code.
 
-    For **C#**: `OwnData.cs`
+    - For **C#**: `OwnData.cs`
 
     ```csharp
     using Azure.AI.Projects;

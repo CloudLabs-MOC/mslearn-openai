@@ -68,7 +68,7 @@ In this task, you will use the gpt-image-1.5 playground in the Microsoft Foundry
 
       > **Note:** This task relies on the gpt-image-1.5 quota limit available in your Microsoft Foundry. If the model deployment fails, it may be due to quota restrictions on the existing resource.
       >
-      > To resolve this, create a new Microsoft Foundry resource in azure portal(as done in **Lab 01**) in a supported region such as **East US 2**, **West US 3**, or **Poland Central**, and then attempt to deploy the gpt-image-1.5 model again.
+      > To resolve this, create a new Microsoft Foundry resource in azure portal(as done in **Lab 01**) in a supported region such as **East US 2**, **West US 3**, or **Poland Central**, **Sweden Central**, and then attempt to deploy the gpt-image-1.5 model again.
 
       > **Note:** If your model is deployed to a new foundry resource due to quota limitations, which is created during deployment, you will need to configure its Azure OpenAI endpoint and API key when using the REST API to generate images. Otherwise, you can use the ones you have used before.
 
