@@ -402,94 +402,94 @@ In this task, you will complete key parts of the application to enable it to use
     }
     ```
 
-    For **Python**: `ownData.py`
+    - For **Python**: `ownData.py`
 
     ```python
 
-     import os
+        import os
 
-     from dotenv import load_dotenv
-     from azure.identity import DefaultAzureCredential
-     from azure.ai.projects import AIProjectClient
-
-
-     # Load values from .env
-     load_dotenv()
-
-     # Read Microsoft Foundry configuration
-     endpoint = os.getenv("FOUNDRY_PROJECT_ENDPOINT")
-     agent_name = os.getenv("FOUNDRY_AGENT_NAME")
-     agent_version = os.getenv("FOUNDRY_AGENT_VERSION")
+        from dotenv import load_dotenv
+        from azure.identity import DefaultAzureCredential
+        from azure.ai.projects import AIProjectClient
 
 
-     # Validate configuration
-     if not endpoint:
-         raise ValueError("FOUNDRY_PROJECT_ENDPOINT is missing from .env")
+        # Load values from .env
+        load_dotenv()
 
-     if not agent_name:
-         raise ValueError("FOUNDRY_AGENT_NAME is missing from .env")
-
-     if not agent_version:
-         raise ValueError("FOUNDRY_AGENT_VERSION is missing from .env")
+        # Read Microsoft Foundry configuration
+        endpoint = os.getenv("FOUNDRY_PROJECT_ENDPOINT")
+        agent_name = os.getenv("FOUNDRY_AGENT_NAME")
+        agent_version = os.getenv("FOUNDRY_AGENT_VERSION")
 
 
-     # Connect to Microsoft Foundry
-     project_client = AIProjectClient(
-         endpoint=endpoint,
-         credential=DefaultAzureCredential(),
-     )
+        # Validate configuration
+        if not endpoint:
+            raise ValueError("FOUNDRY_PROJECT_ENDPOINT is missing from .env")
+
+        if not agent_name:
+            raise ValueError("FOUNDRY_AGENT_NAME is missing from .env")
+
+        if not agent_version:
+            raise ValueError("FOUNDRY_AGENT_VERSION is missing from .env")
 
 
-     # Get the OpenAI client for the Foundry project
-     openai_client = project_client.get_openai_client()
+        # Connect to Microsoft Foundry
+        project_client = AIProjectClient(
+            endpoint=endpoint,
+            credential=DefaultAzureCredential(),
+        )
 
 
-     print("Microsoft Foundry Agent connected.")
-     print(f"Agent: {agent_name}")
-     print(f"Version: {agent_version}")
-     print()
-     print("Type 'exit' to quit.")
-     print()
+        # Get the OpenAI client for the Foundry project
+        openai_client = project_client.get_openai_client()
 
 
-     # Continuously accept questions
-     while True:
+        print("Microsoft Foundry Agent connected.")
+        print(f"Agent:     {agent_name}")
+        print(f"Version: {agent_version}")
+        print()
+        print("Type 'exit' to quit.")
+        print()
 
-         question = input("Question: ")
 
-         if question.lower() == "exit":
-             break
+        # Continuously accept questions
+        while True:
 
-        if not question.strip():
-            print("Please enter a question.")
-            continue
+            question = input("Question: ")
 
-        try:
-            # Send the question to the existing Foundry Agent
-            response = openai_client.responses.create(
-                input=[
-                    {
-                        "role": "user",
-                        "content": question
-                    }
-                ],
-                extra_body={
-                    "agent_reference": {
-                        "name": agent_name,
-                        "version": agent_version,
-                        "type": "agent_reference"
-                    }
-                },
-            )
+            if question.lower() == "exit":
+                break
 
-            print("\nAgent response:")
-            print(response.output_text)
-            print()
+            if not question.strip():
+                print("Please enter a question.")
+                continue
 
-        except Exception as e:
-            print("\nError calling Microsoft Foundry Agent:")
-            print(e)
-            print()
+            try:
+                # Send the question to the existing Foundry Agent
+                response = openai_client.responses.create(
+                    input=[
+                        {
+                            "role": "user",
+                            "content": question
+                        }
+                    ],
+                    extra_body={
+                        "agent_reference": {
+                            "name": agent_name,
+                            "version": agent_version,
+                            "type": "agent_reference"
+                        }
+                    },
+                )
+
+                print("\nAgent response:")
+                print(response.output_text)
+                print()
+
+            except Exception as e:
+                print("\nError calling Microsoft Foundry Agent:")
+                print(e)
+                print()
      ```
 
 1. Save the changes to the code file.
