@@ -64,9 +64,13 @@ In this task, you will use the gpt-image-1.5 playground in the Microsoft Foundry
     - Request per Minute Rate Limit: **1/9 (4)** (use the **slider** to adjust the values)
     - Guardrails **(5)**: **DefaultV2**
 
-    ![](../media/l5-gpt-d3.png)
+      ![](../media/l5-gpt-d3.png)
 
-    > **Note:** If your model is deployed to a new resource due to quota limitations (as shown in the images below), which is created during deployment, you will need to configure its Azure OpenAI endpoint and API key when using the REST API to generate images. Otherwise, you can use the ones you have used before.
+      > **Note:** This task relies on the gpt-image-1.5 quota limit available in your Microsoft Foundry. If the model deployment fails, it may be due to quota restrictions on the existing resource.
+      >
+      > To resolve this, create a new Microsoft Foundry resource in azure portal(as done in **Lab 01**) in a supported region such as **East US 2**, **West US 3**, or **Poland Central**, and then attempt to deploy the gpt-image-1.5 model again.
+
+      > **Note:** If your model is deployed to a new foundry resource due to quota limitations, which is created during deployment, you will need to configure its Azure OpenAI endpoint and API key when using the REST API to generate images. Otherwise, you can use the ones you have used before.
 
 1. In the left pane, select **Deployments (1)**, then select your **gpt-image-model** deployment. On the model page, make sure the **Playground (2)** tab is selected and confirm that **Model: gpt-image-model (3)** is the selected deployment. The image playground opens with a prompt box at the bottom.
 

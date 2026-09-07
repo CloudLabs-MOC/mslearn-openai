@@ -45,9 +45,7 @@ This lab provides robust functionalities for leveraging AI within Azure. Microso
 
 ## 🖼️ Architecture Diagram
 
-![](../media/DevgenAI-Arch-1-3.png "Lab Environment")
-
-![](../media/DevgenAI-Arch-4-7.png "Lab Environment")
+![](../media/DG-AI-MF-archtitecture.png "Lab Environment")
 
 ## 🔍 Explanation of Components
 

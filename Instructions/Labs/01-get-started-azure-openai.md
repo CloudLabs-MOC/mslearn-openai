@@ -15,7 +15,7 @@ In this lab, you'll learn how to get started with Microsoft Foundry by provision
 In this lab, you will complete the following tasks:
 
 - Task 1: Provision a Microsoft Foundry resource
-- Task 2: Deploy a model
+- Task 2: Deploy a Microsoft Foundry model
 - Task 3: Use the Playground
 - Task 4: Explore prompts and parameters
 - Task 5: Explore code generation
@@ -57,9 +57,9 @@ In this task, you'll create a Microsoft Foundry in the Azure portal, selecting t
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="c441612f-1977-44cb-832a-796990d2ff0c" />
+<validation step="659d71ba-f971-4339-9abd-f60c5ec94959" />
 
-## Task 2: Deploy a model
+## Task 2: Deploy a Microsoft Foundry model
 
 In this task, you'll deploy a specific AI model instance within your Microsoft Foundry resource to integrate advanced language capabilities into your applications.
 
@@ -99,7 +99,7 @@ In this task, you'll deploy a specific AI model instance within your Microsoft F
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="70feac4b-7ee0-42a0-9c82-384c63b69f6e" />
+<validation step="32e0d468-9c65-4831-9553-3332bc31ece9" />
 
 ## Task 3: Use the Playground
 

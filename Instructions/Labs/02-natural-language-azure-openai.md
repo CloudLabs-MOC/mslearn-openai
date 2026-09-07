@@ -75,7 +75,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
     - Subscription: Choose the Default subscription **(1)**.
     - Resource group: Select **foundry-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
-    - Region: **<inject key="Region" enableCopy="false" /> (3)**
+    - Region: **Central US**
     - Storage account name: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - File share: Create a new file share named **none** **(5)**
     - Click **Create** **(6)**
@@ -114,7 +114,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="15118cbe-23d9-41b9-8f4b-87472afe89a6" />
+<validation step="f151767f-6eab-467f-97bb-25d52bbe5526" />
 
 ## Task 3: Configure your application
 
