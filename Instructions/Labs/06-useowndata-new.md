@@ -414,7 +414,7 @@ In this task, you will complete key parts of the application to enable it to use
 
 
         # Load values from .env
-            load_dotenv()
+        load_dotenv()
 
         # Read Microsoft Foundry configuration
         endpoint = os.getenv("FOUNDRY_PROJECT_ENDPOINT")
