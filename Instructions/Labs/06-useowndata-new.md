@@ -405,13 +405,10 @@ In this task, you will complete key parts of the application to enable it to use
     - For **Python**: `ownData.py`
 
     ```python
-
         import os
-
         from dotenv import load_dotenv
         from azure.identity import DefaultAzureCredential
         from azure.ai.projects import AIProjectClient
-
 
         # Load values from .env
         load_dotenv()
@@ -420,7 +417,6 @@ In this task, you will complete key parts of the application to enable it to use
         endpoint = os.getenv("FOUNDRY_PROJECT_ENDPOINT")
         agent_name = os.getenv("FOUNDRY_AGENT_NAME")
         agent_version = os.getenv("FOUNDRY_AGENT_VERSION")
-
 
         # Validate configuration
         if not endpoint:
@@ -432,17 +428,14 @@ In this task, you will complete key parts of the application to enable it to use
         if not agent_version:
             raise ValueError("FOUNDRY_AGENT_VERSION is missing from .env")
 
-
         # Connect to Microsoft Foundry
         project_client = AIProjectClient(
             endpoint=endpoint,
             credential=DefaultAzureCredential(),
         )
 
-
         # Get the OpenAI client for the Foundry project
         openai_client = project_client.get_openai_client()
-
 
         print("Microsoft Foundry Agent connected.")
         print(f"Agent:     {agent_name}")
@@ -451,12 +444,9 @@ In this task, you will complete key parts of the application to enable it to use
         print("Type 'exit' to quit.")
         print()
 
-
         # Continuously accept questions
         while True:
-
             question = input("Question: ")
-
             if question.lower() == "exit":
                 break
 
