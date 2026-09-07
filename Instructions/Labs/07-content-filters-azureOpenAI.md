@@ -33,7 +33,7 @@ In this task, you will observe how the model behaves in a conversational interac
 
 1. On the model page, make sure the **Playground** tab is selected. The playground lets you experiment with the model and test its capabilities. In the **Instructions** box, you can provide a system message that tells the model how to behave in response to the prompts you send.
 
-      - Existing system message - `You are an AI assistant that helps people find informations`. 
+    - Existing system message - `You are an AI assistant that helps people find informations`. 
 
 1. In the **Chat** section, enter the following prompt.
 

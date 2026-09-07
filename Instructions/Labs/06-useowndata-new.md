@@ -294,203 +294,193 @@ In this task, you will complete key parts of the application to enable it to use
 
 1. If you prefer **Python**, navigate to the **Python** folder and install the necessary packages using the commands below:
 
-    ```bash
-    cd Python
-    python -m venv labenv
-    source labenv/bin/activate
-    pip install python-dotenv openai==1.65.2
-    ```
+   ```bash
+   cd Python
+   python -m venv labenv
+   source labenv/bin/activate
+   pip install python-dotenv openai==1.65.2
+   ```
 
 1. In the code editor, replace your entire file code.
 
-    - For **C#**: `OwnData.cs`
+   - For **C#**: `OwnData.cs`
 
-    ```csharp
-    using Azure.AI.Projects;
-    using Azure.AI.Extensions.OpenAI;
-    using Azure.Identity;
-    using Microsoft.Extensions.Configuration;
-    using OpenAI.Responses;
+   ```csharp
+   using Azure.AI.Projects;
+   using Azure.AI.Extensions.OpenAI;
+   using Azure.Identity;
+   using Microsoft.Extensions.Configuration;
+   using OpenAI.Responses;
 
-    #pragma warning disable OPENAI001
+   #pragma warning disable OPENAI001
 
-    // Load configuration from appsettings.json
-    IConfiguration config = new ConfigurationBuilder()
-        .SetBasePath(AppContext.BaseDirectory)
-        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: false)
-        .Build();
+   // Load configuration from appsettings.json
+   IConfiguration config = new ConfigurationBuilder()
+       .SetBasePath(AppContext.BaseDirectory)
+       .AddJsonFile("appsettings.json", optional: false, reloadOnChange: false)
+       .Build();
 
-    // Read Microsoft Foundry configuration
-    string projectEndpoint =
-        config["Foundry:ProjectEndpoint"]
-        ?? throw new InvalidOperationException(
-            "Foundry:ProjectEndpoint is missing in appsettings.json");
+   // Read Microsoft Foundry configuration
+   string projectEndpoint =
+       config["Foundry:ProjectEndpoint"]
+       ?? throw new InvalidOperationException(
+           "Foundry:ProjectEndpoint is missing in appsettings.json");
 
-    string agentName =
-        config["Foundry:AgentName"]
-        ?? throw new InvalidOperationException(
-            "Foundry:AgentName is missing in appsettings.json");
+   string agentName =
+       config["Foundry:AgentName"]
+       ?? throw new InvalidOperationException(
+           "Foundry:AgentName is missing in appsettings.json");
 
-    string agentVersion =
-        config["Foundry:AgentVersion"]
-        ?? throw new InvalidOperationException(
-            "Foundry:AgentVersion is missing in appsettings.json");
+   string agentVersion =
+       config["Foundry:AgentVersion"]
+       ?? throw new InvalidOperationException(
+           "Foundry:AgentVersion is missing in appsettings.json");
 
-    // Connect to Microsoft Foundry using your Azure identity
-    AIProjectClient projectClient = new(
-        endpoint: new Uri(projectEndpoint),
-        tokenProvider: new DefaultAzureCredential()
-    );
+   // Connect to Microsoft Foundry using your Azure identity
+   AIProjectClient projectClient = new(
+       endpoint: new Uri(projectEndpoint),
+       tokenProvider: new DefaultAzureCredential()
+   );
 
-    // Reference the existing Foundry Agent
-    AgentReference agentReference = new(
-        name: agentName,
-        version: agentVersion
-    );
+   // Reference the existing Foundry Agent
+   AgentReference agentReference = new(
+       name: agentName,
+       version: agentVersion
+   );
 
-    // Create a Responses client configured for the agent
-    ProjectResponsesClient responseClient =
-        projectClient.ProjectOpenAIClient
-            .GetProjectResponsesClientForAgent(agentReference);
+   // Create a Responses client configured for the agent
+   ProjectResponsesClient responseClient =
+       projectClient.ProjectOpenAIClient
+           .GetProjectResponsesClientForAgent(agentReference);
 
-    Console.WriteLine("Microsoft Foundry Agent connected.");
-    Console.WriteLine($"Agent: {agentName}");
-    Console.WriteLine($"Version: {agentVersion}");
-    Console.WriteLine();
-    Console.WriteLine("Enter your question.");
-    Console.WriteLine("Type 'exit' to quit.");
-    Console.WriteLine();
+   Console.WriteLine("Microsoft Foundry Agent connected.");
+   Console.WriteLine($"Agent: {agentName}");
+   Console.WriteLine($"Version: {agentVersion}");
+   Console.WriteLine();
+   Console.WriteLine("Enter your question.");
+   Console.WriteLine("Type 'exit' to quit.");
+   Console.WriteLine();
 
-    while (true)
-    {
-        Console.Write("Question: ");
+   while (true)
+   {
+       Console.Write("Question: ");
 
-        string question = Console.ReadLine() ?? "";
+       string question = Console.ReadLine() ?? "";
 
-        if (string.Equals(question, "exit", StringComparison.OrdinalIgnoreCase))
-        {
-            break;
-        }
+       if (string.Equals(question, "exit", StringComparison.OrdinalIgnoreCase))
+       {
+           break;
+       }
 
-        if (string.IsNullOrWhiteSpace(question))
-        {
-            Console.WriteLine("Please enter a question.");
-            Console.WriteLine();
-            continue;
-        }
+       if (string.IsNullOrWhiteSpace(question))
+       {
+           Console.WriteLine("Please enter a question.");
+           Console.WriteLine();
+           continue;
+       }
 
-        try
-        {
-            Console.WriteLine("\nSearching the agent's configured tools...");
+       try
+       {
+           Console.WriteLine("\nSearching the agent's configured tools...");
 
-            // Send the question to the existing Foundry Agent.
-            // The agent's File Search/vector store configuration
-            // is used by the agent automatically.
-            ResponseResult response =
-                responseClient.CreateResponse(question);
+           // Send the question to the existing Foundry Agent.
+           // The agent's File Search/vector store configuration
+           // is used by the agent automatically.
+           ResponseResult response =
+               responseClient.CreateResponse(question);
 
-            Console.WriteLine("\nAgent response:");
-            Console.WriteLine(response.GetOutputText());
-            Console.WriteLine();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("\nError calling Microsoft Foundry Agent:");
-            Console.WriteLine(ex.Message);
-            Console.WriteLine();
-        }
-    }
-    ```
+           Console.WriteLine("\nAgent response:");
+           Console.WriteLine(response.GetOutputText());
+           Console.WriteLine();
+       }
+       catch (Exception ex)
+       {
+           Console.WriteLine("\nError calling Microsoft Foundry Agent:");
+           Console.WriteLine(ex.Message);
+           Console.WriteLine();
+       }
+   }
+   ```
 
-    - For **Python**: `ownData.py`
+   - For **Python**: `ownData.py`
 
-    ```python
+   ```python
+   import os
+   from dotenv import load_dotenv
+   from azure.identity import DefaultAzureCredential
+   from azure.ai.projects import AIProjectClient
 
-        import os
+   # Load values from .env
+   load_dotenv()
 
-        from dotenv import load_dotenv
-        from azure.identity import DefaultAzureCredential
-        from azure.ai.projects import AIProjectClient
+   # Read Microsoft Foundry configuration
+   endpoint = os.getenv("FOUNDRY_PROJECT_ENDPOINT")
+   agent_name = os.getenv("FOUNDRY_AGENT_NAME")
+   agent_version = os.getenv("FOUNDRY_AGENT_VERSION")
 
+   # Validate configuration
+   if not endpoint:
+       raise ValueError("FOUNDRY_PROJECT_ENDPOINT is missing from .env")
 
-        # Load values from .env
-        load_dotenv()
+   if not agent_name:
+       raise ValueError("FOUNDRY_AGENT_NAME is missing from .env")
 
-        # Read Microsoft Foundry configuration
-        endpoint = os.getenv("FOUNDRY_PROJECT_ENDPOINT")
-        agent_name = os.getenv("FOUNDRY_AGENT_NAME")
-        agent_version = os.getenv("FOUNDRY_AGENT_VERSION")
+   if not agent_version:
+       raise ValueError("FOUNDRY_AGENT_VERSION is missing from .env")
 
+   # Connect to Microsoft Foundry
+   project_client = AIProjectClient(
+       endpoint=endpoint,
+       credential=DefaultAzureCredential(),
+   )
 
-        # Validate configuration
-        if not endpoint:
-            raise ValueError("FOUNDRY_PROJECT_ENDPOINT is missing from .env")
+   # Get the OpenAI client for the Foundry project
+   openai_client = project_client.get_openai_client()
 
-        if not agent_name:
-            raise ValueError("FOUNDRY_AGENT_NAME is missing from .env")
+   print("Microsoft Foundry Agent connected.")
+   print(f"Agent:     {agent_name}")
+   print(f"Version: {agent_version}")
+   print()
+   print("Type 'exit' to quit.")
+   print()
 
-        if not agent_version:
-            raise ValueError("FOUNDRY_AGENT_VERSION is missing from .env")
+   # Continuously accept questions
+   while True:
+       question = input("Question: ")
+       if question.lower() == "exit":
+           break
 
+       if not question.strip():
+           print("Please enter a question.")
+           continue
 
-        # Connect to Microsoft Foundry
-        project_client = AIProjectClient(
-            endpoint=endpoint,
-            credential=DefaultAzureCredential(),
-        )
+       try:
+           # Send the question to the existing Foundry Agent
+           response = openai_client.responses.create(
+               input=[
+                   {
+                       "role": "user",
+                       "content": question
+                   }
+               ],
+               extra_body={
+                   "agent_reference": {
+                       "name": agent_name,
+                       "version": agent_version,
+                       "type": "agent_reference"
+                   }
+               },
+           )
 
+           print("\nAgent response:")
+           print(response.output_text)
+           print()
 
-        # Get the OpenAI client for the Foundry project
-        openai_client = project_client.get_openai_client()
-
-
-        print("Microsoft Foundry Agent connected.")
-        print(f"Agent:     {agent_name}")
-        print(f"Version: {agent_version}")
-        print()
-        print("Type 'exit' to quit.")
-        print()
-
-
-        # Continuously accept questions
-        while True:
-
-            question = input("Question: ")
-
-            if question.lower() == "exit":
-                break
-
-            if not question.strip():
-                print("Please enter a question.")
-                continue
-
-            try:
-                # Send the question to the existing Foundry Agent
-                response = openai_client.responses.create(
-                    input=[
-                        {
-                            "role": "user",
-                            "content": question
-                        }
-                    ],
-                    extra_body={
-                        "agent_reference": {
-                            "name": agent_name,
-                            "version": agent_version,
-                            "type": "agent_reference"
-                        }
-                    },
-                )
-
-                print("\nAgent response:")
-                print(response.output_text)
-                print()
-
-            except Exception as e:
-                print("\nError calling Microsoft Foundry Agent:")
-                print(e)
-                print()
-     ```
+       except Exception as e:
+           print("\nError calling Microsoft Foundry Agent:")
+           print(e)
+           print()
+   ```
 
 1. Save the changes to the code file.
 
