@@ -64,12 +64,18 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 1. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry | Azure OpenAI**.
 
     ![](./media/SS4.png)
+   
+    >**Note:** Once you will land on Foundry portal, it will create one project for you.
 
-1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
+1. Click **View deployments** under Use a model.
 
-    ![](./media/SS2.png)
+    ![](./media/SS-1.png)
 
-1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)** and click on **Confirm (3)**.
+1. On Deployments tab, click **Deploy (1)**, and choose **Deploy a base model (2)**.
+
+     ![](./media/SS2.png)
+
+1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)**.
 
    ![](./media/L1T2S3a-0707.png) 
 
@@ -77,7 +83,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
      > ![](./media/L1T2S3a-note0707.png)
    
-1. Within the **Deploy model gpt-5-mini** pop-up interface, click on **Customize**.
+1. On **gpt-5-mini** details page, click on **Custom deploy**.
 
    ![](./media/L1T2S4-0707.png)
 
@@ -87,15 +93,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Deployment type: **Global Standard (2)**
 
-      - Model version:**2025-08-07 (Default) (3)**
+      - Tokens per Minute Rate Limit (thousands): **13K-16k (3)**
 
-      - Tokens per Minute Rate Limit (thousands): **13K-16k (4)**
+      - Guardrails: **DefaultV2 (4)**
 
-      - Content filter: **DefaultV2 (5)**
-
-      - Enable dynamic quota: **Enabled (6)**
-
-      - Click on **Deploy (7)**
+      - Click on **Deploy (5)**
 
         ![](./media/L1T2S5-0707.png)
         
