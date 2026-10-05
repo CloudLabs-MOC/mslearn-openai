@@ -119,47 +119,23 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you'll use the Chat playground to interact and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Playgrounds** section, select the **Chat (1)** page, and ensure that the **my-gpt-model(version:2025-08-07)) (2)** model is selected in the configuration pane.
+1. Once the model is deployed, select **Save as agent**.
 
-      ![](./media/L1T3S1-0707.png)  
+      ![](./media/new-b.png) 
 
-1. In the **Setup** section, in the **Give the model instructions and context** box, replace the existing text with the following statement: **`The system is an AI teacher that helps people learn about AI`** **(1)** and click on **Apply changes (2)**. 
+1. On **Create an agent** pop-up, enter the Agent name as **my-gpt-agent (1)** and click **Create and open playground (2)**.
+
+      ![](./media/new-c.png)
+
+1. In the Playgorund section, verify that the **my-gpt-model** is selected as Model.
+
+      ![](./media/new-a.png)  
+
+1. In the Instructions box, replace the existing text with the following statement: **`You are an AI teacher that helps people learn about artificial intelligence.` (1)** and select **Save (2)**. 
 
       ![](./media/L1T3S2-0707.png)
-
-1. In the **Update system message?** window, click on **Continue**.
-
-      ![](./media/e1t4p3.png)
    
-1. In the **Setup** section, click on **+ Add section (1)** drop-down box, then click on **Examples (2)**.
-
-      ![](./media/e1t4p4.png)
-
-1. Enter the following message and response in the designated boxes:
-
-      - **User:** 
-            ```
-            What are the different types of artificial intelligence?
-            ``` 
-    
-      - **Assistant:** 
-            ```
-            There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
-            ``` 
-
-      ![](./media/e1t4p5.png)
-   
-      > **Note:** Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
-
-1. Save the changes by clicking on **Apply changes**.
-
-      ![](./media/e1t4p6.png)
-
-1. In the **Update system message?** pop-up window, click on **Continue**.
-
-      ![](./media/e1t4p3.png)
-   
-1. In the query box at the bottom of the page, enter the text **`What is artificial intelligence?`**. Use the **Send** button to submit the message and view the response.
+1. In the query box at the bottom right of the page, enter the text **`What is artificial intelligence?` (1)**. Use the **Send (2)** button to submit the message and view the response.
 
       ![](./media/NO-7a.png)
    
@@ -173,20 +149,17 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
       ![](./media/L1T3S10-0707.png)
 
-1. Use the **</>View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far. After review, close the sample code page.
-
-      ![](./media/img-01-09.png)
 
 ## Task 4: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Chat Playground** pane, select **Parameters (1)** (scroll down if necessary), and set the following parameter values:
+1. In the **Playground** pane, select **Parameters (1)**, and set the following parameter values and click **Save (4)**:
       
-      - Max Completion Tokens: **500 (2)**
-     
-      - Temperature: **0 (3)**
-   
+      - Reasoning Effort: **low (2)**
+
+      - Max output Tokens: **500 (3)**
+
           ![](./media/img-01-10-01.png)
       
 2. Submit the following message as a query in a chat session
@@ -210,28 +183,18 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 4. Observe the following about the prompt and parameters you used:
 
       - The prompt specifically states that the desired output should be three multiple-choice questions.
-       
-      - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
 ## Task 5: Explore code generation
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup pane**, under the **Give the model instructions and context** box, enter the system message: **`You are a Python developer.`** **(1)** then save the changes by clicking on **Apply changes (2)**.
+1. In the **Instructions** box, enter the system message: **`You are a Python developer.`** **(1)** then save the changes by clicking on **Save (2)**.
 
       ![](./media/L1T5S1-0707.png)
 
-1. In the **Update system message?** pop-up window, click on **Continue**.
-
-      ![](./media/e1t4p3.png)
-
-1. In the **Chat session** pane, click on the **Clear chat** icon to clear the chat history and start a new session.
+1. In the **Chat session** pane, click on the **new chat** icon to start a new session.
 
       ![](./media/e1t6p2.png)
-
-1. Click on **Clear** in **Clear chat?** pop-up window.      
-
-      ![](./media/e1t6p3.png)
 
 1. Submit the following user message:
 
