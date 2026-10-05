@@ -9,45 +9,43 @@ Azure OpenAI Service brings the generative AI models developed by OpenAI to the 
 ## Lab Objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
+- Task 1: Provision an Microsoft Foundry resource
 - Task 2: Deploy a model
 - Task 3: Use the Chat playground
 - Task 4: Explore prompts and parameters 
 - Task 5: Explore code generation
 
-## Task 1: Provision an Azure OpenAI resource
+## Task 1: Provision an Microsoft Foundry resource
 
-In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the Microsoft Foundry service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the result.
+1. In the **Azure portal**, search for **Microsoft Foundry (1)** and select **Microsoft Foundry (2)** from the results.
 
-   ![](./media/azureai.png)
+   ![](./media/mf-1.png)
 
-2. On  **Microsoft Foundry | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
+1. On the **Microsoft Foundry** overview pane, select **Create a resource**
 
-   ![](./media/SS1.png)
+   ![](./media/mf-2.png)
 
-3. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
+1. Create an **Foundry** resource using the settings below, then click **Review + create (6)** , leaving all other options at their defaults.
     
     - Subscription: **Default Subscription (1)**
     
     - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     
-    - Region: **<inject key="Region" enableCopy="false"></inject> (3)**
+    - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
+
+    - Region: **<inject key="Region" enableCopy="false"></inject> (4)**
     
-    - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
-    
-    - Pricing tier: **Standard S0 (5)**
+    - Default project name: **proj-default (5)**
   
-      ![](./media/SS7.png)
+      ![](./media/mf-3.png)
 
-4. Under the **Review + submit** tab, click on **Create**.
+1. Under the **Review + create** tab, click on **Create**.
 
-      ![](./media/SS8.png)
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
-5. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
-
-      ![](./media/e1t1p5.png)
+      ![](./media/mf-4.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - Hit the Validate button for the corresponding task.
@@ -63,10 +61,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry | Azure OpenAI**.
 
-    ![](./media/SS4.png)
+    ![](./media/mf-6.png)
    
-    >**Note:** Once you will land on Foundry portal, it will create one project for you.
-
 1. Click **View deployments** under Use a model.
 
     ![](./media/SS-1.png)
