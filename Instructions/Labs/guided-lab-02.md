@@ -12,57 +12,53 @@ With the Azure OpenAI Service, developers can create chatbots, language models, 
 
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
+- Task 1: Provision an Microsoft Foundry resource
 - Task 2: Deploy a model
 - Task 3: Set up an application in Cloud Shell
 - Task 4: Configure your application
 - Task 5: Test your application
 
-## Task 1: Provision an Azure OpenAI resource
+## Task 1: Provision an Microsoft Foundry resource
 
-In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the Microsoft Foundry service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the results.
+1. In the **Azure portal**, search for **Microsoft Foundry (1)** and select **Microsoft Foundry (2)** from the results.
 
-   ![](../media/img-01-18.png)
+   ![](../media/mf-1.png)
 
-1. On the **Microsoft Foundry | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
+1. On the **Microsoft Foundry** overview pane, select **Create a resource**
 
-   ![](../media/va1.png)
+   ![](../media/mf-2.png)
 
-1. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
+1. Create an **Foundry** resource using the settings below, then click **Review + create (6)** , leaving all other options at their defaults.
     
     - Subscription: **Default Subscription (1)**
     
     - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     
-    - Region: **<inject key="Region" enableCopy="false"></inject> (3)**
-    
-    - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
-    
-    - Pricing tier: **Standard S0 (5)**
+    - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
 
-    - Click **Next (6)** three times to navigate to the **Review + submit** tab.
+    - Region: **<inject key="Region" enableCopy="false"></inject> (4)**
+    
+    - Default project name: **proj-default (5)**
   
-      ![](../media/clicknext.png)
+      ![](../media/mf-3.png)
 
-1. Under the **Review + submit** tab, click on **Create**.
-
-      ![](../media/clickcreate.png)
+1. Under the **Review + create** tab, click on **Create**.
 
 1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
-      ![](../media/e1t1p5.png)
+      ![](../media/mf-4.png)
 
 1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
 
-    - On the left navigation menu, expand **Resource Management (1)** and select **Keys and Endpoint (2)**.
+    - On the left navigation menu, expand **Resource Management** and select **Keys and Endpoint (1)**.
     
-    - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
+    - Copy **Key 1 (2)** and ensure to paste it in a text editor such as notepad for future reference.
     
-    - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+    - Select **OpenAi (3)**, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
     
-        ![](../media/img-01-19.png "Keys and Endpoints")
+        ![](../media/mf-5.png "Keys and Endpoints")
 
 <validation step="b6d08e8e-f2a3-4066-a698-2a324f4493dd" />
 
@@ -75,19 +71,25 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the Azure OpenAI resource pane, navigate back to the **Overview** page and click **Go to Foundry portal**. This will take you to **Microsoft Foundry**.
+1. In the Foundry resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry**.
 
-    ![](../media/va2.png)
+    ![](../media/mf-6.png)
 
-1. Select **Deployments (1)** from the left pane under **Shared resources**, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
+1. Click **View deployments** under Use a model.
 
-    ![](../media/OPA1.png)
+    ![](../media/SS-1.png)
 
-   >**Note:** If the Create a Project pop-up appears, click **Cancel**. Then, on the top-right side, **turn off** the New Foundry toggle. If a feedback pop-up appears, click **Continue without feedback** and then select your OpenAI Foundry resource. 
+1. On Deployments tab, click **Deploy (1)**, and choose **Deploy a base model (2)**.
 
-1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)** and click on **Confirm (3)**.
+     ![](../media/SS2.png)
 
-   ![](../media/T2S3-0707.png)
+1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)**.
+
+     ![](../media/L1T2S3a-0707.png) 
+
+1. On **gpt-5-mini** details page, click on **Custom deploy**.
+
+   ![](../media/L1T2S4-0707.png)
 
 1. Within the **Deploy gpt-5-mini** pop-up interface, enter the following details:
 
@@ -95,20 +97,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     - **Deployment type**: **Global Standard (2)**
 
-    - Click on **Customize**
+    - **Tokens per Minute Rate Limit**: **15K (3)**
 
-    - **Model version upgrade policy**: Select **Upgrade once new default version becomes available (3)**
+    - **Guardrails**: **DefaultV2 (4)**
 
-    - **Model version**: Choose **2025-08-07 (4)**
+    - Click on **Deploy (5)**
 
-    - **Tokens per Minute Rate Limit**: **10K (5)**
-        >**Note**: If you're unable to slide to 10K, click on the slider thumb and use your keyboard arrows (right/left) to adjust the token rate limit.
-
-    - **Enable dynamic quota**: Ensure dynamic quota is **Enabled (6)**
-
-    - Click on **Deploy (7)**
-
-        ![](../media/T2S4-0707.png)
+         ![](../media/new-b1.png)
 
 1. This will deploy a model that you will use as you proceed as you proceed.
 
@@ -159,9 +154,9 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
 
-    > **Note:** Once the terminal opens, click **Settings (1)** and select **Go to Classic version (2)**. If the option is not available, continue with the next steps.
+    >**Note:** Once the terminal opens, click **Settings (1)** and select **Go to Classic version (2)**. If the option is not available, continue with the next steps.
 
-    ![](../media/classic.png)
+     ![](../media/classic.png)
 
 8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
