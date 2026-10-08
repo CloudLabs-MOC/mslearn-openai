@@ -36,7 +36,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     
-    - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
+    - Name: **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
 
     - Region: **<inject key="Region" enableCopy="false"></inject> (4)**
     
@@ -50,13 +50,13 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
       ![](../media/mf-4.png)
 
-1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+1. To capture the Keys and Endpoints values, on **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
 
     - On the left navigation menu, expand **Resource Management** and select **Keys and Endpoint (1)**.
     
     - Copy **Key 1 (2)** and ensure to paste it in a text editor such as notepad for future reference.
     
-    - Select **OpenAi (3)**, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+    - Select **OpenAI (3)**, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
     
         ![](../media/mf-5.png "Keys and Endpoints")
 
