@@ -46,7 +46,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. Under the **Review + create** tab, click on **Create**.
 
-1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed foundry resource in the Azure portal.
 
       ![](../media/mf-4.png)
 
@@ -90,6 +90,10 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 1. On **gpt-5-mini** details page, click on **Custom deploy**.
 
    ![](../media/L1T2S4-0707.png)
+
+      >**Note:** If the **Custom Deploy** option is not visible, click **Deploy**, then select **Custom settings**.
+
+      >![](../media/mf-7.png)
 
 1. Within the **Deploy gpt-5-mini** pop-up interface, enter the following details:
 
