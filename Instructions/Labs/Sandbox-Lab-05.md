@@ -10,7 +10,7 @@ In this exercise, you'll use a gpt-image-1-mini model to generate images based o
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
+- Task 1: Provision a Microsoft Foundry resource
 - Task 2: Explore image-generation in the gpt-image-1-mini playground 
 - Task 3: Use the REST API to generate images 
 - Task 3.1: Prepare the app environment
@@ -18,41 +18,47 @@ In this lab, you will complete the following tasks:
 - Task 3.3: View application code
 - Task 4: Run the app 
 
-### Task 1:  Provision an Azure OpenAI resource
+### Task 1:  Provision a Microsoft Foundry resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task , you'll create an Azure resource in the Azure portal, selecting the Microsoft Foundry service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **[Azure portal](https://portal.azure.com/)**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
+1. In the **Azure portal**, search for **Microsoft Foundry (1)** and select **Microsoft Foundry (2)** from the results.
 
-      ![](../media/l1-12-01.png)
+   ![](../media/mf-1.png)
 
-2. On the **Microsoft Foundry | Azure OpenAI** page, select **Azure OpenAI (1)** from the left pane, click **+ Create (2)** drop-down and click on **Azure OpenAI (3)**.
+1. On the **Microsoft Foundry** overview pane, select **Create a resource**
 
-     ![](../media/va11.png)
+   ![](../media/mf-2.png)
 
-3. Create an **Azure OpenAI** resource with the following settings, click on **Next (6)** thrice and subsequently click on **Create**:
-   
-      - **Subscription:** Default - Pre-assigned subscription. **(1)**
-      - **Resource group:** **openai-<inject key="Deployment-id" enableCopy="false"></inject> (2)**
-      - **Region:** Select **East US 2 (3)**
-      - **Name:** **OpenAI-Lab05-<inject key="Deployment-id" enableCopy="false"></inject> (4)**
-      - **Pricing tier**: Standard S0 **(5)**
+1. Create an **Foundry** resource using the settings below, then click **Review + create (6)** , leaving all other options at their defaults.
+    
+    - Subscription: **Default Subscription (1)**
+    
+    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    
+    - Name: **OpenAI-Lab05-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
 
-        ![](../media/l3-12-01.png)
+    - Region: **<inject key="Region" enableCopy="false"></inject> (4)**
+    
+    - Default project name: **proj-default (5)**
+  
+      ![](../media/mf-3.png)
 
-        > **Note:** The **gpt-image-1-mini** model is only available in Azure OpenAI Service resources in the **East US 2**, **Poland Central**, **Sweden Central**, and **West US 3** regions.
+1. Under the **Review + create** tab, click on **Create**.
 
 1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
-     ![](../media/l1-12-21.png)
+      ![](../media/mf-4.png)
 
-5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
-      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+1. To capture the Keys and Endpoints values, on **OpenAI-Lab05-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
 
-        ![](../media/e1t1p5a1.png "Keys and Endpoints")
+    - On the left navigation menu, expand **Resource Management** and select **Keys and Endpoint (1)**.
+    
+    - Copy **Key 1 (2)** and ensure to paste it in a text editor such as notepad for future reference.
+    
+    - Select **OpenAI (3)**, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+    
+        ![](../media/mf-5.png "Keys and Endpoints")
 
 <validation step="d1fdf614-83d8-4c1a-b9c7-c9adf003d03f" />
 
@@ -65,41 +71,57 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you will use the gpt-image-1-mini playground in the Microsoft Foundry portal to experiment with image generation.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
+1. In the Azure Microsoft Foundry resource pane, click on **Go to Foundry portal**, which will navigate to the **Microsoft Foundry portal**.
 
-      ![](../media/l1-12-01.png)
+      ![](../media/mf-6.png)
 
-2. On the **Microsoft Foundry | Azure OpenAI** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab05-<inject key="Deployment-id" enableCopy="false"></inject>(2)**
+1. Click **View deployments** under Use a model.
 
-      ![](../media/l5-12-11.png)
+    ![](../media/SS-1.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to the **Microsoft Foundry portal**.
+1. On Deployments tab, click **Deploy (1)**, and choose **Deploy a base model (2)**.
 
-      ![](../media/l5-12-21.png)
+     ![](../media/SS2.png)
 
-4. On the **Microsoft Foundry portal** page, select **Model catalog (1)** under **Get started** from the left pane. Then, search **gpt-image-1-mini (2)** and choose **gpt-image-1-mini (3)**.
+1. Then, search **gpt-image-1-mini (1)** and choose **gpt-image-1-mini (2)**.
 
-      ![](../media/GM1.png)
+     ![](../media/a-1.png)
 
-   >**Note:** If the Create a Project pop-up appears, click **Cancel**. Then, on the top-right side, **turn off** the New Foundry toggle. If a feedback pop-up appears, click **Continue without feedback** and then select your **OpenAI Foundry resource**.
+1. On the gpt-image-1-mini page, click on **Deploy (1)**, then select **Custom settings (2)**.
 
-6. On the gpt-image-1-mini page, click on **Use this model**.
+    ![](../media/a-2.png)
 
-      ![](../media/GM2.png)
+1. Within the **Deploy gpt-image-1-mini** pop-up interface, enter the following details:
 
-7. Within the **Deploy model** pop-up interface, enter the **Deployment name** as **gpt-image-1-mini (1)**, Click on **Customize (2)** and make the **Requests per Minute Rate Limit: 3 (3)** and click on **Deploy (4)**.
+      - Deployment name: **gpt-image-1-mini (1)**
 
-      ![](../media/dall6.png)
+      - Deployment type: **Global Standard (2)**
 
-      ![](../media/dall7.png)
+      - Requests per Minute Rate Limit (thousands): **3 (3)**
+
+      - Guardrails: **DefaultV2 (4)**
+
+      - Click on **Deploy (5)**
+
+        ![](../media/a-3.png)
               
-4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, `An elephant on a skateboard`), and then select **Generate (3)** to view the **resulting image (4)**.
+4. Now, enter a description of an image you'd like to generate in the **Describe the image you want to generate (1)** box (for example, `An elephant on a skateboard`), and then select **Generate (2)** to view the **resulting image (3)**.
    
-      ![The gpt-image-1-mini Playground in Azure OpenAI Studio with a generated image.](../media/dall4.png)
+      ![](../media/a-4.png)
 
-5. Modify the prompt to provide a more specific description. For example, `An elephant on a skateboard in the style of Picasso`. Then generate the new image and review the results.
+      > **Note:** If you receive a **PermissionDenied** error, assign the required roles to your lab user by performing the following steps:
+      >- In the Azure portal, navigate to your **OpenAI-Lab05-<inject key="DeploymentID" enableCopy="false"></inject>** foundry resource.
+      >-  From the left menu, select **Access control (IAM)**, then select **+ Add** > **Add role assignment**.
+      >- On the **Role** tab, search for and select **Cognitive Services OpenAI User**, then select **Next**.
+      >- On the **Members** tab, keep **User, group, or service principal** selected, then click **+ Select members**.
+      >- Search for and select your lab user **<inject key="AzureAdUserEmail"></inject>**, then click **Select**.
+      >- Select **Review + assign**, then select **Review + assign** again.
+      >- Repeat steps 2 to 6 to assign the **Azure AI Developer** role to the same user.
+      >- Wait **5 minutes** for the role assignments to take effect, then refresh the browser.
 
-      ![The gpt-image-1-mini Playground in Azure OpenAI Studio with two generated images.](../media/dall5.png)
+1. Modify the prompt to provide a more specific description. For example, `An elephant on a skateboard in the style of Picasso` **(1)**. Then **generate (2)** the new image and review the **results (3)**.
+
+      ![](../media/a-5.png)
 
       > **Note:** The image may appear differently than shown in the screenshot. 
 
@@ -133,21 +155,12 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
     - **Subscription**: Default - Pre-assigned subscription **(1)**.
     - **Resource group**: **openai-<inject key="Deployment-id" enableCopy="false"></inject> (2)**
-    - **Region**: Select **East US 2 (3)**
+    - **Region**: Select **<inject key="Region" enableCopy="false"></inject>  (3)**
     - **Storage account name**: **storage<inject key="Deployment-id" enableCopy="false"></inject> (4)**
     - **File share**: none **(5)**
     - Click **Create (6)**
 
       ![](../media/l5-12-st1.png)
-    
-1. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
-
-   ![](../media/classic-cloudshell1.png)
-
-   >**Note:** If the Settings icon is not visible, click on the (...) ellipses icon.
-
-    > **Note:** If the **Go to Classic version** option is available under **Settings**, select it to continue with the previous Cloud Shell session. Otherwise, continue using the current **Bash** session.
-   
 
 1. Run the below commands:
 
@@ -205,22 +218,22 @@ In this task, you will use a configuration file in the application to store the 
       > pip install --user python-dotenv
       > ```
 
-1. If you're using **C#**, navigate to `generate_image.csproj`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file.
+1. If you're using **C#**, navigate to `generate_image.csproj`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file. For pyhton move to step 9.
 
     ```
     <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     </PropertyGroup>
 
      <ItemGroup>
      <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
-     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
      </ItemGroup>
 
      <ItemGroup>
