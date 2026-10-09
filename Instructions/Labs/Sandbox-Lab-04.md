@@ -10,14 +10,14 @@ The Azure OpenAI Service models can generate code for you using natural language
 ## Lab Objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Microsoft Foundry resource
+- Task 1: Provision a Microsoft Foundry resource
 - Task 2: Deploy a model
 - Task 3: Generate code in the chat playground
 - Task 4: Set up an application in Cloud Shell
 - Task 5: Configure your application
 - Task 6: Run your application
 
-## Task 1: Provision an Microsoft Foundry resource
+## Task 1: Provision a Microsoft Foundry resource
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the Microsoft Foundry service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
@@ -127,7 +127,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
      ![](../media/mf-9.png)
 
-1. On **Create an agent** pop-up, enter the Agent name as **my-gpt-agent (1)** and click **Create (2)**.
+1. On **Create an agent** pop-up, enter the Agent name as **my-gpt-agent (1)** and click **Create and open playground (2)**.
 
     ![](../media/new-c.png)
 
@@ -289,7 +289,7 @@ In this task, you will complete key parts of the application to enable it to use
     pip install --user openai==1.65.2
     ```
 
-1. Open the application code file of your preferred language and update the code. 
+1. Open the application code file of your preferred language and update the code. After updating, click **Ctrl+S** to save it.
 
     - **C#:** `Program.cs`
 
