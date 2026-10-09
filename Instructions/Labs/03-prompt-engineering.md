@@ -10,58 +10,54 @@ In scenario for this exercise, you will perform the role of a software developer
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
+- Task 1: Provision an Microsoft Foundry resource
 - Task 2: Deploy a model
 - Task 3: Apply prompt engineering in chat playground
 - Task 4: Set up an application in Cloud Shell
 - Task 5: Configure your application
 - Task 6: Run your application
 
-### Task 1: Provision an Azure OpenAI resource
+### Task 1: Provision an Microsoft Foundry resource
 
 In this task, you'll create an Azure resource in the Azure portal by selecting the OpenAI service and configuring settings such as the region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
+1. In the **Azure portal**, search for **Microsoft Foundry (1)** and select **Microsoft Foundry (2)** from the results.
 
-   ![](../media/op-rt-g-11.png)
+   ![](../media/mf-1.png)
 
-1. On  **Microsoft Foundry | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
+1. On the **Microsoft Foundry** overview pane, select **Create a resource**
 
-   ![](../media/SS1.png)
+   ![](../media/mf-2.png)
 
-1. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
+1. Create an **Foundry** resource using the settings below, then click **Review + create (6)** , leaving all other options at their defaults.
     
     - Subscription: **Default Subscription (1)**
     
-    - Resource group: **openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)**
+    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     
-    - Region: **<inject key="Region" enableCopy="false"></inject> (3)**
+    - Name: **OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
+
+    - Region: **<inject key="Region" enableCopy="false"></inject> (4)**
     
-    - Name: **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> (4)**
-    
-    - Pricing tier: **Standard S0 (5)**
+    - Default project name: **proj-default (5)**
   
-        ![](../media/op-rt-g-12.png "Create Azure OpenAI resource")
+      ![](../media/mf-3.png)
 
-        >**Note:** If you encounter any deployment issues related to region availability or capacity, update the region to East US 2 and retry the deployment.
+1. Under the **Review + create** tab, click on **Create**.
 
-1. Under the **Review + submit** tab, click on **Create**.
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Foundry resource in the Azure portal.
 
-    ![](../media/SS8.png)
-
-1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
-
-    ![](../media/img-01-28.png)
+      ![](../media/mf-4.png)
 
 1. To capture the Keys and Endpoints values, on **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
 
-      - On the left navigation menu, expand **Resource Management (1)** and select **Keys and Endpoint (2)**.
+    - On the left navigation menu, expand **Resource Management** and select **Keys and Endpoint (1)**.
+    
+    - Copy **Key 1 (2)** and ensure to paste it in a text editor such as notepad for future reference.
+    
+    - Select **OpenAI (3)**, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
-
-      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it into a text editor such as Notepad for later use.
-
-          ![](../media/img-01-29.png "Keys and Endpoints")
+        ![](../media/mf-5.png "Keys and Endpoints")
 
 <validation step="92fd5d61-ee1f-44aa-b7cc-4545c53b5b92" />
 
@@ -74,34 +70,43 @@ In this task, you'll create an Azure resource in the Azure portal by selecting t
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the Azure OpenAI resource pane, navigate back to the **Overview** page and click **Go to Foundry portal**. This will take you to **Microsoft Foundry**.
+1. In the Foundry resource pane, navigate back to the **Overview** page and click **Go to Foundry portal**. This will take you to **Microsoft Foundry**.
 
-    ![](../media/va2.png)
+    ![](../media/mf-6.png)
 
-1. Select the **Models + endpoints (1)** from the left pane under ** My assets**, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
+1. Click **View deployments** under Use a model.
 
-    ![](../media/OPA1.png)
+    ![](../media/SS-1.png)
+    
+1. On Deployments tab, click **Deploy (1)**, and choose **Deploy a base model (2)**.
 
-   >**Note:** If the Create a Project pop-up appears, click **Cancel**. Then, on the top-right side, **turn off** the New Foundry toggle. If a feedback pop-up appears, click **Continue without feedback** and then select your **OpenAI Foundry resource**.
+    ![](../media/SS-2.png)
 
-1. Search for **gpt-5-mini (1)**, select it from the list **(2)**, and then click **Confirm (3)**.
+1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)**.
 
-    ![](../media/T2S3-0707.png)
+     ![](../media/L1T2S3a-0707.png) 
 
-1. On the **Deploy gpt-5-mini** interface, click on **Customize (1)** and enter the details as mentioned below, then click on **Deploy (9):**
+1. On **gpt-5-mini** details page, click on **Custom deploy**.
 
-   | Settings | Action |
-   | -- | -- |
-   | **Deployment name** | **text-turbo (1)** |
-   | **Deployment type** | **Global Standard (2)**|
-   | Click on **Customize** |
-   | **Model version upgrade policy** | **Upgrade once new default version becomes available. (3)** |
-   | **Model version** | 2025-08-07 **(4)**|
-   | **Tokens per Minute Rate Limit (thousands)** | **10K (5)** |
-   | **Content Filter** | **DefaultV2 (6)**|
-   | **Enable dynamic quota** |**Enabled (7)**|
-  
-      ![](../media/T2S4-0707.png)
+   ![](../media/L1T2S4-0707.png)
+
+   >**Note:** If the **Custom Deploy** option is not visible, click **Deploy**, then select **Custom settings**.
+
+     ![](../media/mf-7.png) 
+
+1. Within the **Deploy gpt-5-mini** pop-up interface, enter the following details:
+
+    - **Deployment name**: **text-turbo (1)**
+
+    - **Deployment type**: **Global Standard (2)**
+
+    - **Tokens per Minute Rate Limit**: **15K (3)**
+
+    - **Guardrails**: **DefaultV2 (4)**
+
+    - Click on **Deploy (5)**
+
+         ![](../media/new-b1.png)
     
 <validation step="e3805450-2e13-40c4-80fa-58a0cd695e6e" />
 
@@ -115,21 +120,25 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
-1. Navigate back to [Microsoft Foundry](https://ai.azure.com/) portal, from the left navigation pane, select **Chat (1)** and verify that the **text-turbo (2)** model is selected in the Deployment.
+1. Once the model is deployed, select **Save as agent**.
 
-1. Update the  **Give the model instructions and context (1)** with the text mentioned below, and click on **Apply changes (2)**. 
+    ![](../media/mf-8.png)
 
-    ```
-    You are an AI assistant that helps people find information.
-   ```
+    >**Note:** If foundry user role is not assigned, click **Assign me**. Wait for 5 minutes and refresh the page. Again click **Save as Agent**.
 
-    ![](../media/findinfoo.png)
+     ![](../media/mf-9.png)
 
-    >**Note:** If you can't see the setup section, click on Show setup.
+1. On **Create an agent** pop-up, enter the Agent name as **text-turbo-agent (1)** and click **Create (2)**.
 
-1. In the **Update system message?** window, click on **Continue**.
+    ![](../media/mf-10.png)
 
-      ![](../media/19.png)
+1. In the Agent **Playgorund** section, verify that the **text-turbo** is selected as Model.
+
+     ![](../media/mf-11.png)
+
+1. In the **Instructions** box, replace the existing text with the following statement: **You are an AI assistant that helps people find information (1)** and select **Save (2)**. 
+
+     ![](../media/mf-12.png)
 
 1. In the **Chat session**, submit the following query:
 
@@ -147,75 +156,11 @@ In this task, you will examine how prompt engineering improves model responses i
 
 1. The response describes the article. However, suppose you want a more specific format for article categorization.
   
-   ![](../media/T3S13b-0707.png)
+    ![](../media/mf-13.png)
 
-1. In the **Setup** section, change the **Give the model instructions and context (1)** to the below text and click on **Apply changes (2)**. 
+1. In the **Instructions** box, replace the existing text with the following statement: **You are a news aggregator that categorizes news articles. (1)** and select **Save (2)**. 
 
-   ```
-   You are a news aggregator that categorizes news articles.
-   ```
-
-   ![](../media/T3S6-0707.png)
-
-1. In the **Update system message?** window, click on **Continue**.
-
-      ![](../media/19.png)
-
-1. Under the new system message, select the **Add section (1)** button, and choose **Examples (2)**. Then add the following example.
-
-   ![](../media/addsectioneg.png)
-
-   **User:**
-    
-    ```prompt
-    What kind of article is this?
-    ---
-    New York Baseballers Win Big Against Chicago
-    
-    New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3-run homerun late in the bottom of the 7th inning.
-    
-    Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
-    
-    The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but they were unable to get the runner home to score.
-    ```
-    
-    **Assistant:**
-    
-    ```prompt
-    Sports
-      ```
-
-1. Add another example with the following text.
-
-    **User:**
-    
-    ```prompt
-    Categorize this article:
-    ---
-    Joyous moments at the Oscars
-    
-    The Oscars this past week were quite something!
-    
-    Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
-    These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
-    
-    From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrow's rerun of all the festivities.
-    ```
-    
-    **Assistant:**
-    
-    ```prompt
-    Entertainment
-    ```
-    >**Note:** Click Add section, then choose Examples again to add another example.
-   
-1. Click on the **Apply changes** button to save your changes.
-
-   ![](../media/w3.png)
-
-1. In the **Update system message?** window, click on **Continue**.
-
-      ![](../media/19.png)
+     ![](../media/mf-14.png)
 
 1. In the **Chat session** section, resubmit the following prompt:
 
@@ -231,45 +176,30 @@ In this task, you will examine how prompt engineering improves model responses i
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning that the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-    The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
+    The combination of a more specific system message results in a consistent format for the results.
 
-   ![](../media/T3S13b-0707.png)
+     ![](../media/mf-15.png)
 
-1. Set the **Give the model instructions and context (1)** to the text mentioned below. Save the changes by clicking on **Apply changes (2)**.
-   ```
-   You are an AI assistant that helps people find information.
-   ```
+1. Set the **Instructions** box, replace the existing text with the following statement: **You are an AI assistant that helps people find information. (1)** and select **Save (2)**.
 
-   ![](../media/findinfoo.png)
+   ![](../media/mf-12.png)
 
-1. In the **Update system message?** window, click on **Continue**.
-
-      ![](../media/19.png)
-
-1. In the **Chat session** section, submit the following prompt:
+1. In the **Chat** section, submit the following prompt:
 
     ```prompt
-    # 1. Create a list of animals
-    # 2. Create a list of whimsical names for those animals
-    # 3. Combine them randomly into a list of 25 animal and name pairs
+      1. Create a list of animals
+      2. Create a list of whimsical names for those animals
+      3. Combine them randomly into a list of 25 animal and name pairs
     ```
     The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you wanted was for the model to write a Python program that performs the tasks you described?
 
-   ![](../media/T3S15-0707.png)
+    ![](../media/mf-16.png)
 
-1. Change the **Give the model instructions and context (1)** to the text mentioned below, and **Apply changes (2)** the changes.
+1. Update the **Instructions** box, replace the existing text with the following statement: **You are a coding assistant helping write Python code. (1)** and select **Save (2)**.
 
-   ```
-   You are a coding assistant helping write Python code.
-   ```
+    ![](../media/mf-17.png)
 
-   ![](../media/T3S16-0707.png)
-
-1. In the **Update system message?** window, click on **Continue**.
-
-      ![](../media/19.png)
-
-1. Submit the following prompt to the model:
+1. Submit the following prompt to the agent in **Chat** section:
 
       ```
       Write a Python function named Multiply that multiplies two numeric parameters.
@@ -277,7 +207,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 1. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-      ![](../media/T3S19-0707.png)
+    ![](../media/mf-18.png)
 
 ### Task 4: Set up an application in Cloud Shell
 
@@ -302,11 +232,11 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 1. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **Resource group**: Select **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** (2)
+    - **Resource group**: Select **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**
     - **CloudShell region**: **<inject key="Region" enableCopy="false"></inject> (3)**
-    - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create** (6)
+    - **Storage account name**: **storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)**
+    - **File share**: Create a new file share named **none** **(5)**
+    - Click **Create** **(6)**
 
         ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
         
@@ -536,20 +466,21 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     **Python:** prompt-engineering.py - Add the code in **Build the messages array** section
 
-   ```python
-   # Format and send the request to the model
-    messages =[
-            {"role": "system", "content": system_message},
-            {"role": "user", "content": user_message},
-    ]
+    ```python
+    # Format and send the request to the model
+        messages =[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message},
+        ]
 
-    print("\nSending request to Azure OpenAI model...\n")
+        print("\nSending request to Azure OpenAI model...\n")
+    
 
-# Call the Azure OpenAI model
-    response = await client.chat.completions.create(
-    model=model,
-    messages=messages
-    )
+    # Call the Azure OpenAI model
+        response = await client.chat.completions.create(
+        model=model,
+        messages=messages
+        )
     ```
 
       ![](../media/L3T3S12p-1707.png)
