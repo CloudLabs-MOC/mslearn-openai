@@ -36,7 +36,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     
-    - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
+    - Name: **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
 
     - Region: **<inject key="Region" enableCopy="false"></inject> (4)**
     
@@ -46,17 +46,17 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. Under the **Review + create** tab, click on **Create**.
 
-1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed foundry resource in the Azure portal.
 
       ![](../media/mf-4.png)
 
-1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+1. To capture the Keys and Endpoints values, on **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
 
     - On the left navigation menu, expand **Resource Management** and select **Keys and Endpoint (1)**.
     
     - Copy **Key 1 (2)** and ensure to paste it in a text editor such as notepad for future reference.
     
-    - Select **OpenAi (3)**, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+    - Select **OpenAI (3)**, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
     
         ![](../media/mf-5.png "Keys and Endpoints")
 
@@ -90,6 +90,10 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 1. On **gpt-5-mini** details page, click on **Custom deploy**.
 
    ![](../media/L1T2S4-0707.png)
+
+      >**Note:** If the **Custom Deploy** option is not visible, click **Deploy**, then select **Custom settings**.
+
+      >![](../media/mf-7.png)
 
 1. Within the **Deploy gpt-5-mini** pop-up interface, enter the following details:
 
