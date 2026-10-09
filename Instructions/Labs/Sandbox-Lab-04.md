@@ -10,74 +10,90 @@ The Azure OpenAI Service models can generate code for you using natural language
 ## Lab Objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
+- Task 1: Provision an Microsoft Foundry resource
 - Task 2: Deploy a model
 - Task 3: Generate code in the chat playground
 - Task 4: Set up an application in Cloud Shell
 - Task 5: Configure your application
 - Task 6: Run your application
 
-## Task 1: Provision an Azure OpenAI resource
+## Task 1: Provision an Microsoft Foundry resource
 
-In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the Microsoft Foundry service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the results.
+1. In the **Azure portal**, search for **Microsoft Foundry (1)** and select **Microsoft Foundry (2)** from the results.
 
-   ![](../media/new/AI1.png)
+   ![](../media/mf-1.png)
 
-2. On  **Microsoft Foundary | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
+1. On the **Microsoft Foundry** overview pane, select **Create a resource**
 
-   ![](../media/new/AI2.png)
+   ![](../media/mf-2.png)
 
-3. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
+1. Create an **Foundry** resource using the settings below, then click **Review + create (6)** , leaving all other options at their defaults.
     
     - Subscription: **Default Subscription (1)**
     
-    - Resource group: **openai-<inject key="Deployment-id" enableCopy="false"></inject> (2)**
+    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     
-    - Region: **<inject key="Region" enableCopy="false"></inject> (3)**
+    - Name: **OpenAI-Lab04-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
+
+    - Region: **<inject key="Region" enableCopy="false"></inject> (4)**
     
-    - Name: **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (4)**
-    
-    - Pricing tier: **Standard S0 (5)**
+    - Default project name: **proj-default (5)**
   
-      ![](../media/new/AI3.png)
+      ![](../media/mf-3.png)
 
-4. Under the **Review + submit** tab, click on **Create**.
+1. Under the **Review + create** tab, click on **Create**.
 
-      ![](../media/new/AI4.png)
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
-5. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+      ![](../media/mf-4.png)
 
-      ![](../media/new/AI5.png)
+1. To capture the Keys and Endpoints values, on **OpenAI-Lab04-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
 
-6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
-      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it into a text editor such as Notepad for later use.
+    - On the left navigation menu, expand **Resource Management** and select **Keys and Endpoint (1)**.
+    
+    - Copy **Key 1 (2)** and ensure to paste it in a text editor such as notepad for future reference.
+    
+    - Select **OpenAI (3)**, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+    
+        ![](../media/mf-5.png "Keys and Endpoints")
 
-           ![](../media/ui3.png)    
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Hit the Validate button for the corresponding task.
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 2: Deploy a model 
+<validation step="917cb723-2d65-4411-90f9-0150a7636494" />
+
+## Task 2: Deploy a model
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
 1. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry**.
 
-    ![](../media/va2.png)
-
-1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
-
-    ![](../media/OPA1.png)
-
-1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)** and click on **Confirm (3)**.
-
-   ![](../media/new/T2S3-0707.png)
+    ![](../media/mf-6.png)
    
-1. Within the **Deploy model gpt-5-mini** pop-up interface, click on **Customize**.
+1. Click **View deployments** under Use a model.
 
-   ![](../media/new/L1T2S4-0707.png)
+    ![](../media/SS-1.png)
+
+1. On Deployments tab, click **Deploy (1)**, and choose **Deploy a base model (2)**.
+
+     ![](../media/SS2.png)
+
+1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)**.
+
+   ![](../media/L1T2S3a-0707.png) 
+   
+1. On **gpt-5-mini** details page, click on **Custom deploy**.
+
+   ![](../media/L1T2S4-0707.png)
+
+      >**Note:** If the **Custom Deploy** option is not visible, click **Deploy**, then select **Custom settings**.
+
+     ![](../media/mf-7.png) 
 
 1. Within the **Deploy model gpt-5-mini** pop-up interface, enter the following details:
 
@@ -85,16 +101,14 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Deployment type: **Global Standard (2)**
 
-      - Model version: **2025-08-07 (Default) (3)**
+      - Tokens per Minute Rate Limit (thousands): **13K-16k (3)**
 
-      - Tokens per Minute Rate Limit (thousands): In between **13K - 16K (4)**
+      - Guardrails: **DefaultV2 (4)**
 
-      - Content filter: **DefaultV2 (5)**
+      - Click on **Deploy (5)**
 
-      - Click on **Deploy (6)**
-
-        ![](../media/new/L1T2S5-0707.png)
-      
+         ![](../media/L1T2S5-0707.png)
+        
 1. This will deploy a model that you will be playing around with as you proceed.
 
     > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
@@ -105,19 +119,29 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
-1. Navigate back to [Microsoft Foundry](https://ai.azure.com/) portal, from the left navigation pane, select **Chat (1)** and verify that the **my-gpt-model (2)** model is selected in the Deployment.
+1. Once the model is deployed, select **Save as agent**.
 
-   ![](../media/OPA05.png)
+     ![](../media/mf-8.png)
+
+    >**Note:** If foundry user role is not assigned, click **Assign me**. Wait for 5 minutes and refresh the page. If **Save as agent** is locked, navigate to agent tab from left navigation and assign from there.
+
+     ![](../media/mf-9.png)
+
+1. On **Create an agent** pop-up, enter the Agent name as **my-gpt-agent (1)** and click **Create (2)**.
+
+    ![](../media/new-c.png)
+
+1. In the Agent **Playgorund** section, verify that the **my-gpt-model** is selected as Model.
+
+      ![](../media/new-a.png)
    
-1. In the **Chat session** section, enter the following prompt and press *Enter*.
+1. In the **Chat** section, enter the following prompt and press **Enter**.
 
     ```code
     Write a function in Python that takes a character and a string as input, and returns how many times that character appears in the string
     ```
     
-   ![](../media/new/L4T3S2-0707.png)
-
-   >**Note:** If you can't see the setup section, click on Show setup.
+   ![](../media/new/m-1.png)
 
 1. Observe the output. The model will likely respond with a function, with some explanation of what the function does and how to call it.
 
@@ -126,7 +150,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
    Do the same thing, but this time write it in C#.
    ```
 
-   ![](../media/new/AI13.png)
+   ![](../media/new/m-2.png)
 
 1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task, such as reversing the input string.
 
@@ -146,7 +170,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     end
     ```
 
-   ![](../media/new/AI14.png)
+    ![](../media/new/m-3.png)
 
 1. Observe the output, which explains what the function does.
 
@@ -156,7 +180,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
    Can you simplify the function?
    ```   
 
-   ![](../media/new/L4T3S8-0707.png)
+   ![](../media/new/m-4.png)
 
 1. Submit the below-mentioned prompt to add comments to the code.
 
@@ -164,7 +188,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
       Add some comments to the function.
       ```
 
-      ![](../media/new/L4T3S9-0707.png)
+      ![](../media/new/m-5.png)
 
 1. Observe the output, which includes comments explaining what each part of the function does. 
 
@@ -191,18 +215,12 @@ In this task, you will use a short command-line application running in Cloud She
 1. Within the **Create storage account** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(2)
-    - **CloudShell region**: West Europe (3)
+    - **CloudShell region**: **<inject key="Region" enableCopy="false"></inject> (3)**
     - **Storage Account Name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
     - **File share**: Enter **none** (5)
     - Click **Create** (6)
 
       ![](../media/new/AI17.png)
-
-3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
-
-   ![](../media/classic.png)
-
-   >**Note:** If the Settings icon is not visible, click on the (...) ellipses icon.
 
 5. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `mslearn-openai`.
 
@@ -271,11 +289,207 @@ In this task, you will complete key parts of the application to enable it to use
     pip install --user openai==1.65.2
     ```
 
-1. Open the application code file of your preferred language and briefly observe the code. 
+1. Open the application code file of your preferred language and update the code. 
 
     - **C#:** `Program.cs`
-    - **Python:** `code-generation.py`
 
+      ```
+      // Implicit using statements are included
+      using System.Text;
+      using System.Text.Json;
+      using Microsoft.Extensions.Configuration;
+      using Microsoft.Extensions.Configuration.Json;
+      using Azure;
+      using Azure.AI.OpenAI;
+
+      // Build a config object and retrieve user settings.
+      IConfiguration config = new ConfigurationBuilder()
+         .AddJsonFile("appsettings.json")
+         .Build();
+      string? oaiEndpoint = config["AzureOAIEndpoint"];
+      string? oaiKey = config["AzureOAIKey"];
+      string? oaiModelName = config["AzureOAIDeploymentName"];
+
+      string command;
+      bool printFullResponse = false;
+
+      do
+      {
+         Console.WriteLine("\n1: Add comments to my function\n" +
+            "2: Write unit tests for my function\n" +
+            "3: Fix my Go Fish game\n" +
+            "\"quit\" to exit the program\n\n" +
+            "Enter a number to select a task:");
+
+         command = Console.ReadLine() ?? "";
+
+         switch (command)
+         {
+            case "1":
+                  string functionFile = System.IO.File.ReadAllText("../sample-code/function/function.cs");
+                  string commentPrompt = "Add comments to the following function. Return only the commented code.\n---\n" + functionFile;
+
+                  await GetResponseFromOpenAI(commentPrompt);
+                  break;
+            case "2":
+                  functionFile = System.IO.File.ReadAllText("../sample-code/function/function.cs");
+                  string unitTestPrompt = "Write four unit tests for the following function.\n---\n" + functionFile;
+
+                  await GetResponseFromOpenAI(unitTestPrompt);
+                  break;
+            case "3":
+                  string goFishFile = System.IO.File.ReadAllText("../sample-code/go-fish/go-fish.cs");
+                  string goFishPrompt = "Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n" + goFishFile;
+
+                  await GetResponseFromOpenAI(goFishPrompt);
+                  break;
+            case "quit":
+                  Console.WriteLine("Exiting program...");
+                  break;
+            default:
+                  Console.WriteLine("Invalid input. Please try again.");
+                  break;
+         }
+      } while (command != "quit");
+
+      async Task GetResponseFromOpenAI(string prompt)
+      {
+         Console.WriteLine("\nCalling Azure OpenAI to generate code...\n\n");
+
+         if (string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiModelName))
+         {
+            Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
+            return;
+         }
+
+         var credentials = new AzureKeyCredential(oaiKey);
+         var chatClient = new OpenAIClient(new Uri(oaiEndpoint), credentials);
+
+         string systemPrompt = "You are a helpful AI assistant that helps programmers write code.";
+         string userPrompt = prompt;
+
+         // Temperature and MaxTokens are not set because reasoning models (gpt-5, o-series)
+         // reject 'max_tokens' and only support the default temperature.
+         var chatOptions = new ChatCompletionsOptions();
+
+         chatOptions.Messages.Add(new ChatMessage(ChatRole.System, systemPrompt));
+         chatOptions.Messages.Add(new ChatMessage(ChatRole.User, userPrompt));
+
+         Response<ChatCompletions> completions = await chatClient.GetChatCompletionsAsync(oaiModelName, chatOptions);
+
+         string resultText = completions.Value.Choices[0].Message.Content;
+
+         if (printFullResponse)
+         {
+            Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions.Value, new JsonSerializerOptions { WriteIndented = true })}\n\n");
+         }
+
+         Console.WriteLine($"\nResponse:\n{resultText}\n");
+
+         System.IO.File.WriteAllText("result/app.txt", resultText);
+         Console.WriteLine($"\nResponse written to result/app.txt\n\n");
+      }
+      ``` 
+    - **Python:** `code-generation.py`
+      
+      ```
+      import os
+      from dotenv import load_dotenv
+
+      # Add OpenAI import
+      from openai import AzureOpenAI
+
+      # Set to True to print the full response from OpenAI for each call
+      printFullResponse = False
+
+      def main():
+         try:
+            # Get configuration settings
+            load_dotenv()
+            azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+            azure_oai_key = os.getenv("AZURE_OAI_KEY")
+            azure_oai_model = os.getenv("AZURE_OAI_DEPLOYMENT")
+
+            # Print environment variables to verify (optional debug)
+            print("Endpoint:", azure_oai_endpoint)
+            print("Key:", azure_oai_key[:5] + "..." + azure_oai_key[-5:])  # Masked display
+            print("Deployment:", azure_oai_model)
+
+            # Set OpenAI configuration settings
+            global client
+            client = AzureOpenAI(
+                  api_key=azure_oai_key,
+                  azure_endpoint=azure_oai_endpoint,
+                  api_version="2025-04-01-preview"  # Reasoning models (gpt-5, o-series) need 2024-12-01-preview or later
+            )
+
+            # Ensure 'result' folder exists
+            os.makedirs("result", exist_ok=True)
+
+            while True:
+                  print('\n1: Add comments to my function\n' +
+                     '2: Write unit tests for my function\n' +
+                     '3: Fix my Go Fish game\n' +
+                     '\"quit\" to exit the program\n')
+                  command = input('Enter a number to select a task:')
+                  if command == '1':
+                     file = open(file="../sample-code/function/function.py", encoding="utf8").read()
+                     prompt = "Add comments to the following function. Return only the commented code.\n---\n" + file
+                     call_openai_model(prompt, model=azure_oai_model)
+                  elif command == '2':
+                     file = open(file="../sample-code/function/function.py", encoding="utf8").read()
+                     prompt = "Write four unit tests for the following function.\n---\n" + file
+                     call_openai_model(prompt, model=azure_oai_model)
+                  elif command == '3':
+                     file = open(file="../sample-code/go-fish/go-fish.py", encoding="utf8").read()
+                     prompt = "Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n" + file
+                     call_openai_model(prompt, model=azure_oai_model)
+                  elif command.lower() == 'quit':
+                     print('Exiting program...')
+                     break
+                  else:
+                     print("Invalid input. Please try again.")
+
+         except Exception as ex:
+            print(ex)
+
+      def call_openai_model(prompt, model):
+         # Provide a basic user message, and use the prompt content as the user message
+         system_message = "You are a helpful AI assistant that helps programmers write code."
+         user_message = prompt
+
+         # Build the messages array
+         messages = [
+            {"role": "system", "content": system_message},
+            {"role": "user", "content": user_message},
+         ]
+
+         # Call the Azure OpenAI model
+         # temperature and max_tokens are not set because reasoning models (gpt-5, o-series)
+         # reject 'max_tokens' and only support the default temperature.
+         response = client.chat.completions.create(
+            model=model,  # Use the model parameter passed
+            messages=messages
+         )
+
+         # Extract response content
+         output = response.choices[0].message.content
+
+         # Print the response to the console
+         print("\n--- Response Start ---\n")
+         print(output)
+         print("\n--- Response End ---\n")
+
+         # Write the response to a file
+         with open("result/app.txt", "w", encoding="utf8") as results_file:
+            results_file.write(output)
+
+         print("Response written to result/app.txt\n")
+
+      if __name__ == '__main__':
+         main()
+      ```
+      
 ## Task 6: Run your application
 
 In this task, you will run your configured app to generate code for each use case, which is numbered in the app and can be executed in any order.
@@ -294,6 +508,8 @@ In this task, you will run your configured app to generate code for each use cas
     - **Python:** `python code-generation.py`
 
       >**Note:** If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command: `pip install --user --upgrade openai`
+
+      >**Note:** If you encounte error  `No module named 'dotenv'`, run this `pip install --user python-dotenv openai`.
 
 1. Choose option **1** to add comments to your code. Note, the response might take a few seconds for each of these tasks.
 
