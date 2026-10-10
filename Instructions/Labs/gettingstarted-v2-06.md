@@ -54,7 +54,7 @@ Once the environment is provisioned, a virtual machine (JumpVM) and a lab guide 
 
 Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
 
-![](../media/getting-started1.png "Lab Environment")
+![](../media/r-1.png "Lab Environment")
 
 ## Virtual Machine & Lab Guide
  
@@ -96,9 +96,9 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
  
        ![Enter Your Username](../media/sc900-image-1.png)
  
-3. Next, provide your password:
+3. Next, provide your Temporary Access Pass:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
        ![](../media/pwrd1.png)
  

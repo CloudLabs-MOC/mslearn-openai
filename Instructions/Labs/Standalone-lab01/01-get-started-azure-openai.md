@@ -9,13 +9,13 @@ Azure OpenAI Service brings the generative AI models developed by OpenAI to the 
 ## Lab Objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Microsoft Foundry resource
+- Task 1: Provision a Microsoft Foundry resource
 - Task 2: Deploy a model
 - Task 3: Use the Chat playground
 - Task 4: Explore prompts and parameters 
 - Task 5: Explore code generation
 
-## Task 1: Provision an Microsoft Foundry resource
+## Task 1: Provision a Microsoft Foundry resource
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the Microsoft Foundry service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
@@ -43,7 +43,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. Under the **Review + create** tab, click on **Create**.
 
-1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed foundry resource in the Azure portal.
 
       ![](./media/mf-4.png)
 
@@ -59,7 +59,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry | Azure OpenAI**.
+1. In the Microsoft Foundry resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry**.
 
     ![](./media/mf-6.png)
    
@@ -74,14 +74,14 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)**.
 
    ![](./media/L1T2S3a-0707.png) 
-
-   >**Note:** If pop-up window **Unlock the full capabilities of Azure Microsoft Foundry with projects** appears, click **Continue with existing setup**
-
-     > ![](./media/L1T2S3a-note0707.png)
    
 1. On **gpt-5-mini** details page, click on **Custom deploy**.
 
    ![](./media/L1T2S4-0707.png)
+
+      >**Note:** If the **Custom Deploy** option is not visible, click **Deploy**, then select **Custom settings**.
+
+      ![](./media/mf-7.png)
 
 1. Within the **Deploy model gpt-5-mini** pop-up interface, enter the following details:
 
@@ -118,6 +118,10 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 1. Once the model is deployed, select **Save as agent**.
 
       ![](./media/new-b.png) 
+
+      >**Note:** If foundry user role is not assigned, click **Assign me**. Wait for 5 minutes and refresh the page. If **Save as agent** is locked, navigate to agent tab from left navigation and assign from there.
+
+      ![](./media/mf-9.png)
 
 1. On **Create an agent** pop-up, enter the Agent name as **my-gpt-agent (1)** and click **Create and open playground (2)**.
 

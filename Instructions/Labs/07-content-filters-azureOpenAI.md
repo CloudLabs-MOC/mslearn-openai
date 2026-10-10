@@ -10,44 +10,42 @@ In this exercise, you'll explore the affect of the default content filters in Az
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
+- Task 1: Provision a Microsoft Foundry resource
 - Task 2: Deploy a model
 - Task 3: Generate natural language output
 - Task 4: Explore content filters
 
-### Task 1: Provision an Azure OpenAI resource
+### Task 1: Provision a Microsoft Foundry resource
 
-In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the Microsoft Foundry service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the results.
+1. In the **Azure portal**, search for **Microsoft Foundry (1)** and select **Microsoft Foundry (2)** from the results.
 
-   ![](../media/GM4.png)
+   ![](../media/mf-1.png)
 
-1. On  **Microsoft Foundary | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
+1. On the **Microsoft Foundry** overview pane, select **Create a resource**
 
-   ![](../media/AI2.png)
+   ![](../media/mf-2.png)
 
-1. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
+1. Create an **Foundry** resource using the settings below, then click **Review + create (6)** , leaving all other options at their defaults.
     
     - Subscription: **Default Subscription (1)**
     
-    - Resource group: **openai-<inject key="Deployment-id" enableCopy="false"></inject> (2)**
+    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     
-    - Region: **<inject key="Region" enableCopy="false"></inject> (3)**
+    - Name: **OpenAI-Lab07-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
+
+    - Region: **<inject key="Region" enableCopy="false"></inject> (4)**
     
-    - Name: **OpenAI-Lab07-<inject key="Deployment-id" enableCopy="false"></inject> (4)**
-    
-    - Pricing tier: **Standard S0 (5)**
+    - Default project name: **proj-default (5)**
+  
+      ![](../media/mf-3.png)
 
-         ![](../media/IMG010.png "Create Azure OpenAI resource")
+1. Under the **Review + create** tab, click on **Create**.
 
-1. Under the **Review + submit** tab, click on **Create**.
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed foundry resource in the Azure portal.
 
-      ![](../media/A0I4.png)
-
-1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
-
-      ![](../media/AI5.png)
+      ![](../media/mf-4.png)
 
 <validation step="50622248-632f-4437-97cf-9c3f82092308" />
 
@@ -59,34 +57,43 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 ### Task 2: Deploy a model
 
-In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
+In this task, you'll deploy a specific AI model instance within your foundry resource to integrate advanced language capabilities into your applications.
 
-1. In the Azure OpenAI resource page, click on the **Overview (1)** page and click on **Go to Foundry portal (2)**. It will navigate to the **Microsoft Foundry portal**.
+1. In the foundry resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry**.
 
-   ![](../media/foundry2.png)
-
-1. In the **Microsoft Foundry portal**, under My assets, select **Models + endpoints (1)** from the left pane. Click on **Deploy model (2)** and choose **Deploy base model (3)** from the dropdown.
-
-      ![](../media/OPA1.png "Create a new deployment")
-
-1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)** and click on **Confirm (3)**.
-
-   ![](../media/GM6.png) 
-
-   >**Note:** If pop-up window **Unlock the full capabilities of Azure Microsoft Foundry with projects** appears, click **Continue with existing setup**
-
-      ![](../media/AI7.png)
+    ![](../media/mf-6.png)
    
+1. Click **View deployments** under Use a model.
 
-1. On the **Deploy gpt-5-mini** page, configure the deployment using the following settings, and then click **Deploy (6)**.
+    ![](../media/SS-1.png)
 
-    | Setting | Value |
-    |----------|-------|
-    | **Deployment name (1)** | `35turbo` |
-    | **Deployment type (2)** | **Global Standard** |
-    | **Model version (3)** | `2025-08-07` |
-    | **Tokens per Minute Rate Limit (4)** | `20K` |
-    | **Content filter (5)** | **DefaultV2** |
+1. On Deployments tab, click **Deploy (1)**, and choose **Deploy a base model (2)**.
+
+     ![](../media/SS-2.png)
+
+1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)**.
+
+   ![](../media/L1T2S3a-0707.png) 
+   
+1. On **gpt-5-mini** details page, click on **Custom deploy**.
+
+   ![](../media/L1T2S4-0707.png)
+
+      >**Note:** If the **Custom Deploy** option is not visible, click **Deploy**, then select **Custom settings**.
+
+     ![](../media/mf-7.png) 
+   
+1. Within the **Deploy gpt-5-mini** pop-up interface, enter the following details:
+
+      - Deployment name: **35turbo (1)**
+
+      - Deployment type: **Global Standard (2)**
+
+      - Tokens per Minute Rate Limit (thousands): **20k (3)**
+
+      - Guardrails: **DefaultV2 (4)**
+
+      - Click on **Deploy (5)**
 
     ![](../media/GM007.png)
       

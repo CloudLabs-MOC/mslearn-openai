@@ -62,13 +62,13 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![](../media/env1.png)
+![](../media/env-0707.png)
 
 ## Utilizing the Split Window Feature
  
 For your convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
 
-![](../media/splitwin1.png)
+![](../media/split-0707.png)
   
 ## Managing Your Virtual Machine
  
@@ -88,9 +88,9 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
  
        ![Enter Your Username](../media/sc900-image-1.png)
  
-3. Next, provide your password:
+3. Next, provide your Temporary Access Pass:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
        ![](../media/pwrd1.png)
  
