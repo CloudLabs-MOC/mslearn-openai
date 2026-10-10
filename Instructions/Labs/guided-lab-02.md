@@ -157,11 +157,6 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-
-    >**Note:** Once the terminal opens, click **Settings (1)** and select **Go to Classic version (2)**. If the option is not available, continue with the next steps.
-
-     ![](../media/classic.png)
-
 8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash

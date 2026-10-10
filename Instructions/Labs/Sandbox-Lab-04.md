@@ -45,7 +45,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. Under the **Review + create** tab, click on **Create**.
 
-1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed foundry resource in the Azure portal.
 
       ![](../media/mf-4.png)
 
@@ -69,9 +69,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 ## Task 2: Deploy a model
 
-In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
+In this task, you'll deploy a specific AI model instance within your foundry resource to integrate advanced language capabilities into your applications.
 
-1. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry**.
+1. In the foundry resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry**.
 
     ![](../media/mf-6.png)
    
@@ -95,7 +95,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
      ![](../media/mf-7.png) 
 
-1. Within the **Deploy model gpt-5-mini** pop-up interface, enter the following details:
+1. Within the **Deploy gpt-5-mini** pop-up interface, enter the following details:
 
       - Deployment name: **my-gpt-model (1)**
 
