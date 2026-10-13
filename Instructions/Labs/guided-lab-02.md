@@ -12,13 +12,13 @@ With the Azure OpenAI Service, developers can create chatbots, language models, 
 
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Microsoft Foundry resource
+- Task 1: Provision a Microsoft Foundry resource
 - Task 2: Deploy a model
 - Task 3: Set up an application in Cloud Shell
 - Task 4: Configure your application
 - Task 5: Test your application
 
-## Task 1: Provision an Microsoft Foundry resource
+## Task 1: Provision a Microsoft Foundry resource
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the Microsoft Foundry service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
@@ -69,7 +69,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 ## Task 2: Deploy a model
 
-In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
+In this task, you'll deploy a specific AI model instance within your Microsoft Foundry resource to integrate advanced language capabilities into your applications.
 
 1. In the Foundry resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry**.
 
