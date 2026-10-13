@@ -10,16 +10,16 @@ In scenario for this exercise, you will perform the role of a software developer
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Microsoft Foundry resource
+- Task 1: Provision a Microsoft Foundry resource
 - Task 2: Deploy a model
 - Task 3: Apply prompt engineering in chat playground
 - Task 4: Set up an application in Cloud Shell
 - Task 5: Configure your application
 - Task 6: Run your application
 
-### Task 1: Provision an Microsoft Foundry resource
+### Task 1: Provision a Microsoft Foundry resource
 
-In this task, you'll create an Azure resource in the Azure portal by selecting the OpenAI service and configuring settings such as the region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal by selecting the Microsoft Foundry service and configuring settings such as the region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **Microsoft Foundry (1)** and select **Microsoft Foundry (2)** from the results.
 
@@ -29,13 +29,13 @@ In this task, you'll create an Azure resource in the Azure portal by selecting t
 
    ![](../media/mf-2.png)
 
-1. Create an **Foundry** resource using the settings below, then click **Review + create (6)** , leaving all other options at their defaults.
+1. Create a **Foundry** resource using the settings below, then click **Review + create (6)** , leaving all other options at their defaults.
     
     - Subscription: **Default Subscription (1)**
     
-    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - Resource group: **openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)**
     
-    - Name: **OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
+    - Name: **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> (3)**
 
     - Region: **<inject key="Region" enableCopy="false"></inject> (4)**
     
@@ -59,7 +59,7 @@ In this task, you'll create an Azure resource in the Azure portal by selecting t
 
         ![](../media/mf-5.png "Keys and Endpoints")
 
-<validation step="92fd5d61-ee1f-44aa-b7cc-4545c53b5b92" />
+<validation step="3af754c5-e7ba-4643-948a-fa7650c2e53e" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -68,13 +68,13 @@ In this task, you'll create an Azure resource in the Azure portal by selecting t
 
 ### Task 2: Deploy a model
 
-In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
+In this task, you'll deploy a specific AI model instance within your Microsoft Foundry resource to integrate advanced language capabilities into your applications.
 
 1. In the Foundry resource pane, navigate back to the **Overview** page and click **Go to Foundry portal**. This will take you to **Microsoft Foundry**.
 
     ![](../media/mf-6.png)
 
-1. Click **View deployments** under Use a model.
+1. Click on **View deployments** under Use a model.
 
     ![](../media/SS-1.png)
     
@@ -108,7 +108,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
          ![](../media/new-b1.png)
     
-<validation step="e3805450-2e13-40c4-80fa-58a0cd695e6e" />
+<validation step="fc4ff6f5-ab01-4991-8e87-980284dba951" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -246,12 +246,6 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
-1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
-
-   ![](../media/classic.png)
-
-   >**Note:** If the Settings icon is not visible, click on the (...) ellipses icon.
-
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `mslearn-openai`.
 
     ```bash
@@ -273,7 +267,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
    code .
     ```
 
-<validation step="b83818f3-0527-485b-85c5-57c7f0149fe1" />
+<validation step="e23f27c4-7eec-48ce-9be7-c591acf90cc7" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
