@@ -12,13 +12,13 @@ With the Azure OpenAI Service, developers can create chatbots, language models, 
 
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Microsoft Foundry resource
+- Task 1: Provision a Microsoft Foundry resource
 - Task 2: Deploy a model
 - Task 3: Set up an application in Cloud Shell
 - Task 4: Configure your application
 - Task 5: Test your application
 
-## Task 1: Provision an Microsoft Foundry resource
+## Task 1: Provision a Microsoft Foundry resource
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the Microsoft Foundry service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
@@ -60,7 +60,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
         ![](../media/mf-5.png "Keys and Endpoints")
 
-<validation step="b6d08e8e-f2a3-4066-a698-2a324f4493dd" />
+<validation step="c10369e5-8ddd-4890-a11a-de5d148b7558" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -69,7 +69,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 ## Task 2: Deploy a model
 
-In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
+In this task, you'll deploy a specific AI model instance within your Microsoft Foundry resource to integrate advanced language capabilities into your applications.
 
 1. In the Foundry resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry**.
 
@@ -113,7 +113,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-5.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-> **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-5.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+<validation step="c0201c1d-99bf-4da8-a99f-59a46219f377" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ## Task 3: Set up an application in Cloud Shell
 
@@ -182,7 +188,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
       ![](../media/code-editor.png)
 
-<validation step="4eb72f2c-5f15-42b7-9637-abdaf9e30be5" />
+<validation step="c83e5778-f8f1-451e-91ef-8e9728676797" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
