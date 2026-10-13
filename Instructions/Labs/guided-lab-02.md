@@ -30,7 +30,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/mf-2.png)
 
-1. Create an **Foundry** resource using the settings below, then click **Review + create (6)** , leaving all other options at their defaults.
+1. Create a **Foundry** resource using the settings below, then click **Review + create (6)** , leaving all other options at their defaults.
     
     - Subscription: **Default Subscription (1)**
     
@@ -46,17 +46,17 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. Under the **Review + create** tab, click on **Create**.
 
-1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed foundry resource in the Azure portal.
+1. Wait for the deployment to complete. Click on **Go to resource** to navigate to the deployed foundry resource in the Azure portal.
 
       ![](../media/mf-4.png)
 
-1. To capture the Keys and Endpoints values, on **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+1. To capture the Keys and Endpoints values, on the **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
 
     - On the left navigation menu, expand **Resource Management** and select **Keys and Endpoint (1)**.
     
-    - Copy **Key 1 (2)** and ensure to paste it in a text editor such as notepad for future reference.
+    - Copy **Key 1 (2)** and ensure you paste it into a text editor such as Notepad for future reference.
     
-    - Select **OpenAI (3)**, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+    - Select **OpenAI (3)**, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
     
         ![](../media/mf-5.png "Keys and Endpoints")
 
@@ -79,15 +79,15 @@ In this task, you'll deploy a specific AI model instance within your Microsoft F
 
     ![](../media/SS-1.png)
 
-1. On Deployments tab, click **Deploy (1)**, and choose **Deploy a base model (2)**.
+1. On the Deployments tab, click **Deploy (1)**, and choose **Deploy a base model (2)**.
 
      ![](../media/SS2.png)
 
-1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)**.
+1. Search for **gpt-5-mini (1)** in the search bar, and then select **gpt-5-mini (2)**.
 
      ![](../media/L1T2S3a-0707.png) 
 
-1. On **gpt-5-mini** details page, click on **Custom deploy**.
+1. On the **gpt-5-mini** details page, click on **Custom Deploy**.
 
    ![](../media/L1T2S4-0707.png)
 
@@ -145,7 +145,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
    ![](../media/csanext.png)
 
-5. Within the **Create storage account** page, enter the following details:
+5. On the **Create storage account** page, enter the following details:
 
     - Subscription: Choose the **Default subscription (1)**.
 
@@ -180,7 +180,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
     >**Note**: Applications for both **C#** and **Python** have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
 
-10. Open the built-in code editor, and observe the text file that you'll be summarizing with your model. Use the following command to open the lab files in the code editor.
+10. Open the built-in code editor and observe the text file that you'll be summarizing with your model. Use the following command to open the lab files in the code editor.
 
     ```bash
     code .
