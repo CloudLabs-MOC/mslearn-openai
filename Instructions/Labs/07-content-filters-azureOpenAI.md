@@ -47,7 +47,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
       ![](../media/mf-4.png)
 
-<validation step="50622248-632f-4437-97cf-9c3f82092308" />
+<validation step="17b3d0d2-dbd9-4e32-b2bf-7d24921b5f91" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -101,7 +101,7 @@ In this task, you'll deploy a specific AI model instance within your foundry res
 
     > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
 
-<validation step="a75cfc42-9bee-4829-858b-0612e685f83f" />
+<validation step="10cf1e8a-3291-4a7e-aa56-b2dd06ed2bee" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 

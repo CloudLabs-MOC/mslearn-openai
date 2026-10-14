@@ -60,7 +60,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
     
         ![](../media/mf-5.png "Keys and Endpoints")
 
-<validation step="cafb7718-6bf1-4fe9-88b8-d1ed6d7c4c58" />
+<validation step="324aa14e-e7b9-4856-8b46-9a8ce2422139" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -111,7 +111,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. This will deploy a model that you will use as you proceed.
 
-<validation step="863492e4-6930-40bf-ab9f-e1ffb7e21a95" />
+<validation step="0fbfe47d-b9b0-49f1-bf2d-adfbb8a8782b" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
