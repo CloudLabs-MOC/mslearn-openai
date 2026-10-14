@@ -49,7 +49,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
       ![](../media/mf-4.png)
 
-1. To capture the Keys and Endpoints values, on **OpenAI-Lab04-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+1. To capture the Keys and Endpoints values, on **OpenAI-Lab04-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
 
     - On the left navigation menu, expand **Resource Management** and select **Keys and Endpoint (1)**.
     
