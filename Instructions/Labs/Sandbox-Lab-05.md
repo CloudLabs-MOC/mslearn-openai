@@ -60,7 +60,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
     
         ![](../media/mf-5.png "Keys and Endpoints")
 
-<validation step="d1fdf614-83d8-4c1a-b9c7-c9adf003d03f" />
+<validation step="4cf796e3-726b-424f-8140-a104961c0f0d" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -327,7 +327,7 @@ In this task, you will explore the code used to call the REST API and generate a
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="46dc5a95-0801-4085-b021-c775e7b1b06b" />
+<validation step="48358d2a-9f3e-465b-a127-f32f0aa3a33c" />
 
 ## Task 4: Run the app 
 

@@ -59,7 +59,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
         ![](../media/mf-5.png "Keys and Endpoints")
 
-<validation step="917cb723-2d65-4411-90f9-0150a7636494" />
+<validation step="0ece4038-465d-43e4-8ad2-b57062929835" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - Hit the Validate button for the corresponding task.
@@ -114,6 +114,14 @@ In this task, you'll deploy a specific AI model instance within your foundry res
     > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
    
     > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-5-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+
+<validation step="532478d0-2562-4302-90b0-af5cce12741f" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Hit the Validate button for the corresponding task.
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 3: Generate code in chat playground
 
